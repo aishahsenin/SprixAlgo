@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: specification_aishahsenin.aux
+The style file: biblatex.bst
+Database file #1: specification_aishahsenin-blx.bib
+Database file #2: specification_bibliography.bib
+You're missing a field name---line 14 of file specification_bibliography.bib
+ :  
+ :  %note = {Page Version {ID}: 684386333},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 81 of file specification_bibliography.bib
+ : @inreference{_windows_2015
+ :                           ,
+I'm skipping whatever remains of this entry
+Biblatex version: 3.0
+(There were 2 error messages)

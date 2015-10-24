@@ -1,0 +1,197 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 2.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{_designing_2015}{online}{}
+  \field{sortinit}{D}
+  \field{howpublished}{\url{https://msdn.microsoft.com/en-us/library/dn904477(v=vs.110).aspx}}
+  \field{titleaddon}{Microsoft Developer Network}
+  \field{title}{Designing {XAML} in Visual Studio}
+  \verb{file}
+  \verb Designing XAML in Visual Studio:C\:\\Users\\Aishah\\AppData\\Roaming\\M
+  \verb ozilla\\Firefox\\Profiles\\eaj9kfzb.default\\zotero\\storage\\D8X7598T\
+  \verb \dn904477(v=vs.110).html:text/html
+  \endverb
+  \field{type}{Designing {XAML} in Visual Studio}
+  \field{year}{2015}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{_integration_2003}{online}{}
+  \field{sortinit}{I}
+  \field{howpublished}{\url{https://msdn.microsoft.com/en-us/library/aa292128(v=vs.71).aspx}}
+  \field{titleaddon}{Microsoft Developer Network}
+  \field{title}{Integration Testing}
+  \verb{file}
+  \verb Integration Testing:C\:\\Users\\Aishah\\AppData\\Roaming\\Mozilla\\Fire
+  \verb fox\\Profiles\\eaj9kfzb.default\\zotero\\storage\\6SMM6CIE\\aa292128(v=
+  \verb vs.71).html:text/html
+  \endverb
+  \field{year}{2003}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{jackson_software_2014}{online}{}
+  \name{author}{3}{}{%
+    {{}%
+     {Jackson}{J.}%
+     {Mike}{M.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Crouch}{C.}%
+     {Steve}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Baxter}{B.}%
+     {Rob}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{JMCSBR1}
+  \strng{fullhash}{JMCSBR1}
+  \field{sortinit}{J}
+  \field{howpublished}{\url{http://www.software.ac.uk/software-evaluation-guide}}
+  \field{titleaddon}{Software Evaluation Guide}
+  \field{title}{Software Evaluation Guide {\textbar} Software Sustainability
+  Institute}
+  \verb{file}
+  \verb Software Evaluation Guide | Software Sustainability Institute:C\:\\User
+  \verb s\\Aishah\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\eaj9kfzb.defau
+  \verb lt\\zotero\\storage\\T25WKGQA\\software-evaluation-guide.html:text/html
+  \endverb
+  \field{day}{11}
+  \field{month}{11}
+  \field{year}{2014}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{tandon_simple_2007}{online}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Tandon}{T.}%
+     {Manish}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TM1}
+  \strng{fullhash}{TM1}
+  \field{sortinit}{T}
+  \field{howpublished}{\url{http://blogs.msdn.com/b/manishtandon/archive/2007/12/26/simple-animation-using-expression-blend.aspx}}
+  \field{shorttitle}{Simple Animation using Expression Blend}
+  \field{titleaddon}{{MSDN} Blog}
+  \field{title}{Simple Animation using Expression Blend}
+  \verb{file}
+  \verb Simple Animation using Expression Blend. - Manish Tandon - Site Home -
+  \verb MSDN Blogs:C\:\\Users\\Aishah\\AppData\\Roaming\\Mozilla\\Firefox\\Prof
+  \verb iles\\eaj9kfzb.default\\zotero\\storage\\6ZJVS628\\simple-animation-usi
+  \verb ng-expression-blend.html:text/html
+  \endverb
+  \field{day}{26}
+  \field{month}{12}
+  \field{year}{2007}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{_mvvm_2012}{online}{}
+  \field{sortinit}{T}
+  \field{howpublished}{\url{https://msdn.microsoft.com/en-gb/library/hh848246.aspx}}
+  \field{titleaddon}{Microsoft Developer Network}
+  \field{title}{The {MVVM} Pattern}
+  \verb{file}
+  \verb The MVVM Pattern:C\:\\Users\\Aishah\\AppData\\Roaming\\Mozilla\\Firefox
+  \verb \\Profiles\\eaj9kfzb.default\\zotero\\storage\\8WIQTHV6\\hh848246.html:
+  \verb text/html
+  \endverb
+  \field{day}{10}
+  \field{month}{02}
+  \field{year}{2012}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{_unit_2003}{online}{}
+  \field{sortinit}{U}
+  \field{howpublished}{\url{https://msdn.microsoft.com/en-us/library/aa292197(v=vs.71).aspx}}
+  \field{titleaddon}{Microsoft Developer Network}
+  \field{title}{Unit Testing}
+  \verb{file}
+  \verb Unit Testing:C\:\\Users\\Aishah\\AppData\\Roaming\\Mozilla\\Firefox\\Pr
+  \verb ofiles\\eaj9kfzb.default\\zotero\\storage\\XUPE9DF7\\aa292197(v=vs.71).
+  \verb html:text/html
+  \endverb
+  \field{year}{2003}
+  \field{urlday}{19}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\entry{_windows_2015}{inreference}{}
+  \field{sortinit}{W}
+  \field{abstract}{%
+  Windows Presentation Foundation (or {WPF}) is a graphical subsystem for
+  rendering user interfaces in Windows-based applications by Microsoft. {WPF},
+  previously known as "Avalon", was initially released as part of .{NET}
+  Framework 3.0. Rather than relying on the older {GDI} subsystem, {WPF} uses
+  {DirectX}. {WPF} attempts to provide a consistent programming model for
+  building applications and separates the user interface from business logic.
+  It resembles similar {XML}-oriented object models, such as those implemented
+  in {XUL} and {SVG}. {WPF} employs {XAML}, an {XML}-based language, to define
+  and link various interface elements. {WPF} applications can be deployed as
+  standalone desktop programs or hosted as an embedded object in a website.
+  {WPF} aims to unify a number of common user interface elements, such as 2D/3D
+  rendering, fixed and adaptive documents, typography, vector graphics, runtime
+  animation, and pre-rendered media. These elements can then be linked and
+  manipulated based on various events, user interactions, and data bindings.
+  {WPF} runtime libraries are included with all versions of Microsoft Windows
+  since Windows Vista and Windows Server 2008. Users of Windows {XP}
+  {SP}2/{SP}3 and Windows Server 2003 can optionally install the necessary
+  libraries. Microsoft Silverlight provides functionality that is mostly a
+  subset of {WPF} to provide embedded web controls comparable to Adobe Flash.
+  3D runtime rendering has been supported in Silverlight since Silverlight 5.%
+  }
+  \field{booktitle}{Wikipedia, the free encyclopedia}
+  \field{howpublished}{\url{https://en.wikipedia.org/w/index.php?title=Windows_Presentation_Foundation&oldid=679016460}}
+  \field{note}{Page Version {ID}: 679016460}
+  \field{title}{Windows Presentation Foundation}
+  \field{langid}{english}
+  \verb{file}
+  \verb Snapshot:C\:\\Users\\Aishah\\AppData\\Roaming\\Mozilla\\Firefox\\Profil
+  \verb es\\eaj9kfzb.default\\zotero\\storage\\HI3R9W8A\\index.html:text/html
+  \endverb
+  \field{day}{02}
+  \field{month}{09}
+  \field{year}{2015}
+  \field{urlday}{03}
+  \field{urlmonth}{10}
+  \field{urlyear}{2015}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput
