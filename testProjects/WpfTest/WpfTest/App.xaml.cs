@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using WpfTest.ViewModel;
 
 namespace WpfTest
 {
@@ -16,8 +17,18 @@ namespace WpfTest
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            // when the application starts up...
             base.OnStartup(e);
-            MainWindow window = new MainWindow(); // Injecting the view model here, instead of the main window
+
+            // creates a new instance of the MainWindow...
+            MainWindow window = new MainWindow(); 
+
+            // The window view model goes with it...
+            var viewModel = new MainWindowViewModel();
+
+            // Setting the data context to that view model, which is the logic of the view
+            window.DataContext = viewModel;
+
             window.Show();
         }
 
