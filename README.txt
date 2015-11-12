@@ -5,7 +5,7 @@ Complete these diagrams before the weekends (before 14/11/2015)
 - Requirements specification
 - UML Class diagram
 - Interface diagram ?
-- Flowchart of the software
+- Flowchart of the software [in progress]
 
 To complete during the weekends (14/11/2015 & 15/11/2015)
 - Algorithms of the animations (Psuedo code)
