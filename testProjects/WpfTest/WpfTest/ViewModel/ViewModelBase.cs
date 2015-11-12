@@ -4,15 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel;
+using WpfTest.ViewModel.Commands;
 
 namespace WpfTest.ViewModel
 {
     public abstract class ViewModelBase : INotifyPropertyChanged, IDisposable
     {
 
+        // creating a property
+        public SimpleCommand SimpleCommand { get; set; }
+
         protected ViewModelBase()
         {
-
+            // creating a new instance of simple command
+            this.SimpleCommand = new SimpleCommand(this);
         }
 
         // Declaring a new PropertyChangedEventHandler 
@@ -43,5 +48,12 @@ namespace WpfTest.ViewModel
         }
 
         // will be overriden on any subclass that needs it.
+
+        // simple method implementation test here
+        public void SimpleMethod()
+        {
+            // test printing
+            Console.WriteLine("Hello");
+        }
     }
 }

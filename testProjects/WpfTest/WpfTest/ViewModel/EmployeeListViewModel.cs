@@ -15,6 +15,7 @@ namespace WpfTest.ViewModel
         readonly EmployeeRepository _employeeRepository;
 
         // enable to repo to be consumed by the view
+        // getting the list from the employee class
         public ObservableCollection<Model.Employee> AllEmployees
         {
             get;
@@ -22,6 +23,7 @@ namespace WpfTest.ViewModel
         }
 
         // Constructor
+        // if list returns empty, throw exception, if not, make the list initiated at the beginning of this class to equal to the list from employee repo
         public EmployeeListViewModel(EmployeeRepository employeeRepository)
         {
             if (employeeRepository == null)

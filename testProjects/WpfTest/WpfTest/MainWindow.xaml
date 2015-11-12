@@ -4,8 +4,17 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfTest"
+        xmlns:vm="clr-namespace:WpfTest.ViewModel"
+        xmlns:vw="clr-namespace:WpfTest.View"
+        xmlns:commands="clr-namespace:WpfTest.ViewModel.Commands"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vm:EmployeeListViewModel}">
+            <vw:EmployeeListView />
+        </DataTemplate>
+    </Window.Resources>
+
     <Grid Margin="4">
         <Border Background="GhostWhite" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">
             <ItemsControl ItemsSource="{Binding ViewModels}" Margin="4"/>

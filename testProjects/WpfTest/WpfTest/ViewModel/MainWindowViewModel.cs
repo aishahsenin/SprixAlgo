@@ -9,7 +9,7 @@ using WpfTest.DataAccess;
 namespace WpfTest.ViewModel
 {
     // inheriting from ViewModelBase class
-    public class MainWindowViewModel : ViewModelBase()
+    public class MainWindowViewModel : ViewModelBase
     {
 
         // reference from the employee repository
@@ -23,6 +23,10 @@ namespace WpfTest.ViewModel
             _employeeRepository = new EmployeeRepository();
             
             // TODO; create an instance of our view model to display, then add to our collection
+            EmployeeListViewModel viewModel = new EmployeeListViewModel(_employeeRepository);
+            
+            // added the viewModel collections to the collections in here, this will show on the main window
+            this.ViewModels.Add(viewModel);
         }
 
         // ViewModels, what we used to reference on the XAML code on MainWindow.xaml
