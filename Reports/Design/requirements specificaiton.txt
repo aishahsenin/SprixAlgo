@@ -1,0 +1,10 @@
+requirements specification
+
+functional 
+what is it?
+- defines a function of a system and its components
+- described as inputs, behaviour, and output
+
+non- functional requirements
+what is it?
+- specifies the criteria that can be used to judge the operation of the system
