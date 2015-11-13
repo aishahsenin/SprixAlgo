@@ -2,7 +2,7 @@ Work plan
 
 12/11/2015 
 Complete these diagrams before the weekends (before 14/11/2015)
-- Requirements specification
+- Requirements specification [in progress]
 - UML Class diagram
 - Interface diagram ?
 - Flowchart of the software [in progress]
