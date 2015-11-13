@@ -1,0 +1,125 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage{graphicx}
+\usepackage{marginnote}
+\usepackage[verbose, a4paper, tmargin=2cm, bmargin=2cm, lmargin=2cm, rmargin=2cm, headheight=1.3cm, headsep=1cm]{geometry}
+\usepackage{lscape}
+%\usepackage[table]{xcolor}
+\usepackage{todonotes}
+%\usepackage{menukeys}
+%\usepackage{listings}
+%\usepackage{pdflscape}
+%\usepackage{glossaries}
+%\usepackage{wrapfig}
+%\usepackage{float}
+\usepackage{lscape}
+%\usepackage{color}
+
+\usepackage{csquotes}
+\usepackage[style=numeric, backend=bibtex]{biblatex}
+\addbibresource{design_bibliography}
+\defbibheading{secbib}[\bibname]{%
+  \section*{#1}%
+  \markboth{#1}{#1}}
+%\bibliography{specification_bibliography}
+
+% \bibliographystyle{unsrt}
+
+\usepackage{url} 
+\usepackage{hyperref}
+%\usepackage{natbib}
+
+% ------%
+
+% Code stuff
+
+% ------
+
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
+
+\begin{document}
+
+% ----------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+% University Logo
+\includegraphics[width=7cm]{images/uol.png}
+
+%\vfill
+%\vfill
+
+\textsc{\LARGE University of Liverpool}\\[1.5cm] % Name of your university/college
+\textsc{\large Computer Science with a Year in Industry BSc (Hons)}\\[0.5cm] % Major heading such as course name
+\textsc{\large G403}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries COMP390 Honours Year Computer Science Project \\[0.5cm]
+Design Specification}\\
+[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+N Aishah \textsc{B M Senin} \\ (200912462) % Your name
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Project Advisor:} \\
+Dr Prudence \textsc{Wong} % Supervisor's Name
+\end{flushright}
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+%{\today}\\[3cm] 
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+ 
+%----------------------------------------------------------------------------------------
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+% ----------------------------------------
+\tableofcontents
+
+\input{overview.tex}
+
+\input{requirements.tex}
+
+\todototoc
+\listoftodos
+
+\end{document}

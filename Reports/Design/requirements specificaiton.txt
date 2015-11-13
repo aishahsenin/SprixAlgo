@@ -1,10 +1,33 @@
 requirements specification
-
+--------------------------
 functional 
 what is it?
 - defines a function of a system and its components
 - described as inputs, behaviour, and output
 
-non- functional requirements
+menu
+1. shows the list of playable algorithms 
+2. algorithms are split between 3 main paradigms
+
+animation
+1. play the animation 
+2. pause the animation
+3. stop the animation
+4. backtracks the animation
+5. on each iteration, shows the short information about what is going on 
+
+help option
+1. allows the user to control to adjust the speed of the animation
+2. allows the user to adjust the font size
+
+additonal features
+1. suggests to play similar algorithms to learn more
+2. an appendix that shows further writeup of the algorithms animated in the software
+
+non- functional requirements [ADD MORE OF THIS]
+----------------------------
 what is it?
 - specifies the criteria that can be used to judge the operation of the system
+
+graphical interface
+1. the tables, diagrams, images needs to be scalable depending on the users input
