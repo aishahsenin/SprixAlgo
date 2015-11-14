@@ -19,20 +19,20 @@ To complete during the weekends (14/11/2015 & 15/11/2015)
 - writeup of the design
 - UI Design of the software
 
-What to include in the writeup?
+What to include in the writeup? [finish by saturday 14/11/2015]
 1 - Summary of proposal
 	- brief statement of the background
 	- aims and objectives of the project
 	- necessary changes made from previous report
 	- summary of research and analysis carried out so far
 
-2 - Design
+2 - Design [finish latest by Sunday 15/11/2015]
 	- description of anticipated  components of the system and how are they organised
 	- algorithms psuedo code
 	- design of the intended interfaces
 	- description of the evaluation
 
-3 - Review against plan
+3 - Review against plan [finish latest by Monday 16/11/2015]
 	- plan produced as part of the specification
 		- what has been completed
 		- progress made up to this date
