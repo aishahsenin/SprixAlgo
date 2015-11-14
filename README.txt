@@ -36,7 +36,7 @@ What to include in the writeup? [finish by saturday 14/11/2015]
 	- functional and non-functional requirements [done]
 	- UML case diagram [done]
 	- flowchart diagrams [done]
-	- ui design diagrams
+	- ui design diagrams [done]
 	- UML class diagram
 	- sequence diagram (?)
 	- animation algorithm designs
