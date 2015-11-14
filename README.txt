@@ -39,9 +39,9 @@ What to include in the writeup? [finish by saturday 14/11/2015]
 	- ui design diagrams [done]
 	- UML class diagram
 	- sequence diagram (?)
-	- animation algorithm designs
-	- animation psuedo code
-	- evaluation design
+	- animation algorithm designs [15/11/15]
+	- animation psuedo code [15/11/15]
+	- evaluation design [15/11/15]
 
 3 - Review against plan [finish latest by Monday 16/11/2015]
 	- plan produced as part of the specification
