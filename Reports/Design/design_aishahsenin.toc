@@ -2,12 +2,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Overview}{2}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Project background}{2}{section.1.1}
+\contentsline {section}{\numberline {1.1}Project description}{2}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Objectives}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}Aims and objectives of this project}{2}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Summary of research and analysis}{2}{section.1.3}
+\contentsline {section}{\numberline {1.3}Summary of research and analysis}{3}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Requirements}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Design}{4}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{4}{table.2.3}
+\contentsline {section}{\numberline {2.1}Functional and non-functional requirements}{4}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Todo list}{5}{table.2.3}
