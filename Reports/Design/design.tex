@@ -1,8 +1,11 @@
 \chapter{Design}
 
-\section{Functional and non-functional requirements}
+% ------------ REQUIREMENTS -------------
+\section{System requirements}
+\todo[color=yellow]{add small description}
 
-\begin{table}[ht]
+\subsection{Functional requirements}
+\begin{table}[H]
 \caption{Functional requirements of the software}
 \begin{center}
 %\begin{tabular}{cc}
@@ -45,8 +48,8 @@
 
 \newpage
 
+\subsection{Non-functional requirements}
 \todo[color=yellow]{Not sure if saved settings belong in non-functional}
-
 \begin{table}[ht]
 \caption{Non-functional requirements of the software}
 \begin{center}
@@ -65,3 +68,117 @@
 \label{tab:multicol}
 \end{table}
 
+% ---------- UML CASE DIAGRAM ----------
+\section{UML case diagram}
+The use case diagram below on figure \ref{useCaseDiagram} is the representation of what the user can do to interact with the system represented in use cases. It is basically shows the relationship between the user and the system, for this case the student's interaction with the algorithm animation program.
+
+% UML case diagram
+\begin{figure}[H]
+\centering
+\hspace*{-1cm}
+\includegraphics[scale=1]{images/report_images/useCaseDiagram.png}
+\caption{The system use case diagram}
+\label{useCaseDiagram}
+\end{figure}
+
+According to the use case diagram on figure \ref{useCaseDiagram}, firstly, the user can change the settings in the program, by changing features such as the speed of the animation, or the font size displayed in the program. This allows the user to work within the environment that is most comfortable for them. 
+
+Other than changing the settings, the user can also select an algorithm which they wish to learn. This will lead them to the page where the animation of the algorithm is. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. For more information in regards to these controls, refer to the \todo[color=orange]{add some glossary or some sort}. From this page, the user can also access the algorithms which are \textit{related} to the one in question, if they ever wish to do so. This will lead to the page of the algorithm along with its animation.
+
+Other than the settings and the animated feature, if the user ever wishes to know more about the algorithms, the user can view them in the appendix within the program. In the appendix, the user will find all the algorithms available in the program in a list. Once the user selects a particular one they wish to see, the page will display a fuller information in regards to the algorithm. This includes the written up information, and might also involve a few images as well.
+
+% --------------- FLOWCHART -------------------
+\section{System flowcharts}
+In this section, I have included the flowcharts of the program, to display the how the program flows in general, and how decisions controls its following events. 
+
+\subsection{Main flow of the program}
+The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The three main modules which makes up the program, i.e. change settings, view the animation of algorithms, and the appendix, are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, for the animation module, and \ref{} for the appendix module.
+
+\begin{figure}[H]
+\centering
+\hspace*{-1cm}
+\includegraphics[scale=1]{images/report_images/flowchartMain.png}
+\caption{The flowchart of the whole system.}
+\label{mainFlowChart}
+\end{figure}
+
+On the main flow chart below, the user first starts the application, which then brings them to the main menu. From the main menu, the user can select up to three features they wish to use, which are \textit{Select}, \textit{List of Algorithms}, and \textit{Appendix}. Doing so will bring to the respective features. From the main menu, the user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
+
+\subsection{Flow of the animation module} \label{sec:flowchartAnimation}
+The animation module is admittedly the main feature of the program that will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, which then leads to the animation module. From here, there will be a list of the algorithms classified between 3 main paradigms and a sorting algorithm section. When a user selects an algorithm they wish to view, this will lead them to a page where the animation (in stopped mode), and the small description in regards to the algorithm. 
+
+The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects to generate random value, the program will generate a random value within the limited amount assigned.
+
+Once an input has been either retrieved or generated, the user then will able to play the animation by pressing the play button. Whilst the animation is at its \textit{playing state}, the user can control the animation by either \textit{pause}, \textit{backtrack}, or \textit{stop} the animation. The state of the animation depends on what type of controls have been selected by the user, and below is a table \ref{tab:animationControls}, shows the outcome of the animation's state when a particular control button has been selected by the user.
+
+\begin{table}[H]
+\caption{The list of animation controls.}
+\begin{center}
+%\begin{tabular}{cc}
+\begin{tabular}{| p{4cm} | p{11cm} |}
+		\hline
+		\textbf{Control} & \textbf{Description} \\ \hline
+		Play & This button simply initiates the animation. Only available when the animation is either at its initial stage, \textit{paused}, or \textit{stopped}. \\ \hline
+     Pause & When a paused button is activated whilst the animation is playing, the animation stops temporarily. The stopped time will be saved, and will continue from that time if whenever the user chooses to play the animation. User can only pause the animation when the animation is being played. \\ \hline
+     Backtrack &  This is a unique feature that comes in with the program. As the animation is animated through the use of \textit{iterations}, these iteration values will be counted and stored programmatically. When a user clicks backtrack, the iteration counter, \textit{i}, will be brought back to the previous iteration, which is \textit{i - 1}. Once it goes back to its previous iteration, the animation will be brought to its \textit{paused} state. From here, the user can press \textit{play}, which will initiate the animation from that particular state. \\ \hline
+     Stops &  A stopped button will completely halt the process of the animation. Its final playing state will be discarded once a stop button is selected. \\ \hline
+\end{tabular}
+\end{center}
+\label{tab:animationControls}
+\end{table}
+
+\begin{landscape}
+\begin{figure}[H]
+\centering
+\hspace*{-2cm}
+\includegraphics[scale=0.9]{images/report_images/flowchartAnimation.png}
+\caption{The flowchart of the animation module.}
+\label{flowchartAnimation}
+\end{figure}
+\end{landscape}
+
+\newpage
+
+\subsection{Flow of the appendix module}
+Finally, the last module would be the appendix module, which will contain the supplementary material in regards to the algorithms that are used in this program. This basically lists all the algorithms that are used, and users can select any algorithm within that list to view more information about the algorithm.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-1.5cm}
+\includegraphics[scale=1]{images/report_images/flowchartAppendix.png}
+\caption{The flowchart of the appendix module.}
+\label{flowchartAppendix}
+\end{figure}
+
+The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking into one. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
+
+% --------------- UI DESIGN -------------------
+\section{Graphical User Interface design of the system}
+
+\subsection{Program start page}
+As the program first initiates, the UI design shown in figure \ref{uiStartWindow} will be the start page of the application. The start page displays the main menu of the application, which as mentioned earlier in sections \ref{}. 
+
+\begin{enumerate}
+\item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. Refer to section \ref{}, figure \ref{} for more details.
+\item The \textit{Change settings} button on the other hand, leads the user to a settings page.
+\item The \textit{View appendix} page brings the user to the main appendix list, which lists all the algorithms that is shown within the program.
+\item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-1.5cm}
+\includegraphics[scale=1]{images/report_images/uiStartWindow.png}
+\caption{The start page of the program}
+\label{uiStartWindow}
+\end{figure}
+
+\subsection{Settings page}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-1.5cm}
+\includegraphics[scale=1]{images/report_images/uiSettings.png}
+\caption{The settings page}
+\label{uiSettings}
+\end{figure}

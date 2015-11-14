@@ -3,5 +3,15 @@
 \BOOKMARK [1][-]{section.1.2}{Aims and objectives of this project}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Summary of research and analysis}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Design}{}% 5
-\BOOKMARK [1][-]{section.2.1}{Functional and non-functional requirements}{chapter.2}% 6
-\BOOKMARK [0][-]{table.2.3}{Todo list}{}% 7
+\BOOKMARK [1][-]{section.2.1}{System requirements}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Functional requirements}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Non-functional requirements}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{UML case diagram}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.3}{System flowcharts}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Main flow of the program}{section.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.3.2}{Flow of the animation module}{section.2.3}% 12
+\BOOKMARK [2][-]{subsection.2.3.3}{Flow of the appendix module}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Graphical User Interface design of the system}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{Program start page}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Settings page}{section.2.4}% 16
+\BOOKMARK [0][-]{figure.2.6}{Todo list}{}% 17
