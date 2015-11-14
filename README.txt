@@ -21,16 +21,27 @@ To complete during the weekends (14/11/2015 & 15/11/2015)
 
 What to include in the writeup? [finish by saturday 14/11/2015]
 1 - Summary of proposal
-	- brief statement of the background
-	- aims and objectives of the project
-	- necessary changes made from previous report
-	- summary of research and analysis carried out so far
+	- brief statement of the background [done]
+	- aims and objectives of the project [done]
+	- necessary changes made from previous report [not sure to do this]
+	- summary of research and analysis carried out so far 
 
 2 - Design [finish latest by Sunday 15/11/2015]
-	- description of anticipated  components of the system and how are they organised
+	- description of anticipated components of the system and how are they organised
 	- algorithms psuedo code
 	- design of the intended interfaces
 	- description of the evaluation
+
+	design chapter structure
+	- functional and non-functional requirements
+	- UML case diagram
+	- flowchart diagrams
+	- ui design diagrams
+	- UML class diagram
+	- sequence diagram (?)
+	- animation algorithm designs
+	- animation psuedo code
+	- evaluation design
 
 3 - Review against plan [finish latest by Monday 16/11/2015]
 	- plan produced as part of the specification
