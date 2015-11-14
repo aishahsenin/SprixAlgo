@@ -3,18 +3,20 @@
 \BOOKMARK [1][-]{section.1.2}{Aims and objectives of this project}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{Summary of research and analysis}{chapter.1}% 4
 \BOOKMARK [0][-]{chapter.2}{Design}{}% 5
-\BOOKMARK [1][-]{section.2.1}{System requirements}{chapter.2}% 6
-\BOOKMARK [2][-]{subsection.2.1.1}{Functional requirements}{section.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.1.2}{Non-functional requirements}{section.2.1}% 8
-\BOOKMARK [1][-]{section.2.2}{UML case diagram}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.3}{System flowcharts}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.3.1}{Main flow of the program}{section.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.3.2}{Flow of the animation module}{section.2.3}% 12
-\BOOKMARK [2][-]{subsection.2.3.3}{Flow of the appendix module}{section.2.3}% 13
-\BOOKMARK [1][-]{section.2.4}{Graphical User Interface design of the system}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.4.1}{Program start page}{section.2.4}% 15
-\BOOKMARK [2][-]{subsection.2.4.2}{Settings page}{section.2.4}% 16
-\BOOKMARK [2][-]{subsection.2.4.3}{List of algorithms page}{section.2.4}% 17
-\BOOKMARK [2][-]{subsection.2.4.4}{The page of the animation of the algorithm selected}{section.2.4}% 18
-\BOOKMARK [2][-]{subsection.2.4.5}{The appendix page}{section.2.4}% 19
-\BOOKMARK [0][-]{Item.27}{Todo list}{}% 20
+\BOOKMARK [1][-]{section.2.1}{Description of the design}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{System requirements}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.2.1}{Functional requirements}{section.2.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.2}{Non-functional requirements}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.3}{UML case diagram}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{System flowcharts}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{Main flow of the program}{section.2.4}% 12
+\BOOKMARK [2][-]{subsection.2.4.2}{Flow of the animation module}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.3}{Flow of the appendix module}{section.2.4}% 14
+\BOOKMARK [1][-]{section.2.5}{Graphical User Interface design of the system}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.5.1}{Program start page}{section.2.5}% 16
+\BOOKMARK [2][-]{subsection.2.5.2}{Settings page}{section.2.5}% 17
+\BOOKMARK [2][-]{subsection.2.5.3}{List of algorithms page}{section.2.5}% 18
+\BOOKMARK [2][-]{subsection.2.5.4}{The page of the animation of the algorithm selected}{section.2.5}% 19
+\BOOKMARK [2][-]{subsection.2.5.5}{The appendix page}{section.2.5}% 20
+\BOOKMARK [1][-]{section.2.6}{UML class diagram}{chapter.2}% 21
+\BOOKMARK [0][-]{section.2.6}{Todo list}{}% 22
