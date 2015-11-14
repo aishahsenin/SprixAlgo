@@ -33,9 +33,9 @@ What to include in the writeup? [finish by saturday 14/11/2015]
 	- description of the evaluation
 
 	design chapter structure
-	- functional and non-functional requirements
-	- UML case diagram
-	- flowchart diagrams
+	- functional and non-functional requirements [done]
+	- UML case diagram [done]
+	- flowchart diagrams [done]
 	- ui design diagrams
 	- UML class diagram
 	- sequence diagram (?)
