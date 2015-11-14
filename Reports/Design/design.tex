@@ -153,17 +153,9 @@ Finally, the last module would be the appendix module, which will contain the su
 The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking into one. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
 
 % --------------- UI DESIGN -------------------
+\newpage
 \section{Graphical User Interface design of the system}
-
 \subsection{Program start page}
-As the program first initiates, the UI design shown in figure \ref{uiStartWindow} will be the start page of the application. The start page displays the main menu of the application, which as mentioned earlier in sections \ref{}. 
-
-\begin{enumerate}
-\item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. Refer to section \ref{}, figure \ref{} for more details.
-\item The \textit{Change settings} button on the other hand, leads the user to a settings page.
-\item The \textit{View appendix} page brings the user to the main appendix list, which lists all the algorithms that is shown within the program.
-\item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
-\end{enumerate}
 
 \begin{figure}[H]
 \centering
@@ -173,12 +165,87 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 \label{uiStartWindow}
 \end{figure}
 
+As the program first initiates, the UI design shown in figure \ref{uiStartWindow} will be the start page of the application. The start page displays the main menu of the application, which as mentioned earlier in sections \ref{}. 
+
+\begin{enumerate}
+\item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. Refer to section \ref{}, figure \ref{} for more details.
+\item The \textit{Change settings} button on the other hand, leads the user to a settings page.
+\item The \textit{View appendix} page brings the user to the main appendix list, which lists all the algorithms that is shown within the program.
+\item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
+\end{enumerate}
+
+\newpage
+
 \subsection{Settings page}
 
 \begin{figure}[H]
 \centering
-%\hspace*{-1.5cm}
-\includegraphics[scale=1]{images/report_images/uiSettings.png}
-\caption{The settings page}
+\hspace*{-0.5cm}
+\includegraphics[scale=0.8]{images/report_images/uiSettings.png}
+\caption{The settings page.}
 \label{uiSettings}
 \end{figure}
+
+On the \textit{Settings} page, users can adjust several features of the program, for this case, the font size, and the animation speed. The reason for having a settings page is to ensure that the users will have the ease in working in a comfortable environment.
+
+\begin{enumerate}
+\item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 9pt. The default size on the other hand is 12pt, followed by the largest possible size is 18pt. The user can adjust the font size from 9pt (smallest) to 18pt (biggest) by using the slider.
+\item Secondly, the user can also change the animation speed. Initially, the animation will be running on a default speed of \todo[color=orange]{find the specific speed of the animation!}. However, if the speed is either too fast or slow for the user, the user could always adjust the speed by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
+\end{enumerate}
+
+\subsection{List of algorithms page}
+
+\begin{figure}[H]
+\centering
+\hspace*{-0.5cm}
+\includegraphics[scale=0.8]{images/report_images/uiListOfAlgorithms.png}
+\caption{The page that shows the list of algorithms available for animation.}
+\label{uiListOfAlgorithms}
+\end{figure}
+
+In this page basically shows the list of all the algorithms that are available in animation. These algorithms are also to be classified between the three main algorithmic paradigms, which are \textit{greedy method}, \textit{divide and conquer}, and \textit{dynamic programming} approaches. Also, another classification would be the sorting algorithms will be included in the list as well. \textit{Note that the size of program has been extended in order to fit all the whole list of algorithms within one screenshot.}
+
+\begin{enumerate}
+\item Shows the list of all the algorithms available. These algorithms are also classified according to its respective algorithmic paradigms. Users can click any of those algorithms displayed in that list if they wish to learn more about them.
+\end{enumerate}
+
+\subsection{The page of the animation of the algorithm selected}
+
+\begin{figure}[H]
+\centering
+\hspace*{-0.5cm}
+\includegraphics[scale=0.7]{images/report_images/uiInputAnimation.png}
+\caption{The page that shows requests the input from the user before starting the animation of the algorithm.}
+\label{uiInputAnimation}
+\end{figure}
+
+\begin{enumerate}
+\item The title of the algorithm in question.
+\item The form page of the list of input that is required for the heap sort animation.
+\item As all fields are equipped with validation, it will throw an error message in regards to the field if it happens to receive the wrong input. For this case, the user fails to insert a numerical value.
+\item Another option instead of adding the user's own input is to generate random values for the animation.
+\item This button submits the values and proceeds to the next page, shown in figure \ref{uiAnimation}.
+\item This button simply brings the user back to the list of algorithms.
+\item This dialog will be prompted once the user clicks the \textit{Submit} button. This is to ensure that the user is happy with the input they have given. From here, if they click \textit{No, make further changes}, the dialog will close, and the page remains the same. If the user clicks \textit{Yes, proceed}, the program will proceed to the next page, which is shown in figure \ref{uiAnimation}.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\hspace*{-0.5cm}
+\includegraphics[scale=0.8]{images/report_images/uiAnimation.png}
+\caption{The page that shows the animation of the algorithm.}
+\label{uiAnimation}
+\end{figure}
+
+\begin{enumerate}
+\item The title of the algorithm in question.
+\item The section of the page where the animation of the algorithm is carried out.
+\item The backtrack button.
+\item The pause button.
+\item The play button. Turns red when the animation is at the \textit{playing state}. This applies to other control buttons as well.
+\item The stop button.
+\item The number of iteration the animation is currently at. Every time the animation finishes its \textit{main loop}, the iteration counter is added, and it will be displayed here.
+\item The area where a written information regarding the animation is displayed. Every time an animation displays something new, a new text block is displayed here, along with the numbers (variables) involved the animation. Once the animation has moved on to the next step, the text mentioned will be greyed out, as the new text will be the one that is emphasized. 
+\item The button simply brings the user back to the previous page which would be the main list of algorithms. Whatever that is played in the animation will be discarded.
+\end{enumerate}
+
