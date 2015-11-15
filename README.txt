@@ -68,8 +68,8 @@ algorithms to use
 
 Sunday
 Fractional knapsack problem [done]
-Knapsack problem [done, yet to write about it on the report]
-Activity Selection Problem 
+Knapsack problem [done]
+Activity Selection Problem [done]
 Huffman code 
 
 Monday
@@ -81,6 +81,7 @@ Tueday
 Rod cutting problem 
 Weighted activity selection problem 
 Bubble sort 
+Evaluation list
 
 Wednesday
 Insertion sort 

@@ -31,7 +31,7 @@
 
 \newpage
    
-\begin{table}[ht]
+\begin{table}[H]
 \caption{Functional requirements of the software}
 \begin{center}
 %\begin{tabular}{cc}
@@ -53,7 +53,7 @@
 
 \subsection{Non-functional requirements}
 \todo[color=yellow]{Not sure if saved settings belong in non-functional}
-\begin{table}[ht]
+\begin{table}[H]
 \caption{Non-functional requirements of the software}
 \begin{center}
 %\begin{tabular}{cc}
@@ -99,7 +99,7 @@ Other than the settings and the animated feature, if the user ever wishes to kno
 In this section, I have included the flowcharts of the program, to display the how the program flows in general, and how decisions controls its following events. 
 
 \subsection{Main flow of the program}
-The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The three main modules which makes up the program, i.e. change settings, view the animation of algorithms, and the appendix, are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, for the animation module, and \ref{} for the appendix module.
+The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The three main modules which makes up the program, i.e. change settings, view the animation of algorithms, and the appendix, are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, for the animation module, and \ref{sec:flowchartAppendix} for the appendix module.
 
 \begin{figure}[H]
 \centering
@@ -109,14 +109,14 @@ The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the 
 \label{mainFlowChart}
 \end{figure}
 
-On the main flow chart below, the user first starts the application, which then brings them to the main menu. From the main menu, the user can select up to three features they wish to use, which are \textit{Select}, \textit{List of Algorithms}, and \textit{Appendix}. Doing so will bring to the respective features. From the main menu, the user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
+On the main flow chart below, the user first starts the application, which then brings them to the main menu. From here, the user can select up to three features they wish to use, which are \textit{Settings}, \textit{List of Algorithms}, and \textit{Appendix}. The user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
 
 \subsection{Flow of the animation module} \label{sec:flowchartAnimation}
-The animation module is admittedly the main feature of the program that will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, which then leads to the animation module. From here, there will be a list of the algorithms classified between 3 main paradigms and a sorting algorithm section. When a user selects an algorithm they wish to view, this will lead them to a page where the animation (in stopped mode), and the small description in regards to the algorithm. 
+The animation module is admittedly the main feature of the program which will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, that leads to the animation module. From here, a list of the algorithms are classified between 3 main paradigms and a sorting algorithm into different sections for user feasibility purpose. When the user selects an algorithm they wish to learn more about, the program would lead them to a page where the animation is, and a brief description about the algorithm shown in the \textit{Information} section placed below the animation. 
 
-The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects to generate random value, the program will generate a random value within the limited amount assigned.
+The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable, and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects the \textit{Generate random value} button instead, the program would then generate a random value within the limited amount assigned, and input those value into the animation.
 
-Once an input has been either retrieved or generated, the user then will able to play the animation by pressing the play button. Whilst the animation is at its \textit{playing state}, the user can control the animation by either \textit{pause}, \textit{backtrack}, or \textit{stop} the animation. The state of the animation depends on what type of controls have been selected by the user, and below is a table \ref{tab:animationControls}, shows the outcome of the animation's state when a particular control button has been selected by the user.
+Once an input has been either retrieved, the user then will able to play the animation by pressing the play button. Whilst the animation is at its \textit{playing state}, the user can control the animation by either \textit{pause}, \textit{backtrack}, or \textit{stop} the animation. The state of the animation depends on the type of controls that have been selected by the user. To view the description of each control available in the animation page, below on table \ref{tab:animationControls} that shows the outcome of the animation's state when a particular control button has been selected by the user.
 
 \begin{table}[H]
 \caption{The list of animation controls.}
@@ -125,9 +125,9 @@ Once an input has been either retrieved or generated, the user then will able to
 \begin{tabular}{| p{4cm} | p{11cm} |}
 		\hline
 		\textbf{Control} & \textbf{Description} \\ \hline
-		Play & This button simply initiates the animation. Only available when the animation is either at its initial stage, \textit{paused}, or \textit{stopped}. \\ \hline
+		Play & This button simply initiates the animation. This button is only available for use when the animation is either at its initial stage, \textit{paused}, or \textit{stopped}. \\ \hline
      Pause & When a paused button is activated whilst the animation is playing, the animation stops temporarily. The stopped time will be saved, and will continue from that time if whenever the user chooses to play the animation. User can only pause the animation when the animation is being played. \\ \hline
-     Backtrack &  This is a unique feature that comes in with the program. As the animation is animated through the use of \textit{iterations}, these iteration values will be counted and stored programmatically. When a user clicks backtrack, the iteration counter, \textit{i}, will be brought back to the previous iteration, which is \textit{i - 1}. Once it goes back to its previous iteration, the animation will be brought to its \textit{paused} state. From here, the user can press \textit{play}, which will initiate the animation from that particular state. \\ \hline
+     Backtrack &  This is a unique feature that comes in with the program. As the animation is animated through the use of \textit{iterations}, these iteration values will be counted and stored programmatically. When a user clicks this button, the iteration counter, \textit{i}, will be brought back to the previous iteration, which is \textit{i - 1}. Once it goes back to its previous iteration, the animation will be brought to its \textit{paused} state. From here, the user can press \textit{play}, which will initiate the animation from that particular state. \\ \hline
      Stops &  A stopped button will completely halt the process of the animation. Its final playing state will be discarded once a stop button is selected. \\ \hline
 \end{tabular}
 \end{center}
@@ -146,7 +146,7 @@ Once an input has been either retrieved or generated, the user then will able to
 
 \newpage
 
-\subsection{Flow of the appendix module}
+\subsection{Flow of the appendix module} \label{sec:flowchartAppendix}
 Finally, the last module would be the appendix module, which will contain the supplementary material in regards to the algorithms that are used in this program. This basically lists all the algorithms that are used, and users can select any algorithm within that list to view more information about the algorithm.
 
 \begin{figure}[H]
@@ -157,7 +157,7 @@ Finally, the last module would be the appendix module, which will contain the su
 \label{flowchartAppendix}
 \end{figure}
 
-The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking into one. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
+The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking one from the list. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
 
 \newpage
 
@@ -174,10 +174,10 @@ The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events
 \label{uiStartWindow}
 \end{figure}
 
-As the program first initiates, the UI design shown in figure \ref{uiStartWindow} will be the start page of the application. The start page displays the main menu of the application, which as mentioned earlier in sections \ref{}. 
+As the program first initiates, the UI design shown in figure \ref{uiStartWindow} will be the start page of the application. The start page displays the main menu of the application. 
 
 \begin{enumerate}
-\item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. Refer to section \ref{}, figure \ref{} for more details.
+\item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. 
 \item The \textit{Change settings} button on the other hand, leads the user to a settings page.
 \item The \textit{View appendix} page brings the user to the main appendix list, which lists all the algorithms that is shown within the program.
 \item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
@@ -195,10 +195,10 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 \label{uiSettings}
 \end{figure}
 
-On the \textit{Settings} page, users can adjust several features of the program, for this case, the font size, and the animation speed. The reason for having a settings page is to ensure that the users will have the ease in working in a comfortable environment.
+On the \textit{Settings} page, users can adjust several features of the program, such as the font size, and the animation speed. The reason for having a settings page is to ensure that the users are working in an environment that they are most comfortable in.
 
 \begin{enumerate}
-\item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 9pt. The default size on the other hand is 12pt, followed by the largest possible size is 18pt. The user can adjust the font size from 9pt (smallest) to 18pt (biggest) by using the slider.
+\item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 9pt. The default size on the other hand is 12pt, followed by the largest possible size is 18pt. 
 \item Secondly, the user can also change the animation speed. Initially, the animation will be running on a default speed of \todo[color=orange]{find the specific speed of the animation!}. However, if the speed is either too fast or slow for the user, the user could always adjust the speed by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
 \end{enumerate}
 
@@ -334,11 +334,11 @@ Once the animation has stopped, either by the user or the animation simply reach
 \label{sequenceDiagramSettings}
 \end{figure}
 
-Another feature that is available in the program would be the settings feature. Based on the sequence diagram in figure \ref{sequenceDiagramSettings}, when the user opens the program, the program will call the \textit{displayMenu()} method to display the main menu onto the client. For this case, the user then selects \textit{Settings} button, which leads them to the settings page, called out by the \textit{displaySettings()} method.
+Another feature that is available in the program would be the settings feature. Based on the sequence diagram in figure \ref{sequenceDiagramSettings}, as when the user opens the program, the program will call the \textit{displayMenu()} method to display the main menu onto the client. The user then selects \textit{Settings} button, which leads them to the settings page, which would be called out by the \textit{displaySettings()} method.
 
-In the settings page, the user can change features such as the font size and the animation speed. When the user decides to change the font size by using the drag controller, the \textit{changeFontSize()} method is being called out, with the current value depending on where the selector along the slider. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
+Once the user is in the settings page, the user can change features such as the font size and the animation speed. If the user decides to change the font size, the \textit{changeFontSize()} method is being called out. When the method is called, it passes the parameter of the font size chosen by the user, and uses it to make necessary changes to the font size. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
 
-Once the user is done with changing the settings, they could press the \textit{Back} button, which leads them back to the main menu. To see the graphical interface design of the settings page, do refer to figure \ref{uiSettings}, on page \pageref{uiSettings}.
+Once the user is done with changing the settings, they could then press the \textit{Back} button, which leads them back to the main menu. To see the graphical interface design of the settings page, do refer to figure \ref{uiSettings}, on page \pageref{uiSettings}.
 
 \newpage
 
@@ -352,11 +352,9 @@ Once the user is done with changing the settings, they could press the \textit{B
 \label{sequenceDiagramAppendix}
 \end{figure}
 
-Last but not least, the appendix would be the other feature that would be available in the \textit{Algorithm Animation} program. As per usual, as when the user initiates the program, the user would be led to the main menu. Once there, the user then clicks the \textit{View appendix} button, which calls out the \textit{displayAppendixList()} method, and leads the user to the appendix page.
+Last but not least, the appendix would be the other feature that would be available in the \textit{Algorithm Animation} program. From the main menu, the user clicks the \textit{View appendix} button, which calls out the \textit{displayAppendixList()} method, and leads the user to the appendix page. Once the appendix page is displayed, the user could select the algorithm they wish to find out more about, within the list presented on the page. Once the user selects one, the program calls out the \textit{displayAlgorithmInfo()} with the name of the algorithm as the passing parameter, which displays the information available for the algorithm.
 
-Once the appendix page has been displayed, the user then can select the algorithm they wish to find out more about, within the list presented on the page. Once the user clicks one, the program calls out the \textit{displayAlgorithmInfo()} with the name of the algorithm as the passing parameter, which displays the information available for the algorithm.
-
-When the user is done, the \textit{Back} button can be selected, which leads them back to the main menu. If you wish to refer to the graphical user interface design of the appendix page, refer to figure \ref{uiAppendix} in page \pageref{uiAppendix}.
+When the user is done, the \textit{Back} button can be selected, which leads them back to the main menu. Like before, if you wish to refer to the graphical user interface design of the appendix page, refer to figure \ref{uiAppendix} in page \pageref{uiAppendix}.
 
 \newpage
 
@@ -375,7 +373,7 @@ The Fractional Knapsack Problem is one of the algorithms that uses a combinatori
 \label{animationDesignFractionalKnapsackProblem}
 \end{figure}
 
-The graphical interface of the Fractional Knapsack Problem algorithm shown in figure \ref{animationDesignFractionalKnapsackProblem} is the initial state of the animation. The animation consists of the items, which are represented in cubes, along with its values, i.e. weight and value of the item. Other than the items, there will also be an image of a rucksack which basically represents the idea of a knapsack. The values of the knapsack is its max weight, the maximum amount of weight it can possible carry, and the current weight it is carrying now.
+The graphical interface of the Fractional Knapsack Problem algorithm shown in figure \ref{animationDesignFractionalKnapsackProblem} is the initial state of the animation. The animation consists of the items, which are represented in cubes, along with its values, i.e. weight and value of the item. Other than the items, there will also be an image of a rucksack that represents the knapsack. The knapsack has its max weight, which is the maximum amount of weight it can possible carry, and the current weight it is carrying now.
 
 Note that I have not included the control buttons in these designs. This section is mainly to emphasize the design of the animation of the algorithm in question. If you would like to refer to the design of the actual graphical interface within the animation page, do have a look at section \ref{uiDesign}, on page \pageref{uiDesign} for more details.
 
@@ -409,7 +407,7 @@ This part of the animation is when the items are re-arranged according to their 
 
 Once the items are finally arranged, it is now time to add the items into the knapsack. The animation will represented that by dragging the item in its current iteration next to the knapsack. An arrow will then appear next to the item to represent the act of adding the item into the knapsack. 
 
-When the item is added into the knapsack, there will be a change on the \textit{Current weight} value. As you can see in the diagram shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP3}, that the \textit{Current weight} value is now 5. This shows that the whole of item 2 has been added into the knapsack, which holds a total weight of 5.
+When the item in question is added into the knapsack, there will be a change on the \textit{Current weight} value. As you can see in the diagram shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP3}, that the \textit{Current weight} value is now 5. This shows that the whole of item 2 has been added into the knapsack, which holds a total weight of 5.
 
 \begin{figure}[H]
 \centering
@@ -421,7 +419,7 @@ When the item is added into the knapsack, there will be a change on the \textit{
 
 Shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP4}, there is an exception to this animation, that the knapsack, can no longer contain the total weight of the item in question. So, the animation program will inform the user, under the information section, that it can't insert the whole of item in question. This proceeds the animation to add fractions of the item instead, and doing a simple calculation (ratio * amount of weight left in the bag) along it as well. You can clearly see this calculation clearly above the arrow.
 
-As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. This conclusion is shown in the in figure \ref{animationDesignFractionalKnapsackProblem_STEP5}, on page \pageref{animationDesignFractionalKnapsackProblem_STEP5}.
+As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. This design of the animation when it reaches to its conclusion is shown in the in figure \ref{animationDesignFractionalKnapsackProblem_STEP5}, on page \pageref{animationDesignFractionalKnapsackProblem_STEP5}.
 
 \begin{figure}[H]
 \centering
@@ -433,21 +431,29 @@ As when the calculation is complete, and the knapsack's current weight has reach
 
 \subsection{Knapsack Problem}
 
+\todo[color=yellow]{Brief description of the knapsack problem}
+
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=0.85]{images/report_images/animationDesignKnapsackProblem.png}
-\caption{The animation design of the Knapsack Problem.}
+\includegraphics[scale=0.7]{images/report_images/animationDesignKnapsackProblem.png}
+\caption{The initial state of the animation design of the Knapsack Problem. It shows that it is describing what the tables are.}
 \label{animationDesignKnapsackProblem}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP1.png}
-\caption{The animation design of the Knapsack Problem.}
+\includegraphics[scale=0.7]{images/report_images/animationDesignKnapsackProblem_STEP1.png}
+\caption{Another state after figure \ref{animationDesignKnapsackProblem} where the animation goes on describing the other table.}
 \label{animationDesignKnapsackProblem_STEP1}
 \end{figure}
+
+As when the animation of the knapsack problem starts (refer to figure \ref{animationDesignKnapsackProblem} and figure \ref{animationDesignKnapsackProblem_STEP1}), there will be a few texts which describes the tables that are found within the animation. Those texts found around the table basically describes the use of them, in order for the user to understand what they are for before the actual algorithm starts. These texts will remain here for about a 30 seconds, before proceeding to the next state.
+
+Within the \textit{Information} section, there will also be a brief description of what the algorithm is, and how is it different from the Fractional Knapsack algorithm. 
+
+Included in this animation, other than the ones mentioned before, are the items represented in cubes. Along with them are its values, which are its respective values and weight. Next to it is an image of a rucksack, that basically represents the knapsack, with values such as its maximum capacity, and the current weight it is holding. For its initial state, the current value is always 0.
 
 \begin{figure}[H]
 \centering
@@ -456,6 +462,10 @@ As when the calculation is complete, and the knapsack's current weight has reach
 \caption{The animation design of the Knapsack Problem.}
 \label{animationDesignKnapsackProblem_STEP2}
 \end{figure}
+
+Referring to figure \ref{animationDesignKnapsackProblem_STEP2}, after the explanation phase has completed, the algorithm of the knapsack problem begins. The algorithm begins by applying the sum of values obtained on the first row of the \textit{value table}. Since on the left side of the table is 0, meaning that there are no items selected, all the values are returned as 0 for the first row. The texts that are inserted into the table are turned red, simply to let the users know where to look in the animation. 
+
+As you can see on figure \ref{animationDesignKnapsackProblem_STEP3}, values are added into the \textit{keep table} as well after adding those values into the \textit{values table} previously.
 
 \begin{figure}[H]
 \centering
@@ -468,18 +478,12 @@ As when the calculation is complete, and the knapsack's current weight has reach
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=0.85]{images/report_images/animationDesignKnapsackProblem.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
 \includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP4.png}
 \caption{The animation design of the Knapsack Problem.}
 \label{animationDesignKnapsackProblem_STEP4}
 \end{figure}
+
+As the animation proceeds to the second row in figure \ref{animationDesignKnapsackProblem_STEP4}, the animation loops by doing the same thing previously on the first row. It refers to the top column, which is the weight of the knapsack to carry, which is highlighted with a green circle. Followed by the spot where the animation needs to compute the value for, which is highlighted with a red circle. Figure \ref{animationDesignKnapsackProblem_STEP4_1} shows the result with the inserted value.
 
 \begin{figure}[H]
 \centering
@@ -503,6 +507,58 @@ As when the calculation is complete, and the knapsack's current weight has reach
 \includegraphics[scale=0.9]{images/report_images/animationDesignKnapsackProblem_STEP6.png}
 \caption{The animation design of the Knapsack Problem.}
 \label{animationDesignKnapsackProblem_STEP6}
+\end{figure}
+
+Once filling up the \textit{value} and \textit{keep} table is completed, the algorithm looks through the keep table from the most bottom right hand side, to find out which item to keep. If the value is 1, it means that the item along that row is kept, and the total weight of the knapsack will be subtracted from the item. Do this along the column which is the maximum possible amount of capacity of the knapsack, in this case 5, until either the knapsack is full, or can no longer take in any more items. Finally once it has done that, show the total value (most optimum value you can achieve) that is taken away from the knapsack.
+
+\subsection{Activity Selection Problem}
+
+\todo[color=yellow]{Description of the Activity Selection Problem}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem.png}
+\caption{The animation design of the Activity Selection Problem.}
+\label{animationDesignActivitySelectionProblem}
+\end{figure}
+
+Shown in figure \ref{animationDesignActivitySelectionProblem}, is the initial stage of the animation before the algorithm starts. During this phase, the animation starts off by explaining the diagram, using the bright yellow callouts. Along with it, there is a further explanation about the objective of the algorithm within the information section below.
+
+Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm which is shown in figure \ref{animationDesignActivitySelectionProblem_STEP1}. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it  goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed (refer to figure \ref{animationDesignActivitySelectionProblem_STEP3}).
+
+Once there aren't any more activities left in the list of activities, shown in figure \ref{animationDesignActivitySelectionProblem_STEP4}, the optimal solution to the problem has been finalised. This is when the animation ends. 
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP1.png}
+\caption{The animation design of the Activity Selection Problem.}
+\label{animationDesignActivitySelectionProblem_STEP1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP2.png}
+\caption{The animation design of the Activity Selection Problem.}
+\label{animationDesignActivitySelectionProblem_STEP2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP3.png}
+\caption{The animation design of the Activity Selection Problem.}
+\label{animationDesignActivitySelectionProblem_STEP3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP4.png}
+\caption{The animation design of the Activity Selection Problem.}
+\label{animationDesignActivitySelectionProblem_STEP4}
 \end{figure}
 
 \todo[color=pink]{I left it off here}
