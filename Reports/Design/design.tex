@@ -71,6 +71,8 @@
 \label{tab:multicol}
 \end{table}
 
+\newpage
+
 % ---------- UML CASE DIAGRAM ----------
 \section{UML case diagram}
 The use case diagram below on figure \ref{useCaseDiagram} is the representation of what the user can do to interact with the system represented in use cases. It is basically shows the relationship between the user and the system, for this case the student's interaction with the algorithm animation program.
@@ -89,6 +91,8 @@ According to the use case diagram on figure \ref{useCaseDiagram}, firstly, the u
 Other than changing the settings, the user can also select an algorithm which they wish to learn. This will lead them to the page where the animation of the algorithm is. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. For more information in regards to these controls, refer to the \todo[color=orange]{add some glossary or some sort}. From this page, the user can also access the algorithms which are \textit{related} to the one in question, if they ever wish to do so. This will lead to the page of the algorithm along with its animation.
 
 Other than the settings and the animated feature, if the user ever wishes to know more about the algorithms, the user can view them in the appendix within the program. In the appendix, the user will find all the algorithms available in the program in a list. Once the user selects a particular one they wish to see, the page will display a fuller information in regards to the algorithm. This includes the written up information, and might also involve a few images as well.
+
+\newpage
 
 % --------------- FLOWCHART -------------------
 \section{System flowcharts}
@@ -155,9 +159,11 @@ Finally, the last module would be the appendix module, which will contain the su
 
 The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking into one. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
 
+\newpage
+
 % --------------- UI DESIGN -------------------
 \newpage
-\section{Graphical User Interface design of the system}
+\section{Graphical User Interface design of the system} \label{uiDesign}
 \subsection{Program start page}
 
 \begin{figure}[H]
@@ -282,8 +288,12 @@ In this page basically shows the list of all the algorithms that are available i
 \item This section on the other hand displays whatever information about the algorithm selected from the list in no. 1.
 \end{enumerate}
 
+\newpage
+
 % -------------- UML Class diagram --------------
 \section{UML class diagram}
+
+\newpage
 
 %--------------- UML Sequence Diagram ----------
 \section{UML Sequence Diagram}
@@ -347,5 +357,152 @@ Last but not least, the appendix would be the other feature that would be availa
 Once the appendix page has been displayed, the user then can select the algorithm they wish to find out more about, within the list presented on the page. Once the user clicks one, the program calls out the \textit{displayAlgorithmInfo()} with the name of the algorithm as the passing parameter, which displays the information available for the algorithm.
 
 When the user is done, the \textit{Back} button can be selected, which leads them back to the main menu. If you wish to refer to the graphical user interface design of the appendix page, refer to figure \ref{uiAppendix} in page \pageref{uiAppendix}.
+
+\newpage
+
+% ------------- Algorithm animation design ----------------
+\section{Algorithm animation designs}
+In this section, I will present you the designs of the animations that will be included in the \textit{Algorithm Animation} program. This section is to propose an idea how the animation will look and act like, and to give a guidance on how to develop them during the implementation stage. Alongside with the design of the animation, I will also include a brief description about the algorithm, and whatever is happening within the animation.
+
+\subsection{Fractional Knapsack Problem}
+The Fractional Knapsack Problem is one of the algorithms that uses a combinatorial optimisation strategy in which the goal is to fill the knapsack, with fractional amounts of items until it reaches to its maximised value. This algorithm predominantly uses the greedy method approach in order to reach to its optimal solution. Within this section, I have included the design of how the animation for this algorithm will turn out to be, along with its descriptions that describes each of the different processes that happens during the play time of the animation.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem.png}
+\caption{The animation design of the FractionalKnapsackProblem. This shows the initial state of the animation.}
+\label{animationDesignFractionalKnapsackProblem}
+\end{figure}
+
+The graphical interface of the Fractional Knapsack Problem algorithm shown in figure \ref{animationDesignFractionalKnapsackProblem} is the initial state of the animation. The animation consists of the items, which are represented in cubes, along with its values, i.e. weight and value of the item. Other than the items, there will also be an image of a rucksack which basically represents the idea of a knapsack. The values of the knapsack is its max weight, the maximum amount of weight it can possible carry, and the current weight it is carrying now.
+
+Note that I have not included the control buttons in these designs. This section is mainly to emphasize the design of the animation of the algorithm in question. If you would like to refer to the design of the actual graphical interface within the animation page, do have a look at section \ref{uiDesign}, on page \pageref{uiDesign} for more details.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP1.png}
+\caption{The animation design of the FractionalKnapsackProblem.}
+\label{animationDesignFractionalKnapsackProblem_STEP1}
+\end{figure}
+
+The next step of this animation shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP1}, is simply to follow the process of the animation. In this design, the animation is currently at the stage where it needs to calculate each of the items' value to weight ratio. The animation simply adds another value to each of those items called \textit{Ratio}, that shows the results to the calculation.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP2.png}
+\caption{The animation design of the FractionalKnapsackProblem.}
+\label{animationDesignFractionalKnapsackProblem_STEP2}
+\end{figure}
+
+This part of the animation is when the items are re-arranged according to their value to weight ratios. As you can see in figure \ref{animationDesignFractionalKnapsackProblem_STEP2}, that the items are re-arranged accordingly. 
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP3.png}
+\caption{The animation design of the FractionalKnapsackProblem.}
+\label{animationDesignFractionalKnapsackProblem_STEP3}
+\end{figure}
+
+Once the items are finally arranged, it is now time to add the items into the knapsack. The animation will represented that by dragging the item in its current iteration next to the knapsack. An arrow will then appear next to the item to represent the act of adding the item into the knapsack. 
+
+When the item is added into the knapsack, there will be a change on the \textit{Current weight} value. As you can see in the diagram shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP3}, that the \textit{Current weight} value is now 5. This shows that the whole of item 2 has been added into the knapsack, which holds a total weight of 5.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP4.png}
+\caption{The animation design of the FractionalKnapsackProblem.}
+\label{animationDesignFractionalKnapsackProblem_STEP4}
+\end{figure}
+
+Shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP4}, there is an exception to this animation, that the knapsack, can no longer contain the total weight of the item in question. So, the animation program will inform the user, under the information section, that it can't insert the whole of item in question. This proceeds the animation to add fractions of the item instead, and doing a simple calculation (ratio * amount of weight left in the bag) along it as well. You can clearly see this calculation clearly above the arrow.
+
+As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. This conclusion is shown in the in figure \ref{animationDesignFractionalKnapsackProblem_STEP5}, on page \pageref{animationDesignFractionalKnapsackProblem_STEP5}.
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP5.png}
+\caption{The animation design of the FractionalKnapsackProblem.}
+\label{animationDesignFractionalKnapsackProblem_STEP5}
+\end{figure}
+
+\subsection{Knapsack Problem}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.85]{images/report_images/animationDesignKnapsackProblem.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP1.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP2.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP2}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP3.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP3}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.85]{images/report_images/animationDesignKnapsackProblem.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP4.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP4}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP4_1.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP4_1}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP5.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP5}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=0.9]{images/report_images/animationDesignKnapsackProblem_STEP6.png}
+\caption{The animation design of the Knapsack Problem.}
+\label{animationDesignKnapsackProblem_STEP6}
+\end{figure}
 
 \todo[color=pink]{I left it off here}
