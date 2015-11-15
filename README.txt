@@ -28,17 +28,14 @@ What to include in the writeup? [finish by saturday 14/11/2015]
 
 2 - Design [finish latest by Sunday 15/11/2015]
 	- description of anticipated components of the system and how are they organised
-	- algorithms psuedo code
-	- design of the intended interfaces
-	- description of the evaluation
 
 	design chapter structure
 	- functional and non-functional requirements [done]
 	- UML case diagram [done]
 	- flowchart diagrams [done]
 	- ui design diagrams [done]
-	- UML class diagram
-	- sequence diagram (?)
+	- UML class diagram [in progress - still need classes for individual algorithms]
+	- sequence diagram [done]
 	- animation algorithm designs [15/11/15]
 	- animation psuedo code [15/11/15]
 	- evaluation design [15/11/15]
