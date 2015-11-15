@@ -56,6 +56,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.2}Knapsack Problem}{32}{subsection.2.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.3}Activity Selection Problem}{38}{subsection.2.8.3}
+\contentsline {subsection}{\numberline {2.8.3}Activity Selection Problem}{39}{subsection.2.8.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Todo list}{43}{section*.11}

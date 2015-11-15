@@ -483,7 +483,7 @@ As you can see on figure \ref{animationDesignKnapsackProblem_STEP3}, values are 
 \label{animationDesignKnapsackProblem_STEP4}
 \end{figure}
 
-As the animation proceeds to the second row in figure \ref{animationDesignKnapsackProblem_STEP4}, the animation loops by doing the same thing previously on the first row. It refers to the top column, which is the weight of the knapsack to carry, which is highlighted with a green circle. Followed by the spot where the animation needs to compute the value for, which is highlighted with a red circle. Figure \ref{animationDesignKnapsackProblem_STEP4_1} shows the result with the inserted value.
+As the animation proceeds to the second row in figure \ref{animationDesignKnapsackProblem_STEP4}, where the animation loops by doing the same thing previously on the first row. It refers to the top column, which is the weight of the knapsack to carry, which is highlighted with a green circle. Followed by the spot where the animation needs to compute the value for, which is highlighted with a red circle. Figure \ref{animationDesignKnapsackProblem_STEP4_1} shows the result with the inserted value.
 
 \begin{figure}[H]
 \centering
@@ -511,8 +511,9 @@ As the animation proceeds to the second row in figure \ref{animationDesignKnapsa
 
 Once filling up the \textit{value} and \textit{keep} table is completed, the algorithm looks through the keep table from the most bottom right hand side, to find out which item to keep. If the value is 1, it means that the item along that row is kept, and the total weight of the knapsack will be subtracted from the item. Do this along the column which is the maximum possible amount of capacity of the knapsack, in this case 5, until either the knapsack is full, or can no longer take in any more items. Finally once it has done that, show the total value (most optimum value you can achieve) that is taken away from the knapsack.
 
-\subsection{Activity Selection Problem}
+\newpage
 
+\subsection{Activity Selection Problem}
 \todo[color=yellow]{Description of the Activity Selection Problem}
 
 \begin{figure}[H]
@@ -523,9 +524,9 @@ Once filling up the \textit{value} and \textit{keep} table is completed, the alg
 \label{animationDesignActivitySelectionProblem}
 \end{figure}
 
-Shown in figure \ref{animationDesignActivitySelectionProblem}, is the initial stage of the animation before the algorithm starts. During this phase, the animation starts off by explaining the diagram, using the bright yellow callouts. Along with it, there is a further explanation about the objective of the algorithm within the information section below.
+Shown in figure \ref{animationDesignActivitySelectionProblem}, is the initial stage of the activity selection animation during its starting phase. During this phase, the animation starts off by explaining parts of the diagram, using the bright yellow callouts. Along with it, there is a further explanation about the objective of the algorithm within the information section below.
 
-Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm which is shown in figure \ref{animationDesignActivitySelectionProblem_STEP1}. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it  goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed (refer to figure \ref{animationDesignActivitySelectionProblem_STEP3}).
+Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm which is shown in figure \ref{animationDesignActivitySelectionProblem_STEP1}. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed (refer to figure \ref{animationDesignActivitySelectionProblem_STEP3}).
 
 Once there aren't any more activities left in the list of activities, shown in figure \ref{animationDesignActivitySelectionProblem_STEP4}, the optimal solution to the problem has been finalised. This is when the animation ends. 
 
