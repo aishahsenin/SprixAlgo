@@ -50,7 +50,7 @@ What to include in the writeup? [finish by saturday 14/11/2015]
 algorithms to use
 -----------------
 1 - greedy algorithm
-	- fractional knapsack problem
+	- fractional knapsack problem [done]
 	- activity selection problem
 	- huffman codes
 
@@ -65,3 +65,25 @@ algorithms to use
 4 - sorting algorithms
 		binary search tree
 		merge and sort
+
+Sunday
+Fractional knapsack problem [done]
+Knapsack problem [done, yet to write about it on the report]
+Activity Selection Problem 
+Huffman code 
+
+Monday
+Merge sort 
+Matrix Multiplication 
+Review against plan
+
+Tueday
+Rod cutting problem 
+Weighted activity selection problem 
+Bubble sort 
+
+Wednesday
+Insertion sort 
+Heap sort
+Class diagram
+Last minute changes
