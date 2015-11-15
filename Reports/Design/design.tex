@@ -285,3 +285,67 @@ In this page basically shows the list of all the algorithms that are available i
 % -------------- UML Class diagram --------------
 \section{UML class diagram}
 
+%--------------- UML Sequence Diagram ----------
+\section{UML Sequence Diagram}
+
+\todo[color=yellow]{brief description about sequence diagram}
+
+
+\subsection{The animation feature}
+The sequence diagram shown in figure \ref{sequenceDiagramShowAlgorithmList} shows the interaction between the user and the different objects involved within the animation module found in the program. First and foremost, as the user initiates the program, the program will display the main menu by executing the \textit{displayMenu()} method. From there, the user selects (for this case) the \textit{List of algorithms} button, which leads the user to the main list of algorithms.
+
+The user then can pick any algorithm they wish to learn from this list. For example, the uses decides to learn how the merge sort algorithm works. So the user clicks the button called \textit{Merge sort algorithm}, which then leads the user to the next page, the input request page, or known as \textit{AlgorithmAnimationInputRequest} according to the sequence diagram in figure \ref{sequenceDiagramShowAlgorithmList}.
+
+Once the values have been inserted, the program proceeds to the animation page by calling out the \textit{displayAnimation()} method, along with the \textit{play()} method that plays the animation. Once the animation is playing, the user can manipulate the animation by using the control buttons such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} button. Each of these controls has its own call of method, and will be called accordingly depending on which control button is pressed. 
+
+If any control button is pressed, the program then calls out the \textit{displayAnimationRealTime()} method. This method predominantly used to run the animations, such as keeping track of the iteration(s) of where the animation is currently at, and also tracks where the timing of the animation is currently at when a control button is clicked. Of course, the latter does not apply to the \textit{stop} button, as the animation will be told to immediately reach to the end once the animation has stopped. 
+
+Once the animation has stopped, either by the user or the animation simply reaches to its own end, the program will then give the user an option of viewing other algorithms that are similar to the one in question, by calling the \textit{getSuggestedAlgorithms()} method. The user can either click one of the suggested algorithms, or choose to go back, which brings them to the main algorithm list.
+
+\begin{landscape}
+\begin{figure}[H]
+\centering
+%\hspace*{-1.5cm}
+\includegraphics[scale=0.55]{images/report_images/sequenceDiagramShowAlgorithmList.png}
+\caption{The sequence diagram of when the user uses the animation feature.}
+\label{sequenceDiagramShowAlgorithmList}
+\end{figure}
+\end{landscape}
+
+\newpage
+
+\subsection{The settings feature}
+
+\begin{figure}[H]
+\centering
+\hspace*{-1cm}
+\includegraphics[scale=0.9]{images/report_images/sequenceDiagramSettings.png}
+\caption{The sequence diagram of when the user uses the settings feature.}
+\label{sequenceDiagramSettings}
+\end{figure}
+
+Another feature that is available in the program would be the settings feature. Based on the sequence diagram in figure \ref{sequenceDiagramSettings}, when the user opens the program, the program will call the \textit{displayMenu()} method to display the main menu onto the client. For this case, the user then selects \textit{Settings} button, which leads them to the settings page, called out by the \textit{displaySettings()} method.
+
+In the settings page, the user can change features such as the font size and the animation speed. When the user decides to change the font size by using the drag controller, the \textit{changeFontSize()} method is being called out, with the current value depending on where the selector along the slider. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
+
+Once the user is done with changing the settings, they could press the \textit{Back} button, which leads them back to the main menu. To see the graphical interface design of the settings page, do refer to figure \ref{uiSettings}, on page \pageref{uiSettings}.
+
+\newpage
+
+\subsection{The appendix feature}
+
+\begin{figure}[H]
+\centering
+%\hspace*{-0.5cm}
+\includegraphics[scale=1]{images/report_images/sequenceDiagramAppendix.png}
+\caption{The sequence diagram of when the user uses the appendix feature.}
+\label{sequenceDiagramAppendix}
+\end{figure}
+
+Last but not least, the appendix would be the other feature that would be available in the \textit{Algorithm Animation} program. As per usual, as when the user initiates the program, the user would be led to the main menu. Once there, the user then clicks the \textit{View appendix} button, which calls out the \textit{displayAppendixList()} method, and leads the user to the appendix page.
+
+Once the appendix page has been displayed, the user then can select the algorithm they wish to find out more about, within the list presented on the page. Once the user clicks one, the program calls out the \textit{displayAlgorithmInfo()} with the name of the algorithm as the passing parameter, which displays the information available for the algorithm.
+
+When the user is done, the \textit{Back} button can be selected, which leads them back to the main menu. If you wish to refer to the graphical user interface design of the appendix page, refer to figure \ref{uiAppendix} in page \pageref{uiAppendix}.
+
+\todo[color=pink]{I left it off here}
