@@ -441,13 +441,13 @@ Once the explanation phase is done, the animation carries on by initiating the a
 \label{animationDesignMergeSort}
 \end{figure}
 
-The merge sort algorithm is basically one of the sorting algorithms that uses the divide and conquer method to sort the contents of the array of values. The animation for the merge sort algorithm will emphasize mainly on the idea of a divide and conquer, that is made up one of the three algorithmic paradigms. 
+The merge sort algorithm is basically one of the sorting algorithms that uses the divide and conquer method to sort the contents of the array of values. The animation for the merge sort algorithm will emphasize mainly on the idea of a divide and conquer, which is one of the three algorithmic paradigms. 
 
 On the input page for the merge sort algorithm, will be the number of elements in array, followed by the values for each element of the array. The animation for this algorithm will be made simple, as you can see in figure \ref{animationDesignMergeSort}. First, is to have squares that represents each element of the array. These squares will initially be set next to the other squares with values clearly shown on them.
 
 As when the animation starts, the animation will clearly show the division it makes to divide the array into 2 parts, each side with an equal amount of elements to the other side (unless if the total number of elements is an odd number, then one side will have one more element than the other). The animation will keep on doing this until each of the elements divided will be left to one each. After which, the animation will proceed in taking the first element from the unsorted list, sorts and drags it down to another tier, and do the same for the rest until all the elements are sorted and merged as a whole. The animation then concludes by showing that it is finally sorted, and ends here.
 
-\newspace
+\newpage
 
 \subsection{Matrix multiplication}
 
@@ -463,10 +463,12 @@ The matrix multiplication problem is classified under the \textit{optimisation p
 
 The input page for the animation will consist of the number of matrices to compute and the size of each of those matrices. There will be some constraint when it comes to selecting the size of the matrix however, is that, the next matrix will need to have one of its sides to be the same value as one of the sides the first matrix as well, which is a basic rule for two matrices to be multiplied with one another.
 
-On the animation itself, it will present each matrix in a rectangular shaped, depending on the size that was given during the input stage. Above each matrix will also be an identifier, which format is \textit{Mi}, \textit{i} being the number of the matrix in the list. Below each of the rectangles will show the size of the matrix, which format goes as \textit{widthSize * lengthSize}, in order to depict the size of each rectangles.
+On the animation itself, it will present each matrix in a rectangular shaped figures, depending on the size that was given during the input stage. On top of each matrix will also be an identifier, which format is \textit{Mi}, \textit{i} being the number of the matrix in the list. Below each of the rectangles will show the size of the matrix, which format goes as \textit{widthSize * lengthSize}, in order to depict the size of each rectangles.
 
 During a part of the animation, the algorithm will pick the values for \textit{i} and \textit{j}, which are the values between the 1, the first matrix, and N, where it is the number of the last matrix in the list. Between these two values, there will also be \textit{k}, which is going to be used to compute the most efficient \textit{split} to be made, in order to achieve the minimal amount of scalar multiplications between the two lists of the matrices. In every iteration of the algorithm, the animation is to use \textit{k} as a splitter, and between the two parts of the list, find the minimum amount of scalar multiplications needed. And once the minimum has been found, the algorithm will conclude its answers, and ends.
 
 Since this problem uses dynamic programming, there is a need to add a table that goes with the animation as well. This table is what I call the \textit{i and j} table, which is a two dimensional array that makes up the size of \textit{i} and \textit{j}. This table is used to store the result of the scalar multiplications between the size of the matrices, and is used to find the most efficient solution for the problem. 
+
+\subsection{Rod cutting problem}
 
 \todo[color=pink]{I left it off here}

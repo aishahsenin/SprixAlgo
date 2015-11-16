@@ -73,8 +73,8 @@ Activity Selection Problem [done]
 Huffman code (?)
 
 Monday
-Merge sort [done, need diagram]
-Matrix Multiplication [done, need diagram]
+Merge sort [done]
+Matrix Multiplication [done]
 Rod cutting problem 
 
 Tueday
