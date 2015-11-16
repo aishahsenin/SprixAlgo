@@ -70,7 +70,7 @@ Sunday
 Fractional knapsack problem [done]
 Knapsack problem [done]
 Activity Selection Problem [done]
-Huffman code (?)
+Huffman code (? )
 
 Monday
 Merge sort [done]
