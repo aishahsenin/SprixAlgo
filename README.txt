@@ -73,15 +73,15 @@ Activity Selection Problem [done]
 Huffman code (?)
 
 Monday
-Merge sort 
-Matrix Multiplication 
-Review against plan
+Merge sort [done, need diagram]
+Matrix Multiplication [done, need diagram]
+Rod cutting problem 
 
 Tueday
-Rod cutting problem 
 Weighted activity selection problem 
 Bubble sort 
 Evaluation list
+Review against plan
 
 Wednesday
 Insertion sort 

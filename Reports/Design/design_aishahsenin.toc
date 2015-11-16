@@ -54,8 +54,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.1}Fractional Knapsack Problem}{27}{subsection.2.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.2}Knapsack Problem}{32}{subsection.2.8.2}
+\contentsline {subsection}{\numberline {2.8.2}Knapsack Problem}{29}{subsection.2.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.3}Activity Selection Problem}{39}{subsection.2.8.3}
+\contentsline {subsection}{\numberline {2.8.3}Activity Selection Problem}{31}{subsection.2.8.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{43}{section*.11}
+\contentsline {subsection}{\numberline {2.8.4}Merge sort}{32}{subsection.2.8.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8.5}Matrix multiplication}{32}{subsection.2.8.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Todo list}{32}{section*.11}

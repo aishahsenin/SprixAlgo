@@ -362,9 +362,9 @@ When the user is done, the \textit{Back} button can be selected, which leads the
 \section{Algorithm animation designs}
 In this section, I will present you the designs of the animations that will be included in the \textit{Algorithm Animation} program. This section is to propose an idea how the animation will look and act like, and to give a guidance on how to develop them during the implementation stage. Alongside with the design of the animation, I will also include a brief description about the algorithm, and whatever is happening within the animation.
 
-\subsection{Fractional Knapsack Problem}
-The Fractional Knapsack Problem is one of the algorithms that uses a combinatorial optimisation strategy in which the goal is to fill the knapsack, with fractional amounts of items until it reaches to its maximised value. This algorithm predominantly uses the greedy method approach in order to reach to its optimal solution. Within this section, I have included the design of how the animation for this algorithm will turn out to be, along with its descriptions that describes each of the different processes that happens during the play time of the animation.
+Note that I have not included the control buttons in these designs. This section is mainly to emphasize the design of the animation of the algorithm in question. If you would like to refer to the design of the actual graphical interface within the animation page, do have a look at section \ref{uiDesign}, on page \pageref{uiDesign} for more details.
 
+\subsection{Fractional Knapsack Problem}
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
@@ -373,61 +373,19 @@ The Fractional Knapsack Problem is one of the algorithms that uses a combinatori
 \label{animationDesignFractionalKnapsackProblem}
 \end{figure}
 
+The Fractional Knapsack Problem is one of the algorithms that uses a combinatorial optimisation strategy in which the goal is to fill the knapsack, with fractional amounts of items until it reaches to its maximised value. This algorithm predominantly uses the greedy method approach in order to reach to its optimal solution. Within this section, I have included the design of how the animation for this algorithm will turn out to be, along with its descriptions that describes each of the different processes that happens during the play time of the animation.
+
 The graphical interface of the Fractional Knapsack Problem algorithm shown in figure \ref{animationDesignFractionalKnapsackProblem} is the initial state of the animation. The animation consists of the items, which are represented in cubes, along with its values, i.e. weight and value of the item. Other than the items, there will also be an image of a rucksack that represents the knapsack. The knapsack has its max weight, which is the maximum amount of weight it can possible carry, and the current weight it is carrying now.
 
-Note that I have not included the control buttons in these designs. This section is mainly to emphasize the design of the animation of the algorithm in question. If you would like to refer to the design of the actual graphical interface within the animation page, do have a look at section \ref{uiDesign}, on page \pageref{uiDesign} for more details.
+The next step of this animation shown in figure, is simply to follow the process of the animation. In this design, the animation is currently at the stage where it needs to calculate each of the items' value to weight ratio. The animation simply adds another value to each of those items called \textit{Ratio}, that shows the results to the calculation. Next would be the part of the animation is when the items are re-arranged according to their value to weight ratios.
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP1.png}
-\caption{The animation design of the FractionalKnapsackProblem.}
-\label{animationDesignFractionalKnapsackProblem_STEP1}
-\end{figure}
+Once the items are finally arranged, it is now time to add the items into the knapsack. The animation will represented that by dragging the item in its current iteration next to the knapsack. An arrow will then appear next to the item to represent the act of adding the item into the knapsack. When the item in question is added into the knapsack, there will be a change on the \textit{Current weight} value. 
 
-The next step of this animation shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP1}, is simply to follow the process of the animation. In this design, the animation is currently at the stage where it needs to calculate each of the items' value to weight ratio. The animation simply adds another value to each of those items called \textit{Ratio}, that shows the results to the calculation.
+There is an exception to this animation, that the knapsack, can no longer contain the total weight of the item in question. So, the animation program will inform the user, under the information section, that it can't insert the whole of item in question. This proceeds the animation to add fractions of the item instead, and doing a simple calculation (ratio * amount of weight left in the bag) along it as well. You can clearly see this calculation clearly above the arrow.
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP2.png}
-\caption{The animation design of the FractionalKnapsackProblem.}
-\label{animationDesignFractionalKnapsackProblem_STEP2}
-\end{figure}
+As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. 
 
-This part of the animation is when the items are re-arranged according to their value to weight ratios. As you can see in figure \ref{animationDesignFractionalKnapsackProblem_STEP2}, that the items are re-arranged accordingly. 
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP3.png}
-\caption{The animation design of the FractionalKnapsackProblem.}
-\label{animationDesignFractionalKnapsackProblem_STEP3}
-\end{figure}
-
-Once the items are finally arranged, it is now time to add the items into the knapsack. The animation will represented that by dragging the item in its current iteration next to the knapsack. An arrow will then appear next to the item to represent the act of adding the item into the knapsack. 
-
-When the item in question is added into the knapsack, there will be a change on the \textit{Current weight} value. As you can see in the diagram shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP3}, that the \textit{Current weight} value is now 5. This shows that the whole of item 2 has been added into the knapsack, which holds a total weight of 5.
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP4.png}
-\caption{The animation design of the FractionalKnapsackProblem.}
-\label{animationDesignFractionalKnapsackProblem_STEP4}
-\end{figure}
-
-Shown in figure \ref{animationDesignFractionalKnapsackProblem_STEP4}, there is an exception to this animation, that the knapsack, can no longer contain the total weight of the item in question. So, the animation program will inform the user, under the information section, that it can't insert the whole of item in question. This proceeds the animation to add fractions of the item instead, and doing a simple calculation (ratio * amount of weight left in the bag) along it as well. You can clearly see this calculation clearly above the arrow.
-
-As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. This design of the animation when it reaches to its conclusion is shown in the in figure \ref{animationDesignFractionalKnapsackProblem_STEP5}, on page \pageref{animationDesignFractionalKnapsackProblem_STEP5}.
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP5.png}
-\caption{The animation design of the FractionalKnapsackProblem.}
-\label{animationDesignFractionalKnapsackProblem_STEP5}
-\end{figure}
+\newpage
 
 \subsection{Knapsack Problem}
 
@@ -441,73 +399,16 @@ As when the calculation is complete, and the knapsack's current weight has reach
 \label{animationDesignKnapsackProblem}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.7]{images/report_images/animationDesignKnapsackProblem_STEP1.png}
-\caption{Another state after figure \ref{animationDesignKnapsackProblem} where the animation goes on describing the other table.}
-\label{animationDesignKnapsackProblem_STEP1}
-\end{figure}
 
-As when the animation of the knapsack problem starts (refer to figure \ref{animationDesignKnapsackProblem} and figure \ref{animationDesignKnapsackProblem_STEP1}), few description which describes about the tables will be displayed during the animation's initial play time. Those descriptions in the yellow coloured callouts are placed around the table to describe its purpose, in order for the user to understand what they are before the actual algorithm starts. These texts will remain here for about a 30 seconds, before proceeding to the next state.
+As when the animation of the knapsack problem starts (refer to figure \ref{animationDesignKnapsackProblem}), few description which describes about the tables will be displayed during the animation's initial play time. Those descriptions in the yellow coloured callouts are placed around the table to describe its purpose, in order for the user to understand what they are before the actual algorithm starts. These texts will remain here for about a 30 seconds, before proceeding to the next state.
 
 Included in this animation, other than the ones mentioned before, are the cube figures which represent the items. Along with them are its attributes, which are their respective value they are worth, and their weight. Next to it is an image of the knapsack. Show below it is its maximum capacity, and the current weight it is holding. For its initial state, the current value is always 0.
 
 Within the \textit{Information} section, there will also be a brief description of what the algorithm is, and how is it different from the Fractional Knapsack algorithm. 
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP2.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP2}
-\end{figure}
+After the explanation phase has completed, the algorithm of the knapsack problem begins. The algorithm begins by applying the sum of values obtained on the first row of the \textit{value table}. Since on the left side of the table is 0, meaning that there are no items selected, all the values are returned as 0 for the first row. The texts that are inserted into the table are turned red, simply to let the users know where to look in the animation. The values are added into the \textit{keep table} as well after adding those values into the \textit{values table} previously.
 
-Referring to figure \ref{animationDesignKnapsackProblem_STEP2}, after the explanation phase has completed, the algorithm of the knapsack problem begins. The algorithm begins by applying the sum of values obtained on the first row of the \textit{value table}. Since on the left side of the table is 0, meaning that there are no items selected, all the values are returned as 0 for the first row. The texts that are inserted into the table are turned red, simply to let the users know where to look in the animation. 
-
-As you can see on figure \ref{animationDesignKnapsackProblem_STEP3}, values are added into the \textit{keep table} as well after adding those values into the \textit{values table} previously.
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP3.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP3}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP4.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP4}
-\end{figure}
-
-As the animation proceeds to the second row in figure \ref{animationDesignKnapsackProblem_STEP4}, where the animation loops by doing the same thing previously on the first row. It refers to the top column, which is the weight of the knapsack to carry, which is highlighted with a green circle. Followed by the spot where the animation needs to compute the value for, which is highlighted with a red circle. Figure \ref{animationDesignKnapsackProblem_STEP4_1} shows the result with the inserted value.
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP4_1.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP4_1}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignKnapsackProblem_STEP5.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP5}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignKnapsackProblem_STEP6.png}
-\caption{The animation design of the Knapsack Problem.}
-\label{animationDesignKnapsackProblem_STEP6}
-\end{figure}
+As the animation proceeds to the second row, where the animation loops by doing the same thing previously on the first row. It refers to the top column, which is the weight of the knapsack to carry, which is highlighted with a green circle. Followed by the spot where the animation needs to compute the value for, which is highlighted with a red circle. 
 
 Once filling up the \textit{value} and \textit{keep} table is completed, the algorithm looks through the keep table from the most bottom right hand side, to find out which item to keep. If the value is 1, it means that the item along that row is kept, and the total weight of the knapsack will be subtracted from the item. Do this along the column which is the maximum possible amount of capacity of the knapsack, in this case 5, until either the knapsack is full, or can no longer take in any more items. Finally once it has done that, show the total value (most optimum value you can achieve) that is taken away from the knapsack.
 
@@ -526,40 +427,27 @@ Once filling up the \textit{value} and \textit{keep} table is completed, the alg
 
 Shown in figure \ref{animationDesignActivitySelectionProblem}, is the initial stage of the activity selection animation during its starting phase. During this phase, the animation starts off by explaining parts of the diagram, using the bright yellow callouts. Along with it, there is a further explanation about the objective of the algorithm within the information section below.
 
-Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm which is shown in figure \ref{animationDesignActivitySelectionProblem_STEP1}. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed (refer to figure \ref{animationDesignActivitySelectionProblem_STEP3}).
+Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed. Once there aren't any more activities left in the list of activities, the optimal solution to the problem has been finalised. This is when the animation ends. 
 
-Once there aren't any more activities left in the list of activities, shown in figure \ref{animationDesignActivitySelectionProblem_STEP4}, the optimal solution to the problem has been finalised. This is when the animation ends. 
+\newpage
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP1.png}
-\caption{The animation design of the Activity Selection Problem.}
-\label{animationDesignActivitySelectionProblem_STEP1}
-\end{figure}
+\subsection{Merge sort}
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP2.png}
-\caption{The animation design of the Activity Selection Problem.}
-\label{animationDesignActivitySelectionProblem_STEP2}
-\end{figure}
+The merge sort algorithm is basically one of the sorting algorithms that uses the divide and conquer method to sort the contents of the array of values. The animation for the merge sort algorithm will emphasize mainly on the idea of a divide and conquer, that is made up one of the three algorithmic paradigms. 
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP3.png}
-\caption{The animation design of the Activity Selection Problem.}
-\label{animationDesignActivitySelectionProblem_STEP3}
-\end{figure}
+On the input page for the merge sort algorithm, will be the number of elements in array, followed by the values for each element of the array. The animation for this algorithm will be made simple. First, is to have squares that represents each element of the array. These squares will initially be set next to the other squares with values clearly shown on them.
 
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP4.png}
-\caption{The animation design of the Activity Selection Problem.}
-\label{animationDesignActivitySelectionProblem_STEP4}
-\end{figure}
+As when the animation starts, the animation will clearly show the division it makes to divide the array into 2 parts, each side with an equal amount of elements to the other side (unless if the total number of elements is an odd number, then one side will have one more element than the other). The animation will keep on doing this until each of the elements divided will be left to one each. After which, the animation will proceed in taking the first element from the unsorted list, sorts and drags it down to another tier, and do the same for the rest until all the elements are sorted and merged as a whole. The animation then concludes by showing that it is finally sorted, and ends here.
+
+\subsection{Matrix multiplication}
+The matrix multiplication problem is classified under the \textit{optimisation problem}, that will be available in animation. This problem simply shows the algorithm on finding the most efficient way to multiply two or more matrices together, and using dynamic programming in order to find the solution. 
+
+The input page for the animation will consist of the number of matrices to compute and the size of each of those matrices. There will be some constraint when it comes to selecting the size of the matrix however, is that, the next matrix will need to have one of its sides to be the same value as one of the sides the first matrix as well, which is a basic rule for two matrices to be multiplied with one another.
+
+On the animation itself, it will present each matrix in a rectangular shaped, depending on the size that was given during the input stage. Above each matrix will also be an identifier, which format is \textit{Mi}, \textit{i} being the number of the matrix in the list. Below each of the rectangles will show the size of the matrix, which format goes as \textit{widthSize * lengthSize}, in order to depict the size of each rectangles.
+
+During a part of the animation, the algorithm will pick the values for \textit{i} and \textit{j}, which are the values between the 1, the first matrix, and N, where it is the number of the last matrix in the list. Between these two values, there will also be \textit{k}, which is going to be used to compute the most efficient \textit{split} to be made, in order to achieve the minimal amount of scalar multiplications between the two lists of the matrices. In every iteration of the algorithm, the animation is to use \textit{k} as a splitter, and between the two parts of the list, find the minimum amount of scalar multiplications needed. And once the minimum has been found, the algorithm will conclude its answers, and ends.
+
+Since this problem uses dynamic programming, there is a need to add a table that goes with the animation as well. This table is what I call the \textit{i and j} table, which is a two dimensional array that makes up the size of \textit{i} and \textit{j}. This table is used to store the result of the scalar multiplications between the size of the matrices, and is used to find the most efficient solution for the problem. 
 
 \todo[color=pink]{I left it off here}
