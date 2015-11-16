@@ -60,8 +60,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.4}Merge sort}{32}{subsection.2.8.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.5}Matrix multiplication}{33}{subsection.2.8.5}
+\contentsline {subsection}{\numberline {2.8.5}Matrix multiplication}{32}{subsection.2.8.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.8.6}Rod cutting problem}{34}{subsection.2.8.6}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{34}{section*.11}
+\contentsline {chapter}{Todo list}{33}{section*.11}
