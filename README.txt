@@ -87,4 +87,5 @@ Wednesday
 Insertion sort 
 Heap sort
 Class diagram
+Psuedo code
 Last minute changes
