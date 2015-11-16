@@ -78,10 +78,10 @@ Matrix Multiplication [done]
 Rod cutting problem [done]
 
 Tueday
-Weighted activity selection problem 
-Bubble sort 
-Evaluation list
-Review against plan
+Weighted activity selection problem [morning]
+Bubble sort [morning]
+Evaluation list [evening]
+Review against plan [evening]
 
 Wednesday
 Insertion sort 
