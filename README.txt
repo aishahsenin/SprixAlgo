@@ -75,7 +75,7 @@ Huffman code (?)
 Monday
 Merge sort [done]
 Matrix Multiplication [done]
-Rod cutting problem 
+Rod cutting problem [done]
 
 Tueday
 Weighted activity selection problem 
