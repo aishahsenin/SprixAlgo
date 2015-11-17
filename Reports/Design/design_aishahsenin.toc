@@ -64,4 +64,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.8.6}Rod cutting problem}{34}{subsection.2.8.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{34}{section*.11}
+\contentsline {subsection}{\numberline {2.8.7}Bubble sort}{34}{subsection.2.8.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8.8}Insertion sort}{35}{subsection.2.8.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8.9}Heap sort}{35}{subsection.2.8.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.8.10}The evaluation}{35}{subsection.2.8.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.9}Review against plan}{35}{section.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Todo list}{35}{section*.12}
