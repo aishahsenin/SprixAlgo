@@ -78,12 +78,13 @@ Rod cutting problem [done]
 
 Tueday
 Bubble sort [done]
-Insertion sort 
+Insertion sort [done]
 Heap sort
 Psuedo code
 
 Wednesday
 Evaluation list [in progress]
 Review against plan [evening]
+presentation
 Class diagram
 Last minute changes

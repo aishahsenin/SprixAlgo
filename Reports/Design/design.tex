@@ -530,14 +530,20 @@ The animation for the bubble sort algorithm will show the list of values, arrang
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=1.5]{images/report_images/animationDesignInsertionSort.png}
-\caption{Merge sort animation design.}
+\includegraphics[scale=0.9]{images/report_images/animationDesignInsertionSort.png}
+\caption{The insertion sort animation design.}
 \label{animationDesignInsertionSort}
 \end{figure}
 
 The input page for the insertion sort will be very similar to the input page for the bubble sort. However, of course, the animation of the insertion sort will be different compared to it. At the initial stage, as seen in figure \ref{animationDesignInsertionSort}, the animation shows the values, where these values represents each element in an array. As the animation begins, the first value from the left will be highlighted with a red bordered square, and then``pulled out'' from the main array. This value is then used to compare with the values from the left side, values which are in the black bordered square. The black bordered square is basically to represent the values that the algorithm had gone through, and are sorted. Once the value in the red square has found its place within the values within the black border, the red box for that value changes to black. Then, the next unboxed value will be pulled out the following after.
 
+\newpage
+
 \subsection{Heap sort}
+
+Heap sort is another one of the sort algorithms that will be included in the \textit{Algorithm Animation Program}. Unlike the other two sorting algorithms mentioned above, there is a different feature about the heap sort, is that it makes use of a binary tree to create an array of \textit{heap}, followed by using the \textit{heap} array to sort the contents found within it. Another convenient feature about heap sort algorithm  is that, when it comes to sorting, there isn't a need for an additional temporary array. All it requires is the memory that is already given to it (the array of values), and swap the values within the array strategically before sorting them out.
+
+Like the other sorting algorithms, the input page for the heap sort will be the same. The animation for the heap sort on the other hand, will consist of the list of values in each square, which represents the values found in the elements of the array. The animation will also include the binary tree, which will show in a step by step basis on how, the values from the initial array, is inserted into the tree and finally from that tree, to create a \textit{heap} array. And then of course from there, the animation would also show how the values in the \textit{heap} array is sorted. As when the animation is showing how the binary tree is being applied to, the animation will also show the process of value swapping in the initial array as well. Once the values are sorted, the animation will conclude that that the array has been sorted before stopping.
 
 % ------------- EVALUATION LIST -----------------
 \subsection{The Evaluation Design}
