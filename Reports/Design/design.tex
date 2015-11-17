@@ -385,6 +385,8 @@ There is an exception to this animation, that the knapsack, can no longer contai
 
 As when the calculation is complete, and the knapsack's current weight has reached to its max weight, the animation then comes into a conclusion. The conclusion of this algorithm is that the knapsack is finally full, and the total value that the knapsack has achieved is displayed as well. Afterwards, the animation stops here. 
 
+\todo[color=orange]{psuedo code}
+
 \newpage
 
 \subsection{Knapsack Problem}
@@ -412,6 +414,8 @@ As the animation proceeds to the second row, where the animation loops by doing 
 
 Once filling up the \textit{value} and \textit{keep} table is completed, the algorithm looks through the keep table from the most bottom right hand side, to find out which item to keep. If the value is 1, it means that the item along that row is kept, and the total weight of the knapsack will be subtracted from the item. Do this along the column which is the maximum possible amount of capacity of the knapsack, in this case 5, until either the knapsack is full, or can no longer take in any more items. Finally once it has done that, show the total value (most optimum value you can achieve) that is taken away from the knapsack.
 
+\todo[color=orange]{psuedo code}
+
 \newpage
 
 \subsection{Activity Selection Problem}
@@ -428,6 +432,8 @@ Once filling up the \textit{value} and \textit{keep} table is completed, the alg
 Shown in figure \ref{animationDesignActivitySelectionProblem}, is the initial stage of the activity selection animation during its starting phase. During this phase, the animation starts off by explaining parts of the diagram, using the bright yellow callouts. Along with it, there is a further explanation about the objective of the algorithm within the information section below.
 
 Once the explanation phase is done, the animation carries on by initiating the activity selection problem algorithm. First, it selects the activity with the earliest end time, and highlights it red. Once the activity has been chosen, it goes on by finding the other activities within the list that is incompatible with the chosen activity. These incompatible activities are then removed from the list of activities, and are greyed out in the animation to show that they are removed. Once there aren't any more activities left in the list of activities, the optimal solution to the problem has been finalised. This is when the animation ends. 
+
+\todo[color=orange]{psuedo code}
 
 \newpage
 
@@ -446,6 +452,8 @@ The merge sort algorithm is basically one of the sorting algorithms that uses th
 On the input page for the merge sort algorithm, will be the number of elements in array, followed by the values for each element of the array. The animation for this algorithm will be made simple, as you can see in figure \ref{animationDesignMergeSort}. First, is to have squares that represents each element of the array. These squares will initially be set next to the other squares with values clearly shown on them.
 
 As when the animation starts, the animation will clearly show the division it makes to divide the array into 2 parts, each side with an equal amount of elements to the other side (unless if the total number of elements is an odd number, then one side will have one more element than the other). The animation will keep on doing this until each of the elements divided will be left to one each. After which, the animation will proceed in taking the first element from the unsorted list, sorts and drags it down to another tier, and do the same for the rest until all the elements are sorted and merged as a whole. The animation then concludes by showing that it is finally sorted, and ends here.
+
+\todo[color=orange]{psuedo code}
 
 \newpage
 
@@ -469,6 +477,10 @@ During a part of the animation, the algorithm will pick the values for \textit{i
 
 Since this problem uses dynamic programming, there is a need to add a table that goes with the animation as well. This table is what I call the \textit{i and j} table, which is a two dimensional array that makes up the size of \textit{i} and \textit{j}. This table is used to store the result of the scalar multiplications between the size of the matrices, and is used to find the most efficient solution for the problem. 
 
+\todo[color=orange]{psuedo code}
+
+\newpage
+
 \subsection{Rod cutting problem}
 
 \begin{figure}[H]
@@ -484,5 +496,29 @@ The rod cutting problem is another one of those algorithms that uses the dynamic
 In the input page for the rod cutting problem, would have the input for the length of the rod, and the prices for each length of the rod. When the input is inserted, the animation starts by showing the image of a rod, with the length assigned to it. Below it as well are two tables, one of them, the \textit{Price/Length} table, is the table that is used to calculate the price earned for selling the rod at a certain length. This table will be filled along the way during the course of the animation. The other table is the \textit{price table}, which lists the set of length and its prices. 
 
 The algorithm ends when the \textit{Price/Length} table is fully filled, and the optimum cut is retrieved from the table. The animation will then conclude the optimum price for the particular problem before it terminates.
+
+\todo[color=orange]{psuedo code}
+
+\newpage
+
+\subsection{Bubble sort}
+
+The bubble sort is one of the sorting algorithms that I will include in this program, classified under the \textit{Sorting algorithms} section. It is a simple algorithm that compares each adjacent pair, and swaps with one another, left side is the smaller value, whilst the right side is the larger value. The algorithm keeps doing so until the whole list is fully sorted.
+
+For the input page, the values that the program will take before starting the animation would be, the size of the array, and the values for each of the elements in the array.
+
+The animation for the bubble sort algorithm will show the list of values, arranged accordingly to the input that was given by the user, or the random generator. These values are shown basically depict each of the element of the array, and the animation will show clearly that each of them will be swapped with the value next to itself clearly when it is its time to swap. Once the largest value in the list has moved all the way to the right side of the array, a black border will surround it, indicating that the position for this element has been finalised. The animation will come to an end, once all the elements have its own black border. The animation then concludes that the array of values have been sorted, and will stop itself then.
+
+\todo[color=orange]{psuedo code}
+
+\subsection{Insertion sort}
+
+\subsection{Heap sort}
+
+% ------------- EVALUATION LIST -----------------
+\subsection{The evaluation}
+
+% -------------REVIEW AGAINST PLAN -----------
+\section{Review against plan}
 
 \todo[color=pink]{I left it off here}
