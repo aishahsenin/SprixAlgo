@@ -1,2 +1,7 @@
 functional and non-function description - http://reqtest.com/requirements-blog/functional-vs-non-functional-requirements/
 sequence diagram description http://www.ibm.com/developerworks/rational/library/3101.html
+evaluation list example http://software.ac.uk/sites/default/files/SSI-SoftwareEvaluationCriteria.pdf
+
+matrix multiplication psuedocode http://code.wikia.com/wiki/Matrix_multiplication
+knapsack problem psuedocode https://en.wikipedia.org/wiki/Knapsack_problem
+bubble sort psuedocode http://mathbits.com/MathBits/Java/arrays/Bubble.htm
