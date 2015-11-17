@@ -70,7 +70,6 @@ Sunday
 Fractional knapsack problem [done]
 Knapsack problem [done]
 Activity Selection Problem [done]
-Huffman code (? )
 
 Monday
 Merge sort [done]
@@ -78,14 +77,13 @@ Matrix Multiplication [done]
 Rod cutting problem [done]
 
 Tueday
-Weighted activity selection problem [too difficult...]
-Bubble sort [morning]
-Evaluation list [evening]
-Review against plan [evening]
-
-Wednesday
+Bubble sort [done]
 Insertion sort 
 Heap sort
-Class diagram
 Psuedo code
+
+Wednesday
+Evaluation list [in progress]
+Review against plan [evening]
+Class diagram
 Last minute changes

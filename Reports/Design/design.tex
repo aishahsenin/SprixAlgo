@@ -1,13 +1,24 @@
 \chapter{Design}
 
-\section{Description of the design}
-\todo[color=yellow]{description of anticipated components of the system and how are they organised}
+In this design chapter primarily consists of the plan for the construction of the \textit{Algorithm Animation} program. This design documentation includes the list of requirements that is expected of the program, the different uses of the program from the users' perspective, system flowchart, the graphical user interface design, sequence diagrams, the design of the animations for each algorithms, and finally the evaluation list.
 
-% ------------ REQUIREMENTS -------------
-\section{System requirements}
-\todo[color=yellow]{add small description}
+% ---------- Brief description on design ----------
+\section{Brief description of the anticipated software}
+% how the software is going to turn up like
+The program initiates by displaying the main menu. From here, the users can select whichever category they wish to use. These categories include the three main different features of the program, which are \textit{settings}, \textit{animation}, and \textit{appendix}. 
+
+With the \textit{settings} feature, the user can change some of the aspects of the program, such as its font size and the speed of animation. This would allow the users to work on an environment that feels most comfortable for them.
+
+The animation feature, which admittedly would be the main aspect of this project, is where the list of different algorithms would be collected at. From here, the user can select the algorithm they wish to learn. Once they have selected one, the program will lead the user to the input page, which has a form for the user to fill. This form is different depending on which algorithm selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
+
+Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
+
+The last feature of this program, is the \textit{appendix}. The appendix would basically display extra information in regards to the algorithms that are not mentioned within the animation feature. The reason for this feature is for students who decided to read further about those algorithms that are presented in the program. 
 
 \subsection{Functional requirements}
+
+The functional requirements of the \textit{Algorithm Animation} program is to specify the list of requirements, the system needs to do, such as its behaviour or function. The tables below (tables \ref{table:functionalRequirements} and \ref{table:functionalRequirements2}) shows the list of functional requirements that is expected for the program to achieve, along with their respective descriptions.  
+
 \begin{table}[H]
 \caption{Functional requirements of the software}
 \begin{center}
@@ -26,7 +37,7 @@
     7 & Shows a short description during the animation on each \textit{iteration} of the algorithm & During the animation's playtime, the program is to show a short description about what the animation is doing. \\ \hline
 \end{tabular}
 \end{center}
-\label{tab:multicol}
+\label{table:functionalRequirements}
 \end{table}
 
 \newpage
@@ -46,13 +57,15 @@
     11 & Appendix that shows further writeup of the algorithms available in the program & This shows the full writeup of the description shown during the animation, and additional information in regards with the algorithm. \\ \hline
 \end{tabular}
 \end{center}
-\label{tab:multicol}
+\label{table:functionalRequirements2}
 \end{table}
 
 \newpage
 
 \subsection{Non-functional requirements}
-\todo[color=yellow]{Not sure if saved settings belong in non-functional}
+
+On the other hand, the non-functional requirements, refer to the set of requirements that describes how the system works in general, in terms of its operations. Table \ref{table:nonfunctionalRequirements} below shows the set of non-functional requirements the system is expected to satisfy, along with its individual descriptions.
+
 \begin{table}[H]
 \caption{Non-functional requirements of the software}
 \begin{center}
@@ -68,14 +81,14 @@
     4 & Saves the settings provided by user & The program is to save the changes made by user under settings. This means that when the user opens the program again, the changed settings will still be in placed. \\ \hline
 \end{tabular}
 \end{center}
-\label{tab:multicol}
+\label{table:nonfunctionalRequirements}
 \end{table}
 
 \newpage
 
 % ---------- UML CASE DIAGRAM ----------
 \section{UML case diagram}
-The use case diagram below on figure \ref{useCaseDiagram} is the representation of what the user can do to interact with the system represented in use cases. It is basically shows the relationship between the user and the system, for this case the student's interaction with the algorithm animation program.
+The use case diagram below on figure \ref{useCaseDiagram} is the representation of what the user can do to interact with the system represented in use cases. It is basically shows the relationship between the user and the \textit{Animated Algorithm Program}.
 
 % UML case diagram
 \begin{figure}[H]
@@ -86,17 +99,17 @@ The use case diagram below on figure \ref{useCaseDiagram} is the representation 
 \label{useCaseDiagram}
 \end{figure}
 
-According to the use case diagram on figure \ref{useCaseDiagram}, firstly, the user can change the settings in the program, by changing features such as the speed of the animation, or the font size displayed in the program. This allows the user to work within the environment that is most comfortable for them. 
+According to the use case diagram shown on figure \ref{useCaseDiagram}, the user can change the settings of some of the features of the program, such as the speed of the animation, and its font size. This is to ensure that the user will be able to work comfortably within the environment, when the program allows the them to change these features of the program. The user could always revert back to the system's default settings if there is a need to.
 
-Other than changing the settings, the user can also select an algorithm which they wish to learn. This will lead them to the page where the animation of the algorithm is. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. For more information in regards to these controls, refer to the \todo[color=orange]{add some glossary or some sort}. From this page, the user can also access the algorithms which are \textit{related} to the one in question, if they ever wish to do so. This will lead to the page of the algorithm along with its animation.
+Other than the settings, the animation is another feature that would be included within the program. By selecting an algorithm from the list of algorithms, the program will lead the user to the page where the animation of the algorithm resides in. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. The user can also access other algorithms that are \textit{related} to the current one, if they ever wish to do so. If the user clicks on the algorithm from the list of related algorithms, the program then goes to the animation page of the algorithm that was selected by the user.
 
-Other than the settings and the animated feature, if the user ever wishes to know more about the algorithms, the user can view them in the appendix within the program. In the appendix, the user will find all the algorithms available in the program in a list. Once the user selects a particular one they wish to see, the page will display a fuller information in regards to the algorithm. This includes the written up information, and might also involve a few images as well.
+Other than the settings and the animated feature, there will be an appendix within the program, where the users can view more information about the algorithm. The appendix however will only list the algorithms that are available in the program as animations. Within this feature, the appendix will mainly include a more detailed explanation about the algorithm that is not mentioned in the animation page. The information that can be found in the appendix is expected to contain predominantly texts and images of the algorithm.
 
 \newpage
 
 % --------------- FLOWCHART -------------------
 \section{System flowcharts}
-In this section, I have included the flowcharts of the program, to display the how the program flows in general, and how decisions controls its following events. 
+In this section, I have included the flowcharts of the program, to display the flow of the system in general, and how decisions controls its following events. 
 
 \subsection{Main flow of the program}
 The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The three main modules which makes up the program, i.e. change settings, view the animation of algorithms, and the appendix, are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, for the animation module, and \ref{sec:flowchartAppendix} for the appendix module.
@@ -298,11 +311,11 @@ In this page basically shows the list of all the algorithms that are available i
 %--------------- UML Sequence Diagram ----------
 \section{UML Sequence Diagram}
 
-\todo[color=yellow]{brief description about sequence diagram}
+Next up, is the sequence diagrams. These diagrams are primarily used to show the interactions between its objects in a sequential order, and the interactions that occur afterwards. The purpose of this diagram is to show in greater detail, compared to the class diagram shown in the previous section (section \ref{}), of what objects that are involved during a particular event. Do take note that these diagrams will be separated between the three main features of the program, the \textit{animation}, \textit{settings}, and finally \textit{appendix}.
 
 
 \subsection{The animation feature}
-The sequence diagram shown in figure \ref{sequenceDiagramShowAlgorithmList} shows the interaction between the user and the different objects involved within the animation module found in the program. First and foremost, as the user initiates the program, the program will display the main menu by executing the \textit{displayMenu()} method. From there, the user selects (for this case) the \textit{List of algorithms} button, which leads the user to the main list of algorithms.
+The sequence diagram for the animation feature shown in figure \ref{sequenceDiagramShowAlgorithmList}, reveals the interaction between the user and the different objects that are expected to be involved within this feature. First and foremost, as the user initiates the program, the program will display the main menu by executing the \textit{displayMenu()} method. From there, the user selects (for this case) the \textit{List of algorithms} button, which leads the user to the main list of algorithms.
 
 The user then can pick any algorithm they wish to learn from this list. For example, the uses decides to learn how the merge sort algorithm works. So the user clicks the button called \textit{Merge sort algorithm}, which then leads the user to the next page, the input request page, or known as \textit{AlgorithmAnimationInputRequest} according to the sequence diagram in figure \ref{sequenceDiagramShowAlgorithmList}.
 
@@ -368,12 +381,12 @@ Note that I have not included the control buttons in some of these designs. This
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem.png}
+\includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP1.png}
 \caption{The animation design of the FractionalKnapsackProblem. This shows the initial state of the animation.}
 \label{animationDesignFractionalKnapsackProblem}
 \end{figure}
 
-The Fractional Knapsack Problem is one of the algorithms that uses a combinatorial optimisation strategy in which the goal is to fill the knapsack, with fractional amounts of items until it reaches to its maximised value. This algorithm predominantly uses the greedy method approach in order to reach to its optimal solution. Within this section, I have included the design of how the animation for this algorithm will turn out to be, along with its descriptions that describes each of the different processes that happens during the play time of the animation.
+The Fractional Knapsack Problem is one of the algorithms that uses a combinatorial optimisation strategy in which the goal is to fill the knapsack with fractional amounts of items until it reaches to its maximised value. This algorithm predominantly uses the greedy method approach in order to reach to its optimal solution. Within this section, I have included the design of how the animation for this algorithm will turn out to be, along with its descriptions that describes each of the different processes that happens during the play time of the animation.
 
 The graphical interface of the Fractional Knapsack Problem algorithm shown in figure \ref{animationDesignFractionalKnapsackProblem} is the initial state of the animation. The animation consists of the items, which are represented in cubes, along with its values, i.e. weight and value of the item. Other than the items, there will also be an image of a rucksack that represents the knapsack. The knapsack has its max weight, which is the maximum amount of weight it can possible carry, and the current weight it is carrying now.
 
@@ -389,12 +402,12 @@ As when the calculation is complete, and the knapsack's current weight has reach
 
 \subsection{Knapsack Problem}
 
-\todo[color=yellow]{Brief description of the knapsack problem}
+The Knapsack Problem is quite similar compared to the Fractional Knapsack Problem. However for this problem, you can only take the whole item and leave the rest if there is no space left in the knapsack, instead of taking items fractionally until the knapsack is full. Despite a minor change in the constraints of this problem, the approach to the knapsack problem is very different to the fractional one. Instead of utilising the greedy method like we would do for the fractional, this requires us to use the dynamic programming approach instead. Because of this, the animation needs to add another feature, and this will basically be applied to all algorithms that uses the dynamic programming approach as well: tables.
 
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=0.7]{images/report_images/animationDesignKnapsackProblem.png}
+\includegraphics[scale=0.7]{images/report_images/animationDesignKnapsackProblem_STEP2.png}
 \caption{The initial state of the animation design of the Knapsack Problem. It shows that it is describing what the tables are.}
 \label{animationDesignKnapsackProblem}
 \end{figure}
@@ -415,12 +428,13 @@ Once filling up the \textit{value} and \textit{keep} table is completed, the alg
 \newpage
 
 \subsection{Activity Selection Problem}
-\todo[color=yellow]{Description of the Activity Selection Problem}
+
+In the Activity Selection Problem, you are given a set of activities, where each have its respective starting and finishing time. Within this set of activities, the goal is to find the most number of activities that can run without interrupting each other. This algorithm uses the greedy method approach in order to find the optimum set of activities. 
 
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem.png}
+\includegraphics[scale=0.9]{images/report_images/animationDesignActivitySelectionProblem_STEP1.png}
 \caption{The animation design of the Activity Selection Problem.}
 \label{animationDesignActivitySelectionProblem}
 \end{figure}
@@ -456,7 +470,7 @@ As when the animation starts, the animation will clearly show the division it ma
 %\hspace*{-0.5cm}
 \includegraphics[scale=0.9]{images/report_images/animationDesignMatrixMultiplication.png}
 \caption{Merge sort animation design.}
-\label{animationDesignMergeSort}
+\label{animationDesignMatrixMultiplication}
 \end{figure}
 
 The matrix multiplication problem is classified under the \textit{optimisation problem}, that will be available in animation. This problem simply shows the algorithm on finding the most efficient way to multiply two or more matrices together, and using dynamic programming in order to find the solution. 
@@ -476,12 +490,16 @@ Since this problem uses dynamic programming, there is a need to add a table that
 %\hspace*{-0.5cm}
 \includegraphics[scale=0.9]{images/report_images/animationDesignRodCuttingProblem.png}
 \caption{Merge sort animation design.}
-\label{animationDesignMergeSort}
+\label{animationDesignRodCuttingProblem}
 \end{figure}
 
 The rod cutting problem is another one of those algorithms that uses the dynamic programming strategy. The problem consists of a rod, which is a x amount of length. Along with it, there is a table of prices, selling for a certain amount for a certain amount of length. Using some sort of a strategy (for our case, an algorithm), find the best cuts of the rod of x length, in order to get the most value out of it.
 
-In the input page for the rod cutting problem, would have the input for the length of the rod, and the prices for each length of the rod. When the input is inserted, the animation starts by showing the image of a rod, with the length as
+In the input page for the rod cutting problem, would have the input for the length of the rod, and the prices for each length of the rod. When the input is inserted, the animation starts by showing the image of a rod, with the length assigned to it. Below it as well are two tables, one of them, the \textit{Price/Length} table, is the table that is used to calculate the price earned for selling the rod at a certain length. This table will be filled along the way during the course of the animation. The other table is the \textit{price table}, which lists the set of length and its prices. 
+
+The algorithm ends when the \textit{Price/Length} table is fully filled, and the optimum cut is retrieved from the table. The animation will then conclude the optimum price for the particular problem before it terminates.
+
+
 
 \newpage
 
@@ -490,7 +508,7 @@ In the input page for the rod cutting problem, would have the input for the leng
 \begin{figure}[H]
 \centering
 %\hspace*{-0.5cm}
-\includegraphics[scale=0.9]{images/report_images/animationDesignBubbleSort.png}
+\includegraphics[scale=1.5]{images/report_images/animationDesignBubbleSort.png}
 \caption{Merge sort animation design.}
 \label{animationDesignBubbleSort}
 \end{figure}
@@ -501,18 +519,37 @@ For the input page, the values that the program will take before starting the an
 
 The animation for the bubble sort algorithm will show the list of values, arranged accordingly to the input that was given by the user, or the random generator. These values are shown basically depict each of the element of the array, and the animation will show clearly that each of them will be swapped with the value next to itself clearly when it is its time to swap. Once the largest value in the list has moved all the way to the right side of the array, a black border will surround it, indicating that the position for this element has been finalised. The animation will come to an end, once all the elements have its own black border. The animation then concludes that the array of values have been sorted, and will stop itself then.
 
-\todo[color=orange]{psuedo code}
+\newpage
+\todo[color=yellow]{description about the psuedo code}
+\lstinputlisting[frame=single]{codes/bubbleSort.java}
+
+\newpage
 
 \subsection{Insertion sort}
+
+The input page for the insertion sort will be very similar to the input page for the bubble sort. 
 
 \subsection{Heap sort}
 
 % ------------- EVALUATION LIST -----------------
-\subsection{The evaluation}
+\subsection{The Evaluation Design}
 
-% -------------REVIEW AGAINST PLAN -----------
-\section{Review against plan}signed to it. Below it as well are two tables, one of them, the \textit{Price/Length} table, is the table that is used to calculate the price earned for selling the rod at a certain length. This table will be filled along the way during the course of the animation. The other table is the \textit{price table}, which lists the set of length and its prices. 
+% what are the criteria from the system
+% 1 - usability
+% 2 - comprehensive
+% 3 - correctness
+There are three criteria that will be assessed for the \textit{Algorithm Animation} program. These three refers to the usability of the program, ensuring the the program is easy and learned to use. 
 
-The algorithm ends when the \textit{Price/Length} table is fully filled, and the optimum cut is retrieved from the table. The animation will then conclude the optimum price for the particular problem before it terminates.
+Another criteria which applies on the animations of the algorithms of the program needs to be comprehensive for the users.
+
+Of course, when it comes to developing programs that are used to teach, another criteria that comes hand in hand with comprehensiveness would be the correctness of the animation. The animation and the information that comes with them need to most importantly depict the algorithm correctly.
+
+% how to assess these criteria
+
+% Who will be involved in the evaluation
+
+% What testing to be carried out?
+
+% What kind of conclusion do you expect from the evaluation?
 
 \todo[color=pink]{I left it off here}

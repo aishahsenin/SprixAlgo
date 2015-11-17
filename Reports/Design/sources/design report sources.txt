@@ -1,0 +1,2 @@
+functional and non-function description - http://reqtest.com/requirements-blog/functional-vs-non-functional-requirements/
+sequence diagram description http://www.ibm.com/developerworks/rational/library/3101.html
