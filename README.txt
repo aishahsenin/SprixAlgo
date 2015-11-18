@@ -82,11 +82,17 @@ Insertion sort [done]
 
 Wednesday
 Afternoon
-Evaluation list [one section left to do]
-Review against plan [morning]
 Class diagram [done]
+Evaluation list [done]
 
 Evening
+Creating a local database?
+
+Review against plan 
+	- the information page
+	- appendix page
+	- adding a local database into the program for the extra features
+
 Psuedo code 
 Presentation slides
 Last minute changes

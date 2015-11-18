@@ -413,6 +413,12 @@ As when the calculation is complete, and the knapsack's current weight has reach
 
 \newpage
 
+\lstinputlisting[frame=single, caption=The psuedo code of the fractional Knapsack Problem, label={fractionalKnapsackProblem}]{codes/fractionalKnapsackProblem.java}
+
+The psuedo code of the fractional knapsack problem, shown in listing \ref{fractionalKnapsackProblem}, is basically the construction of how the algorithm will be put to work during the implementation phase. First the algorithm declares the arrayList of \textit{Item} objects, where an \textit{Item} object will have its attributes such as weight and value. The arrayList will store the list of items, which the user has declared on the input page before the animation starts.
+
+Moving on, the algorithm will then calculate each of the items' value to weight ratio. Using those values, the algorithm then sorts the items out, from the item with the largest value to weight ratio, to the one that has the least. From here, the algorithm starts picking the first item from the list, and adding it into the knapsack. However before doing so, the algorithm checks if there is any space left for the knapsack to take in, by comparing the whole weight of the item to the amount of capacity left the knapsack is able to take in. If there is enough space, the algorithm takes in the whole item, otherwise, it starts adding each amount of fraction it is able to take before the knapsack capacity reaches to its full amount. When that happens, the algorithm ends.
+
 \subsection{Knapsack Problem}
 
 The Knapsack Problem is quite similar compared to the Fractional Knapsack Problem. However for this problem, you can only take the whole item and leave the rest if there is no space left in the knapsack, instead of taking items fractionally until the knapsack is full. Despite a minor change in the constraints of this problem, the approach to the knapsack problem is very different to the fractional one. Instead of utilising the greedy method like we would do for the fractional, this requires us to use the dynamic programming approach instead. Because of this, the animation needs to add another feature, and this will basically be applied to all algorithms that uses the dynamic programming approach as well: tables.
@@ -596,14 +602,14 @@ The last criteria that needs to be assessed during the evaluation would be the \
 % who will be involved during the evaluation
 There will be a need to include two different sets of groups of testers when it comes to the evaluation of this software. The first group will be involving in computer science students, who either have no knowledge in to having basic knowledge in regards to algorithms. The reason why this group will be used to assessed the program is that they will mainly be assessing the usability and the correctness of the program. Since they have no to little knowledge regarding the topic, it is up to them to see if they have managed to achieve any form of understanding after using the program. The measurement of their understanding will able to show the amount of effectiveness in representing the animations. If they manage to do so, it will show that the representation of the animations are effective.
 
-The second group of testers on the other hand, would involve in students, or lecturers who have an extensive knowledge in algorithms.
+The second group of testers on the other hand, would involve in students, or lecturers who have an extensive knowledge in algorithms. This group will primarily focus on assessing the validation of the animations that are presented to them. With the help of this group of testers, their feedback will ensure that the animations portraying the algorithms correctly, and if not, state in the evaluation form on what are the areas that are portraying the algorithms incorrectly. They will also assess the correctness of the information that comes with the animation as well, and see if the correlation between the information and animation is relevant and valid. Using their feedback will help me in locating the specific errors found within the animation and its information, and rectifying them.
 
 \todo[color=pink]{I left it off here}
 
 % what testing will be carried out
+\todo[color=yellow]{anything to write for what kind of testing to be carried out?}
 
 \subsection{The design of the evaluation form}
-
 Below in table \ref{table:evaluationFormDesign}, I have included the software evaluation form that is expected to be filled out with feedback from the users who will be testing the software. The form includes in defining each criteria, any sub-criteria that comes along with it, and the notes that is explained in plain language on what each of those criteria means. Which then follows by a series of questions that are involved within each criteria, which the testers are expected to fill their feedback in. 
 
 What is expected from the evaluation form is that users are expected to fill in with open ended answers in each sections of the form, describing about their experiences when it comes to using the software. It is also expected of me to obtain feedback, such as what is good or aspects that is lacking in the program. Of course, the users are to give the feedback of the software based on the criteria that they are assessing from, which would definitely gives me a better sense of direction when there is the need to improve on the software. Of course, afterwards, the form allows the users to give any additional feedback if there is a need to. This might be useful, as it might fill in the gaps that I have missed in the criteria based assessment.
