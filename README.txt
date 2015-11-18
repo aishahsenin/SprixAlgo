@@ -81,9 +81,12 @@ Bubble sort [done]
 Insertion sort [done]
 
 Wednesday
-Evaluation list [morning]
+Afternoon
+Evaluation list [one section left to do]
 Review against plan [morning]
 Class diagram [done]
+
+Evening
 Psuedo code 
 Presentation slides
 Last minute changes

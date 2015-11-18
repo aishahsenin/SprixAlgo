@@ -319,8 +319,6 @@ Show in figure \ref{UMLClassDiagram} is the class diagram of the \textit{Algorit
 \end{figure}
 \end{landscape}
 
-
-
 \newpage
 
 %--------------- UML Sequence Diagram ----------
@@ -581,24 +579,67 @@ The input page for the insertion sort will be very similar to the input page for
 %Like the other sorting algorithms, the input page for the heap sort will be the same. The animation for the heap sort on the other hand, will consist of the list of values in each square, which represents the values found in the elements of the array. The animation will also include the binary tree, which will show in a step by step basis on how, the values from the initial array, is inserted into the tree and finally from that tree, to create a \textit{heap} array. And then of course from there, the animation would also show how the values in the \textit{heap} array is sorted. As when the animation is showing how the binary tree is being applied to, the animation will also show the process of value swapping in the initial array as well. Once the values are sorted, the animation will conclude that that the array has been sorted before stopping.
 
 % ------------- EVALUATION LIST -----------------
-\subsection{The Evaluation Design}
+\section{The Evaluation Design}
 
 % what are the criteria from the system
 % 1 - usability
 % 2 - comprehensive
 % 3 - correctness
-There are three criteria that will be assessed for the \textit{Algorithm Animation} program. These three refers to the usability of the program, ensuring the the program is easy and learned to use. 
 
-Another criteria which applies on the animations of the algorithms of the program needs to be comprehensive for the users.
+The evaluation will asses on the three main criteria that will be used during the assessment phase, which are \textit{usability}, \textit{comprehensiveness}, \textit{correctness}. The term \textit{usability} plainly refers to the ease of using the program. There are a few pointers for the software to achieve this, which involve in easy installation process, the intuitiveness of its graphical interface, efficient, and its interface is easy to navigate around with and learn.
 
-Of course, when it comes to developing programs that are used to teach, another criteria that comes hand in hand with comprehensiveness would be the correctness of the animation. The animation and the information that comes with them need to most importantly depict the algorithm correctly.
+The next criteria that will be assessed during the evaluation would be the \textit{comprehensiveness} of the program. Since this software is meant to be educational, the software needs to take conscientious measures in making the animation to be easily understood by students, who either have no knowledge or little prior knowledge on the particular subject. Within this criteria, the animations in this program needs to be easily understood, by giving sufficient amount of information that goes hand in hand while the animation is being played. With these two working together, the content that are provided needs to be relevant. These construction of the content that has being displayed are also expected to be clear and concise, and would be easily understood within a short period of time. 
 
-% how to assess these criteria
+The last criteria that needs to be assessed during the evaluation would be the \textit{correctness} of the contents that is provided in the software. This is another important criteria that needs to be assessed during the evaluation, especially for an educational based software, as it is important for the \textit{Algorithm Animation Program} to sustain the correct depiction of the algorithms shown in the program. 
 
-% Who will be involved in the evaluation
+\subsection{Testers who will be involved during the evaluation}
+% who will be involved during the evaluation
+There will be a need to include two different sets of groups of testers when it comes to the evaluation of this software. The first group will be involving in computer science students, who either have no knowledge in to having basic knowledge in regards to algorithms. The reason why this group will be used to assessed the program is that they will mainly be assessing the usability and the correctness of the program. Since they have no to little knowledge regarding the topic, it is up to them to see if they have managed to achieve any form of understanding after using the program. The measurement of their understanding will able to show the amount of effectiveness in representing the animations. If they manage to do so, it will show that the representation of the animations are effective.
 
-% What testing to be carried out?
-
-% What kind of conclusion do you expect from the evaluation?
+The second group of testers on the other hand, would involve in students, or lecturers who have an extensive knowledge in algorithms.
 
 \todo[color=pink]{I left it off here}
+
+% what testing will be carried out
+
+\subsection{The design of the evaluation form}
+
+Below in table \ref{table:evaluationFormDesign}, I have included the software evaluation form that is expected to be filled out with feedback from the users who will be testing the software. The form includes in defining each criteria, any sub-criteria that comes along with it, and the notes that is explained in plain language on what each of those criteria means. Which then follows by a series of questions that are involved within each criteria, which the testers are expected to fill their feedback in. 
+
+What is expected from the evaluation form is that users are expected to fill in with open ended answers in each sections of the form, describing about their experiences when it comes to using the software. It is also expected of me to obtain feedback, such as what is good or aspects that is lacking in the program. Of course, the users are to give the feedback of the software based on the criteria that they are assessing from, which would definitely gives me a better sense of direction when there is the need to improve on the software. Of course, afterwards, the form allows the users to give any additional feedback if there is a need to. This might be useful, as it might fill in the gaps that I have missed in the criteria based assessment.
+
+\begin{table}[H]
+\caption{The design of the evaluation form that will be used for the criteria based assessment.}
+\begin{center}
+%\begin{tabular}{cc}
+\begin{tabular}{| p{8cm} | p{8cm} |}
+		\hline
+		\textbf{Criteria} & \textbf{Yes/No, supporting feedback} \\ \hline
+		\multicolumn{2}{| l |}{\centerline{\textbf{Usability}}}\\ \hline
+		Is the program easily understood in terms of usage?  & \\ \hline
+		Is it easy to navigate around the program? & \\ \hline
+		Can you see the images displayed in the program clearly? & \\ \hline
+		Can you see the animation displayed clearly? & \\ \hline
+		Is the interface of the program easy to use?  &   \\ \hline
+		
+		\multicolumn{2}{| l |}{\centerline{\textbf{Comprehensiveness}}}\\ \hline
+		Do you understand the general structure of the algorithms presented in the program? & \\ \hline
+		Do you understand how each of the algorithms work? List the ones that you understand and the ones you don't. & \\ \hline
+		Was it easy for you to understand that the animations are trying to portray? & \\ \hline
+		What do you think about the display of the animations in general? & \\ \hline
+		Are the information that comes with the animation can be easily understood? & \\ \hline
+		Are the information that comes with the animation relevant to the animation? & \\ \hline
+		
+		\multicolumn{2}{| l |}{\centerline{\textbf{Correctness}}}\\ \hline
+		Are the representation of the animations for the algorithms it is portraying correct?  & \\ \hline
+		Are the information displayed whilst the animation is playing correct? & \\ \hline
+		
+		\multicolumn{2}{| l |}{\centerline{\textbf{Other feedback}}}\\ \hline
+		Are there any thing that is good in the program? & \\ \hline
+		Are there any that is lacking? & \\ \hline
+		What do you think that needs to be improved in the software? & \\ \hline
+\end{tabular}
+\end{center}
+\label{table:evaluationFormDesign}
+\end{table}
+

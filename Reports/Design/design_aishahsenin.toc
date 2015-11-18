@@ -66,8 +66,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.7.8}Insertion sort}{43}{subsection.2.7.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.9}The Evaluation Design}{44}{subsection.2.7.9}
+\contentsline {section}{\numberline {2.8}The Evaluation Design}{44}{section.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Review against plan}{45}{chapter.3}
+\contentsline {subsection}{\numberline {2.8.1}Testers who will be involved during the evaluation}{44}{subsection.2.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{45}{chapter.3}
+\contentsline {subsection}{\numberline {2.8.2}The design of the evaluation form}{44}{subsection.2.8.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Review against plan}{46}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Todo list}{46}{chapter.3}
