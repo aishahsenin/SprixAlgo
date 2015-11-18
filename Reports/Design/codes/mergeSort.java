@@ -29,3 +29,28 @@ void CopyArray(B[], A[], n){
     for(i = 0; i < n; i++)
         A[i] = B[i];
 }
+
+// input: array of values, valueArray
+
+// keep splitting the array until the array is left to one
+// the depth of the split is = valueArray.size / 2
+int depth = valueArray.size / 2
+
+// start the splitting here
+for (int i = 0; i < depth; i++){
+
+  // split valueArray into 2 equal parts
+  int middle = valueArray.size/2
+
+  // copy first part of valueArray to arrayLeft
+  for (int i = 0; i < middle){
+   arrayLeft[i] = valueArray[i];
+  }
+
+  // copy second part of valueArray to arrayRight
+  for (int i = middle, i < valueArray.size){
+    arrayRight[i] = valueArray[i];
+  }
+
+}
+

@@ -85,16 +85,14 @@ Afternoon
 Class diagram [done]
 Evaluation list [done]
 
-Evening
-Creating a local database?
-
 Review against plan 
 	- the information page
 	- appendix page
 	- adding a local database into the program for the extra features
 
-Psuedo code [in progress]
+Psuedo code [only done for some algorithms]
 Presentation slides
+human data shizz
 
 Last minute changes
 - bibliography
