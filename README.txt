@@ -67,7 +67,7 @@ algorithms to use
 		merge and sort
 
 Sunday
-Fractional knapsack problem [done]
+Fractional knapsack problem [done] 
 Knapsack problem [done]
 Activity Selection Problem [done]
 
@@ -93,6 +93,9 @@ Review against plan
 	- appendix page
 	- adding a local database into the program for the extra features
 
-Psuedo code 
+Psuedo code [in progress]
 Presentation slides
+
 Last minute changes
+- bibliography
+- grammar mistakes

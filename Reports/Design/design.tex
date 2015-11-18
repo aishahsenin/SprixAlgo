@@ -5,15 +5,13 @@ In this design chapter primarily consists of the plan for the construction of th
 % ---------- Brief description on design ----------
 \section{Brief description of the anticipated software}
 % how the software is going to turn up like
-The program initiates by displaying the main menu. From here, the users can select whichever category they wish to use. These categories include the three main different features of the program, which are \textit{settings}, \textit{animation}, and \textit{appendix}. 
+The program initiates by displaying the main menu. From here, the users can select whichever category they wish to use. These categories include the two main different features of the program, which are \textit{settings} and the \textit{animation} feature.
 
 With the \textit{settings} feature, the user can change some of the aspects of the program, such as its font size and the speed of animation. This would allow the users to work on an environment that feels most comfortable for them.
 
 The animation feature, which admittedly would be the main aspect of this project, is where the list of different algorithms would be collected at. From here, the user can select the algorithm they wish to learn. Once they have selected one, the program will lead the user to the input page, which has a form for the user to fill. This form is different depending on which algorithm selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
 
 Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
-
-The last feature of this program, is the \textit{appendix}. The appendix would basically display extra information in regards to the algorithms that are not mentioned within the animation feature. The reason for this feature is for students who decided to read further about those algorithms that are presented in the program. 
 
 \subsection{Functional requirements}
 
@@ -54,7 +52,6 @@ The functional requirements of the \textit{Algorithm Animation} program is to sp
     9 & Adjust the font size & Users can adjust the font size to fit their own requirements. Users can pick sizes from small (font size 8), default (font size 12), and large (font size 16). By default, the general size of the fonts in the program will be sized 12. \\ \hline
     \multicolumn{3}{| l |}{\textbf{Additional features}}\\ \hline
     10 & Suggests to play similar algorithms & When users view a certain algorithm, the program also suggests an algorithm alike with the currently viewed one. This is to enhance better learning experience for users to seek out on similar problems \\ \hline
-    11 & Appendix that shows further writeup of the algorithms available in the program & This shows the full writeup of the description shown during the animation, and additional information in regards with the algorithm. \\ \hline
 \end{tabular}
 \end{center}
 \label{table:functionalRequirements2}
@@ -103,8 +100,6 @@ According to the use case diagram shown on figure \ref{useCaseDiagram}, the user
 
 Other than the settings, the animation is another feature that would be included within the program. By selecting an algorithm from the list of algorithms, the program will lead the user to the page where the animation of the algorithm resides in. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. The user can also access other algorithms that are \textit{related} to the current one, if they ever wish to do so. If the user clicks on the algorithm from the list of related algorithms, the program then goes to the animation page of the algorithm that was selected by the user.
 
-Other than the settings and the animated feature, there will be an appendix within the program, where the users can view more information about the algorithm. The appendix however will only list the algorithms that are available in the program as animations. Within this feature, the appendix will mainly include a more detailed explanation about the algorithm that is not mentioned in the animation page. The information that can be found in the appendix is expected to contain predominantly texts and images of the algorithm.
-
 \newpage
 
 % --------------- FLOWCHART -------------------
@@ -112,7 +107,7 @@ Other than the settings and the animated feature, there will be an appendix with
 In this section, I have included the flowcharts of the program, to display the flow of the system in general, and how decisions controls its following events. 
 
 \subsection{Main flow of the program}
-The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The three main modules which makes up the program, i.e. change settings, view the animation of algorithms, and the appendix, are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, for the animation module, and \ref{sec:flowchartAppendix} for the appendix module.
+The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The two main features (settings and animation) are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, and for the animation module.
 
 \begin{figure}[H]
 \centering
@@ -122,7 +117,7 @@ The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the 
 \label{mainFlowChart}
 \end{figure}
 
-On the main flow chart below, the user first starts the application, which then brings them to the main menu. From here, the user can select up to three features they wish to use, which are \textit{Settings}, \textit{List of Algorithms}, and \textit{Appendix}. The user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
+On the main flow chart below, the user first starts the application, which then brings them to the main menu. From here, the user can select up to three features they wish to use, which are \textit{Settings} and \textit{List of Algorithms}. The user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
 
 \subsection{Flow of the animation module} \label{sec:flowchartAnimation}
 The animation module is admittedly the main feature of the program which will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, that leads to the animation module. From here, a list of the algorithms are classified between 3 main paradigms and a sorting algorithm into different sections for user feasibility purpose. When the user selects an algorithm they wish to learn more about, the program would lead them to a page where the animation is, and a brief description about the algorithm shown in the \textit{Information} section placed below the animation. 
@@ -159,21 +154,6 @@ Once an input has been either retrieved, the user then will able to play the ani
 
 \newpage
 
-\subsection{Flow of the appendix module} \label{sec:flowchartAppendix}
-Finally, the last module would be the appendix module, which will contain the supplementary material in regards to the algorithms that are used in this program. This basically lists all the algorithms that are used, and users can select any algorithm within that list to view more information about the algorithm.
-
-\begin{figure}[H]
-\centering
-%\hspace*{-1.5cm}
-\includegraphics[scale=1]{images/report_images/flowchartAppendix.png}
-\caption{The flowchart of the appendix module.}
-\label{flowchartAppendix}
-\end{figure}
-
-The flowchart on figure \ref{flowchartAppendix} refers to the sequence of events that are involved within the module. First, from the main menu, as when the user selects \textit{View appendix}, the program then brings the user to the list of all the available appendix found in the program. The user then could select the algorithm they wish to find out more about, by clicking one from the list. This will then lead the user to the page that predominantly presents the detailed information in regards to the algorithm in question.
-
-\newpage
-
 % --------------- UI DESIGN -------------------
 \newpage
 \section{Graphical User Interface design of the system} \label{uiDesign}
@@ -192,7 +172,6 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 \begin{enumerate}
 \item The \textit{List of Algorithm} button leads the user to the list of algorithms. In this list, user can select whatever algorithm they wish to learn. 
 \item The \textit{Change settings} button on the other hand, leads the user to a settings page.
-\item The \textit{View appendix} page brings the user to the main appendix list, which lists all the algorithms that is shown within the program.
 \item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
 \end{enumerate}
 
@@ -286,21 +265,6 @@ In this page basically shows the list of all the algorithms that are available i
 \item Secondly, once the animation has ended, it also suggests the user on algorithms that are closely related to the current one for a comprehensive learning experience.
 \end{enumerate}
 
-\subsection{The appendix page}
-
-\begin{figure}[H]
-\centering
-\hspace*{-0.5cm}
-\includegraphics[scale=0.8]{images/report_images/uiAppendix.png}
-\caption{The appendix page which lists the algorithms available in the program, which then shows further information regarding the algorithm.}
-\label{uiAppendix}
-\end{figure}
-
-\begin{enumerate}
-\item This section lists all the algorithms available in the program.
-\item This section on the other hand displays whatever information about the algorithm selected from the list in no. 1.
-\end{enumerate}
-
 \newpage
 
 % -------------- UML Class diagram --------------
@@ -324,7 +288,7 @@ Show in figure \ref{UMLClassDiagram} is the class diagram of the \textit{Algorit
 %--------------- UML Sequence Diagram ----------
 \section{UML Sequence Diagram}
 
-Next up, is the sequence diagrams. These diagrams are primarily used to show the interactions between its objects in a sequential order, and the interactions that occur afterwards. The purpose of this diagram is to show in greater detail, compared to the class diagram shown in the previous section (section \ref{UMLClassDiagram}), of what objects that are involved during a particular event. Do take note that these diagrams will be separated between the three main features of the program, the \textit{animation}, \textit{settings}, and finally \textit{appendix}.
+Next up, is the sequence diagrams. These diagrams are primarily used to show the interactions between its objects in a sequential order, and the interactions that occur afterwards. The purpose of this diagram is to show in greater detail, compared to the class diagram shown in the previous section (section \ref{UMLClassDiagram}), of what objects that are involved during a particular event. Do take note that these diagrams will be separated between the two main features of the program, the \textit{animation} and \textit{settings} feature.
 
 
 \subsection{The animation feature}
@@ -365,22 +329,6 @@ Another feature that is available in the program would be the settings feature. 
 Once the user is in the settings page, the user can change features such as the font size and the animation speed. If the user decides to change the font size, the \textit{changeFontSize()} method is being called out. When the method is called, it passes the parameter of the font size chosen by the user, and uses it to make necessary changes to the font size. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
 
 Once the user is done with changing the settings, they could then press the \textit{Back} button, which leads them back to the main menu. To see the graphical interface design of the settings page, do refer to figure \ref{uiSettings}, on page \pageref{uiSettings}.
-
-\newpage
-
-\subsection{The appendix feature}
-
-\begin{figure}[H]
-\centering
-%\hspace*{-0.5cm}
-\includegraphics[scale=1]{images/report_images/sequenceDiagramAppendix.png}
-\caption{The sequence diagram of when the user uses the appendix feature.}
-\label{sequenceDiagramAppendix}
-\end{figure}
-
-Last but not least, the appendix would be the other feature that would be available in the \textit{Algorithm Animation} program. From the main menu, the user clicks the \textit{View appendix} button, which calls out the \textit{displayAppendixList()} method, and leads the user to the appendix page. Once the appendix page is displayed, the user could select the algorithm they wish to find out more about, within the list presented on the page. Once the user selects one, the program calls out the \textit{displayAlgorithmInfo()} with the name of the algorithm as the passing parameter, which displays the information available for the algorithm.
-
-When the user is done, the \textit{Back} button can be selected, which leads them back to the main menu. Like before, if you wish to refer to the graphical user interface design of the appendix page, refer to figure \ref{uiAppendix} in page \pageref{uiAppendix}.
 
 \newpage
 
@@ -443,10 +391,11 @@ As the animation proceeds to the second row, where the animation loops by doing 
 
 Once filling up the \textit{value} and \textit{keep} table is completed, the algorithm looks through the keep table from the most bottom right hand side, to find out which item to keep. If the value is 1, it means that the item along that row is kept, and the total weight of the knapsack will be subtracted from the item. Do this along the column which is the maximum possible amount of capacity of the knapsack, in this case 5, until either the knapsack is full, or can no longer take in any more items. Finally once it has done that, show the total value (most optimum value you can achieve) that is taken away from the knapsack.
 
-\lstinputlisting[frame=single]{codes/knapsackProblem.java}
-\todo[color=yellow]{describe the psuedo code}
+\lstinputlisting[frame=single, caption={The psuedo code of the Knapsack Problem}, label={knapsackProblem}]{codes/knapsackProblem.java}
 
-\newpage
+The code that is shown in listings \ref{knapsackProblem}, is the psuedo code for the knapsack problem\cite{}. The input for the algorithm is the arrayList of the items, which consists of the value and weight attributes, the number of items in total, and the capacity of the knapsack. Since this problem uses the dynamic programming approach, the 2D array for the value table will be in \textit{tableValues[j][i]}, where \textit{j} is a count until to it reaches to the capacity of the knapsack, and \textit{i} being the counter for the number of items in total. 
+
+First, the algorithm inserts 0 values on he first row of the value table, since there are no items are taken. After the row has been fully filled out, the algorithm proceeds in going through the next, and following rows. It first check the \textit{j} value, it being the capacity of 1, and the \textit{i} value, which defines the first item, item 1. It then compares with the weight of item 1 and the capacity amount, to see if item 1 fits. If it does, the algorithm proceeds in find the max value between the current item plus the item that can fit in the remaining capacity (if there is any), and the previous item from the same capacity. Once a max value is found, the algorithm proceeds to the next \textit{j} value until it ends. However, if there is no capacity left since the weight of the item is more than the capacity, the algorithm takes on the previous value instead.
 
 \subsection{Activity Selection Problem}
 
@@ -466,10 +415,12 @@ Once the explanation phase is done, the animation carries on by initiating the a
 
 \newpage
 
-\lstinputlisting[frame=single]{codes/activitySelectionProblem.java}
-\todo[color=yellow]{describe the psuedo code}
+\lstinputlisting[frame=single, caption={The psuedo code of the Activity Selection Problem}, label={activitySelectionProblem}]{codes/activitySelectionProblem.java}
 
-\newpage
+The psuedo code of the activity selection problem shown in listing \ref{activitySelectionProblem}. There will be an arrayList of activities as an input, where the algorithm firstly sorts them by their finish times, earliest to latest. From that list, the algorithm uses the greedy approach by taking the activity that has the earliest time (which is first on the list), and insert into the set S, which will be another arrayList with an \textit{Activity} class type. 
+
+Taking n as the length of the remaining activities in the set, the algorithm that iterates through the list to find the activities that are incompatible with the one that is selected through the greedy approach. When this is done, the algorithm conduct a recursion, where it goes from the beginning by calling out the next activity that has the earliest finish time from the updated list. The algorithm goes on until to a point where it has achieved the optimum set of activities.
+
 
 \subsection{Merge sort}
 
@@ -489,7 +440,7 @@ As when the animation starts, the animation will clearly show the division it ma
 
 \newpage
 
-\lstinputlisting[frame=single]{codes/mergeSort.java}
+\lstinputlisting[frame=single, caption={The psuedo code for merge sort}, label={mergeSort}]{codes/mergeSort.java}
 \todo[color=yellow]{describe the psuedo code}
 
 \newpage
