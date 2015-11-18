@@ -83,7 +83,7 @@ Insertion sort [done]
 Wednesday
 Evaluation list [morning]
 Review against plan [morning]
-Class diagram [morning]
+Class diagram [done]
 Psuedo code 
 Presentation slides
 Last minute changes
