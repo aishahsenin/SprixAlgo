@@ -11,7 +11,11 @@ With the \textit{settings} feature, the user can change some of the aspects of t
 
 The animation feature on the other hand, which admittedly would be the main aspect of this project, where the list of different algorithms can be selected from. From here, the user selects the algorithm they wish to see the animation of. Once they have selected one, the program will lead the user to the input page, where the input form would be presented to them. The user should either enter all the required input in this form, or generate random values for the input instead. It is worth noting that this form would be different depending on the algorithm that is selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
 
+<<<<<<< HEAD
 Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have controls for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
+=======
+Once the input page is filled with necessary values, the program proceeds to the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
+>>>>>>> 1a9aac45c787c056ea0d53531c423a976d87d812
 
 \subsection{Functional requirements}
 
@@ -73,7 +77,7 @@ On the other hand, the non-functional requirements, refer to the set of requirem
     \multicolumn{3}{| l |}{\textbf{Graphical interface}}\\ \hline
     1 & The images for the animation is to be scalable depending on the size of the user's input & The physical size of the animation highly depends on the input size given by either the user or the random generator. Due to this, the program needs to carefully scale the animation when it is either too small or too big for the screen. It needs to ensure that the user can easily see the images and fonts of the animation, whether the input size is small or large. \\ \hline
     2 & Tables included in the animation demonstration are to be scrollable when it gets larger than a specified size given & Some algorithms require a table, especially the dynamic programming types. The table varies in size depending on the size of input for the algorithm. If the table width and length gets bigger than a specific size given, instead of exceeding the size, the program is to add a scrollable feature for the table. \\ \hline
-    3 & The program is to be clear and easy enough for users to comprehend its design & The colour scheme of the program is to have a calming, non-blaring proposition. The images and fonts along with it needs to be shown clearly, and easily relatable for the general public. \\ \hline
+    3 & The program is to be clear and easy enough for users to comprehend its design & The colour scheme of the program is to have a neutral, non-blaring overlay. The images and fonts along with it needs to be shown clearly, and easily relatable for the general public. \\ \hline
     \multicolumn{3}{| l |}{\textbf{Settings}}\\ \hline
     4 & Saves the settings provided by user & The program is to save the changes made by user under settings. This means that when the user opens the program again, the changed settings will still be in placed. \\ \hline
 \end{tabular}
@@ -120,7 +124,7 @@ On the main flow chart below, the user first starts the application, which then 
 \subsection{Flow of the animation module} \label{sec:flowchartAnimation}
 The animation module is admittedly the main feature of the program which will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, that leads to the animation module. From here, a list of the algorithms are classified between 3 main paradigms and a sorting algorithm into different sections for user feasibility purpose. When the user selects an algorithm they wish to learn more about, the program would lead them to a page where the animation is, and a brief description about the algorithm shown in the \textit{Information} section placed below the animation. 
 
-The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable, and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects the \textit{Generate random value} button instead, the program would then generate a random value within the limited amount assigned, and input those value into the animation.
+The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable, and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects the \textit{Generate random value} button instead, the program would then generate a random value within the limited amount assigned, and input those values into the animation.
 
 Once an input has been either retrieved, the user then will able to play the animation by pressing the play button. Whilst the animation is at its \textit{playing state}, the user can control the animation by either \textit{pause}, \textit{backtrack}, or \textit{stop} the animation. The state of the animation depends on the type of controls that have been selected by the user. To view the description of each control available in the animation page, below on table \ref{tab:animationControls} that shows the outcome of the animation's state when a particular control button has been selected by the user.
 
@@ -163,6 +167,7 @@ The settings feature on the other hand involve in two options, the user can eith
 \label{flowchartSettings}
 \end{figure}
 
+\newpage
 
 % --------------- UI DESIGN -------------------
 \section{Graphical User Interface design of the system} \label{uiDesign}
@@ -197,8 +202,8 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 On the \textit{Settings} page, users can adjust several features of the program, such as the font size, and the animation speed. The reason for having a settings page is to ensure that the users are working in an environment that they are most comfortable in.
 
 \begin{enumerate}
-\item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 9pt. The default size on the other hand is 12pt, followed by the largest possible size is 18pt. 
-\item Secondly, the user can also change the animation speed. The user could always adjust the speed by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
+\item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 8pt. The default size on the other hand is 12pt, followed by the largest possible size is 16pt. 
+\item Secondly, the user can also change the animation speed. The speed can be adjusted by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
 \end{enumerate}
 
 \subsection{List of algorithms page}
@@ -211,7 +216,7 @@ On the \textit{Settings} page, users can adjust several features of the program,
 \label{uiListOfAlgorithms}
 \end{figure}
 
-In this page basically shows the list of all the algorithms that are available in animation. These algorithms are also to be classified between the three main algorithmic paradigms, which are \textit{greedy method}, \textit{divide and conquer}, and \textit{dynamic programming} approaches. Also, another classification would be the sorting algorithms will be included in the list as well.
+In this page basically shows the list of all the algorithms that are available in animation. These algorithms are also to be classified between the three main algorithmic paradigms, which are \textit{greedy method}, \textit{divide and conquer}, and \textit{dynamic programming} approaches, as well as the sorting algorithms.
 
 \begin{enumerate}
 \item Shows the list of all the algorithms available. These algorithms are also classified according to its respective algorithmic paradigms. Users can click any of those algorithms displayed in that list if they wish to learn more about them.
@@ -299,7 +304,7 @@ Next up, is the sequence diagrams. These diagrams are primarily used to show the
 \subsection{The animation feature}
 The sequence diagram for the animation feature shown in figure \ref{sequenceDiagramShowAlgorithmList}, reveals the interaction between the user and the different objects that are expected to be involved within this feature. First and foremost, as the user initiates the program, the program will display the main menu by executing the \textit{displayMenu()} method. From there, the user selects (for this case) the \textit{List of algorithms} button, which leads the user to the main list of algorithms.
 
-The user then can pick any algorithm they wish to learn from this list. For example, the uses decides to learn how the merge sort algorithm works. So the user clicks the button called \textit{Merge sort algorithm}, which then leads the user to the next page, the input request page, or known as \textit{AlgorithmAnimationInputRequest} according to the sequence diagram in figure \ref{sequenceDiagramShowAlgorithmList}.
+The user then can pick any algorithm they wish to learn from this list. For example, the user decides to learn how the merge sort algorithm works. So the user clicks the button called \textit{Merge sort algorithm}, which then leads the user to the next page, which is the input request page (or known as \textit{AlgorithmAnimationInputRequest} according to the sequence diagram in figure \ref{sequenceDiagramShowAlgorithmList}).
 
 Once the values have been inserted, the program proceeds to the animation page by calling out the \textit{displayAnimation()} method, along with the \textit{play()} method that plays the animation. Once the animation is playing, the user can manipulate the animation by using the control buttons such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} button. Each of these controls has its own call of method, and will be called accordingly depending on which control button is pressed. 
 
@@ -331,7 +336,7 @@ Once the animation has stopped, either by the user or the animation simply reach
 
 Another feature that is available in the program would be the settings feature. Based on the sequence diagram in figure \ref{sequenceDiagramSettings}, as when the user opens the program, the program will call the \textit{displayMenu()} method to display the main menu onto the client. The user then selects \textit{Settings} button, which leads them to the settings page, which would be called out by the \textit{displaySettings()} method.
 
-Once the user is in the settings page, the user can change features such as the font size and the animation speed. If the user decides to change the font size, the \textit{changeFontSize()} method is being called out. When the method is called, it passes the parameter of the font size chosen by the user, and uses it to make necessary changes to the font size. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
+Once the user is in the settings page, the user can change features such as the font size and the animation speed. If the user decides to change the font size, the \textit{changeFontSize()} method is being called out. When the method is called, the method then passes the parameter of the font size chosen by the user, and uses it to make necessary changes to the font size. Once that is done, the program then calls out the \textit{displayUpdatedSettings()} to change the outlook of the program to whatever that is changed. The same applies to when the speed of animation is changed, however this time, the \textit{changeAnimationSpeed()} method is called out instead. 
 
 Once the user is done with changing the settings, they could then press the \textit{Back} button, which leads them back to the main menu. To see the graphical interface design of the settings page, do refer to figure \ref{uiSettings}, on page \pageref{uiSettings}.
 
@@ -384,7 +389,7 @@ The Knapsack Problem is quite similar compared to the Fractional Knapsack Proble
 \label{animationDesignKnapsackProblem}
 \end{figure}
 
-As when the animation of the knapsack problem starts (refer to figure \ref{animationDesignKnapsackProblem}), few description which describes about the tables will be displayed during the animation's initial play time. Those descriptions in the yellow coloured callouts are placed around the table to describe its purpose, in order for the user to understand what they are before the actual algorithm starts. These texts will remain here for about a 30 seconds, before proceeding to the next state.
+During the initial phase of the animation (figure \ref{animationDesignKnapsackProblem}), the animation starts off by displaying information about the use of the \textit{value} and \textit{keep} table. These information will be displayed in yellow callouts, which would be placed around those tables which they are referring to. Its purpose is to inform the user on what these tables are for, before the actual algorithm starts. These texts will remain here for about a 30 seconds, before proceeding to the next state.
 
 Included in this animation, other than the ones mentioned before, are the cube figures which represent the items. Along with them are its attributes, which are their respective value they are worth, and their weight. Next to it is an image of the knapsack. Show below it is its maximum capacity, and the current weight it is holding. For its initial state, the current value is always 0.
 
@@ -539,7 +544,7 @@ The last criteria that needs to be assessed during the evaluation would be the \
 
 \subsection{Testers who will be involved during the evaluation}
 % who will be involved during the evaluation
-There will be a need to include two different sets of groups of testers when it comes to the evaluation of this software. The first group will be involving in computer science students, who either have no knowledge in to having basic knowledge in regards to algorithms. The reason why this group will be used to assessed the program is that they will mainly be assessing the usability and the correctness of the program. Since they have no to little knowledge regarding the topic, it is up to them to see if they have managed to achieve any form of understanding after using the program. The measurement of their understanding will able to show the amount of effectiveness in representing the animations. If they manage to do so, it will show that the representation of the animations are effective.
+It is possible that non-human data will be needed when conducting the evaluation of the software. Non-human data refers to their anonymous feedback in regards of the software they have tested. These testers are required to come from two different sets of groups of testers when it comes to the evaluation of this software. The first group will be involving in computer science students, who either have no knowledge in to having basic knowledge in regards to algorithms. The reason why this group will be used to assessed the program is that they will mainly be assessing the usability and the correctness of the program. Since they have no to little knowledge regarding the topic, it is up to them to see if they have managed to achieve any form of understanding after using the program. The measurement of their understanding will able to show the amount of effectiveness in representing the animations. If they manage to do so, it will show that the representation of the animations are effective.
 
 The second group of testers on the other hand, would involve in students, or lecturers who have an extensive knowledge in algorithms. This group will primarily focus on assessing the validation of the animations that are presented to them. With the help of this group of testers, their feedback will ensure that the animations portraying the algorithms correctly, and if not, state in the evaluation form on what are the areas that are portraying the algorithms incorrectly. They will also assess the correctness of the information that comes with the animation as well, and see if the correlation between the information and animation is relevant and valid. Using their feedback will help me in locating the specific errors found within the animation and its information, and rectifying them.
 
