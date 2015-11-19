@@ -9,17 +9,13 @@ The program initiates by displaying the main menu. From here, the users can sele
 
 With the \textit{settings} feature, the user can change some of the aspects of the program, which are its font size and the speed of animation. Doing so would allow the users to work on an environment that feels most comfortable for them.
 
-The animation feature on the other hand, which admittedly would be the main aspect of this project, where the list of different algorithms can be selected from. From here, the user selects the algorithm they wish to see the animation of. Once they have selected one, the program will lead the user to the input page, where the input form would be presented to them. The user should either enter all the required input in this form, or generate random values for the input instead. It is worth noting that this form would be different depending on the algorithm that is selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
+The animation feature on the other hand, which admittedly would be the main aspect of this project, where the list of different algorithms can be selected from. From here, the user selects the algorithm they wish to see the animation of. Once they have selected one, the program would proceed to the input page, where the form is. The user should either enter the required input in this form, or generate random values for them instead. It is worth noting that this form has a different structure depending on the algorithm, since different algorithms have varying sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
 
-<<<<<<< HEAD
-Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have controls for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
-=======
 Once the input page is filled with necessary values, the program proceeds to the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
->>>>>>> 1a9aac45c787c056ea0d53531c423a976d87d812
 
 \subsection{Functional requirements}
 
-The functional requirements of the \textit{Algorithm Animation} program is to specify the list of requirements, the system needs to do, such as its behaviour or function. The tables below (tables \ref{table:functionalRequirements} and \ref{table:functionalRequirements2}) shows the list of functional requirements that is expected for the program to achieve, along with their respective descriptions.  
+The functional requirements of the \textit{Algorithm Animation} program is to specify the list of requirements, that defines the system's behaviour and functionality of what the system needs to do. The tables below (tables \ref{table:functionalRequirements} and \ref{table:functionalRequirements2}) shows the list of functional requirements that is expected for the program to achieve, along with their respective descriptions.  
 
 \begin{table}[H]
 \caption{Functional requirements of the software}
@@ -29,14 +25,15 @@ The functional requirements of the \textit{Algorithm Animation} program is to sp
 		\hline
 		\textbf{No.} & \textbf{Requirements} & \textbf{Description} \\ \hline
     \multicolumn{3}{| l |}{\textbf{Menu}}\\ \hline
-    1 & Shows the list of playable algorithms & In the menu, the program is to show all the algorithms available in the program in the main list. In this list, user can select the feature they wish to choose, such as the settings or the animation feature. \\ \hline
-    2 & Classify the available algorithms between the 3 main algorithmic paradigms & On the main list, the algorithms are to be classified between the 3 main paradigms and the sorting algorithms. This is to allow the users to understand immediately the correlation between similar algorithms when classified within its paradigms. Also, the purpose of classifying the algorithms is to increase the ease of usability, as users will only be required to look within the algorithms paradigm in order to search for a specific problem.  \\ \hline
+        1 & The main menu & The main menu is to list the selection of features for the user to select from. \\ \hline
+    2 & Shows the list of playable algorithms & In the menu, the program is to show all the algorithms available in the program in the main list. In this list, user can select the feature they wish to choose, such as the settings or the animation feature. \\ \hline
+    3 & Classify the available algorithms between the 3 main algorithmic paradigms & On the main list, the algorithms are to be classified between the 3 main paradigms and the sorting algorithms. This would allow the users to understand immediately on the correlation between the algorithms. Also, the purpose of doing this is to increase the ease of usability, as users will only be required to look within the specified algorithmic paradigm in order to search for the specific problem.  \\ \hline
     \multicolumn{3}{| l |}{\textbf{Animation}}\\ \hline
-    3 & Plays the animation & When the animation is in its initial or paused state, users can play the animation. This initiates the animation, that plays it until the end, unless the user either pauses or stops it. \\ \hline
-    4 & Pauses the animation & The user can pause the animation, which stops the animation temporarily at its current state. \\ \hline
-    5 & Stops the animation & When the animation is playing, user can stop the animation. This ends the animation completely at any point of time during the playtime of the animation. \\ \hline
-    6 & Backtracks the animation & During the animation's playtime, the program keeps track on the number of iteration(s) the animation is currently at. When a user chooses to backtrack the animation, the animation will \textit{rewind} itself from its current iteration \textit{i}, to \textit{i - 1}. \\ \hline
-    7 & Shows a short description during the animation on each \textit{iteration} of the algorithm & During the animation's playtime, the program is to show a short description about what the animation is doing. \\ \hline
+    4 & Plays the animation & When the animation is in its initial or paused state, users can play the animation. This initiates the animation, until the end or unless the user either pauses or stops it. \\ \hline
+    5 & Pauses the animation & The user can pause the animation, which stops the animation temporarily at its current state. \\ \hline
+    6 & Stops the animation & When the animation is playing, user can stop the animation. This ends the animation completely at any point of time during the playtime of the animation. \\ \hline
+    7 & Backtracks the animation & During the animation's playtime, the program keeps track on the number of iteration(s) the animation is currently at. When a user chooses to backtrack the animation, the animation will \textit{rewind} itself from its current iteration \textit{i}, to \textit{i - 1}. \\ \hline
+    8 & Shows a short description during the animation on each \textit{iteration} of the algorithm & During the animation's playtime, the program is to show a short description about what the animation is doing. \\ \hline
 \end{tabular}
 \end{center}
 \label{table:functionalRequirements}
@@ -54,8 +51,12 @@ The functional requirements of the \textit{Algorithm Animation} program is to sp
     \multicolumn{3}{| l |}{\textbf{Help option}}\\ \hline
     8 & Adjust the speed of the animation & Users can adjust the speed of the animation ranging from 1 (very slow), to 10 (very fast). By default, the speed of the animation will be set to 5. \\ \hline
     9 & Adjust the font size & Users can adjust the font size to fit their own requirements. Users can pick sizes from small (font size 8), default (font size 12), and large (font size 16). By default, the general size of the fonts in the program will be sized 12. \\ \hline
+    
+    \multicolumn{3}{| l |}{\textbf{Input page}}\\ \hline
+    10 & Generates random values as an alternative way of adding input & The program is to allow the user to generate random values in the input page as an alternative, instead of adding their own input. However, the random values needs to have a range from the minimum to the maximum amount, for each type, and also depending to the algorithm selected. \\ \hline
+    11 & Input range & In the input page, there is a need to assign each values to have its minimum and maximum amount that would be approved by the program. This is to ensure that the program does not take too little or way too many values, as there is only a limited amount of space for the animation to be presented in the program. \\ \hline
     \multicolumn{3}{| l |}{\textbf{Additional features}}\\ \hline
-    10 & Suggests to play similar algorithms & When users view a certain algorithm, the program also suggests an algorithm alike with the currently viewed one. This is to enhance better learning experience for users to seek out on similar problems \\ \hline
+    11 & Suggests to play similar algorithms & When users view a certain algorithm, the program also suggests an algorithm alike with the currently viewed one. This is to enhance better learning experience for users to seek out on similar problems \\ \hline
 \end{tabular}
 \end{center}
 \label{table:functionalRequirements2}
@@ -65,7 +66,7 @@ The functional requirements of the \textit{Algorithm Animation} program is to sp
 
 \subsection{Non-functional requirements}
 
-On the other hand, the non-functional requirements, refer to the set of requirements that describes how the system works in general, in terms of its operations. Table \ref{table:nonfunctionalRequirements} below shows the set of non-functional requirements the system is expected to satisfy, along with its individual descriptions.
+The non-functional requirements refer to the list of features that describe how the system works in general, in terms of its operations. Table \ref{table:nonfunctionalRequirements} below shows the set of non-functional requirements the system is expected to satisfy, along with its individual descriptions.
 
 \begin{table}[H]
 \caption{Non-functional requirements of the software}
@@ -75,9 +76,9 @@ On the other hand, the non-functional requirements, refer to the set of requirem
 		\hline
 		\textbf{No.} & \textbf{Requirements} & \textbf{Description} \\ \hline
     \multicolumn{3}{| l |}{\textbf{Graphical interface}}\\ \hline
-    1 & The images for the animation is to be scalable depending on the size of the user's input & The physical size of the animation highly depends on the input size given by either the user or the random generator. Due to this, the program needs to carefully scale the animation when it is either too small or too big for the screen. It needs to ensure that the user can easily see the images and fonts of the animation, whether the input size is small or large. \\ \hline
+    1 & The images for the animation is to be scalable depending on the size of the user's input & The physical size of the animation highly depends on the input size given by either the user or the random generator. Due to this, the program needs to carefully scale the animation when it is either too small or too big for the screen. It also needs to ensure that the user can easily see the images and fonts of the animation, whether the input size is small or large. \\ \hline
     2 & Tables included in the animation demonstration are to be scrollable when it gets larger than a specified size given & Some algorithms require a table, especially the dynamic programming types. The table varies in size depending on the size of input for the algorithm. If the table width and length gets bigger than a specific size given, instead of exceeding the size, the program is to add a scrollable feature for the table. \\ \hline
-    3 & The program is to be clear and easy enough for users to comprehend its design & The colour scheme of the program is to have a neutral, non-blaring overlay. The images and fonts along with it needs to be shown clearly, and easily relatable for the general public. \\ \hline
+    3 & The graphical interface is to be clear and easy enough for users to comprehend its design & The colour scheme of the program is to have a neutral, non-blaring overlay. The images and fonts along with it needs to be shown clearly, and easily relatable for the general public. \\ \hline
     \multicolumn{3}{| l |}{\textbf{Settings}}\\ \hline
     4 & Saves the settings provided by user & The program is to save the changes made by user under settings. This means that when the user opens the program again, the changed settings will still be in placed. \\ \hline
 \end{tabular}
@@ -100,16 +101,16 @@ The use case diagram below on figure \ref{useCaseDiagram} is the representation 
 \label{useCaseDiagram}
 \end{figure}
 
-According to the use case diagram shown on figure \ref{useCaseDiagram}, the user can change the settings of some of the features of the program, such as the speed of the animation, and its font size. This is to ensure that the user will be able to work comfortably within the environment, when the program allows the them to change these features of the program. The user could always revert back to the system's default settings if there is a need to.
+According to the use case diagram shown on figure \ref{useCaseDiagram}, the user can change the settings on the speed of the animation and its font size of the animation. If there is a need to, the user could always revert back to the system's default settings..
 
 Other than the settings, the animation is another feature that would be included within the program. By selecting an algorithm from the list of algorithms, the program will lead the user to the page where the animation of the algorithm resides in. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. The user can also access other algorithms that are \textit{related} to the current one, if they ever wish to do so. If the user clicks on the algorithm from the list of related algorithms, the program then goes to the animation page of the algorithm that was selected by the user.
 
 % --------------- FLOWCHART -------------------
 \section{System flowcharts}
-In this section, I have included the flowcharts of the program, that displays the flow of the system in general, and how decisions controls its following events. 
+In this section, I have included the flowcharts of the program, that displays the flow of the system in general, and how decisions, made by the user, controls its following events. 
 
 \subsection{Main flow of the program}
-The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The two main features (settings and animation) are grouped within its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation} for the animation feature, and section \ref{} for the settings feature.
+The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The two main features (settings and animation) are grouped within its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation} for the animation feature, and section \ref{flowchartAnimation} for the settings feature.
 
 \begin{figure}[H]
 \centering
@@ -119,12 +120,12 @@ The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the 
 \label{mainFlowChart}
 \end{figure}
 
-On the main flow chart below, the user first starts the application, which then brings them to the main menu. From here, the user can select up to three features they wish to use, which are \textit{Settings} and \textit{List of Algorithms}. The user can also choose to exit from the main menu, by selecting \textit{Exit} which then closes the whole application.
+On the main flow chart below, the user first starts the application, which then brings them to the main menu. From here, the user can select up to two features they wish to use, which are \textit{Settings} and \textit{List of Algorithms}. The user can also choose to exit from the main menu, by selecting \textit{Exit}, which then closes the whole application.
 
 \subsection{Flow of the animation module} \label{sec:flowchartAnimation}
-The animation module is admittedly the main feature of the program which will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, that leads to the animation module. From here, a list of the algorithms are classified between 3 main paradigms and a sorting algorithm into different sections for user feasibility purpose. When the user selects an algorithm they wish to learn more about, the program would lead them to a page where the animation is, and a brief description about the algorithm shown in the \textit{Information} section placed below the animation. 
+The animation module is admittedly the main feature of the program which will be heavily concentrated during the course of the implementation of the project. The user first selects the \textit{List of Algorithms} button, that leads to the animation module. From here, a list of the algorithms are classified between 3 main paradigms and a sorting algorithm into different sections for user feasibility purpose. When the user selects an algorithm they wish to learn more about, the program would proceed to the input page. Once filled and submitted, the program uses those input and apply to the animation. This will be where the program proceeds to the animation page. In there, there would be a brief description about the algorithm shown in the \textit{Information} section placed below the animation. 
 
-The program will first prompt the user either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable, and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects the \textit{Generate random value} button instead, the program would then generate a random value within the limited amount assigned, and input those values into the animation.
+In the input page, the user would be prompted to either to enter their own specific input, or the generate a random value instead. When the user decides to add their own input, there will be a specific limit assigned to the algorithm. If the input exceeds the limited amount, the program will throw an error message to inform user that the input was unacceptable, and requests the user to add an input that does not exceed the assigned limit. On the other hand, if the user selects the \textit{Generate random value} button instead, the program would then generate a random value within the limited amount assigned, and input those values into the animation.
 
 Once an input has been either retrieved, the user then will able to play the animation by pressing the play button. Whilst the animation is at its \textit{playing state}, the user can control the animation by either \textit{pause}, \textit{backtrack}, or \textit{stop} the animation. The state of the animation depends on the type of controls that have been selected by the user. To view the description of each control available in the animation page, below on table \ref{tab:animationControls} that shows the outcome of the animation's state when a particular control button has been selected by the user.
 
@@ -147,8 +148,8 @@ Once an input has been either retrieved, the user then will able to play the ani
 \begin{landscape}
 \begin{figure}[H]
 \centering
-\hspace*{-2cm}
-\includegraphics[scale=0.9]{images/report_images/flowchartAnimation.png}
+\hspace*{-1cm}
+\includegraphics[scale=0.8]{images/report_images/flowchartAnimation.png}
 \caption{The flowchart of the animation feature.}
 \label{flowchartAnimation}
 \end{figure}
@@ -157,7 +158,7 @@ Once an input has been either retrieved, the user then will able to play the ani
 \newpage
 
 \subsection{Flow of the settings feature} \label{sec:flowchartSettings}
-The settings feature on the other hand involve in two options, the user can either change the font size, the animation speed, or both. Once the user has made changes, the program conduct those changes accordingly. Afterwards, the user will proceed back to the main menu.
+The settings feature on the other hand involve in two options, the user can either change the font size, the animation speed, or both. Once the user has made changes, the program would then conduct those changes accordingly. Afterwards, the user will proceed back to the main menu.
 
 \begin{figure}[H]
 \centering
@@ -199,11 +200,11 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 \label{uiSettings}
 \end{figure}
 
-On the \textit{Settings} page, users can adjust several features of the program, such as the font size, and the animation speed. The reason for having a settings page is to ensure that the users are working in an environment that they are most comfortable in.
+On the \textit{Settings} page, users can adjust the two features of the program, which is the font size and the animation speed. The reason for having a settings page is to ensure that the users are working in an environment that they are most comfortable in.
 
 \begin{enumerate}
 \item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 8pt. The default size on the other hand is 12pt, followed by the largest possible size is 16pt. 
-\item Secondly, the user can also change the animation speed. The speed can be adjusted by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
+\item Secondly, the user can also change the animation speed. The speed can be adjusted by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed. The default speed would be set to ``5'', fastest would be 10, whilst the slowest speed would be 1.
 \end{enumerate}
 
 \subsection{List of algorithms page}
@@ -219,7 +220,7 @@ On the \textit{Settings} page, users can adjust several features of the program,
 In this page basically shows the list of all the algorithms that are available in animation. These algorithms are also to be classified between the three main algorithmic paradigms, which are \textit{greedy method}, \textit{divide and conquer}, and \textit{dynamic programming} approaches, as well as the sorting algorithms.
 
 \begin{enumerate}
-\item Shows the list of all the algorithms available. These algorithms are also classified according to its respective algorithmic paradigms. Users can click any of those algorithms displayed in that list if they wish to learn more about them.
+\item Shows the list of all the algorithms available. Users can click any of those algorithms displayed in that list if they wish to learn more about them. As when the user selects one, the program would then proceed to the specified input page for the user to provide their input to, or simply let the program to generate random values.
 \end{enumerate}
 
 \subsection{The page of the animation of the algorithm selected}
@@ -353,7 +354,7 @@ Note that I have not included the control buttons in some of these designs. This
 \centering
 %\hspace*{-0.5cm}
 \includegraphics[scale=1]{images/report_images/animationDesignFractionalKnapsackProblem_STEP1.png}
-\caption{The animation design of the FractionalKnapsackProblem. This shows the initial state of the animation.}
+\caption{The animation design of the Fractional Knapsack Problem. This shows the initial state of the animation.}
 \label{animationDesignFractionalKnapsackProblem}
 \end{figure}
 
@@ -461,7 +462,7 @@ As when the animation starts, the animation will clearly show the division it ma
 \centering
 %\hspace*{-0.5cm}
 \includegraphics[scale=0.9]{images/report_images/animationDesignMatrixMultiplication.png}
-\caption{Merge sort animation design.}
+\caption{The animation design for the matrix multiplication problem.}
 \label{animationDesignMatrixMultiplication}
 \end{figure}
 
@@ -484,7 +485,7 @@ Since this problem uses dynamic programming, there is a need to add a table that
 \centering
 %\hspace*{-0.5cm}
 \includegraphics[scale=0.9]{images/report_images/animationDesignRodCuttingProblem.png}
-\caption{Merge sort animation design.}
+\caption{The animation design for the rod cutting problem.}
 \label{animationDesignRodCuttingProblem}
 \end{figure}
 
@@ -500,7 +501,7 @@ The algorithm ends when the \textit{Price/Length} table is fully filled, and the
 \centering
 %\hspace*{-0.5cm}
 \includegraphics[scale=1.5]{images/report_images/animationDesignBubbleSort.png}
-\caption{Merge sort animation design.}
+\caption{The bubble sort animation design.}
 \label{animationDesignBubbleSort}
 \end{figure}
 
