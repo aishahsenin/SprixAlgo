@@ -1,0 +1,13 @@
+the purpose of this project
+a general description of your product
+your target audience
+the aims and objectives that you wish to achieve in this project/program
+
+the main functionalities of this product
+the general flow of this program
+the graphical user interface 
+the design of the animations
+
+the evaluation process
+
+any changes made from the previous specification report to this
