@@ -11,7 +11,7 @@ With the \textit{settings} feature, the user can change some of the aspects of t
 
 The animation feature on the other hand, which admittedly would be the main aspect of this project, where the list of different algorithms can be selected from. From here, the user selects the algorithm they wish to see the animation of. Once they have selected one, the program will lead the user to the input page, where the input form would be presented to them. The user should either enter all the required input in this form, or generate random values for the input instead. It is worth noting that this form would be different depending on the algorithm that is selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
 
-Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
+Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have controls for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
 
 \subsection{Functional requirements}
 
@@ -25,10 +25,10 @@ The functional requirements of the \textit{Algorithm Animation} program is to sp
 		\hline
 		\textbf{No.} & \textbf{Requirements} & \textbf{Description} \\ \hline
     \multicolumn{3}{| l |}{\textbf{Menu}}\\ \hline
-    1 & Shows the list of playable algorithms & In the menu, the program is to show all the algorithms available in the program in the main list. In this list, user can select whichever algorithm they wish to see. \\ \hline
-    2 & Classify the available algorithms between the 3 main algorithmic paradigms & On the main list, the algorithms are to be classified between the 3 main paradigms, such as the greedy method, divide and conquer, and dynamic programming. This is to allow the users to understand immediately the correlation between similar algorithms when classified within its paradigms. This is also to increase the ease of usability, as users will only be required to look within the algorithms paradigm to search for a specific problem.  \\ \hline
+    1 & Shows the list of playable algorithms & In the menu, the program is to show all the algorithms available in the program in the main list. In this list, user can select the feature they wish to choose, such as the settings or the animation feature. \\ \hline
+    2 & Classify the available algorithms between the 3 main algorithmic paradigms & On the main list, the algorithms are to be classified between the 3 main paradigms and the sorting algorithms. This is to allow the users to understand immediately the correlation between similar algorithms when classified within its paradigms. Also, the purpose of classifying the algorithms is to increase the ease of usability, as users will only be required to look within the algorithms paradigm in order to search for a specific problem.  \\ \hline
     \multicolumn{3}{| l |}{\textbf{Animation}}\\ \hline
-    3 & Plays the animation & When the animation is in its initial or paused state, users can play the animation. This initiates the animation, which plays until the end, unless the user either pauses or stops the animation. \\ \hline
+    3 & Plays the animation & When the animation is in its initial or paused state, users can play the animation. This initiates the animation, that plays it until the end, unless the user either pauses or stops it. \\ \hline
     4 & Pauses the animation & The user can pause the animation, which stops the animation temporarily at its current state. \\ \hline
     5 & Stops the animation & When the animation is playing, user can stop the animation. This ends the animation completely at any point of time during the playtime of the animation. \\ \hline
     6 & Backtracks the animation & During the animation's playtime, the program keeps track on the number of iteration(s) the animation is currently at. When a user chooses to backtrack the animation, the animation will \textit{rewind} itself from its current iteration \textit{i}, to \textit{i - 1}. \\ \hline
@@ -100,14 +100,12 @@ According to the use case diagram shown on figure \ref{useCaseDiagram}, the user
 
 Other than the settings, the animation is another feature that would be included within the program. By selecting an algorithm from the list of algorithms, the program will lead the user to the page where the animation of the algorithm resides in. From here, the user can manipulate the animation, by pressing controls such as play, pause, stop and ``backtrack''. The user can also access other algorithms that are \textit{related} to the current one, if they ever wish to do so. If the user clicks on the algorithm from the list of related algorithms, the program then goes to the animation page of the algorithm that was selected by the user.
 
-\newpage
-
 % --------------- FLOWCHART -------------------
 \section{System flowcharts}
-In this section, I have included the flowcharts of the program, to display the flow of the system in general, and how decisions controls its following events. 
+In this section, I have included the flowcharts of the program, that displays the flow of the system in general, and how decisions controls its following events. 
 
 \subsection{Main flow of the program}
-The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The two main features (settings and animation) are grouped in its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation}, and for the animation module.
+The flowchart below on figure \ref{mainFlowChart} shows the overall flow of the program itself. The two main features (settings and animation) are grouped within its respective subprocesses. Each subprocess will be described more in detail in sections \ref{sec:flowchartAnimation} for the animation feature, and section \ref{} for the settings feature.
 
 \begin{figure}[H]
 \centering
@@ -147,15 +145,26 @@ Once an input has been either retrieved, the user then will able to play the ani
 \centering
 \hspace*{-2cm}
 \includegraphics[scale=0.9]{images/report_images/flowchartAnimation.png}
-\caption{The flowchart of the animation module.}
+\caption{The flowchart of the animation feature.}
 \label{flowchartAnimation}
 \end{figure}
 \end{landscape}
 
 \newpage
 
+\subsection{Flow of the settings feature} \label{sec:flowchartSettings}
+The settings feature on the other hand involve in two options, the user can either change the font size, the animation speed, or both. Once the user has made changes, the program conduct those changes accordingly. Afterwards, the user will proceed back to the main menu.
+
+\begin{figure}[H]
+\centering
+\hspace*{-2cm}
+\includegraphics[scale=0.9]{images/report_images/flowchartSettings.png}
+\caption{The flowchart of the settings feature.}
+\label{flowchartSettings}
+\end{figure}
+
+
 % --------------- UI DESIGN -------------------
-\newpage
 \section{Graphical User Interface design of the system} \label{uiDesign}
 \subsection{Program start page}
 
@@ -174,8 +183,6 @@ As the program first initiates, the UI design shown in figure \ref{uiStartWindow
 \item The \textit{Change settings} button on the other hand, leads the user to a settings page.
 \item Finally, the \textit{Exit} button would close the whole application, if the user selects it.
 \end{enumerate}
-
-\newpage
 
 \subsection{Settings page}
 

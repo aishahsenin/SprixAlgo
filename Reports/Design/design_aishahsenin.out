@@ -10,27 +10,28 @@
 \BOOKMARK [1][-]{section.2.3}{System flowcharts}{chapter.2}% 10
 \BOOKMARK [2][-]{subsection.2.3.1}{Main flow of the program}{section.2.3}% 11
 \BOOKMARK [2][-]{subsection.2.3.2}{Flow of the animation module}{section.2.3}% 12
-\BOOKMARK [1][-]{section.2.4}{Graphical User Interface design of the system}{chapter.2}% 13
-\BOOKMARK [2][-]{subsection.2.4.1}{Program start page}{section.2.4}% 14
-\BOOKMARK [2][-]{subsection.2.4.2}{Settings page}{section.2.4}% 15
-\BOOKMARK [2][-]{subsection.2.4.3}{List of algorithms page}{section.2.4}% 16
-\BOOKMARK [2][-]{subsection.2.4.4}{The page of the animation of the algorithm selected}{section.2.4}% 17
-\BOOKMARK [1][-]{section.2.5}{UML class diagram}{chapter.2}% 18
-\BOOKMARK [1][-]{section.2.6}{UML Sequence Diagram}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.6.1}{The animation feature}{section.2.6}% 20
-\BOOKMARK [2][-]{subsection.2.6.2}{The settings feature}{section.2.6}% 21
-\BOOKMARK [1][-]{section.2.7}{Algorithm animation designs}{chapter.2}% 22
-\BOOKMARK [2][-]{subsection.2.7.1}{Fractional Knapsack Problem}{section.2.7}% 23
-\BOOKMARK [2][-]{subsection.2.7.2}{Knapsack Problem}{section.2.7}% 24
-\BOOKMARK [2][-]{subsection.2.7.3}{Activity Selection Problem}{section.2.7}% 25
-\BOOKMARK [2][-]{subsection.2.7.4}{Merge sort}{section.2.7}% 26
-\BOOKMARK [2][-]{subsection.2.7.5}{Matrix multiplication}{section.2.7}% 27
-\BOOKMARK [2][-]{subsection.2.7.6}{Rod cutting problem}{section.2.7}% 28
-\BOOKMARK [2][-]{subsection.2.7.7}{Bubble sort}{section.2.7}% 29
-\BOOKMARK [2][-]{subsection.2.7.8}{Insertion sort}{section.2.7}% 30
-\BOOKMARK [1][-]{section.2.8}{The Evaluation Design}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.8.1}{Testers who will be involved during the evaluation}{section.2.8}% 32
-\BOOKMARK [2][-]{subsection.2.8.2}{The design of the evaluation form}{section.2.8}% 33
-\BOOKMARK [0][-]{chapter.3}{Review against plan}{}% 34
-\BOOKMARK [1][-]{section.3.1}{Updated Gantt Chart}{chapter.3}% 35
-\BOOKMARK [0][-]{figure.3.1}{Todo list}{}% 36
+\BOOKMARK [2][-]{subsection.2.3.3}{Flow of the settings feature}{section.2.3}% 13
+\BOOKMARK [1][-]{section.2.4}{Graphical User Interface design of the system}{chapter.2}% 14
+\BOOKMARK [2][-]{subsection.2.4.1}{Program start page}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.2}{Settings page}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.3}{List of algorithms page}{section.2.4}% 17
+\BOOKMARK [2][-]{subsection.2.4.4}{The page of the animation of the algorithm selected}{section.2.4}% 18
+\BOOKMARK [1][-]{section.2.5}{UML class diagram}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.6}{UML Sequence Diagram}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.6.1}{The animation feature}{section.2.6}% 21
+\BOOKMARK [2][-]{subsection.2.6.2}{The settings feature}{section.2.6}% 22
+\BOOKMARK [1][-]{section.2.7}{Algorithm animation designs}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.7.1}{Fractional Knapsack Problem}{section.2.7}% 24
+\BOOKMARK [2][-]{subsection.2.7.2}{Knapsack Problem}{section.2.7}% 25
+\BOOKMARK [2][-]{subsection.2.7.3}{Activity Selection Problem}{section.2.7}% 26
+\BOOKMARK [2][-]{subsection.2.7.4}{Merge sort}{section.2.7}% 27
+\BOOKMARK [2][-]{subsection.2.7.5}{Matrix multiplication}{section.2.7}% 28
+\BOOKMARK [2][-]{subsection.2.7.6}{Rod cutting problem}{section.2.7}% 29
+\BOOKMARK [2][-]{subsection.2.7.7}{Bubble sort}{section.2.7}% 30
+\BOOKMARK [2][-]{subsection.2.7.8}{Insertion sort}{section.2.7}% 31
+\BOOKMARK [1][-]{section.2.8}{The Evaluation Design}{chapter.2}% 32
+\BOOKMARK [2][-]{subsection.2.8.1}{Testers who will be involved during the evaluation}{section.2.8}% 33
+\BOOKMARK [2][-]{subsection.2.8.2}{The design of the evaluation form}{section.2.8}% 34
+\BOOKMARK [0][-]{chapter.3}{Review against plan}{}% 35
+\BOOKMARK [1][-]{section.3.1}{Updated Gantt Chart}{chapter.3}% 36
+\BOOKMARK [0][-]{figure.3.1}{Todo list}{}% 37
