@@ -68,4 +68,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Review against plan}{37}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Todo list}{37}{chapter.3}
+\contentsline {section}{\numberline {3.1}Updated Gantt Chart}{37}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Todo list}{40}{figure.3.1}

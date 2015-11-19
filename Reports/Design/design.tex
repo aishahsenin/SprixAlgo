@@ -1,15 +1,15 @@
 \chapter{Design}
 
-In this design chapter primarily consists of the plan for the construction of the \textit{Algorithm Animation} program. This design documentation includes the list of requirements that is expected of the program, the different uses of the program from the users' perspective, system flowchart, the graphical user interface design, sequence diagrams, the design of the animations for each algorithms, and finally the evaluation list.
+In this design chapter primarily consists of the plan for the construction of the \textit{Algorithm Animation Program}. This design documentation includes the list of requirements that is expected of the program, the different uses of the program from the users' perspective, system flowchart, the graphical user interface design, sequence diagrams, the design of the animations for each algorithms, and finally the evaluation list.
 
 % ---------- Brief description on design ----------
 \section{Brief description of the anticipated software}
 % how the software is going to turn up like
 The program initiates by displaying the main menu. From here, the users can select whichever category they wish to use. These categories include the two main different features of the program, which are \textit{settings} and the \textit{animation} feature.
 
-With the \textit{settings} feature, the user can change some of the aspects of the program, such as its font size and the speed of animation. This would allow the users to work on an environment that feels most comfortable for them.
+With the \textit{settings} feature, the user can change some of the aspects of the program, which are its font size and the speed of animation. Doing so would allow the users to work on an environment that feels most comfortable for them.
 
-The animation feature, which admittedly would be the main aspect of this project, is where the list of different algorithms would be collected at. From here, the user can select the algorithm they wish to learn. Once they have selected one, the program will lead the user to the input page, which has a form for the user to fill. This form is different depending on which algorithm selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
+The animation feature on the other hand, which admittedly would be the main aspect of this project, where the list of different algorithms can be selected from. From here, the user selects the algorithm they wish to see the animation of. Once they have selected one, the program will lead the user to the input page, where the input form would be presented to them. The user should either enter all the required input in this form, or generate random values for the input instead. It is worth noting that this form would be different depending on the algorithm that is selected, as different algorithms have different sets of input. The user can either enter their own input (these input will be bounded with a specific limit), or generates random values instead. 
 
 Once the input page is filled with necessary values, the program proceeds in the animation page, where the animation starts playing from. The anticipated program will also have \textit{controls} for the animation as well, such as the \textit{play}, \textit{pause}, \textit{stop}, and \textit{backtrack} buttons. Each of these controls are described further in depth within this design chapter.
 
@@ -191,7 +191,7 @@ On the \textit{Settings} page, users can adjust several features of the program,
 
 \begin{enumerate}
 \item One of the features the user can change is the font size. In order to change the font size, the user is to use the slider below. From the leftmost part of the slider is the smallest size of the font, which is size 9pt. The default size on the other hand is 12pt, followed by the largest possible size is 18pt. 
-\item Secondly, the user can also change the animation speed. Initially, the animation will be running on a default speed of \todo[color=orange]{find the specific speed of the animation!}. However, if the speed is either too fast or slow for the user, the user could always adjust the speed by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
+\item Secondly, the user can also change the animation speed. The user could always adjust the speed by sliding to the leftmost bit of the slider for slower speed, and rightmost for a faster speed.
 \end{enumerate}
 
 \subsection{List of algorithms page}
@@ -535,11 +535,6 @@ The last criteria that needs to be assessed during the evaluation would be the \
 There will be a need to include two different sets of groups of testers when it comes to the evaluation of this software. The first group will be involving in computer science students, who either have no knowledge in to having basic knowledge in regards to algorithms. The reason why this group will be used to assessed the program is that they will mainly be assessing the usability and the correctness of the program. Since they have no to little knowledge regarding the topic, it is up to them to see if they have managed to achieve any form of understanding after using the program. The measurement of their understanding will able to show the amount of effectiveness in representing the animations. If they manage to do so, it will show that the representation of the animations are effective.
 
 The second group of testers on the other hand, would involve in students, or lecturers who have an extensive knowledge in algorithms. This group will primarily focus on assessing the validation of the animations that are presented to them. With the help of this group of testers, their feedback will ensure that the animations portraying the algorithms correctly, and if not, state in the evaluation form on what are the areas that are portraying the algorithms incorrectly. They will also assess the correctness of the information that comes with the animation as well, and see if the correlation between the information and animation is relevant and valid. Using their feedback will help me in locating the specific errors found within the animation and its information, and rectifying them.
-
-\todo[color=pink]{I left it off here}
-
-% what testing will be carried out
-\todo[color=yellow]{anything to write for what kind of testing to be carried out?}
 
 \subsection{The design of the evaluation form}
 Below in table \ref{table:evaluationFormDesign}, I have included the software evaluation form that is expected to be filled out with feedback from the users who will be testing the software. The form includes in defining each criteria, any sub-criteria that comes along with it, and the notes that is explained in plain language on what each of those criteria means. Which then follows by a series of questions that are involved within each criteria, which the testers are expected to fill their feedback in. 
