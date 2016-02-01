@@ -1,5 +1,9 @@
 Work plan
 
+2/1/2016 (Monday)
+- [DESIGN] Main page layout of the program
+- [DESIGN] The layout for other bits of the program
+
 12/11/2015 
 Complete these diagrams before the weekends (before 14/11/2015)
 - Requirements specification [done.]
