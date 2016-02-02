@@ -8,6 +8,7 @@ namespace SprixProject.Controllers
 {
     public class HomeController : Controller
     {
+        // These are all the buttons situated on the header of the page.
         public ActionResult Index()
         {
             return View();
