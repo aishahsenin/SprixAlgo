@@ -10,7 +10,6 @@
     padding-left: 15px;
     padding-right: 15px;
     padding: 10px;
-    /*background-color:burlywood*/
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -45,14 +44,22 @@ textarea {
 }
 
 #mainSection {
-    width:200px;
     padding: 150px;
     padding-left:15px;
     padding-right:15px;
     width:1000px;
-    /*background-color:blue;*/
     position:relative;
     left:120px;
+}
+
+#buttonSection {
+    padding: 15px;
+    padding-left:15px;
+    padding-right:15px;
+    width:1000px;
+    position:relative;
+    left:-15px;
+    top:120px;
 }
 
 #footer { 
@@ -167,4 +174,32 @@ textarea {
     transition: all .4s;
   -webkit-transition: all .4s;
 }
+
+/* TEXT FOR BUTTONS */
+.textGreedy{
+    position: relative;
+    bottom:0px;
+    left:180px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textDivideAndConquer{
+    position: relative;
+    bottom:0px;
+    left:410px;
+    top:-20px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textDynamic{
+    position: relative;
+    bottom:0px;
+    left:660px;
+    top:-40px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
 
