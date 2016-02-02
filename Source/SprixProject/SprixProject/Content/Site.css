@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: dimgray;
+    background-color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -24,40 +24,90 @@ textarea {
     max-width: 280px;
 }
 
-.button {
-
-    width: 100px;
-	height: 55px;
-	background: red;
-	position: relative;
-
-}
-
-.hexagon {
+.frame{
+  width: 210px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
   position: relative;
-  width: 300px; 
-  height: 173.21px;
-  background-color: #64C7CC;
-  margin: 86.60px 0;
+  cursor: pointer;
+  top: 50px;
+  right: 270px;
 }
 
-.hexagon:before,
-.hexagon:after {
-  content: "";
+.frame2{
+  width: 210px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 50px;
+  right: 40px;
+}
+
+.frame3{
+  width: 210px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 50px;
+  right: -190px
+}
+
+.hex-outer{
+  background: #e1e1e1;
+  width: 210px;
+  height: 120px;
+}
+
+.hex-inner{
+  background: #42eb94;
+  width: 200px;
+  height: 115px;
+  position: relative;
+  left: 5px;
+  top: 82px !important;
+  border-radius: 0;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+}
+
+.h1{
   position: absolute;
-  width: 0;
-  border-left: 150px solid transparent;
-  border-right: 150px solid transparent;
+  top: 80px;
 }
 
-.hexagon:before {
-  bottom: 100%;
-  border-bottom: 86.60px solid #64C7CC;
+.h2{
+  position: absolute;
+  top: 80px;
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
 }
 
-.hexagon:after {
-  top: 100%;
-  width: 0;
-  border-top: 86.60px solid #64C7CC;
+.h3{
+  position: absolute;
+  top: 80px;
+  transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
 }
-	
+
+.label{
+  position: absolute;
+  color: #ABF8FF;
+  font-weight: bold;
+  font-size: 160px;
+  left: 59px;
+  top: 36px;
+    transition: all .4s;
+  -webkit-transition: all .4s;
+}
+
+.hex1{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
