@@ -1,6 +1,13 @@
 Work plan
 
-2/1/2016 (Monday)
+3/2/2016 (Wednesday)
+- Finish designing the other layout of AlgoAnimate
+
+2/2/2016 (Tuesday)
+- Finished the layout for the main page
+- Look into Bootstrap!
+
+1/2/2016 (Monday)
 - [DESIGN] Main page layout of the program
 - [DESIGN] The layout for other bits of the program
 
