@@ -1,13 +1,16 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: white;
+    background-color: #efefef;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
+    position:relative;
     padding-left: 15px;
     padding-right: 15px;
+    padding: 10px;
+    /*background-color:burlywood*/
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,41 +27,101 @@ textarea {
     max-width: 280px;
 }
 
+/* PAGE LAYOUT */
+#header {
+    padding: 5px;
+    padding-left:15px;
+    padding-right:15px;
+    position:relative;
+    left:50px;
+    font-family:'Orator Std';
+    font-size:90px;
+    text-align:center;
+}
+
+.title {
+    position:relative;
+    left:50px;
+}
+
+#mainSection {
+    width:200px;
+    padding: 150px;
+    padding-left:15px;
+    padding-right:15px;
+    width:1000px;
+    /*background-color:blue;*/
+    position:relative;
+    left:120px;
+}
+
+#footer { 
+    color:#808080;
+    clear:both;
+    text-align:center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding:20px;
+    bottom: 100px;
+    position:relative;
+    left:50px;
+    bottom:0px;
+}
+
+/* HEXAGON BUTTONS */
 .frame{
-  width: 210px;
+  width: 0px;
   height: 0px;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   cursor: pointer;
-  top: 50px;
-  right: 270px;
+  top: -150px;
+  right: 350px;
 }
 
 .frame2{
-  width: 210px;
+  width: 0px;
   height: 0px;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   cursor: pointer;
-  top: 50px;
-  right: 40px;
+  top: -150px;
+  right: 100px;
 }
 
 .frame3{
-  width: 210px;
+  width: 0px;
   height: 0px;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   cursor: pointer;
-  top: 50px;
-  right: -190px
+  top: -150px;
+  right: -150px
+}
+
+.frame:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
+.frame2:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
+.frame3:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
 }
 
 .hex-outer{
-  background: #e1e1e1;
+  background: white;
   width: 210px;
   height: 120px;
 }
@@ -96,18 +159,12 @@ textarea {
 
 .label{
   position: absolute;
-  color: #ABF8FF;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 160px;
-  left: 59px;
-  top: 36px;
+  left: -38px;
+  top: 30px;
     transition: all .4s;
   -webkit-transition: all .4s;
-}
-
-.hex1{
-    position: relative;
-    top: 20px;
-    left: 30px;
 }
 

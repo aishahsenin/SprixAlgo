@@ -20,6 +20,7 @@
                 <!-- Button links -->
                 @Html.ActionLink("Algo Animator", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
+            <!-- Where your view stuff goes -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -30,13 +31,16 @@
             </div>
         </div>
     </div>
+  
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Algo Animator</p>
-        </footer>
+
     </div>
+
+    <div id="footer">
+        <p>&copy; @DateTime.Now.Year - Algo Animator</p>
+    </div> 
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
