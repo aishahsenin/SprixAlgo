@@ -14,6 +14,16 @@ namespace SprixProject.Controllers
             return View();
         }
 
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            return View();
+        }
+
         public ActionResult DivideAndConquer()
         {
             return View();
