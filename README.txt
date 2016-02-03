@@ -1,6 +1,12 @@
 Work plan
 
-2/1/2016 (Monday)
+3/2/2016 (Wednesday)
+- [UI] Finished most of the UI on the main page. Need to design custom logos for each buttons
+- [UI] Added a side navigational bar on the other layout of the page. 
+	- Need to make them dynamic [TODO]
+- [UI] Need to design the other segments of the layout in the pages [TODO]
+
+1/1/2016 (Monday)
 - [DESIGN] Main page layout of the program
 - [DESIGN] The layout for other bits of the program
 
