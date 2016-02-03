@@ -1,0 +1,156 @@
+﻿/* HEXAGON BUTTONS */
+.frame{
+  width: 0px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+  right: 350px;
+}
+
+.frame2{
+  width: 0px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+  right: 100px;
+}
+
+.frame3{
+  width: 0px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+  right: -150px
+}
+
+.frame:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
+.frame2:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
+.frame3:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
+.hex-outer{
+  background: white;
+  width: 210px;
+  height: 120px;
+}
+
+.hex-inner{
+  background: #42eb94;
+  width: 200px;
+  height: 115px;
+  position: relative;
+  left: 5px;
+  top: 82px !important;
+  border-radius: 0;
+  transition: all .4s;
+  -webkit-transition: all .4s;
+}
+
+.h1{
+  position: absolute;
+  top: 80px;
+}
+
+.h2{
+  position: absolute;
+  top: 80px;
+  transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+}
+
+.h3{
+  position: absolute;
+  top: 80px;
+  transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+}
+
+.label{
+  position: absolute;
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 160px;
+  left: -38px;
+  top: 30px;
+    transition: all .4s;
+  -webkit-transition: all .4s;
+  text-decoration:none;
+}
+
+.label a:link{
+    color:white;
+}
+
+.label a:hover{
+    color:darkgrey;
+    text-decoration: none;
+}
+
+/* TEXT FOR BUTTONS */
+.textGreedy{
+    position: relative;
+    bottom:0px;
+    left:250px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textGreedy a:hover {
+    background-color:black;
+    color:white;
+}
+
+.textDivideAndConquer{
+    position: relative;
+    bottom:0px;
+    left:490px;
+    top:-20px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textDivideAndConquer a:hover {
+    background-color:black;
+    color:white;
+}
+
+.textDynamic{
+    position: relative;
+    bottom:0px;
+    left:735px;
+    top:-40px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textDynamic a:hover {
+    background-color:black;
+    color:white;
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: inherit;
+    text-decoration:none;
+}

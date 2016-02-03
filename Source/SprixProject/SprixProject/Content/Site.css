@@ -10,6 +10,14 @@
     padding-left: 15px;
     padding-right: 15px;
     padding: 10px;
+    background-color:blue;
+}
+
+.body-contentHome {
+    position:relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding: 10px;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -52,6 +60,10 @@ textarea {
     left:120px;
 }
 
+#sideNavBar {
+    background-color: #42eb94;
+}
+
 #buttonSection {
     padding: 15px;
     padding-left:15px;
@@ -62,144 +74,8 @@ textarea {
     top:120px;
 }
 
-#footer { 
+.footer { 
     color:#808080;
-    clear:both;
     text-align:center;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding:20px;
-    bottom: 100px;
-    position:relative;
-    left:50px;
-    bottom:0px;
 }
-
-/* HEXAGON BUTTONS */
-.frame{
-  width: 0px;
-  height: 0px;
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-  cursor: pointer;
-  top: -150px;
-  right: 350px;
-}
-
-.frame2{
-  width: 0px;
-  height: 0px;
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-  cursor: pointer;
-  top: -150px;
-  right: 100px;
-}
-
-.frame3{
-  width: 0px;
-  height: 0px;
-  margin: 0 auto;
-  margin-top: 20px;
-  position: relative;
-  cursor: pointer;
-  top: -150px;
-  right: -150px
-}
-
-.frame:hover .hex-inner{
-  height: 100px;
-  top: 90px !important;
-  border-radius: 4px;
-}
-
-.frame2:hover .hex-inner{
-  height: 100px;
-  top: 90px !important;
-  border-radius: 4px;
-}
-
-.frame3:hover .hex-inner{
-  height: 100px;
-  top: 90px !important;
-  border-radius: 4px;
-}
-
-.hex-outer{
-  background: white;
-  width: 210px;
-  height: 120px;
-}
-
-.hex-inner{
-  background: #42eb94;
-  width: 200px;
-  height: 115px;
-  position: relative;
-  left: 5px;
-  top: 82px !important;
-  border-radius: 0;
-  transition: all .4s;
-  -webkit-transition: all .4s;
-}
-
-.h1{
-  position: absolute;
-  top: 80px;
-}
-
-.h2{
-  position: absolute;
-  top: 80px;
-  transform: rotate(60deg);
-  -webkit-transform: rotate(60deg);
-}
-
-.h3{
-  position: absolute;
-  top: 80px;
-  transform: rotate(-60deg);
-  -webkit-transform: rotate(-60deg);
-}
-
-.label{
-  position: absolute;
-  color: #FFFFFF;
-  font-weight: bold;
-  font-size: 160px;
-  left: -38px;
-  top: 30px;
-    transition: all .4s;
-  -webkit-transition: all .4s;
-}
-
-/* TEXT FOR BUTTONS */
-.textGreedy{
-    position: relative;
-    bottom:0px;
-    left:180px;
-    font-family:'Orator Std';
-    font-size: 15px;
-}
-
-.textDivideAndConquer{
-    position: relative;
-    bottom:0px;
-    left:410px;
-    top:-20px;
-    font-family:'Orator Std';
-    font-size: 15px;
-}
-
-.textDynamic{
-    position: relative;
-    bottom:0px;
-    left:660px;
-    top:-40px;
-    font-family:'Orator Std';
-    font-size: 15px;
-}
-
 

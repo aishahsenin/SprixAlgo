@@ -6,28 +6,28 @@ using System.Web.Mvc;
 
 namespace SprixProject.Controllers
 {
-    public class HomeController : Controller
+    public class AnimationController : Controller
     {
-        // These are all the buttons situated on the header of the page.
+        // GET: Animation
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult DivideAndConquer()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Greedy()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
 
+        public ActionResult DynamicProgramming()
+        {
+            return View();
+        }
 
     }
 }
