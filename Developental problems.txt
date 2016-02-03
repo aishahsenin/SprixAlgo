@@ -1,0 +1,9 @@
+3/2/16 (Wednesday)
+- Need to make SIDE NAVIGATIONAL BAR dynamic
+- Need to finish the layout of all the other main pages
+- The links on the top navigational bar doesn't work
+
+2/2/2016 (Tuesday)
+- [AlgoAnimator website]
+	- problem with the footer. needs to be fixed. [solved]
+	- look into bootstrap
