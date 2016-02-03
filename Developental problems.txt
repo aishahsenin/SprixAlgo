@@ -1,5 +1,0 @@
-2/2/2016 (Tuesday)
-
-- [AlgoAnimator website]
-	- problem with the footer. needs to be fixed. [solved]
-	- look into bootstrap
