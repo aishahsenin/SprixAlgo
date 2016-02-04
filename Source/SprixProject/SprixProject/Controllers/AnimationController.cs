@@ -14,28 +14,21 @@ namespace SprixProject.Controllers
             return View();
         }
 
-        public ActionResult About()
-        {
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            return View();
-        }
-
         public ActionResult DivideAndConquer()
         {
+            ViewBag.Type = "DivideAndConquer";
             return View();
         }
 
         public ActionResult Greedy()
         {
+            ViewBag.Type = "Greedy";
             return View();
         }
 
         public ActionResult DynamicProgramming()
         {
+            ViewBag.Type = "Dynamic";
             return View();
         }
 
