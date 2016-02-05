@@ -7,9 +7,9 @@ namespace SprixProject.Models
 {
     public class Algorithm
     {
-        public int ID { get; }
-        public string Title { get; }
-        public ParadigmType Type { get; }
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public ParadigmType Type { get; set; }
 
     }
 }

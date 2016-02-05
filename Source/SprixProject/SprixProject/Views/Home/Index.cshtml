@@ -1,4 +1,6 @@
-﻿@{
+﻿@model SprixProject.Models.Algorithm
+
+@{
     ViewBag.Title = "Main Page";
     Layout = "~/Views/Shared/_EntryLayout.cshtml"; // specifying which layout it is showing
 }
@@ -45,5 +47,17 @@
         <div class="textDivideAndConquer">@Html.ActionLink("Divide and Conquer", "DivideAndConquer", "Animation")</div>
         <div class="textDynamic">@Html.ActionLink("Dynamic Programming", "DynamicProgramming", "Animation")</div>
     </div>
+
+<!-- TODO; TEST HERE -->
+<div class="col-lg-12">
+
+
+    <p>@Model.Title</p>
+
+    @*@foreach (var algorithm in Model) // TODO; error found here, throwing null exception
+    { 
+        <p>@algorithm.Title</p>
+    }*@
+</div>
     
 

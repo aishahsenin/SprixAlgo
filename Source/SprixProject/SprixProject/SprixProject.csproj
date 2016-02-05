@@ -246,6 +246,7 @@
     <Content Include="Views\Animation\NavSideBar\_GreedyNavBar.cshtml" />
     <Content Include="Views\Animation\NavSideBar\_DivideAndConquerNavBar.cshtml" />
     <Content Include="Views\Animation\NavSideBar\_DynamicProgrammingNavBar.cshtml" />
+    <Content Include="Views\Animation\AnimationStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
