@@ -1,5 +1,17 @@
 Work plan
 
+7/2/16 (Sunday)
+- Created both Azure and local database
+- Using database first method!
+- Added a LINQ class for the tables in the local database
+- Inner joined two tables (Algorithms and ParadigmType) into a single LINQ query
+	- Using the result, show it onto the View [DONE]
+	SELECT ...
+	FROM Algorithms
+	JOIN ParadigmTypes on ParadigmTypeId = Id
+	WHERE Algorithms.Id = 1
+
+
 6/2/2016 (Saturday)
 - Create a local database
 - Need to do ViewModels
