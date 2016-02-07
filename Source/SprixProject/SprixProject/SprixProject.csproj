@@ -183,6 +183,10 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\SprixDB.mdf" />
+    <Content Include="App_Data\SprixDB_log.ldf">
+      <DependentUpon>SprixDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\hexagonButtons.css" />
@@ -249,7 +253,6 @@
     <Content Include="Views\Animation\AnimationStart.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Images\Buttons\" />
     <Folder Include="ViewModels\" />
   </ItemGroup>
