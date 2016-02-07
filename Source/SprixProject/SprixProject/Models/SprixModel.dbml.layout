@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="SprixModel">
+  <DataContextMoniker Name="/SprixModelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d2c7edcf-906f-44bc-9d16-96a0b14be9d8" absoluteBounds="4.375, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SprixModelDataContext/Algorithm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89149c6e-77b1-4ddf-80a8-a0d1df7ce732" absoluteBounds="4.39, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1bbdc31-1af4-4be0-ba04-dd5ca07e6532" absoluteBounds="7.25, 1.875, 2, 1.3862939453125">
+      <DataClassMoniker Name="/SprixModelDataContext/ParadigmType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19065d58-f303-44a5-b2a0-37fd59dc9285" absoluteBounds="7.2650000000000006, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.25 : 2.56814697265625); (6.375 : 2.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/SprixModelDataContext/ParadigmType/ParadigmType_Algorithm" />
+      <nodes>
+        <classShapeMoniker Id="e1bbdc31-1af4-4be0-ba04-dd5ca07e6532" />
+        <classShapeMoniker Id="d2c7edcf-906f-44bc-9d16-96a0b14be9d8" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
