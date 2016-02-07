@@ -9,6 +9,9 @@ namespace SprixProject.Controllers
 {
     public class AnimationController : Controller
     {
+
+        AlgorithmRepository algorithmRepository = new AlgorithmRepository();
+
         // GET: Animation
         public ActionResult Index()
         {
@@ -17,50 +20,30 @@ namespace SprixProject.Controllers
 
         public ActionResult DivideAndConquer()
         {
+            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(2).ToList();
             ViewBag.Type = "DivideAndConquer";
-            return View();
+            return View(algoType);
         }
 
         public ActionResult Greedy()
         {
+            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(1).ToList();
             ViewBag.Type = "Greedy";
-            return View();
+            return View(algoType);
         }
 
         public ActionResult DynamicProgramming()
         {
+            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(3).ToList();
             ViewBag.Type = "Dynamic";
-            return View();
+            return View(algoType);
         }
 
         // TODO; 
-        public ActionResult AnimationStart(int id)
-        {
-            // List of paradigm types
-            //var paradigm = new List<ParadigmType>
-            //{
-            //    new ParadigmType { ID = 1, Name = "Greedy method", Description = "Description about greedy method " },
-            //    new ParadigmType { ID = 2, Name = "Divide and Conquer", Description = "Description about divide and conquer" },
-            //    new ParadigmType { ID = 3, Name = "Dynamic Programming", Description = "Description about dynamic programming" }
-            //};
-
-            //// TODO; 
-            //var algorithm = new List<Algorithm>
-            //{
-            //    new Algorithm { ID = 1, Title = "Fractional Knapsack Problem", Type = { ID = 1, Name = "Greed", Description = "some desc" } },
-            //    new Algorithm { ID = 2, Title = "Activity Scheduling", Type = { ID = 2, Name = "Greed2", Description = "some desc2" } }
-
-            //};
-
-            var algorithm = new Algorithm()
-            {
-                ID = 1,
-                Title = "something",
-                Type = { ID = 1, Name = "greedy", Description = "something desc" }
-            };
-
-            return View(algorithm);
-        }
+        //public ActionResult AnimationStart(int id)
+        //{
+        //    return View();
+        //}
 
     }
 

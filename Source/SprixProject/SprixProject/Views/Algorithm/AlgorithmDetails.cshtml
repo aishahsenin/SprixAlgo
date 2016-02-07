@@ -1,0 +1,14 @@
+﻿@*@model SprixProject.Models.AlgoParadigmType*@
+@*@model IEnumerable<SprixProject.Models.Algorithm>*@
+@model SprixProject.Models.AlgoParadigmType
+
+@{
+    ViewBag.Title = "AlgorithmDetails";
+}
+
+@section Title{<h2>@Html.Encode(Model.ParadigmType)</h2>}
+
+@section ContentTitle {<h2>@Html.Encode(Model.AlgorithmName)</h2>}
+
+@section Content { <p>@Html.Encode(Model.AlgorithmDescription)</p> }
+

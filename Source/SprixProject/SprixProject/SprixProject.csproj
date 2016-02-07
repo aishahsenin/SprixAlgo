@@ -51,6 +51,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -168,6 +169,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlgorithmController.cs" />
     <Compile Include="Controllers\AnimationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -176,9 +178,15 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Algorithm.cs" />
+    <Compile Include="Models\AlgorithmRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ParadigmType.cs" />
+    <Compile Include="Models\ParadigmTypeRepository.cs" />
+    <Compile Include="Models\SprixModel.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SprixModel.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -197,6 +205,11 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Models\SprixModel.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SprixModel.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -243,7 +256,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Animation\DivideAndConquer.cshtml" />
     <Content Include="Views\Shared\_EntryLayout.cshtml" />
     <Content Include="Views\Animation\Greedy.cshtml" />
     <Content Include="Views\Animation\DynamicProgramming.cshtml" />
@@ -251,10 +263,10 @@
     <Content Include="Views\Animation\NavSideBar\_DivideAndConquerNavBar.cshtml" />
     <Content Include="Views\Animation\NavSideBar\_DynamicProgrammingNavBar.cshtml" />
     <Content Include="Views\Animation\AnimationStart.cshtml" />
+    <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -263,6 +275,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\SprixModel.dbml.layout">
+      <DependentUpon>SprixModel.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
