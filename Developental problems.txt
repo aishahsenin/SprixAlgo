@@ -1,3 +1,7 @@
+7/2/2016 (Sunday)
+- retrieving data in view from controller [manage to find out how]
+- make nav bars display depending on the type of ParadigmType Id it's displaying for
+
 4/2/16 (Thursday)
 - Sort the view model out! for algorithm, paradigm type, and fractional
 - nav bar data needs to be produced by view model
