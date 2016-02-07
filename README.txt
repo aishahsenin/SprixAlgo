@@ -1,5 +1,9 @@
 Work plan
 
+6/2/2016 (Saturday)
+- Create a local database
+- Need to do ViewModels
+
 3/2/2016 (Wednesday)
 - [UI] Finished most of the UI on the main page. Need to design custom logos for each buttons
 - [UI] Added a side navigational bar on the other layout of the page. 
