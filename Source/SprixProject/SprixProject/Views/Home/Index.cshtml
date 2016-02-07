@@ -1,4 +1,4 @@
-﻿@model SprixProject.Models.Algorithm
+﻿@model IEnumerable<SprixProject.Models.Algorithm>
 
 @{
     ViewBag.Title = "Main Page";
@@ -51,13 +51,10 @@
 <!-- TODO; TEST HERE -->
 <div class="col-lg-12">
 
-
-    <p>@Model.Title</p>
-
-    @*@foreach (var algorithm in Model) // TODO; error found here, throwing null exception
+    @foreach (var algorithm in Model) // TODO; error found here, throwing null exception
     { 
         <p>@algorithm.Title</p>
-    }*@
+    }
 </div>
     
 
