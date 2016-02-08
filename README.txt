@@ -1,6 +1,9 @@
 Work plan
 
 7/2/16 (Sunday)
+- [TODO] Link to specific algorithms on the side nav bar
+- [TODO] Delete some of the unused controllers and views
+
 - Created both Azure and local database
 - Using database first method!
 - Added a LINQ class for the tables in the local database
