@@ -1,14 +1,36 @@
 ﻿@*@model SprixProject.Models.AlgoParadigmType*@
 @*@model IEnumerable<SprixProject.Models.Algorithm>*@
-@model SprixProject.Models.AlgoParadigmType
+@model SprixProject.ViewModel.ViewModelAlgorithm
 
 @{
     ViewBag.Title = "AlgorithmDetails";
 }
 
-@section Title{<h2>@Html.Encode(Model.ParadigmType)</h2>}
+@section Title{<h2>@Html.Encode(Model.algoDetails.ParadigmType)</h2>}
 
-@section ContentTitle {<h2>@Html.Encode(Model.AlgorithmName)</h2>}
+@section ContentTitle {<h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>}
 
-@section Content { <p>@Html.Encode(Model.AlgorithmDescription)</p> }
+@section Content { <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> }
+
+@section SideNavBar {
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                @Html.Encode(Model.algoDetails.ParadigmType)
+            </li>
+            @foreach (var item in Model.algoNavBar)
+            {
+                <li>
+                    <a href="#">
+                        @item.Name
+                    </a>
+                </li>
+            }
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+}
 

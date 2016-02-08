@@ -40,6 +40,8 @@
         <!-- Sidebar -->
         <!-- TODO; Make this dynamic, side bar depends on the type of page -->
 
+        @RenderSection("SideNavBar", false)
+
         
         @if (ViewBag.Type == "Greedy")
         {

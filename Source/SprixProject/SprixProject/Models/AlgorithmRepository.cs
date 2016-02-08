@@ -16,10 +16,15 @@ namespace SprixProject.Models
             return db.Algorithms;
         }
 
-        public IQueryable<Algorithm> FindParadigmTypeAlgorithm(int id)
+        public IQueryable<Algorithm> FindSameParadigmTypeAlgorithm(int id)
         {
+
+            var algorithmId = (from Algorithm in db.Algorithms
+                              where Algorithm.Id == id
+                              select Algorithm.ParadigmTypeId).SingleOrDefault();
+
             return from Algorithm in db.Algorithms
-                   where Algorithm.ParadigmTypeId == id
+                   where Algorithm.ParadigmTypeId == algorithmId
                    select Algorithm;
         }
 
@@ -43,7 +48,6 @@ namespace SprixProject.Models
             db.SubmitChanges();
         }
 
-        // TODO; Inner join using two tables (Algorithms and ParadigmType). Need to show this onto view
         public IQueryable<AlgoParadigmType> FindThis(int id)
         {
             return from n in db.Algorithms
@@ -59,6 +63,7 @@ namespace SprixProject.Models
 
     }
 
+    // New classes for inner join type queries
     public class AlgoParadigmType
     {
         public String AlgorithmName { get; set; }

@@ -18,26 +18,26 @@ namespace SprixProject.Controllers
             return View();
         }
 
-        public ActionResult DivideAndConquer()
-        {
-            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(2).ToList();
-            ViewBag.Type = "DivideAndConquer";
-            return View(algoType);
-        }
+        //public ActionResult DivideAndConquer()
+        //{
+        //    var algoType = algorithmRepository.FindParadigmTypeAlgorithm(2).ToList();
+        //    ViewBag.Type = "DivideAndConquer";
+        //    return View(algoType);
+        //}
 
-        public ActionResult Greedy()
-        {
-            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(1).ToList();
-            ViewBag.Type = "Greedy";
-            return View(algoType);
-        }
+        //public ActionResult Greedy()
+        //{
+        //    var algoType = algorithmRepository.FindParadigmTypeAlgorithm(1).ToList();
+        //    ViewBag.Type = "Greedy";
+        //    return View(algoType);
+        //}
 
-        public ActionResult DynamicProgramming()
-        {
-            var algoType = algorithmRepository.FindParadigmTypeAlgorithm(3).ToList();
-            ViewBag.Type = "Dynamic";
-            return View(algoType);
-        }
+        //public ActionResult DynamicProgramming()
+        //{
+        //    var algoType = algorithmRepository.FindParadigmTypeAlgorithm(3).ToList();
+        //    ViewBag.Type = "Dynamic";
+        //    return View(algoType);
+        //}
 
         // TODO; 
         //public ActionResult AnimationStart(int id)

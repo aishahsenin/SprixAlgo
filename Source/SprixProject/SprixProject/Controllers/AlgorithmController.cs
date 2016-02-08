@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SprixProject.Models;
+using SprixProject.ViewModel;
 
 namespace SprixProject.Controllers
 {
@@ -20,17 +21,22 @@ namespace SprixProject.Controllers
 
         public ActionResult AlgorithmDetails(int id)
         {
-            var algo = algorithmRepository.FindThis(id);
-            // Algorithm algo = algorithmRepository.GetAlgorithm(id);
-            return View("AlgorithmDetails", algo.SingleOrDefault());
+            ViewModelAlgorithm vm = new ViewModelAlgorithm();
+            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+
+            if (vm.algoNavBar == null || vm.algoDetails == null)
+                return View("Not found");
+            else
+                return View(vm);
         }
 
-        // TODO; not retrieving as expected
         //public ActionResult AlgorithmDetails(int id)
         //{
-        //    //var algoDetails = algorithmRepository.FindSpecificAlgorithm(id).ToList();
-        //    Algorithm algo = algorithmRepository.GetAlgorithm(id);
-        //    return View("AlgorithmDetails", algo);
+        //    // Algorithm algo = algorithmRepository.GetAlgorithm(id);
+        //    var algo = algorithmRepository.FindThis(id);
+        //    return View("AlgorithmDetails", algo.SingleOrDefault());
         //}
+
     }
 }
