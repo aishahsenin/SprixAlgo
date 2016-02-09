@@ -18,7 +18,7 @@
         <div class="hex-inner h1"></div>
         <div class="hex-inner h2"></div>
         <div class="hex-inner h3"></div>
-        <div class="label">@Html.ActionLink("+", "AlgorithmDetails", "Algorithm", new { id = 1 })</div>
+        <div class="label">@Html.ActionLink("+", "AlgorithmDetails", "Algorithm", new { Id = 1 }, null)</div>
     </div>
 
     <div class="frame2">
@@ -28,7 +28,7 @@
         <div class="hex-inner h1"></div>
         <div class="hex-inner h2"></div>
         <div class="hex-inner h3"></div>
-        <div class="label">@Html.ActionLink("+", "DivideAndConquer", "Animation")</div>
+        <div class="label">@Html.ActionLink("+", "AlgorithmDetails", "Algorithm", new { Id = 6 }, null)</div>
     </div>
 
     <div class="frame3">
@@ -38,14 +38,14 @@
         <div class="hex-inner h1"></div>
         <div class="hex-inner h2"></div>
         <div class="hex-inner h3"></div>
-        <div class="label">@Html.ActionLink("+", "DynamicProgramming", "Animation")</div>
+        <div class="label">@Html.ActionLink("+", "AlgorithmDetails", "Algorithm", new { Id = 2 }, null)</div>
     </div>
 </div>
     <!-- Text under buttons -->
     <div class="col-lg-12">
-        <div class="textGreedy">@Html.ActionLink("Greedy Method", "Greedy", "Animation")</div>
-        <div class="textDivideAndConquer">@Html.ActionLink("Divide and Conquer", "DivideAndConquer", "Animation")</div>
-        <div class="textDynamic">@Html.ActionLink("Dynamic Programming", "DynamicProgramming", "Animation")</div>
+        <div class="textGreedy">@Html.ActionLink("Greedy Method", "AlgorithmDetails", "Algorithm", new { Id = 1 }, null)</div>
+        <div class="textDivideAndConquer">@Html.ActionLink("Divide and Conquer", "AlgorithmDetails", "Algorithm", new { Id = 6 }, null)</div>
+        <div class="textDynamic">@Html.ActionLink("Dynamic Programming", "AlgorithmDetails", "Algorithm", new { Id = 2 }, null)</div>
     </div>
     
 
