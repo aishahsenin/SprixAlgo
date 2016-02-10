@@ -11,7 +11,7 @@ Work plan
 
 7/2/16 (Sunday)
 - [DONE] Link to specific algorithms on the side nav bar
-- [TODO] Delete some of the unused controllers and views
+- [DONE] Delete some of the unused controllers and views
 
 - Created both Azure and local database
 - Using database first method!
