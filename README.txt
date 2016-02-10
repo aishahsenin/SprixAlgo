@@ -1,7 +1,12 @@
 Work plan
 
+10/2/2016
+- [TODO] Input page for each for the algorithms
+- [TODO] Need to add relevant database to support the data model
+- [TODO] Update the database model in Visio
+
 7/2/16 (Sunday)
-- [TODO] Link to specific algorithms on the side nav bar
+- [DONE] Link to specific algorithms on the side nav bar
 - [TODO] Delete some of the unused controllers and views
 
 - Created both Azure and local database
