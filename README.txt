@@ -1,9 +1,13 @@
 Work plan
 
-10/2/2016
+10/2/2016 (Wednesday)
 - [TODO] Input page for each for the algorithms
 - [TODO] Need to add relevant database to support the data model
 - [TODO] Update the database model in Visio
+- [TODO] Start working on these algorithms (Finish by the end of this week Saturday 13/2/2016)
+	- Insertion Sort
+	- Fractional Knapsack Problem
+	- Knapsack Problem
 
 7/2/16 (Sunday)
 - [DONE] Link to specific algorithms on the side nav bar
