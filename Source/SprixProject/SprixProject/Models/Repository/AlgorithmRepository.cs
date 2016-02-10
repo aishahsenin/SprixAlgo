@@ -16,6 +16,7 @@ namespace SprixProject.Models
             return db.Algorithms;
         }
 
+        // This query is used to display the side nav bar
         public IQueryable<Algorithm> FindSameParadigmTypeAlgorithm(int id)
         {
 

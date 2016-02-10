@@ -177,11 +177,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Algorithm.cs" />
-    <Compile Include="Models\AlgorithmRepository.cs" />
+    <Compile Include="Models\Class\Algorithm.cs" />
+    <Compile Include="Models\Repository\AlgorithmRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ParadigmTypeRepository.cs" />
+    <Compile Include="Models\Repository\ParadigmTypeRepository.cs" />
+    <Compile Include="Models\Class\SortAlgorithm.cs" />
     <Compile Include="Models\SprixModel.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
