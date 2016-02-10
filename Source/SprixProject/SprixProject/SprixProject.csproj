@@ -189,7 +189,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\ViewModelAlgorithm.cs" />
+    <Compile Include="ViewModel\AlgorithmViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">

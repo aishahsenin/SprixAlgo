@@ -21,7 +21,7 @@ namespace SprixProject.Controllers
 
         public ActionResult AlgorithmDetails(int id)
         {
-            ViewModelAlgorithm vm = new ViewModelAlgorithm();
+            AlgorithmViewModel vm = new AlgorithmViewModel();
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
 
