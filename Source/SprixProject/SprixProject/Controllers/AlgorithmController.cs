@@ -31,12 +31,21 @@ namespace SprixProject.Controllers
                 return View(vm);
         }
 
-        //public ActionResult AlgorithmDetails(int id)
-        //{
-        //    // Algorithm algo = algorithmRepository.GetAlgorithm(id);
-        //    var algo = algorithmRepository.FindThis(id);
-        //    return View("AlgorithmDetails", algo.SingleOrDefault());
-        //}
+        public ActionResult PartialAlgorithmDetails(int id)
+        {
+            // TODO; retrieve the right form
+
+            AlgorithmViewModel vm = new AlgorithmViewModel();
+            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            // TODO; add algoSortForm
+
+            if (vm.algoNavBar == null || vm.algoDetails == null)
+                return View("Not found");
+            else
+                return PartialView("AlgorithmDetails", vm);
+
+        }
 
     }
 }

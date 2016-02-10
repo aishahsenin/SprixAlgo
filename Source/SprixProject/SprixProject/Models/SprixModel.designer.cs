@@ -30,12 +30,15 @@ namespace SprixProject.Models
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
-    partial void InsertAlgorithm(Algorithm instance);
-    partial void UpdateAlgorithm(Algorithm instance);
-    partial void DeleteAlgorithm(Algorithm instance);
     partial void InsertParadigmType(ParadigmType instance);
     partial void UpdateParadigmType(ParadigmType instance);
     partial void DeleteParadigmType(ParadigmType instance);
+    partial void InsertFormType(FormType instance);
+    partial void UpdateFormType(FormType instance);
+    partial void DeleteFormType(FormType instance);
+    partial void InsertAlgorithm(Algorithm instance);
+    partial void UpdateAlgorithm(Algorithm instance);
+    partial void DeleteAlgorithm(Algorithm instance);
     #endregion
 		
 		public SprixModelDataContext() : 
@@ -68,14 +71,6 @@ namespace SprixProject.Models
 			OnCreated();
 		}
 		
-		public System.Data.Linq.Table<Algorithm> Algorithms
-		{
-			get
-			{
-				return this.GetTable<Algorithm>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ParadigmType> ParadigmTypes
 		{
 			get
@@ -83,179 +78,20 @@ namespace SprixProject.Models
 				return this.GetTable<ParadigmType>();
 			}
 		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Algorithm")]
-	public partial class Algorithm : INotifyPropertyChanging, INotifyPropertyChanged
-	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id;
-		
-		private string _Name;
-		
-		private string _Description;
-		
-		private System.Nullable<int> _ParadigmTypeId;
-		
-		private EntityRef<ParadigmType> _ParadigmType;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnDescriptionChanging(string value);
-    partial void OnDescriptionChanged();
-    partial void OnParadigmTypeIdChanging(System.Nullable<int> value);
-    partial void OnParadigmTypeIdChanged();
-    #endregion
-		
-		public Algorithm()
-		{
-			this._ParadigmType = default(EntityRef<ParadigmType>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id
+		public System.Data.Linq.Table<FormType> FormTypes
 		{
 			get
 			{
-				return this._Id;
-			}
-			set
-			{
-				if ((this._Id != value))
-				{
-					this.OnIdChanging(value);
-					this.SendPropertyChanging();
-					this._Id = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
-				}
+				return this.GetTable<FormType>();
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(150) NOT NULL", CanBeNull=false)]
-		public string Name
+		public System.Data.Linq.Table<Algorithm> Algorithms
 		{
 			get
 			{
-				return this._Name;
-			}
-			set
-			{
-				if ((this._Name != value))
-				{
-					this.OnNameChanging(value);
-					this.SendPropertyChanging();
-					this._Name = value;
-					this.SendPropertyChanged("Name");
-					this.OnNameChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NChar(255)")]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this.OnDescriptionChanging(value);
-					this.SendPropertyChanging();
-					this._Description = value;
-					this.SendPropertyChanged("Description");
-					this.OnDescriptionChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParadigmTypeId", DbType="Int")]
-		public System.Nullable<int> ParadigmTypeId
-		{
-			get
-			{
-				return this._ParadigmTypeId;
-			}
-			set
-			{
-				if ((this._ParadigmTypeId != value))
-				{
-					if (this._ParadigmType.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnParadigmTypeIdChanging(value);
-					this.SendPropertyChanging();
-					this._ParadigmTypeId = value;
-					this.SendPropertyChanged("ParadigmTypeId");
-					this.OnParadigmTypeIdChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ParadigmType_Algorithm", Storage="_ParadigmType", ThisKey="ParadigmTypeId", OtherKey="Id", IsForeignKey=true)]
-		public ParadigmType ParadigmType
-		{
-			get
-			{
-				return this._ParadigmType.Entity;
-			}
-			set
-			{
-				ParadigmType previousValue = this._ParadigmType.Entity;
-				if (((previousValue != value) 
-							|| (this._ParadigmType.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._ParadigmType.Entity = null;
-						previousValue.Algorithms.Remove(this);
-					}
-					this._ParadigmType.Entity = value;
-					if ((value != null))
-					{
-						value.Algorithms.Add(this);
-						this._ParadigmTypeId = value.Id;
-					}
-					else
-					{
-						this._ParadigmTypeId = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("ParadigmType");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+				return this.GetTable<Algorithm>();
 			}
 		}
 	}
@@ -395,6 +231,384 @@ namespace SprixProject.Models
 		{
 			this.SendPropertyChanging();
 			entity.ParadigmType = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.FormType")]
+	public partial class FormType : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private EntitySet<Algorithm> _Algorithms;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    #endregion
+		
+		public FormType()
+		{
+			this._Algorithms = new EntitySet<Algorithm>(new Action<Algorithm>(this.attach_Algorithms), new Action<Algorithm>(this.detach_Algorithms));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(150)")]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FormType_Algorithm", Storage="_Algorithms", ThisKey="Id", OtherKey="FormTypeId")]
+		public EntitySet<Algorithm> Algorithms
+		{
+			get
+			{
+				return this._Algorithms;
+			}
+			set
+			{
+				this._Algorithms.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Algorithms(Algorithm entity)
+		{
+			this.SendPropertyChanging();
+			entity.FormType = this;
+		}
+		
+		private void detach_Algorithms(Algorithm entity)
+		{
+			this.SendPropertyChanging();
+			entity.FormType = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Algorithm")]
+	public partial class Algorithm : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id;
+		
+		private string _Name;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _ParadigmTypeId;
+		
+		private System.Nullable<int> _AlgorithmTypeId;
+		
+		private System.Nullable<int> _FormTypeId;
+		
+		private EntityRef<FormType> _FormType;
+		
+		private EntityRef<ParadigmType> _ParadigmType;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnDescriptionChanging(string value);
+    partial void OnDescriptionChanged();
+    partial void OnParadigmTypeIdChanging(System.Nullable<int> value);
+    partial void OnParadigmTypeIdChanged();
+    partial void OnAlgorithmTypeIdChanging(System.Nullable<int> value);
+    partial void OnAlgorithmTypeIdChanged();
+    partial void OnFormTypeIdChanging(System.Nullable<int> value);
+    partial void OnFormTypeIdChanged();
+    #endregion
+		
+		public Algorithm()
+		{
+			this._FormType = default(EntityRef<FormType>);
+			this._ParadigmType = default(EntityRef<ParadigmType>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id
+		{
+			get
+			{
+				return this._Id;
+			}
+			set
+			{
+				if ((this._Id != value))
+				{
+					this.OnIdChanging(value);
+					this.SendPropertyChanging();
+					this._Id = value;
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="NChar(150) NOT NULL", CanBeNull=false)]
+		public string Name
+		{
+			get
+			{
+				return this._Name;
+			}
+			set
+			{
+				if ((this._Name != value))
+				{
+					this.OnNameChanging(value);
+					this.SendPropertyChanging();
+					this._Name = value;
+					this.SendPropertyChanged("Name");
+					this.OnNameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NChar(255)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this.OnDescriptionChanging(value);
+					this.SendPropertyChanging();
+					this._Description = value;
+					this.SendPropertyChanged("Description");
+					this.OnDescriptionChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParadigmTypeId", DbType="Int")]
+		public System.Nullable<int> ParadigmTypeId
+		{
+			get
+			{
+				return this._ParadigmTypeId;
+			}
+			set
+			{
+				if ((this._ParadigmTypeId != value))
+				{
+					if (this._ParadigmType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnParadigmTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._ParadigmTypeId = value;
+					this.SendPropertyChanged("ParadigmTypeId");
+					this.OnParadigmTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AlgorithmTypeId", DbType="Int")]
+		public System.Nullable<int> AlgorithmTypeId
+		{
+			get
+			{
+				return this._AlgorithmTypeId;
+			}
+			set
+			{
+				if ((this._AlgorithmTypeId != value))
+				{
+					this.OnAlgorithmTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._AlgorithmTypeId = value;
+					this.SendPropertyChanged("AlgorithmTypeId");
+					this.OnAlgorithmTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FormTypeId", DbType="Int")]
+		public System.Nullable<int> FormTypeId
+		{
+			get
+			{
+				return this._FormTypeId;
+			}
+			set
+			{
+				if ((this._FormTypeId != value))
+				{
+					if (this._FormType.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnFormTypeIdChanging(value);
+					this.SendPropertyChanging();
+					this._FormTypeId = value;
+					this.SendPropertyChanged("FormTypeId");
+					this.OnFormTypeIdChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="FormType_Algorithm", Storage="_FormType", ThisKey="FormTypeId", OtherKey="Id", IsForeignKey=true)]
+		public FormType FormType
+		{
+			get
+			{
+				return this._FormType.Entity;
+			}
+			set
+			{
+				FormType previousValue = this._FormType.Entity;
+				if (((previousValue != value) 
+							|| (this._FormType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._FormType.Entity = null;
+						previousValue.Algorithms.Remove(this);
+					}
+					this._FormType.Entity = value;
+					if ((value != null))
+					{
+						value.Algorithms.Add(this);
+						this._FormTypeId = value.Id;
+					}
+					else
+					{
+						this._FormTypeId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("FormType");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="ParadigmType_Algorithm", Storage="_ParadigmType", ThisKey="ParadigmTypeId", OtherKey="Id", IsForeignKey=true)]
+		public ParadigmType ParadigmType
+		{
+			get
+			{
+				return this._ParadigmType.Entity;
+			}
+			set
+			{
+				ParadigmType previousValue = this._ParadigmType.Entity;
+				if (((previousValue != value) 
+							|| (this._ParadigmType.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._ParadigmType.Entity = null;
+						previousValue.Algorithms.Remove(this);
+					}
+					this._ParadigmType.Entity = value;
+					if ((value != null))
+					{
+						value.Algorithms.Add(this);
+						this._ParadigmTypeId = value.Id;
+					}
+					else
+					{
+						this._ParadigmTypeId = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("ParadigmType");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

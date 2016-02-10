@@ -269,6 +269,7 @@
     <Content Include="Views\Animation\NavSideBar\_DynamicProgrammingNavBar.cshtml" />
     <Content Include="Views\Animation\AnimationStart.cshtml" />
     <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
+    <Content Include="Views\Algorithm\PartialAlgorithmDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

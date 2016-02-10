@@ -49,16 +49,19 @@ namespace SprixProject.Models
             db.SubmitChanges();
         }
 
+        // Note: Pay attention to this query. Very important
         public IQueryable<AlgoParadigmType> FindThis(int id)
         {
             return from n in db.Algorithms
                    join c in db.ParadigmTypes on n.ParadigmTypeId equals c.Id
+                   join d in db.AlgorithmTypes on n.AlgorithmTypeId equals d.Id
                    where n.Id == id
                    select new AlgoParadigmType()
                    {
                        AlgorithmName = n.Name,
                        ParadigmType = c.Name,
-                       AlgorithmDescription = n.Description
+                       AlgorithmDescription = n.Description,
+                       AlgorithmType = d.Id
                    };
         }
 
@@ -70,6 +73,7 @@ namespace SprixProject.Models
         public String AlgorithmName { get; set; }
         public String ParadigmType { get; set; }
         public String AlgorithmDescription { get; set; }
+        public int AlgorithmType { get; set; }
     }
 
 }

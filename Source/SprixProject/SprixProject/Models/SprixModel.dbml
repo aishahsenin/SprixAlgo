@@ -1,20 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SprixDB" Class="SprixModelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="WebSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SprixDB.mdf;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SprixDBConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.Algorithm" Member="Algorithms">
-    <Type Name="Algorithm">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="NChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="Description" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
-      <Column Name="ParadigmTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="ParadigmType_Algorithm" Member="ParadigmType" ThisKey="ParadigmTypeId" OtherKey="Id" Type="ParadigmType" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.ParadigmType" Member="ParadigmTypes">
     <Type Name="ParadigmType">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="Description" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
       <Association Name="ParadigmType_Algorithm" Member="Algorithms" ThisKey="Id" OtherKey="ParadigmTypeId" Type="Algorithm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FormType" Member="FormTypes">
+    <Type Name="FormType">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(150)" CanBeNull="true" />
+      <Association Name="FormType_Algorithm" Member="Algorithms" ThisKey="Id" OtherKey="FormTypeId" Type="Algorithm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Algorithm" Member="Algorithms">
+    <Type Name="Algorithm">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="ParadigmTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlgorithmTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FormTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="FormType_Algorithm" Member="FormType" ThisKey="FormTypeId" OtherKey="Id" Type="FormType" IsForeignKey="true" />
+      <Association Name="ParadigmType_Algorithm" Member="ParadigmType" ThisKey="ParadigmTypeId" OtherKey="Id" Type="ParadigmType" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

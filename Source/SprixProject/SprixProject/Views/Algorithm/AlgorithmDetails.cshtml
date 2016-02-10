@@ -10,7 +10,10 @@
 
 @section ContentTitle {<h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>}
 
-@section Content { <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> }
+@section Content { 
+    <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> 
+    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", Model.algoDetails.AlgorithmType } } )
+    }
 
 @section SideNavBar {
 

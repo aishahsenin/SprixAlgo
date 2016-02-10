@@ -11,5 +11,9 @@ namespace SprixProject.ViewModel
     {
         public List <Algorithm> algoNavBar { get; set; }
         public AlgoParadigmType algoDetails { get; set; }
+
+        // TODO; if it's sort type, return this, else...
+        public SortAlgorithm algoSortForm { get; set; }
+
     }
 }

@@ -5,7 +5,7 @@ using System.Web;
 
 namespace SprixProject.Models
 {
-    public class SortAlgorithm
+    public class SortAlgorithm : Algorithm
     {
         public int NoOfIndex;
         public int[] ValuesArray;
