@@ -33,17 +33,27 @@ namespace SprixProject.Controllers
 
         public ActionResult PartialAlgorithmDetails(int id)
         {
+
+            SortAlgorithm sortForm = new SortAlgorithm();
+            sortForm.NoOfIndex = 5;
+            sortForm.ValuesArray = new int[] { 1, 2 };
+            sortForm.temp = 0;
+
+
             // TODO; retrieve the right form
 
-            AlgorithmViewModel vm = new AlgorithmViewModel();
-            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
-            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            //AlgorithmViewModel vm = new AlgorithmViewModel();
+            //vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
+            //vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+
             // TODO; add algoSortForm
 
-            if (vm.algoNavBar == null || vm.algoDetails == null)
-                return View("Not found");
-            else
-                return PartialView("AlgorithmDetails", vm);
+            //if (vm.algoNavBar == null || vm.algoDetails == null)
+            //    return View("Not found");
+            //else
+            //    return PartialView("AlgorithmDetails", vm);
+
+            return PartialView(sortForm);
 
         }
 

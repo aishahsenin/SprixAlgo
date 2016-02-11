@@ -42,20 +42,6 @@
 
         @RenderSection("SideNavBar", false)
 
-        
-        @if (ViewBag.Type == "Greedy")
-        {
-            @RenderPage("~/Views/Animation/NavSideBar/_GreedyNavBar.cshtml");
-        }
-        else if (ViewBag.Type == "Dynamic")
-        {
-            @RenderPage("~/Views/Animation/NavSideBar/_DynamicProgrammingNavBar.cshtml");
-        }
-        else if (ViewBag.Type == "DivideAndConquer")
-        {
-            @RenderPage("~/Views/Animation/NavSideBar/_DivideAndConquerNavBar.cshtml");
-        }
-
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <div class="container-fluid">

@@ -190,7 +190,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\ViewModelAlgorithm.cs" />
+    <Compile Include="ViewModel\AlgorithmViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">
@@ -263,6 +263,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_EntryLayout.cshtml" />
     <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
+    <Content Include="Views\Algorithm\PartialAlgorithmDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

@@ -12,28 +12,30 @@
 
 @section Content { 
     <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> 
-    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", Model.algoDetails.AlgorithmType } } )
-    }
+    
+    @*TODO; work on this partial view for the form*@
+    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", 1 } }  )
+        }
 
-@section SideNavBar {
+    @section SideNavBar {
 
-    <!-- Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                @Html.Encode(Model.algoDetails.ParadigmType)
-            </li>
-            @foreach (var item in Model.algoNavBar)
-            {
-                <li>
-                    <a href="#">
-                        @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
-                    </a>
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    @Html.Encode(Model.algoDetails.ParadigmType)
                 </li>
-            }
-        </ul>
-    </div>
-    <!-- /#sidebar-wrapper -->
+                @foreach (var item in Model.algoNavBar)
+                {
+                    <li>
+                        <a href="#">
+                            @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-}
+    }
 
