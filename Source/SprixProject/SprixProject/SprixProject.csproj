@@ -190,7 +190,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\AlgorithmViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelAlgorithm.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">
@@ -262,14 +262,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_EntryLayout.cshtml" />
-    <Content Include="Views\Animation\Greedy.cshtml" />
-    <Content Include="Views\Animation\DynamicProgramming.cshtml" />
-    <Content Include="Views\Animation\NavSideBar\_GreedyNavBar.cshtml" />
-    <Content Include="Views\Animation\NavSideBar\_DivideAndConquerNavBar.cshtml" />
-    <Content Include="Views\Animation\NavSideBar\_DynamicProgrammingNavBar.cshtml" />
-    <Content Include="Views\Animation\AnimationStart.cshtml" />
     <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
-    <Content Include="Views\Algorithm\PartialAlgorithmDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

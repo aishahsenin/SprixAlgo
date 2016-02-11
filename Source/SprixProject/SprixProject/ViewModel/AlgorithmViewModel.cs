@@ -9,7 +9,7 @@ namespace SprixProject.ViewModel
 {
     public class AlgorithmViewModel
     {
-        public List <Algorithm> algoNavBar { get; set; }
+        public List<Algorithm> algoNavBar { get; set; }
         public AlgoParadigmType algoDetails { get; set; }
 
         // TODO; if it's sort type, return this, else...
