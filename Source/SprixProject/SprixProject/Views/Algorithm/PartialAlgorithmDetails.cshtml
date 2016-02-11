@@ -1,8 +1,17 @@
 ﻿@*Need to return model here*@
-@model IEnumerable<SprixProject.Models.SortAlgorithm>
+@*@model SprixProject.Models.SortAlgorithm*@
+@*@model SprixProject.ViewModel.AlgorithmViewModel*@
+    @model ViewDataDictionary
 
-<p>Hey</p>
+
+
 <p>Test form here</p>
 @*TODO; Add the right form type here*@
 
-@if (Model.
+@if (Html.Encode(Model.sortForm.PassValue) == "1") {
+    @*Show sort form!*@
+    <h2>Sort form type</h2>
+
+    <p>You've called this correctly!</p>
+
+}

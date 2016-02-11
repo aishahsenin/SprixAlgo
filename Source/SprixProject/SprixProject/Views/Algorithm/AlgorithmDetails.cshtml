@@ -14,7 +14,12 @@
     <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> 
     
     @*TODO; work on this partial view for the form*@
-    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", 1 } }  )
+
+    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "PassValue", Model.sortForm.PassValue }, { "ValueArray", Model.sortForm.ValuesArray}, { "NoOfIndex", Model.sortForm.NoOfIndex }, { "temp", Model.sortForm.temp } } )
+
+    @*@Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", 1 } }  )*@
+    @*@Html.Partial("PartialAlgorithmDetails", "Algorithm", new { id = Model.algoDetails.AlgorithmId } )*@
+    @*@Html.Action("PartialAlgorithmDetails", "Algorithm", new { id = Model.algoDetails.AlgorithmId })*@
         }
 
     @section SideNavBar {

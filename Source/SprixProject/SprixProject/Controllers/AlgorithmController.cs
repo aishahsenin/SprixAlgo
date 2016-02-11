@@ -12,6 +12,7 @@ namespace SprixProject.Controllers
     {
 
         AlgorithmRepository algorithmRepository = new AlgorithmRepository();
+        
 
         // GET: Algorithm
         public ActionResult Index()
@@ -24,6 +25,7 @@ namespace SprixProject.Controllers
             AlgorithmViewModel vm = new AlgorithmViewModel();
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            
 
             if (vm.algoNavBar == null || vm.algoDetails == null)
                 return View("Not found");
@@ -31,17 +33,13 @@ namespace SprixProject.Controllers
                 return View(vm);
         }
 
-        public ActionResult PartialAlgorithmDetails(int id)
+        public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
         {
 
-            int passId = id;
+            SortAlgorithm sortAlgorithm = new SortAlgorithm();
+            vm.sortForm = sortAlgorithm.dummyData();
 
-            SortAlgorithm sortForm = new SortAlgorithm();
-            sortForm.NoOfIndex = 5;
-            sortForm.ValuesArray = new int[] { 1, 2 };
-            sortForm.temp = 0;
-
-            return PartialView(sortForm);
+            return PartialView(vm);
 
         }
 

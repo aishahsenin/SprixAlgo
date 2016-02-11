@@ -11,5 +11,6 @@ namespace SprixProject.ViewModel
     {
         public List<Algorithm> algoNavBar { get; set; }
         public AlgoParadigmType algoDetails { get; set; }
+        public SortAlgorithm sortForm { get; set; }
     }
 }
