@@ -13,6 +13,11 @@ namespace SprixProject.Models
         public int temp; 
         public SortAlgorithm SortAlgorithmModel { get; }
 
+        public SortAlgorithm()
+        {
+            PassValue = 0;
+        }
+
         public SortAlgorithm dummyData()
         {
             SortAlgorithm sortFormDetails = new SortAlgorithm();
@@ -22,6 +27,14 @@ namespace SprixProject.Models
             sortFormDetails.temp = 0;
 
             return sortFormDetails;
+        }
+
+        // This method retrieves the form type, 1 = sort form type
+        public int GetFormType()
+        {
+            int formTypeValue = 1;
+
+            return formTypeValue;
         }
 
     }

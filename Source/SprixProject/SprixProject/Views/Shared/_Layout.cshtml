@@ -8,6 +8,7 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/simple-sidebar.css")
     @Scripts.Render("~/bundles/modernizr")
+    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
 
 </head>
 <body>
@@ -52,9 +53,7 @@
                     <div class="col-lg-12" style="background-color:lightgray">
                         @RenderSection("ContentTitle", false)
 
-                        <div class="col-lg-12" style="background-color:yellow">
-                            @RenderSection("Content", false)
-                        </div>
+                        @RenderSection("Content", false)
 
                         <div class="col-lg-12"><p><a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a></p></div> <!-- TODO; change button type -->
                     </div>

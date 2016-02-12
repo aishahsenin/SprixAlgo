@@ -178,6 +178,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Class\Algorithm.cs" />
+    <Compile Include="Models\Class\Input.cs" />
     <Compile Include="Models\Repository\AlgorithmRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -264,6 +265,7 @@
     <Content Include="Views\Shared\_EntryLayout.cshtml" />
     <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
     <Content Include="Views\Algorithm\_AlgorithmDetailsPartial.cshtml" />
+    <Content Include="Views\Algorithm\TestView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />
