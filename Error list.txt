@@ -1,0 +1,11 @@
+
+12/2/2016
+
+10:35
+An exception of type 'System.NullReferenceException' occurred in App_Web_tzcmt33b.dll but was not handled in user code
+Additional information: Object reference not set to an instance of an object.
+Speculation:
+	- Can't pass sortAlgorithm details, returns null for some reason
+
+10:20
+The model item passed into the dictionary is of type 'System.Collections.Generic.List`1[SprixProject.Models.Algorithm]', but this dictionary requires a model item of type 'SprixProject.ViewModel.AlgorithmViewModel'.
