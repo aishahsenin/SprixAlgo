@@ -1,5 +1,5 @@
 12/2/2016 (Friday)
-- Layout is fuzzy when input page is inserted, need to sort it out
+- [sorted] Layout is fuzzy when input page is inserted, need to sort it out
 
 11/2/2016 (Thursday)
 - To delete: sortformViewModel
