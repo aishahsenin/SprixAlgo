@@ -2,9 +2,9 @@ Work plan
 
 12/2/16 (Friday)
 - Sort form
-	- No. of index
-	- Values in the index (form will generate the amount of fields here)
-
+	- [done] No. of index
+		- [DONE] Able to retrieve data using jquery without the need to refresh the page. 
+		- [todo] Values in the index (form will generate the amount of fields here)
 
 10/2/2016 (Wednesday)
 - [TODO] Input page for each for the algorithms, forms!
