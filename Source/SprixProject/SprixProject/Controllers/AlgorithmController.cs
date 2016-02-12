@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SprixProject.Models;
+using SprixProject.Models.Class;
 using SprixProject.ViewModel;
 
 namespace SprixProject.Controllers
@@ -13,7 +14,6 @@ namespace SprixProject.Controllers
 
         AlgorithmRepository algorithmRepository = new AlgorithmRepository();
 
-        // GET: Algorithm
         public ActionResult Index()
         {
             return View();
@@ -22,8 +22,14 @@ namespace SprixProject.Controllers
         public ActionResult AlgorithmDetails(int id)
         {
             AlgorithmViewModel vm = new AlgorithmViewModel();
+            SortAlgorithm sortAlgo = new SortAlgorithm();
+            Input inputForm = new Input();
+
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            vm.sortDetails = sortAlgo.dummyData();
+            vm.formType = sortAlgo.GetFormType();
+            vm.form = inputForm.GetSortInputForm(); // showing sort input form TODO; needs to be dynamic
 
             if (vm.algoNavBar == null || vm.algoDetails == null)
                 return View("Not found");
@@ -31,19 +37,19 @@ namespace SprixProject.Controllers
                 return View(vm);
         }
 
-        public ActionResult PartialAlgorithmDetails(int id)
+        public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
         {
-
-            int passId = id;
-
-            SortAlgorithm sortForm = new SortAlgorithm();
-            sortForm.NoOfIndex = 5;
-            sortForm.ValuesArray = new int[] { 1, 2 };
-            sortForm.temp = 0;
-
-            return PartialView(sortForm);
-
+            return PartialView(vm);
         }
+
+
+        // TODO; Not submitting, does not return the content
+        [HttpPost]
+        public ActionResult AlgorithmDetails(AlgorithmViewModel vm)
+        {
+            return Content("Submitted");
+        }
+
 
     }
 }

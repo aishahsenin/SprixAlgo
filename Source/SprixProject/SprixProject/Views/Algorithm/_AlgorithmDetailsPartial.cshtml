@@ -1,0 +1,43 @@
+﻿@model SprixProject.ViewModel.AlgorithmViewModel
+@Scripts.Render("~/Scripts/jquery_form.js")
+
+@if (Model.formType == 1)
+{
+    <div class="col-md-8">
+        <section id="sortForm">
+            @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, null))
+                {
+                <h4>Enter the values for the @Model.algoDetails.AlgorithmName</h4>
+                <hr />
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.form.NoOfIndex, new { @class = "col-md-2 control-label" })
+                        <div class="col-md-12">
+                            @Html.TextBoxFor(m => m.form.NoOfIndex, htmlAttributes: new { id = "NoOfIndexVal", @class = "form-control" })
+                        </div>
+                    </div>
+
+                // TODO; loop depends on the no of index input on the previous textbox
+                @*for (int i = 0; i < 5; i++)
+                    {
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.form.NoOfIndex, new { @class = "col-md-2 control-label" })
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.form.NoOfIndex, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(m => m.form.NoOfIndex, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    }*@
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-10">
+                        <input type="button" class="btn btn-primary" value="Submit" onclick="GetNoOfIndexVal(this)" />
+                    </div>
+                </div>
+            }
+        </section>
+
+    </div>
+
+}
+

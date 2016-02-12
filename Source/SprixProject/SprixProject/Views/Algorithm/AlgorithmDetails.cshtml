@@ -1,41 +1,38 @@
-﻿@*@model SprixProject.Models.AlgoParadigmType*@
-@*@model IEnumerable<SprixProject.Models.Algorithm>*@
-@model SprixProject.ViewModel.AlgorithmViewModel
+﻿@model SprixProject.ViewModel.AlgorithmViewModel
 
 @{
     ViewBag.Title = "AlgorithmDetails";
 }
 
-@section Title{<h2>@Html.Encode(Model.algoDetails.ParadigmType)</h2>}
+@section Title{<h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>}
 
-@section ContentTitle {<h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>}
+@*---TODO HERE---*@
 
-@section Content { 
-    <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> 
-    
-    @*TODO; work on this partial view for the form*@
-    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", 1 } }  )
-        }
+@section Content {
 
-    @section SideNavBar {
+    @Html.Partial("_AlgorithmDetailsPartial", Model)
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    @Html.Encode(Model.algoDetails.ParadigmType)
+}
+
+@section SideNavBar {
+
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                @Html.Encode(Model.algoDetails.ParadigmType)
+            </li>
+            @foreach (var item in Model.algoNavBar)
+            {
+                <li>
+                    <a href="#">
+                        @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
+                    </a>
                 </li>
-                @foreach (var item in Model.algoNavBar)
-                {
-                    <li>
-                        <a href="#">
-                            @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
-                        </a>
-                    </li>
-                }
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+            }
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-    }
+}
 

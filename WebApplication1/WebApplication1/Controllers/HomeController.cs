@@ -3,16 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SprixProject.Models;
-using SprixProject.ViewModel;
 
-namespace SprixProject.Controllers
+namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-
-        AlgorithmRepository algorithmRepository = new AlgorithmRepository();
-
         public ActionResult Index()
         {
             return View();

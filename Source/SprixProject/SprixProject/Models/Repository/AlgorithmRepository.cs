@@ -57,6 +57,7 @@ namespace SprixProject.Models
                    where n.Id == id
                    select new AlgoParadigmType()
                    {
+                       AlgorithmId = n.Id,
                        AlgorithmName = n.Name,
                        ParadigmType = c.Name,
                        AlgorithmDescription = n.Description
@@ -68,6 +69,7 @@ namespace SprixProject.Models
     // New classes for inner join type queries
     public class AlgoParadigmType
     {
+        public int AlgorithmId { get; set; }
         public String AlgorithmName { get; set; }
         public String ParadigmType { get; set; }
         public String AlgorithmDescription { get; set; }

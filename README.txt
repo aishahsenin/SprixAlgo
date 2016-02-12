@@ -1,9 +1,15 @@
 Work plan
 
+12/2/16 (Friday)
+- Sort form
+	- [done] No. of index
+		- [DONE] Able to retrieve data using jquery without the need to refresh the page. 
+		- [todo] Values in the index (form will generate the amount of fields here)
+
 10/2/2016 (Wednesday)
-- [TODO] Input page for each for the algorithms
-- [TODO] Need to add relevant database to support the data model
-- [TODO] Update the database model in Visio
+- [TODO] Input page for each for the algorithms, forms!
+- [DONE] Need to add relevant database to support the data model
+- [DONE] Update the database model in Visio
 - [TODO] Start working on these algorithms (Finish by the end of this week Saturday 13/2/2016)
 	- Insertion Sort
 	- Fractional Knapsack Problem
