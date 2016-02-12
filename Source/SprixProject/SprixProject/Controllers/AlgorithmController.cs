@@ -21,9 +21,10 @@ namespace SprixProject.Controllers
         public ActionResult AlgorithmDetails(int id)
         {
             AlgorithmViewModel vm = new AlgorithmViewModel();
+            SortAlgorithm sortAlgo = new SortAlgorithm();
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
-            
+            vm.sortForm = sortAlgo.dummyData();
 
             if (vm.algoNavBar == null || vm.algoDetails == null)
                 return View("Not found");
@@ -34,12 +35,7 @@ namespace SprixProject.Controllers
         // TODO; working on this
         public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
         {
-
-            SortAlgorithm sortAlgorithm = new SortAlgorithm();
-            vm.sortForm = sortAlgorithm.dummyData();
-
             return PartialView(vm);
-
         }
 
     }

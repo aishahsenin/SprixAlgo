@@ -13,7 +13,6 @@ namespace SprixProject.Controllers
 
         AlgorithmRepository algorithmRepository = new AlgorithmRepository();
 
-        // These are all the buttons situated on the header of the page.
         public ActionResult Index()
         {
             return View();

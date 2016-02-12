@@ -16,7 +16,7 @@ namespace SprixProject.Models
         public SortAlgorithm dummyData()
         {
             SortAlgorithm sortFormDetails = new SortAlgorithm();
-            sortFormDetails.PassValue = 1; // might need to change
+            sortFormDetails.PassValue = 1; // TODO; might need to change
             sortFormDetails.ValuesArray = new int[] { 3, 5, 6, 7 };
             sortFormDetails.NoOfIndex = sortFormDetails.ValuesArray.Length;
             sortFormDetails.temp = 0;
@@ -26,5 +26,4 @@ namespace SprixProject.Models
 
     }
 
-    // Add methods related to sort algorithms
 }
