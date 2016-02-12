@@ -12,9 +12,7 @@ namespace SprixProject.Controllers
     {
 
         AlgorithmRepository algorithmRepository = new AlgorithmRepository();
-        
 
-        // GET: Algorithm
         public ActionResult Index()
         {
             return View();
@@ -33,6 +31,7 @@ namespace SprixProject.Controllers
                 return View(vm);
         }
 
+        // TODO; working on this
         public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
         {
 

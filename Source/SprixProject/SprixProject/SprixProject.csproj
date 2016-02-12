@@ -264,7 +264,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_EntryLayout.cshtml" />
     <Content Include="Views\Algorithm\AlgorithmDetails.cshtml" />
-    <Content Include="Views\Algorithm\PartialAlgorithmDetails.cshtml" />
+    <Content Include="Views\Algorithm\_AlgorithmDetailsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

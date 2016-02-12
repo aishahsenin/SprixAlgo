@@ -10,37 +10,31 @@
 
 @section ContentTitle {<h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>}
 
-@section Content { 
-    <p>@Html.Encode(Model.algoDetails.AlgorithmDescription)</p> 
-    
-    @*TODO; work on this partial view for the form*@
+@section Content {
 
-    @Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "PassValue", Model.sortForm.PassValue }, { "ValueArray", Model.sortForm.ValuesArray}, { "NoOfIndex", Model.sortForm.NoOfIndex }, { "temp", Model.sortForm.temp } } )
+    @Html.Partial("_AlgorithmDetailsPartial", Model)
 
-    @*@Html.Partial("PartialAlgorithmDetails", "Algorithm", new ViewDataDictionary { { "id", 1 } }  )*@
-    @*@Html.Partial("PartialAlgorithmDetails", "Algorithm", new { id = Model.algoDetails.AlgorithmId } )*@
-    @*@Html.Action("PartialAlgorithmDetails", "Algorithm", new { id = Model.algoDetails.AlgorithmId })*@
-        }
+}
 
-    @section SideNavBar {
+@section SideNavBar {
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    @Html.Encode(Model.algoDetails.ParadigmType)
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                @Html.Encode(Model.algoDetails.ParadigmType)
+            </li>
+            @foreach (var item in Model.algoNavBar)
+            {
+                <li>
+                    <a href="#">
+                        @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
+                    </a>
                 </li>
-                @foreach (var item in Model.algoNavBar)
-                {
-                    <li>
-                        <a href="#">
-                            @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
-                        </a>
-                    </li>
-                }
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+            }
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-    }
+}
 
