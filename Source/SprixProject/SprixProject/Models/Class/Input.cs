@@ -19,7 +19,7 @@ namespace SprixProject.Models.Class
             return sortInput;
         }
 
-        // method that produces the number of index fields depending on the size of the index
+        // TODO; method that produces the number of index fields depending on the size of the index
     }
 
 

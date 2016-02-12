@@ -42,8 +42,10 @@ namespace SprixProject.Controllers
             return PartialView(vm);
         }
 
+
+        // TODO; Not submitting, does not return the content
         [HttpPost]
-        public ActionResult AlgorithmDetails(Input input)
+        public ActionResult AlgorithmDetails(AlgorithmViewModel vm)
         {
             return Content("Submitted");
         }

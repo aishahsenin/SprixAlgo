@@ -8,12 +8,10 @@
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/simple-sidebar.css")
     @Scripts.Render("~/bundles/modernizr")
-    <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
+    @* DO NOT DELETE <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>*@
 
 </head>
 <body>
-
-    <!-- Top navigational bar here -->
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -37,10 +35,6 @@
     </div>
 
     <div id="wrapper">
-
-        <!-- Sidebar -->
-        <!-- TODO; Make this dynamic, side bar depends on the type of page -->
-
         @RenderSection("SideNavBar", false)
 
         <!-- Page Content -->
@@ -53,7 +47,6 @@
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
-
         </div>
     </div>
 
