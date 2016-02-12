@@ -37,21 +37,13 @@ namespace SprixProject.Controllers
                 return View(vm);
         }
 
-        // TODO; working on this
         public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
         {
             return PartialView(vm);
         }
 
-        // TODO; working on this form (Using AJAX)
-        //public ActionResult TestAjaxView()
-        //{
-        //    ViewBag.Message = "This is AJAX form";
-        //    return View();
-        //}
-
         [HttpPost]
-        public ActionResult TestAjaxRedirect()
+        public ActionResult AlgorithmDetails(Input input)
         {
             return Content("Submitted");
         }

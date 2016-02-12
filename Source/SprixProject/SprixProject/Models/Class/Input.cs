@@ -15,8 +15,11 @@ namespace SprixProject.Models.Class
         {
             Input sortInput = new Input();
             sortInput.NoOfIndex = 0;
+
             return sortInput;
         }
+
+        // method that produces the number of index fields depending on the size of the index
     }
 
 
