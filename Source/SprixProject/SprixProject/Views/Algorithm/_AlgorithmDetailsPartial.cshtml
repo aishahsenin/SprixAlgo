@@ -3,29 +3,23 @@
 
 @if (Model.formType == 1)
 {
-    <div class="col-md-8">
+    <div class="col-md-12">
         <section id="sortForm">
             @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, null))
                 {
                 <h4>Enter the values for the @Model.algoDetails.AlgorithmName</h4>
-                <hr />
-
+                    <hr />
                     <div class="form-group">
-                        <div class="col-md-2 control-label">No. of index</div>
-                        <div class="col-md-12">
-                            @Html.TextBoxFor(m => m.form.NoOfIndex, htmlAttributes: new { id = "NoOfIndexVal", @class = "form-control" })
+                        <div class="col-md-5 control-label">Index no. 1 value</div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.form.NoOfIndex, htmlAttributes: new { @value = "", id = "NoOfIndexVal", @class = "form-control" })
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-md-2 control-label">Values for each index</div>
-                        <div id="indexValues" class="col-md-12">
-                            @* TODO; Print n number of text boxes here! *@
-                            @Html.TextBoxFor(m => m.form.IndexValue, htmlAttributes: new { id = "IndexValue_1", @class = "form-control" })
-                        </div>
+                    <div id="here">
                     </div>
                     <div class="form-group">
-                        <div class="col-md-offset-4 col-md-10">
-                            <input type="button" class="btn btn-primary" value="Submit" onclick="GetNoOfIndexVal(this)" />
+                        <div class="col-md-offset-5 col-md-5">
+                            <input type="button" class="btn btn-primary" value="Add index" onClick="AddOneMoreTextBox(this)" />
                         </div>
                     </div>
             }
