@@ -1,10 +1,14 @@
 Work plan
 
+13/2/2016 (Saturday)
+- Sort form
+	- [todo] retrieving the values that is inserted in the sort form in an ajax/JSON format
+
 12/2/16 (Friday)
 - Sort form
 	- [done] No. of index
 		- [DONE] Able to retrieve data using jquery without the need to refresh the page. 
-		- [todo] Values in the index (form will generate the amount of fields here)
+		- [done] Values in the index (form will generate the amount of fields here)
 
 10/2/2016 (Wednesday)
 - [TODO] Input page for each for the algorithms, forms!
