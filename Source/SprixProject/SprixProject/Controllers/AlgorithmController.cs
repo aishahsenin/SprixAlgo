@@ -47,6 +47,15 @@ namespace SprixProject.Controllers
         [HttpPost]
         public ActionResult AlgorithmDetails(AlgorithmViewModel vm)
         {
+
+            //Input input = new Input();
+            //input.NoOfIndex = vm.form.NoOfIndex;
+            
+            // TODO; add into list
+
+
+            // 1 - create a new object
+            // 2 - return the object into a new view
             return Content("Submitted");
         }
 

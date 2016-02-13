@@ -1,7 +1,7 @@
 ﻿var variableInputCount = 2;
 
 // INFO: Returns the number of index needed to produce a form for index input
-function GetNoOfIndexVal(btnClicked) {
+function submitThis(btnClicked) {
     var $form = $(btnClicked).parents('form');
 
     $.ajax({
@@ -11,22 +11,58 @@ function GetNoOfIndexVal(btnClicked) {
         error: function (xhr, status, error) {
         },
         success: function (response) {
-            var limit = document.getElementById("NoOfIndexVal").value;
-            var indexValueName = "indexValue_" + i;
-            //var textBox = '<div class="form-group"><div class="col-md-2 control-label">Index ' + i + '</div><div id="indexValues"class="col-md-4"><input type="textbox" name="' + indexValueName + '" class="form-control"></div></div>';
-            var textBox = '<div class="form-group"><div class="col-md-2 control-label">Index no. ' + count + ' value</div><div class="col-md-4"><div class="input-group"><input type="textbox" name="' + indexValueName + '" class="form-control"><span class="input-group-btn"><button class="btn btn-default" type="button" onclick="GetNoOfIndexVal(this)">Add</button></span></div></div></div>'
-            $('div#here').append(textBox);
+            var limit = document.getElementById('indexValue_1').value;
+            //var limit = document.getElementById("indexValue_2").value;
+            //var limit = document.getElementById("indexValue_3").value;
+            //var limit = document.getElementById("indexValue_4").value;
+            console.log(limit);
+            //console.log("indexValue_2");
+            //console.log("indexValue_3");
+            //console.log("indexValue_4");
         }
     });
     return false;
 }
 
 function AddOneMoreTextBox(btnClicked) {
-    console.log('count = ' + variableInputCount);
     var indexValueName = "indexValue_" + variableInputCount;
-    var textBox = '<div class="form-group"><div class="col-md-5 control-label">Index no. ' + variableInputCount + ' value</div><div class="col-md-3"><input type="textbox" name="' + indexValueName + '" class="form-control"></div></div>'
+    var textBox = '<div class="form-group"><div class="col-md-3 control-label">Index no. ' + variableInputCount + ' value</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '" class="form-control"></div></div>'
     $('div#here').append(textBox);
-
     variableInputCount += 1;
-
 }
+
+//$(document).ready(function () {
+
+//    $("a.submitForm").click(function () {
+
+
+//        $("form").submit();
+
+//    });
+
+//});
+
+
+//$(document).ready(function() {
+//    $(form)
+//        .formValidation({
+//           // ... options ...
+//        })
+//        .on('success.form.fv', function(e) {
+//            // Prevent form submission
+//            e.preventDefault();
+
+//            var $form = $(e.target),
+//                fv    = $form.data('formValidation');
+
+//            // Use Ajax to submit form data
+//            $.ajax({
+//                url: $form.attr('action'),
+//                type: 'POST',
+//                data: $form.serialize(),
+//                success: function(result) {
+//                    // ... Process the result ...
+//                }
+//            });
+//        });
+//});
