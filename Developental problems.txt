@@ -1,3 +1,9 @@
+13/2/2016 (Saturday)
+- [not doing for now] fix the button for no of index input next to the textbox
+- [done] need to send the value of the no of index in order to depict the size array
+	- using a list type instead of array type, so size can vary
+	- will need to input the different integer values from text input into the list though
+
 12/2/2016 (Friday)
 - [sorted] Layout is fuzzy when input page is inserted, need to sort it out
 
