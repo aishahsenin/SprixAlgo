@@ -11,15 +11,18 @@ namespace SprixProject.Models.Class
         [Required(ErrorMessage = "No of index required.")]
         public int NoOfIndex { get; set; }
 
+        [Required(ErrorMessage = "You need to input these values.")]
+        public List<int> IndexValue { get; set; }
+
         public Input GetSortInputForm()
         {
             Input sortInput = new Input();
+
             sortInput.NoOfIndex = 0;
+            sortInput.IndexValue = new List<int>();
 
             return sortInput;
         }
-
-        // TODO; method that produces the number of index fields depending on the size of the index
     }
 
 

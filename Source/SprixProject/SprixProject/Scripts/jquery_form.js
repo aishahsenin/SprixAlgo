@@ -7,11 +7,19 @@ function GetNoOfIndexVal(btnClicked) {
         url: $form.attr('action'),
         data: $form.serialize(),
         error: function (xhr, status, error) {
-            //do something about the error
         },
         success: function (response) {
-            console.log(document.getElementById('NoOfIndexVal').value);
+            var limit = document.getElementById("NoOfIndexVal").value;
+            for (i = 0; i < limit; i++) {
+                var indexValueName = "indexValue_" + i;
+                //var textBox = '&nbsp;&nbsp;<input type="textbox" name="' + indexValueName + '" />';
+                var textBox = '@Html.TextBoxFor(m => m.form.IndexValue, htmlAttributes: new { id = "' + indexValueName + '", @class = "form-control" })';
 
+                
+
+                $('div#indexValues').append(textBox);
+            }
+            //document.getElementById("NoOfIndexVal").innerHTML = s;
         }
     });
     return false;
