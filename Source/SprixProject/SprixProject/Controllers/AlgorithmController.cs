@@ -45,7 +45,7 @@ namespace SprixProject.Controllers
 
         // TODO; Not submitting, does not return the content
         [HttpPost]
-        public ActionResult AlgorithmDetails(AlgorithmViewModel vm)
+        public ActionResult AlgorithmDetails(String[] potato)
         {
 
             //Input input = new Input();

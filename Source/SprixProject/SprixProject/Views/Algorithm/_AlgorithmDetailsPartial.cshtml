@@ -5,15 +5,14 @@
 {
     <div class="col-md-12">
         <section id="sortForm">
-            @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, null))
-                {
+            @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, new { id = "sortForm" }))
+            {
                 <h4>Enter the values for the @Model.algoDetails.AlgorithmName</h4>
                     <hr />
                     <div class="form-group">
                         <div class="col-md-3 control-label">Index no. 1 value</div>
                         <div class="col-md-9">
-                            @*@Html.TextBoxFor(m => m.form.NoOfIndex, htmlAttributes: new { @value = "", id = "NoOfIndexVal", @class = "form-control" })*@
-                            <input type="textbox" name="indexValue_1" class="form-control">
+                            <input type="textbox" name="indexValue_1" id ="indexValue_1" class="form-control">
                         </div>
                     </div>
                     <div id="here">
