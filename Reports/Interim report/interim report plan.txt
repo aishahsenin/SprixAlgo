@@ -1,0 +1,10 @@
+What has been done
+- The general layout of the program
+- The different forms needed for different types of algorithms
+	- [done] sort form type
+	- [done] knapsack form type
+	- matrix multiplication problem
+	- rod cutting problem
+
+What needs to be done
+- The animations (at least sort algorithms)

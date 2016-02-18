@@ -1,0 +1,36 @@
+\documentclass[12pt,a4paper,oneside]{report}
+
+\usepackage{graphicx}
+\usepackage{marginnote}
+\usepackage[verbose, a4paper, tmargin=2cm, bmargin=2cm, lmargin=2cm, rmargin=2cm, headheight=1.3cm, headsep=1cm]{geometry}
+\usepackage{lscape}
+\usepackage{todonotes}
+\usepackage{lscape}
+\usepackage{url} 
+\usepackage{hyperref}
+
+\begin{document}
+
+   \vspace*{\stretch{1.0}}
+   \begin{center}
+      \Large\textbf{CS Final Year Project Interim Report 2016}\\
+      \large\textit{Nur Aishah B M Senin}\\
+      \large\textit{19th January 2016}
+   \end{center}
+   \vspace*{\stretch{2.0}}
+
+In this interim report includes the current progress of the project that is currently at hand, i.e. the \textit{Animation of Algorithms}, as of today. I have come into a decision of the chosen framework for this project is \textit{ASP.NET}, which is a server-side web application framework by Microsoft that is designed predominantly in producing web page. The software architectural pattern that is used for the ASP.NET project is MVC (Model View Controller), which has been deemed useful so far for this project, in the context of the architecture of the software, as it emphasizes on the separation of the presentation, modelling, and business logic of the program.
+
+There are a few things that has been completed (although not fully tested yet) for the project. One of the completion consists of the general user interface of the program. There had been some improvements made on the initial design stated on the design specification in order to increase the ease of usage of the program. The other that has been mostly established is general class structure of the program, which derives from the UML class diagram from the design specification. 
+
+Of course, it is worth mentioning that there are design aspects of the program were newly added during the developmental phase. For this project, I have included a simple local database, that runs on Microsoft SQL Server 2012, which merely stores the list of algorithms, its paradigm types, and form types. One of the reasons why the database is added, because part of the objective of this project is to allow other developers to easily add on new animations of algorithms without the need of going through a lengthy process of refactoring the existing code. So in this case, all s/he needs to do is to insert the details of the algorithm into the database, followed by adding the code of the animation.
+
+Currently in progression is the forms for different algorithmic types. The purpose of these forms is to allow the users to input their own values onto the animations they have chosen. It is known from the design specification that there would be a need for different form layouts for different types of algorithms, which is currently working on the program. Apart from the forms itself, the submission of the data into the next page is still in the works. 
+
+Since the submission of the forms are not fully functional yet, I reckon that the next strategy that I need to implement is to construct classes that has methods to return the dummy data, so that the animation modules will able to use these data to perform its actions. Speaking on which, since I have decided to develop this project on a web based application, the language that I have chosen for the animations will be CSS3 and HTML5. There might be a possibility that other scripting languages would be involved in the development of the animations such as JavaScript, including its frameworks such as JQuery and AngularJS.
+
+The current priority at this moment is to at least get one algorithms for each paradigm types working, before I can work on the form submission, which involves in figuring out how to amend or append the values of the CSS class using JavaScript. After which, I can pursue on other algorithms, and lastly on other desirable functionality such as the settings panel for the users to use in order to make their usage of the program more at ease.
+
+% Style the review against plan
+
+\end{document}
