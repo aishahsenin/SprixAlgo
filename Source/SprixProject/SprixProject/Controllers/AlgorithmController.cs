@@ -19,6 +19,15 @@ namespace SprixProject.Controllers
             return View();
         }
 
+        // THIS IS FOR TEST ONLY
+        public ActionResult AnimationDummy()
+        {
+            SortAlgorithm sortAlgo = new SortAlgorithm();
+            sortAlgo = sortAlgo.dummyData();
+
+            return View(sortAlgo);
+        }
+
         public ActionResult AlgorithmDetails(int id)
         {
             AlgorithmViewModel vm = new AlgorithmViewModel();
@@ -58,6 +67,8 @@ namespace SprixProject.Controllers
             // 2 - return the object into a new view
             return Content("Submitted");
         }
+
+        // TEST ANIMATION
 
 
     }
