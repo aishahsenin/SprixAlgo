@@ -15,7 +15,9 @@
 %\usepackage{float}
 \usepackage{lscape}
 %\usepackage{color}
-
+\usepackage{url} 
+\usepackage{hyperref}
+%\usepackage{natbib}
 \usepackage{csquotes}
 \usepackage[style=numeric, backend=bibtex]{biblatex}
 \addbibresource{specification_bibliography}
@@ -23,17 +25,9 @@
   \section*{#1}%
   \markboth{#1}{#1}}
 %\bibliography{specification_bibliography}
-
 % \bibliographystyle{unsrt}
-
-\usepackage{url} 
-\usepackage{hyperref}
-%\usepackage{natbib}
-
 % ------%
-
 % Code stuff
-
 % ------
 
 \patchcmd{\thebibliography}{\chapter*}{\section*}{}{}
