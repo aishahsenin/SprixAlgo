@@ -1,5 +1,7 @@
 Work plan
 
+18/2/2016 (Thursday)
+
 13/2/2016 (Saturday)
 - Sort form
 	- [todo] retrieving the values that is inserted in the sort form in an ajax/JSON format
