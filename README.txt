@@ -1,6 +1,11 @@
 Work plan
 
+19/2/2016 (Friday)
+- [todo] Something is wrong with the form input. textbox and buttons are not responding when clicked. sort it out!
+
 18/2/2016 (Thursday)
+- dummy data for sort algorithm
+- dummy data for knapsack algorithm
 
 13/2/2016 (Saturday)
 - Sort form
