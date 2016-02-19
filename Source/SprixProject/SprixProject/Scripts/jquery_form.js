@@ -48,3 +48,21 @@ function AddOneMoreTextBox(clicked_id) {
     }
 
 }
+
+function test(clicked_id) {
+    console.log(clicked_id);
+    variableInputCount += 1;
+
+    if (clicked_id == "sortButtonAdd") {
+        var indexValueName = "indexValue_" + variableInputCount;
+        var textBox = '<div class="form-group"><div class="col-md-3 control-label">Index no. ' + variableInputCount + ' value</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
+        $('div#here').append(textBox);
+    }
+
+    else if (clicked_id == "knapsackButtonAdd") {
+        var indexValueName = "itemWeight_" + variableInputCount;
+        var textBox = '<div class="form-group"><div class="col-md-3 control-label">Weight for item ' + variableInputCount + '</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
+        $('div#here2').append(textBox);
+    }
+
+}
