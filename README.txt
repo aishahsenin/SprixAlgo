@@ -2,6 +2,20 @@ Work plan
 
 19/2/2016 (Friday)
 - [todo] Something is wrong with the form input. textbox and buttons are not responding when clicked. sort it out!
+- [findings] having less intervals for the animation allows the animation to be smoother. 
+
+Too slow!
+@keyframes index1animation {
+    0%   {background-color:red; left:100px; top:50px;}
+    12.5% {background-color:red; left:107.5px; top:62.5px;}
+    25%  {background-color:red; left:115px; top:75px;}
+    37.5% {background-color:red; left:122.5px; top:87.5px;}
+    50%  {background-color:red; left:130px; top:100px;}
+    62.5% {background-color:red; left:137.5px; top:87.5px;}
+    75%  {background-color:red; left:145px; top:75px;}
+    87.5% {background-color:red; left:152.5px; top:62.5px;}
+    100% {background-color:red; left:160px; top:50px;}
+}
 
 18/2/2016 (Thursday)
 - dummy data for sort algorithm
