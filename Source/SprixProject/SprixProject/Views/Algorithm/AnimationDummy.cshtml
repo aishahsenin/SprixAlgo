@@ -1,16 +1,43 @@
-﻿@model SprixProject.Models.SortAlgorithm
+﻿@model SprixProject.ViewModel.AnimationViewModel
 
 @{
     ViewBag.Title = "AnimationDummy";
+    int NoOfIndex = @Model.dummyAnimation.NoOfIndex;
 }
 
-@section Title{<h2>Animation Dummy</h2>}
+@section Title{<h2>Bubble Sort using dummy data</h2>}
 
 @section Content {
 
-@*Animation not showing*@
-<div id="test"></div> 
-<div id="test2"></div> 
+    @* for statement over here, using the number of indexes as a counter, add the indexes accordingly *@
+
+    <div class="col-md-12">
+        <h4>Dummy values</h4>
+
+        @*Hidden values*@
+        <input type="hidden" name="hidNoOfTotalIndex" id="hidNoOfTotalIndex" value="@Model.dummyAnimation.NoOfIndex">
+
+        @Model.dummyAnimation.NoOfIndex indexes <br />
+        @for (int i = 0; i < Model.dummyAnimation.NoOfIndex; i++)
+        {
+            <p>@Model.dummyAnimation.ValuesArray[i]</p>
+        }
+
+    </div>
+
+    <div class="col-md-12">
+        @for (int i = 1; i <= Model.dummyAnimation.NoOfIndex; i++)
+        {
+            var count = i - 1;
+            <div id="@("index"+i)">@Model.dummyAnimation.ValuesArray[count]</div>
+        }
+
+
+        <input type="button" class="btn btn-primary" value="Submit" onClick="bubbleSort(this)" />
+
+
+    </div>
+
 }
 
 @section SideNavBar {
@@ -19,7 +46,7 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                Dummy 
+                Dummy
             </li>
             <li>
                 <a href="#"></a>
@@ -27,5 +54,10 @@
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
-
 }
+
+
+@section scripts {
+    
+    @Scripts.Render("~/Scripts/bubbleSortAnimation.js")
+    }

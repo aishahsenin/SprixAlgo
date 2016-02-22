@@ -1,45 +1,90 @@
-﻿#test {
+﻿#index1 {
     width: 50px;
     height: 50px;
     background-color: red;
     position: relative;
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    animation-name: example;
+    animation-name: index1animation;
     animation-duration: 4s;
     position: relative;
-    left:25%;
-    bottom: 25%;
+    left:100px;
+    top: 50px;
 }
 
-#test2 {
+
+#index2 {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color: green;
     position: relative;
-    -webkit-animation-name: example; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
-    animation-name: example;
+    animation-name: index2animation;
     animation-duration: 4s;
     position: relative;
-    left:35%;
-    bottom: 35%;
+    left:160px;
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:500px; top:0px;}
-    50%  {background-color:blue; left:500px; top:500px;}
-    75%  {background-color:green; left:0px; top:500px;}
-    100% {background-color:red; left:0px; top:0px;}
+#index3 {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: relative;
+    animation-name: index3animation;
+    animation-duration: 4s;
+    position: relative;
+    left:220px;
+    bottom: 50px;
 }
 
-/* Standard syntax */
-@keyframes example {
-    0%   {background-color:red; left:0px; top:0px;}
-    25%  {background-color:yellow; left:500px; top:0px;}
-    50%  {background-color:blue; left:500px; top:500px;}
-    75%  {background-color:green; left:0px; top:500px;}
-    100% {background-color:red; left:0px; top:0px;}
+#index4 {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: relative;
+    animation-name: index4animation;
+    animation-duration: 4s;
+    position: relative;
+    left:280px;
+    bottom: 100px;
 }
+
+#index5 {
+    width: 50px;
+    height: 50px;
+    background-color: purple;
+    position: relative;
+    animation-name: index5animation;
+    animation-duration: 4s;
+    position: relative;
+    left:340px;
+    bottom: 150px;
+}
+
+    
+
+
+@keyframes index1animation {
+    0%   {background-color:red; left:100px; top:50px;}
+    50%  {background-color:red; left:130px; top:100px;}
+    100% {background-color:red; left:160px; top:50px;}
+}
+
+@keyframes index2animation {
+    0%   {background-color:green; left:160px; top:0px;}
+    50%  {background-color:green; left:130px; top:110px;}
+    100% {background-color:green; left:100px; top:0px;}
+}
+
+@keyframes index3animation {
+    0%   {background-color:yellow; left:220px; bottom:50px;}
+    100% {background-color:yellow; left:220px; bottom:50px;}
+}
+
+@keyframes index4animation {
+    0%   {background-color:blue; left:280px; bottom:100px;}
+    100% {background-color:blue; left:280px; bottom:100px;}
+}
+
+@keyframes index5animation {
+    0%   {background-color:purple; left:340px; bottom:150px;}
+    100% {background-color:purple; left:340px; bottom:150px;}
+}
+    

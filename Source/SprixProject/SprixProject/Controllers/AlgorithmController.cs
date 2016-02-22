@@ -22,10 +22,14 @@ namespace SprixProject.Controllers
         // THIS IS FOR TEST ONLY
         public ActionResult AnimationDummy()
         {
-            SortAlgorithm sortAlgo = new SortAlgorithm();
-            sortAlgo = sortAlgo.dummyData();
 
-            return View(sortAlgo);
+            AnimationViewModel vm = new AnimationViewModel();
+            SortAlgorithm sortAlgo = new SortAlgorithm();
+            SortAlgorithm potato = sortAlgo.dummyData();
+
+            vm.dummyAnimation = potato;
+
+            return View(vm);
         }
 
         public ActionResult AlgorithmDetails(int id)

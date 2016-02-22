@@ -192,6 +192,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AlgorithmViewModel.cs" />
+    <Compile Include="ViewModel\AnimationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">
@@ -210,6 +211,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\Animation\BubbleSortAnimation.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\SprixModel.dbml">
@@ -218,6 +220,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bubbleSortAnimation.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

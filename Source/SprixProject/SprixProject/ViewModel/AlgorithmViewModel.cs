@@ -14,6 +14,6 @@ namespace SprixProject.ViewModel
         public AlgoParadigmType algoDetails { get; set; }
         public int formType { get; set; }
         public Input form { get; set; } // TODO; input form will be dynamic
-        public SortAlgorithm sortDetails{ get; set; } // dummy data
+        public SortAlgorithm sortDetails{ get; set; } // dummy data 
     }
 }
