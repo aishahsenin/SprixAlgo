@@ -22,7 +22,7 @@ namespace SprixProject.Models
         {
             SortAlgorithm sortFormDetails = new SortAlgorithm();
             sortFormDetails.PassValue = 1; // TODO; might need to change
-            sortFormDetails.ValuesArray = new int[] { 3, 5, 6, 7, 0 };
+            sortFormDetails.ValuesArray = new int[] { 9, 8, 7, 6, 5 };
             sortFormDetails.NoOfIndex = sortFormDetails.ValuesArray.Length;
             sortFormDetails.temp = 0;
 

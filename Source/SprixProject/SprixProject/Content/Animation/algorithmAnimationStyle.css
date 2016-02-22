@@ -1,4 +1,6 @@
-﻿#index1 {
+﻿
+/*
+#index1 {
     width: 50px;
     height: 50px;
     background-color: red;
@@ -59,7 +61,7 @@
 }
 
     
-
+    */
 
 @keyframes index1animation {
     0%   {background-color:red; left:100px; top:50px;}
@@ -73,6 +75,7 @@
     100% {background-color:green; left:100px; top:0px;}
 }
 
+/*
 @keyframes index3animation {
     0%   {background-color:yellow; left:220px; bottom:50px;}
     100% {background-color:yellow; left:220px; bottom:50px;}
@@ -87,4 +90,4 @@
     0%   {background-color:purple; left:340px; bottom:150px;}
     100% {background-color:purple; left:340px; bottom:150px;}
 }
-    
+    */
