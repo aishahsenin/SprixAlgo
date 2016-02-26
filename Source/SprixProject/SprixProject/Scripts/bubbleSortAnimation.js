@@ -17,44 +17,48 @@ function bubbleSort(btnClicked) {
 
     for (i = 0; i < noOfTotalIndex; i++) {
 
-        if (i != (noOfTotalIndex - 1)) {
+        console.log("i = " + i);
+
+        if (i != (noOfTotalIndex) - 1) {
+
             var valA = document.getElementById('index' + (i + 1)).innerHTML;
             var valB = document.getElementById('index' + (i + 2)).innerHTML;
 
             if (valA > valB) {
+                var a = i + 1;
+                var b = i + 2;
+                swap(a, b);
+                sleep(3000);
 
-                // TODO; add the animation feature here
-                // ERROR; doesn't work
-                //var A = document.getElementById('index' + (i + 1));
-                //A.setAttribute("animation-name", "index1animation");
-                //A.setAttribute("animation-duration", "4s");
-
-                $("#index" + (i + 1)).css("animation-name", "index1animation");
-                $("#index" + (i + 1)).css("animation-duration", "4s");
-
-                $("#index" + (i + 2)).css("animation-name", "index2animation");
-                $("#index" + (i + 2)).css("animation-duration", "4s");
-
-
-                //var B = document.getElementById('index' + (i + 2));
-                //A.setAttribute("animation-name", "index2animation");
-                //A.setAttribute("animation-duration", "4s");
-
-                console.log("swap!");
+                //setTimeout(swap(a, b), 3000);
             }
         }
-
     }
 
 }
 
-//$(document).ready(function () {
-//    $("button").click(function () {
-//        $("index1").addClass("blue");
-//        $("index2").addClass("blue");
+// the animation of swapping between two squares
+function swap(a, b) {
 
+    console.log("a = " + a);
+    console.log("b = " + b);
 
+    // add attributes to valA
+    $("#index" + a).css("animation-name", "index1animation");
+    $("#index" + a).css("animation-duration", "4s");
 
-//        $("div").addClass("important");
-//    });
-//});
+    // add attributes to valB
+    $("#index" + b).css("animation-name", "index2animation");
+    $("#index" + b).css("animation-duration", "4s");
+    
+    console.log("swap ran");
+}
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+        if ((new Date().getTime() - start) > milliseconds) {
+            break;
+        }
+    }
+}

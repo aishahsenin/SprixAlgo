@@ -1,72 +1,10 @@
 ﻿
-/*
-#index1 {
-    width: 50px;
-    height: 50px;
-    background-color: red;
-    position: relative;
-    animation-name: index1animation;
-    animation-duration: 4s;
-    position: relative;
-    left:100px;
-    top: 50px;
-}
-
-
-#index2 {
-    width: 50px;
-    height: 50px;
-    background-color: green;
-    position: relative;
-    animation-name: index2animation;
-    animation-duration: 4s;
-    position: relative;
-    left:160px;
-}
-
-#index3 {
-    width: 50px;
-    height: 50px;
-    background-color: yellow;
-    position: relative;
-    animation-name: index3animation;
-    animation-duration: 4s;
-    position: relative;
-    left:220px;
-    bottom: 50px;
-}
-
-#index4 {
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    position: relative;
-    animation-name: index4animation;
-    animation-duration: 4s;
-    position: relative;
-    left:280px;
-    bottom: 100px;
-}
-
-#index5 {
-    width: 50px;
-    height: 50px;
-    background-color: purple;
-    position: relative;
-    animation-name: index5animation;
-    animation-duration: 4s;
-    position: relative;
-    left:340px;
-    bottom: 150px;
-}
-
-    
-    */
+/* Animation code for bubble sort */
 
 @keyframes index1animation {
     0%   {background-color:red; left:100px; top:50px;}
     50%  {background-color:red; left:130px; top:100px;}
-    100% {background-color:red; left:160px; top:50px;}
+    100% {background-color:red; left:160px; top:0px;}  /* notice that the top is 0px */
 }
 
 @keyframes index2animation {
@@ -74,20 +12,3 @@
     50%  {background-color:green; left:130px; top:110px;}
     100% {background-color:green; left:100px; top:0px;}
 }
-
-/*
-@keyframes index3animation {
-    0%   {background-color:yellow; left:220px; bottom:50px;}
-    100% {background-color:yellow; left:220px; bottom:50px;}
-}
-
-@keyframes index4animation {
-    0%   {background-color:blue; left:280px; bottom:100px;}
-    100% {background-color:blue; left:280px; bottom:100px;}
-}
-
-@keyframes index5animation {
-    0%   {background-color:purple; left:340px; bottom:150px;}
-    100% {background-color:purple; left:340px; bottom:150px;}
-}
-    */
