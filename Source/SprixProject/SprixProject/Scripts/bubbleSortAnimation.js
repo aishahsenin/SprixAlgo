@@ -18,114 +18,34 @@ function sleep(milliseconds) {
     }
 }
 
+$("#btnTest").click(function () {
+    var i = 1;
+    beginBubble(i);
+})
 
-// TEST SECTION
-function loopThrough() {
-    // loop through indexes
-    var noOfTotalIndex = document.getElementById('hidNoOfTotalIndex').getAttribute('value');
+function beginBubble(i) {
+    var valA = document.getElementById('index' + i).innerHTML;
+    var valB = document.getElementById('index' + (i + 1)).innerHTML;
 
-    // creating a deferred object
-    //var deff = $.Deferred();
-    //deff.resolve();
+    if (valA > valB) {
 
-    for (i = 0; i < 3; i++) {
-
-        // this function loops through the index
-        function loopThis() {
-
-            console.log("0 - i = " + i);
-
-            // ensure that loop doesn't go outside its range
-            if (i != (3 - 1)) {
-
-                var valA = document.getElementById('index' + (i + 1)).innerHTML;
-                var valB = document.getElementById('index' + (i + 2)).innerHTML;
-
-                console.log("1 - comparing ValA and ValB " + valA + " " + valB);
-
-                if (valA > valB) {
-
-                    console.log("2 (triggered by if) - swapping ValA and ValB... ");
-
-                    var a = i + 1;
-                    var b = i + 2;
-
-                    //var r = $.Deferred();
-
-                    // this function swaps valA and ValB
-                    function swap() {
-
-                        console.log("3 - swapping these vals a = " + a + " b = " + b);
-
-                        var elem1 = document.getElementById("index" + a); // if this becomes dynamic, the animation works all at once
-                        var elem2 = document.getElementById("index" + b);
-                        var pos1 = 0;
-                        var pos2 = 0;
-
-                        console.log("4 - ..:: FRAME RUNNING ::..");
-                        var keepRunning = setInterval(frame, 5);
-
-                        function frame() {
-                            if (pos1 == -55) {
-                                clearInterval(keepRunning);
-                                console.log("5 - ====== FRAME STOPPED ======"); // NOTE: frame needs to stop before proceeding!!!!
-                                sleep(2000);
-                                console.log("6 - Sleeping ... ");
-                                r.resolve();
-                            }
-                            else {
-                                pos1--;
-                                pos2--;
-                                elem1.style.bottom = pos1 + 'px';
-                                elem2.style.bottom = pos2 + 'px';
-                                //console.log("pos1 = " + pos1);
-                                //console.log("pos2 = " + pos2);  
-                            }
-                        }
-
-                    }
-
-
-                }
-            }
-        }
-
-        console.log("deffered");
-        //deff.done(swap, loopThis);
+        swapIndexes(i, (i + 1));
     }
-
-    return r;
 }
 
-/*
-function swap(a, b) {
+function swapIndexes(a, b) {
 
-    console.log("3 - swapping these vals a = " + a + " b = " + b);
+    console.log("swapping index" + a + " and index" + b);
 
-    var elem1 = document.getElementById("index" + a); // if this becomes dynamic, the animation works all at once
-    var elem2 = document.getElementById("index" + b);
-    var pos1 = 0;
-    var pos2 = 0;
-
-    console.log("4 - ..:: FRAME RUNNING ::..");
-    var keepRunning = setInterval(frame, 5);
-
-    function frame() {
-        if (pos1 == -55) {
-            clearInterval(keepRunning);
-            console.log("5 - ====== FRAME STOPPED ======"); // NOTE: frame needs to stop before proceeding!!!!
-            sleep(2000);
-            console.log("6 - Sleeping ... ");
-        }
-        else {
-            pos1--;
-            pos2--;
-            elem1.style.bottom = pos1 + 'px';
-            elem2.style.bottom = pos2 + 'px';
-            //console.log("pos1 = " + pos1);
-            //console.log("pos2 = " + pos2);  
-        }
-    }
+    $("#index" + a).animate({ left: "55px" }, 1000, function () { });
+    $("#index" + b).animate({ right: "55px" }, 1000, moveToNextIndex(a));
+    //sleep(3000);
 
 }
-*/
+
+function moveToNextIndex(i) {
+    i++;
+    console.log("moving to next");
+    beginBubble(i);
+
+}

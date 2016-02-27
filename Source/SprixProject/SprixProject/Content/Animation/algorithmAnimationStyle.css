@@ -28,6 +28,14 @@
     background-color:purple;
 }
 
+#index4 {
+    background-color:orangered;
+}
+
+#index5 {
+    background-color:teal;
+}
+
 /* Animation code for bubble sort */
 
 @keyframes A {
