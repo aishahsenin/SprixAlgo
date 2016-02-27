@@ -29,7 +29,17 @@
 
     <div class="col-md-12">
 
-        @{
+
+        <div id="inHere">
+            <div class="index" id="index1">2</div>
+            <div class="index" id="index2">1</div>
+            <div class="index" id="index3">0</div>
+        </div>
+
+        <input type="button" class="btn btn-primary" value="Submit" onClick="loopThrough()" />
+
+
+        @*{
             var left = 100;
             var bottom = 0;
             for (int i = 1; i <= Model.dummyAnimation.NoOfIndex; i++)
@@ -41,7 +51,8 @@
             }
         }
          
-        <input type="button" class="btn btn-primary" value="Submit" onClick="bubbleSort(this)" />
+        <input type="button" class="btn btn-primary" value="Submit" onClick="" />
+            *@
 
     </div>
 }
