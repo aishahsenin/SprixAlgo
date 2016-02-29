@@ -55,13 +55,11 @@ namespace SprixProject.Controllers
 
         public ActionResult AlgorithmDetails(int id)
         {
-
-            AlgorithmViewModel vm = new AlgorithmViewModel();
             var formType = algorithmRepository.retrieveFormType(id);
 
             if (formType == 1) // sort
             {
-                
+                AlgorithmViewModel vm = new AlgorithmViewModel();
                 SortAlgorithm sortAlgo = new SortAlgorithm();
                 Input inputForm = new Input();
 
@@ -78,6 +76,7 @@ namespace SprixProject.Controllers
             }
             else if (formType == 2) // knapsack
             {
+                KnapViewModel vm = new KnapViewModel();
                 KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
                 vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
 
