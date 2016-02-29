@@ -41,6 +41,15 @@ namespace SprixProject.Models
             return db.Algorithms.SingleOrDefault(d => d.Id == id);
         }
 
+        // 28/2/16 Working on this
+        public int? retrieveFormType(int id)
+        {
+            var type = (from a in db.Algorithms
+                       where a.Id == id
+                       select a.FormTypeId).SingleOrDefault();
+            return type;
+        }
+
         // TODO; Insert/Delete methods
 
         // Persistence

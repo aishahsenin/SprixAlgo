@@ -179,6 +179,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Class\Algorithm.cs" />
     <Compile Include="Models\Class\Input.cs" />
+    <Compile Include="Models\Class\KnapsackAlgorithm.cs" />
     <Compile Include="Models\Repository\AlgorithmRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AlgorithmViewModel.cs" />
     <Compile Include="ViewModel\AnimationViewModel.cs" />
+    <Compile Include="ViewModel\KnapsackViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">

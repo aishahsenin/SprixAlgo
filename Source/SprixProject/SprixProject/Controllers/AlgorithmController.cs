@@ -34,20 +34,40 @@ namespace SprixProject.Controllers
 
         public ActionResult AlgorithmDetails(int id)
         {
+
             AlgorithmViewModel vm = new AlgorithmViewModel();
-            SortAlgorithm sortAlgo = new SortAlgorithm();
-            Input inputForm = new Input();
+            var paraType = algorithmRepository.retrieveFormType(id);
 
-            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
-            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
-            vm.sortDetails = sortAlgo.dummyData();
-            vm.formType = sortAlgo.GetFormType();
-            vm.form = inputForm.GetSortInputForm(); // showing sort input form TODO; needs to be dynamic
+            if (paraType == 1) // sort
+            {
+                
+                SortAlgorithm sortAlgo = new SortAlgorithm();
+                Input inputForm = new Input();
 
-            if (vm.algoNavBar == null || vm.algoDetails == null)
-                return View("Not found");
-            else
+                vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
+                vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+                vm.sortDetails = sortAlgo.dummyData();
+                vm.formType = sortAlgo.GetFormType();
+                vm.form = inputForm.GetSortInputForm(); // showing sort input form TODO; needs to be dynamic
+
+                if (vm.algoNavBar == null || vm.algoDetails == null)
+                    return View("Not found");
+                else
+                    return View(vm);  
+            }
+            else if (paraType == 2) // knapsack
+            {
+                KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
+                vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
+
                 return View(vm);
+            }
+            else
+            {
+                return View(); // TODO: return not found
+            }
+
+            return View();
         }
 
         public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
