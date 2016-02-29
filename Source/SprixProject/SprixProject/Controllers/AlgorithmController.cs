@@ -20,25 +20,46 @@ namespace SprixProject.Controllers
         }
 
         // THIS IS FOR TEST ONLY
-        public ActionResult AnimationDummy()
+        // ANIMATION DUMMY
+        public ActionResult AnimationDummy(int id)
         {
 
-            AnimationViewModel vm = new AnimationViewModel();
-            SortAlgorithm sortAlgo = new SortAlgorithm();
-            SortAlgorithm potato = sortAlgo.dummyData();
+            // retrieve form type
+            var formType = algorithmRepository.retrieveFormType(id);
 
-            vm.dummyAnimation = potato;
+            // sort type
+            if (formType == 1)
+            {
+                AnimationViewModel vm = new AnimationViewModel();
+                SortAlgorithm sortAlgo = new SortAlgorithm();
+                vm.dummyAnimation = sortAlgo.dummyData();
+                vm.TypeId = 1;
+                return View(vm);
+            }
+            // knapsack type
+            // TODO; working on this
+            else if (formType == 2)
+            {
+                KnapViewModel vm = new KnapViewModel();
+                KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
+                vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
+                vm.TypeId = 2;
+                return View(vm);
+            }
+            else
+            {
+                return View();
+            }
 
-            return View(vm);
         }
 
         public ActionResult AlgorithmDetails(int id)
         {
 
             AlgorithmViewModel vm = new AlgorithmViewModel();
-            var paraType = algorithmRepository.retrieveFormType(id);
+            var formType = algorithmRepository.retrieveFormType(id);
 
-            if (paraType == 1) // sort
+            if (formType == 1) // sort
             {
                 
                 SortAlgorithm sortAlgo = new SortAlgorithm();
@@ -55,7 +76,7 @@ namespace SprixProject.Controllers
                 else
                     return View(vm);  
             }
-            else if (paraType == 2) // knapsack
+            else if (formType == 2) // knapsack
             {
                 KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
                 vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
@@ -67,7 +88,6 @@ namespace SprixProject.Controllers
                 return View(); // TODO: return not found
             }
 
-            return View();
         }
 
         public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)

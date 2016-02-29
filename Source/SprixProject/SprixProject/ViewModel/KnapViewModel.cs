@@ -6,8 +6,9 @@ using SprixProject.Models.Class;
 
 namespace SprixProject.ViewModel
 {
-    public class KnapsackViewModel
+    public class KnapViewModel
     {
         public KnapsackAlgorithm knapsackDummyData { get; set; }
+        public int TypeId { get; set; }
     }
 }

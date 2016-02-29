@@ -7,28 +7,24 @@ namespace SprixProject.Models.Class
 {
     public class KnapsackAlgorithm
     {
+        public String Name;
         public int Capacity;
-        public List<int> ItemsList;
+        public int[] Items;
 
         public KnapsackAlgorithm(){}
 
-        public KnapsackAlgorithm(int Capacity, List<int> ItemsList)
+        public KnapsackAlgorithm(int Capacity, int[] Items)
         {
             Capacity = this.Capacity;
-            ItemsList = this.ItemsList;
-        }
+            Items = this.Items;
+        } 
 
         public KnapsackAlgorithm dummyFractionalKnapsack()
         {
             KnapsackAlgorithm knapsackDetails = new KnapsackAlgorithm();
+            knapsackDetails.Name = "Fractional Knapsack";
             knapsackDetails.Capacity = 50;
-            knapsackDetails.ItemsList.Add(6);
-            knapsackDetails.ItemsList.Add(12);
-            knapsackDetails.ItemsList.Add(3);
-            knapsackDetails.ItemsList.Add(21);
-            knapsackDetails.ItemsList.Add(14);
-            knapsackDetails.ItemsList.Add(8);
-
+            knapsackDetails.Items = new int[] { 2, 13, 4, 7, 18, 12 };
             return knapsackDetails;
         }
 

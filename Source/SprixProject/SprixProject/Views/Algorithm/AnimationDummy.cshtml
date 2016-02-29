@@ -1,31 +1,79 @@
-﻿@model SprixProject.ViewModel.AnimationViewModel
+﻿@*model SprixProject.ViewModel.AnimationViewModel*@
+@model dynamic
 
 @{
     ViewBag.Title = "AnimationDummy";
-    int NoOfIndex = @Model.dummyAnimation.NoOfIndex;
+    //int NoOfIndex = @Model.dummyAnimation.NoOfIndex;
 }
 
-@section Title{<h2>Bubble Sort using dummy data</h2>}
+@section Title{
+
+    @if (Model.TypeId == 1)
+    {
+
+        <h2>@Model.dummyAnimation.Name</h2>
+
+    }
+    else if (Model.TypeId == 2)
+    {
+
+        <h2>@Model.knapsackDummyData.Name</h2>
+
+    }
+
+}
+
 
 @section Content {
 
+    <div class="col-md-12">
+
+        @if (Model.TypeId == 1)
+        {
+
+            <input type="hidden" name="hidNoOfTotalIndex" id="hidNoOfTotalIndex" value="@Model.dummyAnimation.NoOfIndex">
+
+            for (int i = 0; i < Model.dummyAnimation.NoOfIndex; i++){
+                @* TODO; Remember to hide this *@
+                @*<input type="hidden" name="@("indexContent" + i)" id="@("indexContent" + i)" value="@Model.dummyAnimation.ValuesArray[i]">*@
+
+            }
+
+            // TEST DIVS
+            <div id="inHere">
+                <div class="index" id="index1">2</div>
+                <div class="index" id="index2">1</div>
+                <div class="index" id="index3">0</div>
+                <div class="index" id="index4">x</div>
+                <div class="index" id="index5">y</div>
+            </div>
+            <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
+        }
+        else if (Model.TypeId == 2)
+        {
+
+        }
+
+    </div>
+
+
     @* for statement over here, using the number of indexes as a counter, add the indexes accordingly *@
 
-    <div class="col-md-12">
+    @*<div class="col-md-12">
         <h4>Dummy values</h4>
 
         @*Hidden values*@
-        <input type="hidden" name="hidNoOfTotalIndex" id="hidNoOfTotalIndex" value="@Model.dummyAnimation.NoOfIndex">
+    @*<input type="hidden" name="hidNoOfTotalIndex" id="hidNoOfTotalIndex" value="@Model.dummyAnimation.NoOfIndex">
 
         @Model.dummyAnimation.NoOfIndex indexes <br />
         @for (int i = 0; i < Model.dummyAnimation.NoOfIndex; i++)
         {
             @* TODO; Remember to hide this *@
-            <input type="hidden" name="@("indexContent" + i)" id="@("indexContent" + i)" value="@Model.dummyAnimation.ValuesArray[i]">
+    @*<input type="hidden" name="@("indexContent" + i)" id="@("indexContent" + i)" value="@Model.dummyAnimation.ValuesArray[i]">*@
 
-        }
+}
 
-    </div>
+@*</div>
 
     <div class="col-md-12">
 
@@ -39,26 +87,26 @@
         </div>
 
         <input type="button" class="btn btn-primary" value="Submit" onClick="start()" />
-        <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
+        <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />*@
 
 
-        @*{
-            var left = 100;
-            var bottom = 0;
-            for (int i = 1; i <= Model.dummyAnimation.NoOfIndex; i++)
-            {
-                var count = i - 1;
-                <div id="@("index"+i)" style="width: 50px; height: 50px; background-color: red; position: relative; left: @(left + "px"); bottom: @(bottom + "px");">@Model.dummyAnimation.ValuesArray[count]</div>
-                left = left + 60;
-                bottom = bottom + 50;
-            }
+@*{
+        var left = 100;
+        var bottom = 0;
+        for (int i = 1; i <= Model.dummyAnimation.NoOfIndex; i++)
+        {
+            var count = i - 1;
+            <div id="@("index"+i)" style="width: 50px; height: 50px; background-color: red; position: relative; left: @(left + "px"); bottom: @(bottom + "px");">@Model.dummyAnimation.ValuesArray[count]</div>
+            left = left + 60;
+            bottom = bottom + 50;
         }
-         
-        <input type="button" class="btn btn-primary" value="Submit" onClick="" />
-            *@
+    }
 
-    </div>
-}
+    <input type="button" class="btn btn-primary" value="Submit" onClick="" />
+*@
+
+@*</div>
+    }*@
 
 @section SideNavBar {
 
