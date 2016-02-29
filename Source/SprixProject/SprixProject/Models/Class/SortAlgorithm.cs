@@ -7,10 +7,11 @@ namespace SprixProject.Models
 {
     public class SortAlgorithm : Algorithm
     {
+        public String SortAlgorithmName;
         public int PassValue = 1;
         public int NoOfIndex;
         public int[] ValuesArray;
-        public int temp; 
+        public int temp;
         public SortAlgorithm SortAlgorithmModel { get; }
 
         public SortAlgorithm()
@@ -21,6 +22,7 @@ namespace SprixProject.Models
         public SortAlgorithm dummyData()
         {
             SortAlgorithm sortFormDetails = new SortAlgorithm();
+            sortFormDetails.Name = "Bubble sort";
             sortFormDetails.PassValue = 1; // TODO; might need to change
             sortFormDetails.ValuesArray = new int[] { 9, 8, 7, 6, 5 };
             sortFormDetails.NoOfIndex = sortFormDetails.ValuesArray.Length;
