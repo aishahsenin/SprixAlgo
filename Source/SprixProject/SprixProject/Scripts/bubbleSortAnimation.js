@@ -133,7 +133,7 @@ function swapIndexes(i, j) {
 
 
     // peter's code
-    /*
+    /**
     $("#index" + (boxArray[i].index)).animate({ left: (54 * (boxArray[i].origin + 1)) + "px" }, 1000);
     boxArray[i].origin++;
 
