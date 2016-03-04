@@ -7,7 +7,7 @@
   position: relative;
   cursor: pointer;
   top: 0px;
-  right: 350px;
+  right: 450px;
 }
 
 .frame2{
@@ -18,7 +18,7 @@
   position: relative;
   cursor: pointer;
   top: 0px;
-  right: 100px;
+  right: 200px;
 }
 
 .frame3{
@@ -29,8 +29,20 @@
   position: relative;
   cursor: pointer;
   top: 0px;
-  right: -150px
+  right: -50px
 }
+
+.frame4{
+  width: 0px;
+  height: 0px;
+  margin: 0 auto;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  top: 0px;
+  right: -300px
+}
+
 
 .frame:hover .hex-inner{
   height: 100px;
@@ -112,7 +124,7 @@
 .textGreedy{
     position: relative;
     bottom:0px;
-    left:250px;
+    left:155px;
     font-family:'Orator Std';
     font-size: 15px;
 }
@@ -125,7 +137,7 @@
 .textDivideAndConquer{
     position: relative;
     bottom:0px;
-    left:490px;
+    left:389px;
     top:-20px;
     font-family:'Orator Std';
     font-size: 15px;
@@ -139,13 +151,27 @@
 .textDynamic{
     position: relative;
     bottom:0px;
-    left:735px;
+    left:630px;
     top:-40px;
     font-family:'Orator Std';
     font-size: 15px;
 }
 
 .textDynamic a:hover {
+    background-color:black;
+    color:white;
+}
+
+.textSort{
+    position: relative;
+    bottom:0px;
+    left:902px;
+    top:-60px;
+    font-family:'Orator Std';
+    font-size: 15px;
+}
+
+.textSort a:hover {
     background-color:black;
     color:white;
 }
