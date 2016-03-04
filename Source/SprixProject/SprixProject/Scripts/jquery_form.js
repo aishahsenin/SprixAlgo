@@ -1,4 +1,4 @@
-﻿var variableInputCount = 1;
+﻿var variableInputCount = 2;
 
 // INFO: Returns the number of index needed to produce a form for index input
 function submitThis(btnClicked) {
@@ -30,39 +30,20 @@ function submitThis(btnClicked) {
     return false;
 }
 
-//function AddOneMoreTextBox(btnClicked) {
 function AddOneMoreTextBox(clicked_id) {
     console.log(clicked_id);
     variableInputCount += 1;
 
     if (clicked_id == "sortButtonAdd") {
         var indexValueName = "indexValue_" + variableInputCount;
-        var textBox = '<div class="form-group"><div class=".col-xs-6 control-label">Index no. ' + variableInputCount + ' value</div><div class=".col-xs-6"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
-        $('div#here').append(textBox);
+        var textBox = '<fieldset class="form-group"><label for="inputVal"' + variableInputCount + '>Index ' + variableInputCount + '</label><input type="text" class="form-control" id="indexValue_' + indexValueName + '" placeholder="Enter value" /></fieldset>';
+        $('div#newFieldsHere').append(textBox);
     }
 
     else if (clicked_id == "knapsackButtonAdd") {
         var indexValueName = "itemWeight_" + variableInputCount;
         var textBox = '<div class="form-group"><div class="col-md-3 control-label">Weight for item ' + variableInputCount + '</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
-        $('div#here2').append(textBox);
+        $('div#newFieldsHere2').append(textBox);
     }
 
 }
-
-//function test(clicked_id) {
-//    console.log(clicked_id);
-//    variableInputCount += 1;
-
-//    if (clicked_id == "sortButtonAdd") {
-//        var indexValueName = "indexValue_" + variableInputCount;
-//        var textBox = '<div class="form-group"><div class="col-md-3 control-label">Index no. ' + variableInputCount + ' value</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
-//        $('div#here').append(textBox);
-//    }
-
-//    else if (clicked_id == "knapsackButtonAdd") {
-//        var indexValueName = "itemWeight_" + variableInputCount;
-//        var textBox = '<div class="form-group"><div class="col-md-3 control-label">Weight for item ' + variableInputCount + '</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
-//        $('div#here2').append(textBox);
-//    }
-
-//}

@@ -4,7 +4,7 @@
 @*sort type form*@
 @if (Model.algoDetails.FormType == 1)
 {
-    <div class="col-md-12">
+    @*<div class="col-md-12">
             <section id="sortForm">
                 @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, new { id = "sortForm" }))
                     {
@@ -23,15 +23,48 @@
                                     <input type="button" id="sortButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="col-md-offset-6 col-md-10">
-                                    <input type="button" class="btn btn-primary" value="Submit" onClick="submitThis(this)" />
-                                </div>
-                            </div>
+
                 }
             </section>
 
+        </div>*@
+
+    @* TODO; need to validate these forms to only input integer values *@
+    <div class="col-lg-12">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4">
+            <h2>@Html.Encode(Model.algoDetails.AlgorithmName)</h2>
+            <hr />
+
+            <h4>Enter the values the indexes below</h4>
+            <hr />
+
+            <fieldset class="form-group">
+                <label for="inputVal">Index 1</label>
+                <input type="text" class="form-control" id="indexValue_1" placeholder="Enter value" />
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="inputVal2">Index 2</label>
+                <input type="text" class="form-control" id="indexValue_2" placeholder="Enter value" />
+            </fieldset>
+            <div id="newFieldsHere"></div>
+            <fieldset class="form-group">
+                <input type="button" id="sortButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
+            </fieldset>
+
+            <fieldset class="form-group">
+                <div class="col-md-offset-5 col-lg-4">
+                    <input type="button" class="btn btn-primary" value="Submit" onClick="submitThis(this)" />
+                </div>
+            </fieldset>
+
+            <p>@Html.ActionLink("Dummy sort", "AnimationDummy", "Algorithm", new { Id = 8 }, null)</p>
+            <p>@Html.ActionLink("Dummy knapsack", "AnimationDummy", "Algorithm", new { Id = 1 }, null)</p>
         </div>
+
+        <div class="col-lg-4"></div>
+
+    </div>
 
 }
     @*knapsack type form*@
@@ -70,9 +103,4 @@
             </section>
         </div>*@
     @*}*@
-
-    <div class="col-md-12">
-        <p>@Html.ActionLink("Dummy sort", "AnimationDummy", "Algorithm", new { Id = 8 }, null)</p>
-        <p>@Html.ActionLink("Dummy knapsack", "AnimationDummy", "Algorithm", new { Id = 1 }, null)</p>
-    </div>
 
