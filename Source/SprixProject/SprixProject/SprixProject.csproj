@@ -214,6 +214,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\Animation\BubbleSortAnimation.js" />
+    <Content Include="Scripts\Animation\MergeSortAnimation.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\SprixModel.dbml">
