@@ -40,9 +40,9 @@ namespace SprixProject.Controllers
             // TODO; working on this
             else if (formType == 2)
             {
-                KnapViewModel vm = new KnapViewModel();
+                AnimationViewModel vm = new AnimationViewModel();
                 KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
-                vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
+                vm.dummyKnapsackAnimation = knapsack.dummyFractionalKnapsack();
                 vm.TypeId = 2;
                 return View(vm);
             }
@@ -56,63 +56,24 @@ namespace SprixProject.Controllers
         public ActionResult AlgorithmDetails(int id)
         {
             var formType = algorithmRepository.retrieveFormType(id);
+            AlgorithmViewModel vm = new AlgorithmViewModel();
 
-            if (formType == 1) // sort
-            {
-                AlgorithmViewModel vm = new AlgorithmViewModel();
-                SortAlgorithm sortAlgo = new SortAlgorithm();
-                Input inputForm = new Input();
+            // retrieves information of the algorithm selected
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
 
-                vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
-                vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
-                vm.sortDetails = sortAlgo.dummyData();
-                vm.formType = sortAlgo.GetFormType();
-                vm.form = inputForm.GetSortInputForm(); // showing sort input form TODO; needs to be dynamic
+            // retrieves data for the navigational bar
+            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
 
-                if (vm.algoNavBar == null || vm.algoDetails == null)
-                    return View("Not found");
-                else
-                    return View(vm);  
-            }
-            else if (formType == 2) // knapsack
-            {
-                KnapViewModel vm = new KnapViewModel();
-                KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
-                vm.knapsackDummyData = knapsack.dummyFractionalKnapsack();
-
-                return View(vm);
-            }
-            else
-            {
-                return View(); // TODO: return not found
-            }
-
+            return View(vm);
         }
-
-        public ActionResult PartialAlgorithmDetails(AlgorithmViewModel vm)
-        {
-            return PartialView(vm);
-        }
-
 
         // TODO; Not submitting, does not return the content
         [HttpPost]
         public ActionResult AlgorithmDetails(String[] potato)
         {
 
-            //Input input = new Input();
-            //input.NoOfIndex = vm.form.NoOfIndex;
-            
-            // TODO; add into list
-
-
-            // 1 - create a new object
-            // 2 - return the object into a new view
             return Content("Submitted");
         }
-
-        // TEST ANIMATION
-
 
     }
 }

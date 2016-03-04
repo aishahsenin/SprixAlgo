@@ -194,7 +194,6 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\AlgorithmViewModel.cs" />
     <Compile Include="ViewModel\AnimationViewModel.cs" />
-    <Compile Include="ViewModel\KnapViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\SprixDB.mdf">

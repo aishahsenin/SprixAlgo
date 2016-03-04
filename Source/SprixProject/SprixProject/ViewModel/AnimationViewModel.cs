@@ -11,6 +11,7 @@ namespace SprixProject.ViewModel
     {
         // animation bit
         public SortAlgorithm dummyAnimation { get; set; }
+        public KnapsackAlgorithm dummyKnapsackAnimation { get; set; }
         public int TypeId { get; set; }
     }
 }

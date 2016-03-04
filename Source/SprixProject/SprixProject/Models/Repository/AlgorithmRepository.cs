@@ -16,7 +16,7 @@ namespace SprixProject.Models
             return db.Algorithms;
         }
 
-        // This query is used to display the side nav bar
+        // Side navigational bar
         public IQueryable<Algorithm> FindSameParadigmTypeAlgorithm(int id)
         {
 
@@ -50,15 +50,13 @@ namespace SprixProject.Models
             return type;
         }
 
-        // TODO; Insert/Delete methods
-
         // Persistence
         public void Save()
         {
             db.SubmitChanges();
         }
 
-        // Note: Pay attention to this query. Very important
+        // Retrieves the algorithm details
         public IQueryable<AlgoParadigmType> FindThis(int id)
         {
             return from n in db.Algorithms

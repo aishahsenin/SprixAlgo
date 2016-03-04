@@ -36,13 +36,13 @@ function AddOneMoreTextBox(clicked_id) {
 
     if (clicked_id == "sortButtonAdd") {
         var indexValueName = "indexValue_" + variableInputCount;
-        var textBox = '<fieldset class="form-group"><label for="inputVal"' + variableInputCount + '>Index ' + variableInputCount + '</label><input type="text" class="form-control" id="indexValue_' + indexValueName + '" placeholder="Enter value" /></fieldset>';
+        var textBox = '<fieldset class="form-group"><input type="text" class="form-control" id="indexValue_' + indexValueName + '" placeholder="Enter value" /></fieldset>';
         $('div#newFieldsHere').append(textBox);
     }
 
     else if (clicked_id == "knapsackButtonAdd") {
         var indexValueName = "itemWeight_" + variableInputCount;
-        var textBox = '<div class="form-group"><div class="col-md-3 control-label">Weight for item ' + variableInputCount + '</div><div class="col-md-9"><input type="textbox" name="' + indexValueName + '"  id = "' + indexValueName + '" class="form-control"></div></div>'
+        var textBox = '<fieldset class="form-group"><input type="text" class="form-control" id="itemWeight_' + indexValueName + '" placeholder="Enter value" /></fieldset>';
         $('div#newFieldsHere2').append(textBox);
     }
 
