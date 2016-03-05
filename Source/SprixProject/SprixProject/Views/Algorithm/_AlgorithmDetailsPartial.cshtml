@@ -14,22 +14,25 @@
             <h4>Enter the values below</h4>
             <hr />
 
-            <fieldset class="form-group">
-                <label for="inputVal">Index value</label>
-                <input type="text" class="form-control" id="indexValue_1" placeholder="Enter value" />
-            </fieldset>
-            <fieldset class="form-group">
-                <input type="text" class="form-control" id="indexValue_2" placeholder="Enter value" />
-            </fieldset>
-            <div id="newFieldsHere"></div>
-            <fieldset class="form-group">
-                <input type="button" id="sortButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
-            </fieldset>
-            <fieldset class="form-group">
-                <div class="col-md-offset-5 col-lg-4">
-                    <input type="button" class="btn btn-primary" value="Submit" onClick="submitThis(this)" />
-                </div>
-            </fieldset>
+            @using (Html.BeginForm("SortAnimation", "Animations", new { id = Model.algoDetails.AlgorithmId }, FormMethod.Post))
+            {
+                <fieldset class="form-group">
+                    <label for="inputVal">Index value</label>
+                    <input type="text" class="form-control" name="indexValue_1" id="indexValue_1" placeholder="Enter value" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="text" class="form-control" name="indexValue_2" id="indexValue_2" placeholder="Enter value" />
+                </fieldset>
+                <div id="newFieldsHere"></div>
+                <fieldset class="form-group">
+                    <input type="button" id="sortButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-md-offset-5 col-lg-4">
+                        <input type="submit" class="btn btn-primary" value="Submit" />
+                    </div>
+                </fieldset>
+            }
 
             <p>@Html.ActionLink("Dummy sort", "AnimationDummy", "Algorithm", new { Id = 8 }, null)</p>
             <p>@Html.ActionLink("Dummy knapsack", "AnimationDummy", "Algorithm", new { Id = 1 }, null)</p>
@@ -53,27 +56,32 @@ else if (Model.algoDetails.FormType == 2)
             <h4>Enter the values below</h4>
             <hr />
 
-            <fieldset class="form-group">
-                <label for="knapsackCapacity">Knapsack capacity</label>
-                <input type="text" class="form-control" id="capacityValue" placeholder="Enter value" />
-            </fieldset>
+            @using (Html.BeginForm("KnapsackAnimation", "Animations", new { id = Model.algoDetails.AlgorithmId }, FormMethod.Post))
+            {
+                <input type="hidden" name="noOfKnapsackInput" id="noOfKnapsackInput" value="2">
+                <fieldset class="form-group">
+                    <label for="knapsackCapacity">Knapsack capacity</label>
+                    <input type="text" class="form-control" name="capacityValue" id="capacityValue" placeholder="Enter value" />
+                </fieldset>
 
-            <fieldset class="form-group">
-                <label for="itemWeight">Item's weight</label>
-                <input type="text" class="form-control" id="itemWeight_1" placeholder="Enter value" />
-            </fieldset>
-            <fieldset class="form-group">
-                <input type="text" class="form-control" id="itemWeight_2" placeholder="Enter value" />
-            </fieldset>
-            <div id="newFieldsHere2"></div>
-            <fieldset class="form-group">
-                <input type="button" id="knapsackButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
-            </fieldset>
-            <fieldset class="form-group">
-                <div class="col-md-offset-5 col-lg-4">
-                    <input type="button" class="btn btn-primary" value="Submit" onClick="submitThis(this)" />
-                </div>
-            </fieldset>
+                <fieldset class="form-group">
+                    <label for="itemWeight">Item's weight</label>
+                    <input type="text" class="form-control" name="itemWeight_1" id="itemWeight_1" placeholder="Enter value" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <input type="text" class="form-control" name="itemWeight_2" id="itemWeight_2" placeholder="Enter value" />
+                </fieldset>
+                <div id="newFieldsHere2"></div>
+                <fieldset class="form-group">
+                    <input type="button" id="knapsackButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
+                </fieldset>
+                <fieldset class="form-group">
+                    <div class="col-md-offset-5 col-lg-4">
+                        <input type="submit" class="btn btn-primary" value="Submit" />
+                    </div>
+                </fieldset>
+            }
+
         </div>
 
         <div class="col-lg-4"></div>
@@ -83,40 +91,3 @@ else if (Model.algoDetails.FormType == 2)
 
 
 }
-    @*knapsack type form*@
-    @*//else if (Model.algoDetails.FormType == 2)
-        //{*@
-    @*<div class="col-md-12">
-            <section id="knapsackForm">
-                @using (Html.BeginForm("AlgorithmDetails", "Algorithm", FormMethod.Post, new { id = "knapsackForm" }))
-                {
-                    <h4>Enter the values for the @Model.algoDetails.AlgorithmName</h4>
-                    <hr />
-                    <div class="form-group">
-                        <div class="col-md-3 control-label">Capacity of the sack</div>
-                        <div class="col-md-9">
-                            <input type="textbox" name="sackCapacity" id="sackCapacity" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-3 control-label">Weight of item 1</div>
-                        <div class="col-md-9">
-                            <input type="textbox" name="itemWeight_1" id="itemWeight_1" class="form-control">
-                        </div>
-                    </div>
-                    <div id="here2"></div>
-                    <div class="form-group">
-                        <div class="col-md-offset-3 col-md-9">
-                            <input type="button" id="knapsackButtonAdd" value="Add" class="btn" onClick="AddOneMoreTextBox(this.id)" />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-6 col-md-6">
-                            <input type="button" class="btn btn-primary" value="Submit" onClick="submitThis(this)" />
-                        </div>
-                    </div>
-                }
-            </section>
-        </div>*@
-    @*}*@
-

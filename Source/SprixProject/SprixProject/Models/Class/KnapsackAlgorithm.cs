@@ -9,16 +9,17 @@ namespace SprixProject.Models.Class
     {
         public String Name;
         public int Capacity;
-        public int[] Items;
+        public List<int> Items = new List<int>();
 
         public KnapsackAlgorithm(){}
 
-        public KnapsackAlgorithm(int Capacity, int[] Items)
+        public KnapsackAlgorithm(int Capacity, List<int> Items)
         {
             Capacity = this.Capacity;
             Items = this.Items;
         } 
 
+        /*
         public KnapsackAlgorithm dummyFractionalKnapsack()
         {
             KnapsackAlgorithm knapsackDetails = new KnapsackAlgorithm();
@@ -27,6 +28,6 @@ namespace SprixProject.Models.Class
             knapsackDetails.Items = new int[] { 2, 13, 4, 7, 18, 12 };
             return knapsackDetails;
         }
-
+        */
     }
 }

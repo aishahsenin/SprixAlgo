@@ -42,7 +42,7 @@ namespace SprixProject.Controllers
             {
                 AnimationViewModel vm = new AnimationViewModel();
                 KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
-                vm.dummyKnapsackAnimation = knapsack.dummyFractionalKnapsack();
+                //vm.dummyKnapsackAnimation = knapsack.dummyFractionalKnapsack();
                 vm.TypeId = 2;
                 return View(vm);
             }

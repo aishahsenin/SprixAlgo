@@ -170,7 +170,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AlgorithmController.cs" />
-    <Compile Include="Controllers\AnimationController.cs" />
+    <Compile Include="Controllers\AnimationsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,6 +275,7 @@
     <Content Include="Views\Algorithm\TestView.cshtml" />
     <Content Include="Views\Algorithm\_AlgorithmAnimationPartial.cshtml" />
     <Content Include="Views\Algorithm\AnimationDummy.cshtml" />
+    <Content Include="Views\Animations\KnapsackAnimation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />
