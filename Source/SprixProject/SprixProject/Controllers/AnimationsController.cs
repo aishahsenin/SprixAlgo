@@ -38,9 +38,7 @@ namespace SprixProject.Controllers
 
             for (int i = 1; i <= noOfInput; i++)
             {
-                int val = Int32.Parse(Request.Form["itemWeight_" + i]); // TODO; 5/3/2016 error on this
-
-                
+                int val = Int32.Parse(Request.Form["itemWeight_" + i]); // TODO; 5/3/2016 error on this 
                 knapsack.Items.Add(val);
             }
 

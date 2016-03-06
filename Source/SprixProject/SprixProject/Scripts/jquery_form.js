@@ -2,33 +2,48 @@
 
 // INFO: Returns the number of index needed to produce a form for index input
 function submitThis(btnClicked) {
-    var $form = $(btnClicked).parents('form');
-    var dataArray = new Array();
+    //var $form = $(btnClicked).parents('form');
+    //var dataArray = new Array();
+    //$.ajax({
+    //    type: "POST",
+    //    url: $form.attr('action'),
+    //    //data: $form.serialize(),
+    //    dataType: 'json',
+    //    data: JSON.stringify(dataArray),
+    //    error: function (xhr, status, error) {
+    //        // TODO; add somethnig it form submission doesn't work out
+    //    },
+    //    success: function (response) {
+    //        for (i = 1; i <= variableInputCount; i++) {
+    //            var fieldIdCount = 'indexValue_' + i;
+    //            dataArray.push(document.getElementById(fieldIdCount).value);
+    //            console.log("executed sort");
+    //        }
+    //        console.log($.parseJSON(data));
+    //        // TODO; submit form here
+    //        // $("#sortForm").submit();
+    //    }
+    //});
+    //return false;
 
-    $.ajax({
-        type: "POST",
-        url: $form.attr('action'),
-        //data: $form.serialize(),
-        dataType: 'json',
-        data: JSON.stringify(dataArray),
-        error: function (xhr, status, error) {
-            // TODO; add somethnig it form submission doesn't work out
-        },
-        success: function (response) {
 
-            for (i = 1; i <= variableInputCount; i++) {
-                var fieldIdCount = 'indexValue_' + i;
-                dataArray.push(document.getElementById(fieldIdCount).value);
-                console.log("executed sort");
-            }
-            console.log($.parseJSON(data));
 
-            // TODO; submit form here
-            // $("#sortForm").submit();
-        }
-    });
-    return false;
 }
+
+// TODO; 5/3/2016 finish the ajax submission for the knapsack form
+function KnapsackModel() {
+    var self = this;
+    self.Capacity = $('capacityValue').val();
+    
+    // TODO; 5/3/2016 loop to store the list of item weights
+}
+
+// Submit button function
+$('submitHere').click(function () {
+
+    var request = new Knapsack
+
+})
 
 function AddOneMoreTextBox(clicked_id) {
     console.log(clicked_id);

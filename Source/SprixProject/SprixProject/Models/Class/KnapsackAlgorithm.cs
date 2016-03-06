@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -7,9 +8,14 @@ namespace SprixProject.Models.Class
 {
     public class KnapsackAlgorithm
     {
-        public String Name;
-        public int Capacity;
-        public List<int> Items = new List<int>();
+        [DisplayName("Name")]
+        public String Name { get; set; }
+
+        [DisplayName("Capacity")]
+        public int Capacity { get; set; }
+
+        [DisplayName("Items")]
+        public List<int> Items { get; set; }
 
         public KnapsackAlgorithm(){}
 
@@ -19,7 +25,7 @@ namespace SprixProject.Models.Class
             Items = this.Items;
         } 
 
-        /*
+        /* DO NOT DELETE, dummy model
         public KnapsackAlgorithm dummyFractionalKnapsack()
         {
             KnapsackAlgorithm knapsackDetails = new KnapsackAlgorithm();
