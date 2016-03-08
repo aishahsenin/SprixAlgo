@@ -8,9 +8,6 @@ namespace SprixProject.Models.Class
 {
     public class KnapsackAlgorithm
     {
-        [DisplayName("Name")]
-        public String Name { get; set; }
-
         [DisplayName("Capacity")]
         public int Capacity { get; set; }
 

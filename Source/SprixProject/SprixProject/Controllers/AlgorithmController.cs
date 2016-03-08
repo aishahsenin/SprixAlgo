@@ -19,38 +19,26 @@ namespace SprixProject.Controllers
             return View();
         }
 
-        // THIS IS FOR TEST ONLY
-        // ANIMATION DUMMY
         public ActionResult AnimationDummy(int id)
         {
-
-            // retrieve form type
             var formType = algorithmRepository.retrieveFormType(id);
 
-            // sort type
             if (formType == 1)
             {
                 AnimationViewModel vm = new AnimationViewModel();
                 SortAlgorithm sortAlgo = new SortAlgorithm();
-                vm.dummyAnimation = sortAlgo.dummyData();
-                vm.TypeId = 1;
-                return View(vm);
+                return View();
             }
-            // knapsack type
-            // TODO; working on this
             else if (formType == 2)
             {
                 AnimationViewModel vm = new AnimationViewModel();
                 KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
-                //vm.dummyKnapsackAnimation = knapsack.dummyFractionalKnapsack();
-                vm.TypeId = 2;
                 return View(vm);
             }
             else
             {
                 return View();
             }
-
         }
 
         public ActionResult AlgorithmDetails(int id)
@@ -58,16 +46,13 @@ namespace SprixProject.Controllers
             var formType = algorithmRepository.retrieveFormType(id);
             AlgorithmViewModel vm = new AlgorithmViewModel();
 
-            // retrieves information of the algorithm selected
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
-
-            // retrieves data for the navigational bar
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
 
             return View(vm);
         }
 
-        // TODO; Not submitting, does not return the content
+        // 8/3/2016 TODO; Not submitting, does not return the content
         [HttpPost]
         public ActionResult AlgorithmDetails(String[] potato)
         {

@@ -11,7 +11,6 @@ namespace SprixProject.Controllers
 {
     public class AnimationsController : Controller
     {
-
         AlgorithmRepository algorithmRepository = new AlgorithmRepository();
 
         public ActionResult Index()
@@ -19,28 +18,49 @@ namespace SprixProject.Controllers
             return View();
         }
 
-        // TODO; 4/3/16
         [HttpPost]
-        public ActionResult KnapsackAnimation(int id)
+        public ActionResult SortAnimation(int id)
         {
-
-            // TODO; 4/3/16 retrieve knapsack data animation from form
             AnimationViewModel vm = new AnimationViewModel();
-            KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
+            SortAlgorithm sort = new SortAlgorithm();
 
+            int noOfInput = Int32.Parse(Request.Form["noOfSortInput"]);
 
-            int noOfInput = Int32.Parse(Request.Form["noOfKnapsackInput"]);
-
-            knapsack.Capacity = Int32.Parse(Request.Form["capacityValue"]);
-
-
-            List<string> s = new List<string>();
+            List<int> indexValueList = new List<int>();
 
             for (int i = 1; i <= noOfInput; i++)
             {
-                int val = Int32.Parse(Request.Form["itemWeight_" + i]); // TODO; 5/3/2016 error on this 
-                knapsack.Items.Add(val);
+                int val = Int32.Parse(Request.Form["indexValue_"] + i);
+                indexValueList.Add(val);
             }
+
+            sort.IndexValues = indexValueList;
+
+            vm.sortAnimationData = sort;
+            vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        public ActionResult KnapsackAnimation(int id)
+        {
+            AnimationViewModel vm = new AnimationViewModel();
+            KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
+
+            int noOfInput = Int32.Parse(Request.Form["noOfKnapsackInput"]);
+
+            List<int> itemWeightList = new List<int>();
+
+            for (int i = 1; i <= noOfInput; i++)
+            {
+                int val = Int32.Parse(Request.Form["itemWeight_" + i]); 
+                itemWeightList.Add(val);
+            }
+
+            knapsack.Capacity = Int32.Parse(Request.Form["capacityValue"]);
+            knapsack.Items = itemWeightList;
 
             vm.knapsackAnimationData = knapsack;
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();

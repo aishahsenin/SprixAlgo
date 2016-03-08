@@ -16,6 +16,7 @@
 
             @using (Html.BeginForm("SortAnimation", "Animations", new { id = Model.algoDetails.AlgorithmId }, FormMethod.Post))
             {
+                <input type="hidden" name="noOfSortInput" id="noOfSortInput" value="2">
                 <fieldset class="form-group">
                     <label for="inputVal">Index value</label>
                     <input type="text" class="form-control" name="indexValue_1" id="indexValue_1" placeholder="Enter value" />

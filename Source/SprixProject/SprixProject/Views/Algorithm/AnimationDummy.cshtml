@@ -2,35 +2,13 @@
 
 @{
     ViewBag.Title = "AnimationDummy";
-    int NoOfIndex = @Model.dummyAnimation.NoOfIndex;
-    
 }
 
 @section Title{<h2>Bubble Sort using dummy data</h2>}
 
 @section Content {
 
-    @* for statement over here, using the number of indexes as a counter, add the indexes accordingly *@
-
     <div class="col-md-12">
-        <h4>Dummy values</h4>
-
-        @*Hidden values*@
-        <input type="hidden" name="hidNoOfTotalIndex" id="hidNoOfTotalIndex" value="@Model.dummyAnimation.NoOfIndex">
-
-        @Model.dummyAnimation.NoOfIndex indexes <br />
-        @for (int i = 0; i < Model.dummyAnimation.NoOfIndex; i++)
-        {
-            @* TODO; Remember to hide this *@
-            <input type="hidden" name="@("indexContent" + i)" id="@("indexContent" + i)" value="@Model.dummyAnimation.ValuesArray[i]">
-
-        }
-
-    </div>
-
-    <div class="col-md-12">
-
-
         <div id="inHere">
             <div class="index" id="index1">4</div>
             <div class="index" id="index2">3</div>
@@ -39,24 +17,6 @@
             <div class="index" id="index5">0</div>
         </div>
         <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
-
-    @* TODO; Generate divs below
-
-        @*{
-            var left = 100;
-            var bottom = 0;
-            for (int i = 1; i <= Model.dummyAnimation.NoOfIndex; i++)
-            {
-                var count = i - 1;
-                <div id="@("index"+i)" style="width: 50px; height: 50px; background-color: red; position: relative; left: @(left + "px"); bottom: @(bottom + "px");">@Model.dummyAnimation.ValuesArray[count]</div>
-                left = left + 60;
-                bottom = bottom + 50;
-            }
-        }
-         
-        <input type="button" class="btn btn-primary" value="Submit" onClick="" />
-            *@
-
     </div>
 }
 
@@ -78,6 +38,6 @@
 
 
 @section scripts {
-    @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css");
-    @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
+
+    @Scripts.Render("~/Scripts/bubbleSortAnimation.js")
 }
