@@ -9,17 +9,13 @@ namespace SprixProject.Models
     public class SortAlgorithm : Algorithm
     {
 
-        [DisplayName("Name")]
-        public string SortName { get; set; }
-
         [DisplayName("Index Values")]
         public List<int> IndexValues { get; set; }
 
         public SortAlgorithm() { }
 
-        public SortAlgorithm(string Name, List<int> IndexValues)
+        public SortAlgorithm(List<int> IndexValues)
         {
-            Name = this.Name;
             IndexValues = this.IndexValues;
         }
 

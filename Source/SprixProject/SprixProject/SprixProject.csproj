@@ -276,6 +276,7 @@
     <Content Include="Views\Algorithm\_AlgorithmAnimationPartial.cshtml" />
     <Content Include="Views\Algorithm\AnimationDummy.cshtml" />
     <Content Include="Views\Animations\KnapsackAnimation.cshtml" />
+    <Content Include="Views\Animations\SortAnimation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />
