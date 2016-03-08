@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -7,18 +8,31 @@ namespace SprixProject.Models
 {
     public class SortAlgorithm : Algorithm
     {
-        public String SortAlgorithmName;
-        public int PassValue = 1;
-        public int NoOfIndex;
-        public int[] ValuesArray;
-        public int temp;
-        public SortAlgorithm SortAlgorithmModel { get; }
 
-        public SortAlgorithm()
+        [DisplayName("Name")]
+        public string SortName { get; set; }
+
+        [DisplayName("Index Values")]
+        public List<int> IndexValues { get; set; }
+
+        public SortAlgorithm() { }
+
+        public SortAlgorithm(string Name, List<int> IndexValues)
         {
-            PassValue = 0;
+            Name = this.Name;
+            IndexValues = this.IndexValues;
         }
 
+        //public String SortAlgorithmName;
+        //public int PassValue = 1;
+        //public int NoOfIndex;
+        //public int[] ValuesArray;
+        //public int temp;
+        //public SortAlgorithm SortAlgorithmModel { get; }
+
+            
+        
+            /*
         public SortAlgorithm dummyData()
         {
             SortAlgorithm sortFormDetails = new SortAlgorithm();
@@ -30,14 +44,17 @@ namespace SprixProject.Models
 
             return sortFormDetails;
         }
+        
+    */
 
         // This method retrieves the form type, 1 = sort form type
+        /*
         public int GetFormType()
         {
             int formTypeValue = 1;
 
             return formTypeValue;
-        }
+        }*/
 
     }
 

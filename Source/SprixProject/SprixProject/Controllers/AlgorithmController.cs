@@ -32,9 +32,9 @@ namespace SprixProject.Controllers
             {
                 AnimationViewModel vm = new AnimationViewModel();
                 SortAlgorithm sortAlgo = new SortAlgorithm();
-                vm.dummyAnimation = sortAlgo.dummyData();
+                //vm.dummyAnimation = sortAlgo.dummyData();
                 vm.TypeId = 1;
-                return View(vm);
+                return View();
             }
             // knapsack type
             // TODO; working on this
