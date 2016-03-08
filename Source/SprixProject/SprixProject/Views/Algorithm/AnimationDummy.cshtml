@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "AnimationDummy";
     int NoOfIndex = @Model.dummyAnimation.NoOfIndex;
+    
 }
 
 @section Title{<h2>Bubble Sort using dummy data</h2>}
@@ -77,6 +78,6 @@
 
 
 @section scripts {
-
-    @Scripts.Render("~/Scripts/bubbleSortAnimation.js")
+    @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css");
+    @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
 }

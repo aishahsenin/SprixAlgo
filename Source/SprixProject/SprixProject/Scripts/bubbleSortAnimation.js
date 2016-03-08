@@ -1,4 +1,8 @@
-﻿function box(index, value, origin) {
+﻿/*
+
+IRRREEEELLLLEEEVVAAAANNNNNTTTT - Peter
+
+function box(index, value, origin) {
     this.index = index;
     this.value = value;
     this.origin = origin;
@@ -17,7 +21,7 @@ $(document).ready(function () {
 });
 
 $("#btnTest").click(function () {
-    console.log("START");
+    console.log("STARTREDUNDANT");
     var i = 0;
     beginBubble(i);
 })
@@ -62,6 +66,8 @@ function endCheck() {
             return false;
         }
     }
-    console.log("END");
+    console.log("ENDREDUNDANT");
     return true;
 }
+
+*/

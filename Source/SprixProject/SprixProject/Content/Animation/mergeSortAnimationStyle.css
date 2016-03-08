@@ -1,0 +1,59 @@
+﻿#inHere {
+    width: 700px;
+    height: 150px;
+    background-color:yellow;
+    position:relative;
+    /*padding-top: 100px;*/
+    /*padding-bottom: 100px;*/
+}
+
+.index {
+    width: 50px;
+    height: 50px;
+    
+    position:relative;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+#index1 {
+    background-color:red;
+}
+
+#index2 {
+    background-color:green;
+}
+
+#index3 {
+    background-color:purple;
+}
+
+/* Peter: added these*/
+#index4 {
+    background-color:blue;
+}
+
+#index5 {
+    background-color:grey;
+}
+
+/* Animation code for bubble sort */
+
+@keyframes A {
+    0%   {background-color:red; left:0px; top:0px;}
+    50%  {background-color:red; left:30px; top:-50px;}
+    100% {background-color:red; left:60px; top:0px;}  
+}
+
+@keyframes B {
+    0%   {background-color:green; left:0px; top:0px;}
+    50%  {background-color:green; left:-30px; top:110px;}
+    100% {background-color:green; left:-50px; top:0px;}
+}
+
+@keyframes C {
+    0%   {background-color:green; left:0px; top:0px;}
+    50%  {background-color:green; left:-30px; top:110px;}
+    100% {background-color:green; left:-50px; top:0px;}
+}
+

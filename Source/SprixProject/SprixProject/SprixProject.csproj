@@ -204,6 +204,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\Animation\algorithmAnimationStyle.css" />
+    <Content Include="Content\Animation\bubbleSortAnimationStyle.css" />
+    <Content Include="Content\Animation\mergeSortAnimationStyle.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\hexagonButtons.css" />
@@ -212,8 +214,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\Animation\BubbleSortAnimation.js" />
-    <Content Include="Scripts\Animation\MergeSortAnimation.js" />
+    <Content Include="Scripts\BubbleSort\BubbleSortAnimation.js" />
+    <Content Include="Scripts\MergeSort\MergeSortAnimation.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Models\SprixModel.dbml">
