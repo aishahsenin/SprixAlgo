@@ -5,14 +5,22 @@
     this.y = y;
 }
 
+/*
 var box1 = new box(1, 4, 0, 0);
 var box2 = new box(2, 3, 54, 0);
 var box3 = new box(3, 2, 108, 0);
 var box4 = new box(4, 1, 162, 0);
 var box5 = new box(5, 0, 216, 0);
 
+var boxArray = [box1, box2, box3, box4, box5];
+*/
+
+var box1 = new box(1, 2, 0, 0);
+var box2 = new box(2, 1, 54, 0);
+var box3 = new box(3, 0, 108, 0);
+
 var boxArray = [box1, box2, box3];
-// var boxArray = [box1, box2, box3, box4, box5];
+
 
 $(document).ready(function () {
 
@@ -26,15 +34,21 @@ $("#btnTest").click(function () {
 })
 
 function beginBubble(i) {
+    console.log("BUBBLE");
+
+    for (j = 0; j < boxArray.length; j++) {
+        console.log("BUBBLE BOX" + j + " | I: " + boxArray[j].index + ", V: " + boxArray[j].value + ", X: " + boxArray[j].x + ", Y: " + boxArray[j].y);
+    }
+
     if (i < (boxArray.length - 1)) {
         var valA = boxArray[i].value;
         var valB = boxArray[i + 1].value;
 
         if (valA > valB) {
-            swapPositions(i);
+            swapIndexes(i);
         } else {
-            i = i + 2;
-            beginBubble(i);
+//            i = i + 2;
+            beginBubble(++i);
         }
     } else {
         i = 0;
@@ -46,34 +60,24 @@ function beginBubble(i) {
 }
 
 function swapIndexes(i) {
+    console.log("SWAP");
 
-    boxArray[i].origin++;
-    $("#index" + (boxArray[i].index)).animate({ left: (54 * (boxArray[i].origin)) + "px" }, 1000);
+    console.log("SWAP BOX" + i + " POS: " + $("#index" + (boxArray[i].index)).position().left + ", " + $("#index" + (boxArray[i].index)).position().top);
+    console.log("SWAP BOX" + (i + 1) + " POS: " + $("#index" + (boxArray[(i + 1)].index)).position().left + ", " + $("#index" + (boxArray[(i + 1)].index)).position().top);
 
-    boxArray[i + 1].origin--;
-    $("#index" + (boxArray[i + 1].index)).animate({ left: (54 * (boxArray[i + 1].origin)) + "px" }, 1000);
+    $("#index" + (boxArray[i].index)).animate({ left: "54px" }, 1000);
+    $("#index" + (boxArray[i + 1].index)).animate({ left: "-54px" }, 1000);
 
     var temp = boxArray[i];
     boxArray[i] = boxArray[i + 1];
     boxArray[i + 1] = temp;
 
-    setTimeout(function () { beginBubble(++i); }, 1000);
-}
-
-function swapPositions(i) {
-    $("#index" + (boxArray[i].index)).animate({ left: "54px" }, 1000);
+    /* print statements to go here */
     $("#index" + (boxArray[i].index)).css('left', (boxArray[i].x + 54));
-    $("#index" + (boxArray[i + 1].index)).animate({ left: "-54px" }, 1000);
     $("#index" + (boxArray[i + 1].index)).css('left', (boxArray[i].x - 54));
 
-    var temp = boxArray[i];
-    boxArray[i] = boxArray[i + 1];
-    boxArray[i + 1] = temp;
-
     setTimeout(function () { beginBubble(++i); }, 1000);
 }
-
-
 
 
 function potatoDown() {
