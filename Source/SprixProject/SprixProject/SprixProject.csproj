@@ -234,6 +234,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\jquery_form.js" />
+    <Content Include="Scripts\MergeSort\mergeSortTest.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -281,6 +282,7 @@
     <Content Include="Views\Animations\KnapsackAnimation.cshtml" />
     <Content Include="Views\Animations\SortAnimation.cshtml" />
     <Content Include="Views\Algorithm\_KnapsackAnimationPartial.cshtml" />
+    <Content Include="Views\Algorithm\_MergeSortAnimationPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

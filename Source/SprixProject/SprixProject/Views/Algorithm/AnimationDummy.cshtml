@@ -13,6 +13,13 @@
 
     @if (Model.algoDetails.AlgorithmType == 1)
     {
+        @* Merge sort *@
+    if (Model.algoDetails.AlgorithmId == 6)
+    {
+        @Html.Partial("_MergeSortAnimationPartial", Model)
+    }
+    else
+    {
         <div class="col-md-12">
             <div id="inHere">
                 <div class="index" id="index1">2</div>
@@ -23,6 +30,8 @@
             </div>
             <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
         </div>
+        }
+
     }
     else if (Model.algoDetails.AlgorithmType == 2)
     {
@@ -33,7 +42,6 @@
     {
 
     }
-
 }
 
 @section SideNavBar {
@@ -42,7 +50,7 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                Dummy   
+                Dummy
             </li>
             <li>
                 <a href="#"></a>
@@ -55,7 +63,8 @@
 @section Test {}
 
 @section scripts {
-    @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css");
-    @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
     @Styles.Render("~/Content/Items/cube.css")
+    @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
+    @Scripts.Render("~/Scripts/MergeSort/mergeSortTest.js")
+    @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css")
 }

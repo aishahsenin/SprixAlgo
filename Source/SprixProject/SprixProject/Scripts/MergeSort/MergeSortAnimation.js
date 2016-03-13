@@ -1,4 +1,8 @@
-﻿function box(index, value, x, y) {
+﻿//$(document).ready(function () {
+//    console.log("merge sort ready!");
+//});
+
+function box(index, value, x, y) {
     this.index = index;
     this.value = value;
     this.x = x;
