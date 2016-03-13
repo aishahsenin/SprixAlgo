@@ -68,7 +68,8 @@ namespace SprixProject.Models
                        AlgorithmName = n.Name,
                        ParadigmType = c.Name,
                        AlgorithmDescription = n.Description,
-                       FormType = n.FormTypeId
+                       FormType = n.FormTypeId,
+                       AlgorithmType = n.AlgorithmTypeId
                    };
         }
 
@@ -82,6 +83,7 @@ namespace SprixProject.Models
         public String ParadigmType { get; set; }
         public String AlgorithmDescription { get; set; }
         public int? FormType { get; set; }
+        public int? AlgorithmType { get; set; }
     }
 
 }

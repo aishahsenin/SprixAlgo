@@ -23,22 +23,10 @@ namespace SprixProject.Controllers
         {
             var formType = algorithmRepository.retrieveFormType(id);
 
-            if (formType == 1)
-            {
-                AnimationViewModel vm = new AnimationViewModel();
-                SortAlgorithm sortAlgo = new SortAlgorithm();
-                return View();
-            }
-            else if (formType == 2)
-            {
-                AnimationViewModel vm = new AnimationViewModel();
-                KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
-                return View(vm);
-            }
-            else
-            {
-                return View();
-            }
+            AnimationViewModel vm = new AnimationViewModel();
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            return View(vm);
+
         }
 
         public ActionResult AlgorithmDetails(int id)

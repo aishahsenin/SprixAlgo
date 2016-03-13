@@ -4,20 +4,36 @@
     ViewBag.Title = "AnimationDummy";
 }
 
-@section Title{<h2>Bubble Sort using dummy data</h2>}
+@section Title{<h2>Dummy @Model.algoDetails.AlgorithmName</h2>}
 
 @section Content {
 
-    <div class="col-md-12">
-        <div id="inHere">
-            <div class="index" id="index1">2</div>
-            <div class="index" id="index2">1</div>
-            <div class="index" id="index3">0</div>
-            @*<div class="index" id="index4">1</div>
-            <div class="index" id="index5">0</div>*@
+
+    @* Separate the algorithms by its different types *@
+
+    @if (Model.algoDetails.AlgorithmType == 1)
+    {
+        <div class="col-md-12">
+            <div id="inHere">
+                <div class="index" id="index1">2</div>
+                <div class="index" id="index2">1</div>
+                <div class="index" id="index3">0</div>
+                @*<div class="index" id="index4">1</div>
+                    <div class="index" id="index5">0</div>*@
+            </div>
+            <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
         </div>
-        <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
-    </div>
+    }
+    else if (Model.algoDetails.AlgorithmType == 2)
+    {
+        @* Knapsack animation goes here *@
+        @Html.Partial("_KnapsackAnimationPartial", Model)
+    }
+    else if (Model.algoDetails.AlgorithmType == 3)
+    {
+
+    }
+
 }
 
 @section SideNavBar {
@@ -26,7 +42,7 @@
     <div id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                Dummy
+                Dummy   
             </li>
             <li>
                 <a href="#"></a>
@@ -36,8 +52,10 @@
     <!-- /#sidebar-wrapper -->
 }
 
+@section Test {}
 
 @section scripts {
     @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css");
     @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
+    @Styles.Render("~/Content/Items/cube.css")
 }

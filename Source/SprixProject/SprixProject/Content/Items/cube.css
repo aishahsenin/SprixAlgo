@@ -1,0 +1,54 @@
+﻿.cube {
+    background-color: hsl(0, 0%, 47%);
+    width: 50px;
+    height: 50px;
+    position:relative;
+    top:10px;
+    left:10px;
+}
+.cube::after {
+    content: '';   
+    width: 50px;
+    height:30px;
+    position:absolute;
+    bottom:-30px;
+    left:0;
+    background-color: hsl(0, 0%, 17%);
+    -webkit-transform:skew(35deg);
+    -webkit-transform-origin:top;
+    
+    -moz-transform:skew(35deg);
+    -moz-transform-origin:top;
+    
+    -ms-transform:skew(35deg);
+    -ms-transform-origin:top;
+    
+    -o-transform:skew(35deg);
+    -o-transform-origin:top;
+    
+    transform:skew(35deg);
+    transform-origin:top;    
+}
+.cube::before {
+    content: '';
+    width: 20px;
+    height: 53px;
+    position: absolute;
+    top: 13px;
+    right: -20px;
+    background-color:  hsl(0, 0%, 27%);
+    -webkit-transform: skewY(55deg);
+    -webkit-transform-origin: top;
+    
+    -moz-transform: skewY(55deg);
+    -moz-transform-origin: top;
+    
+    -ms-transform: skewY(55deg);
+    -ms-transform-origin: top;    
+    
+    -o-transform: skewY(55deg);
+    -o-transform-origin: top;     
+    
+    transform: skewY(55deg);
+    transform-origin: top;     
+}
