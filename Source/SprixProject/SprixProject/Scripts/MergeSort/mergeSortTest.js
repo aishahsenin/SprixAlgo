@@ -23,21 +23,14 @@ function mergeSort(arr) {
     // finds the middle of the given array
     var middle = parseInt(arr.length / 2);
 
-    // slices the left side of the array to form the 'left' array
+    // slices the array into halves, forming left and right arrays
     var left = arr.slice(0, middle);
     console.log(left);
-
-    // slices the right side of the array to form the 'right' array
     var right = arr.slice(middle, arr.length);
     console.log(right);
+    // TODO; TIMEOUT FOR ANIMATION HERE
 
-    //setTimeout(merge(mergeSort(left), mergeSort(right)),1000);
-
-    // runs the merge algorithm 
-    // how this works is that 
-    //return setTimeout(merge(mergeSort(left), mergeSort(right)), 1000);
     return merge(mergeSort(left), mergeSort(right));
-
 }
 
 /*
@@ -51,13 +44,18 @@ function merge(left, right) {
     var result = [];
 
     while (left.length && right.length) {
+        // if left is less or equal to right
         if (left[0] <= right[0]) {
             result.push(left.shift());
+            // TODO; TIMEOUT FOR ANIMATION HERE
         } else {
+            // else if left is more than right
             result.push(right.shift());
+            // TODO; TIMEOUT FOR ANIMATION HERE
         }
     }
 
+    // might need to do animation below, idk.
     while (left.length)
         result.push(left.shift());
 
