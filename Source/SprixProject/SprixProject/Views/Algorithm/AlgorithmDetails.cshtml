@@ -36,12 +36,17 @@
 
 @section Test {
     <p>Test links go here</p>
-    <p>@Html.ActionLink("Knapsack Problem", "AnimationDummy", "Algorithm", new { Id = 1 }, null)</p>
-    <p>@Html.ActionLink("Matrix multiplication", "AnimationDummy", "Algorithm", new { Id = 3 }, null)</p>
-    <p>@Html.ActionLink("Rod cutting problem", "AnimationDummy", "Algorithm", new { Id = 5 }, null)</p>
-    <p>@Html.ActionLink("Dummy sort", "AnimationDummy", "Algorithm", new { Id = 8 }, null)</p>
-    <p>@Html.ActionLink("Merge sort", "AnimationDummy", "Algorithm", new { Id = 6 }, null)</p>
+    <p>Sort types</p>
+    <p>@Html.ActionLink("Merge sort", "AnimationDummy", "Animations", new { Id = 6 }, null)</p>
+    <p>@Html.ActionLink("Insertion sort", "AnimationDummy", "Animations", new { Id = 7 }, null)</p>
+    <p>@Html.ActionLink("Dummy sort", "AnimationDummy", "Animations", new { Id = 8 }, null)</p>
 
+    <p>Knapsack types</p>
+    <p>@Html.ActionLink("Knapsack Problem", "AnimationDummy", "Animations", new { Id = 1 }, null)</p>
+
+    <p>Misc. types</p>
+    <p>@Html.ActionLink("Matrix multiplication", "AnimationDummy", "Animations", new { Id = 3 }, null)</p>
+    <p>@Html.ActionLink("Rod cutting problem", "AnimationDummy", "Animations", new { Id = 5 }, null)</p>
 
 }
 

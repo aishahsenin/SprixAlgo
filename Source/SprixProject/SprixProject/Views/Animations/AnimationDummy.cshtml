@@ -18,6 +18,10 @@
     {
         @Html.Partial("_MergeSortAnimationPartial", Model)
     }
+    if (Model.algoDetails.AlgorithmId == 7)
+    {
+        @Html.Partial("_InsertionSortAnimationPartial", Model)
+    }
     else
     {
         <div class="col-md-12">

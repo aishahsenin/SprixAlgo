@@ -1,5 +1,14 @@
 Work plan
 
+13/3/2016 (Sunday) THIS WEEK
+- completed the code(s) for 
+	- merge sort, animation needs to be done
+- Start on the animation on some of the dynamic algorithms
+	- knapsack
+	- matrix multiplication
+	- rod cutting problem
+- fix links on the nav bar
+
 19/2/2016 (Friday)
 - [todo] Something is wrong with the form input. textbox and buttons are not responding when clicked. sort it out!
 - [findings] having less intervals for the animation allows the animation to be smoother. 

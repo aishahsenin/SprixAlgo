@@ -68,6 +68,16 @@ namespace SprixProject.Controllers
 
             return View(vm);
         }
+
+        public ActionResult AnimationDummy(int id)
+        {
+            var formType = algorithmRepository.retrieveFormType(id);
+
+            AnimationViewModel vm = new AnimationViewModel();
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            return View(vm);
+
+        }
     }
 
 }

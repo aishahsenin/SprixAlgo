@@ -31,9 +31,13 @@ function mergeSort(arr) {
     var right = arr.slice(middle, arr.length);
     console.log(right);
 
+    //setTimeout(merge(mergeSort(left), mergeSort(right)),1000);
+
     // runs the merge algorithm 
     // how this works is that 
+    //return setTimeout(merge(mergeSort(left), mergeSort(right)), 1000);
     return merge(mergeSort(left), mergeSort(right));
+
 }
 
 /*
