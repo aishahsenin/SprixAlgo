@@ -30,7 +30,7 @@ namespace SprixProject.Controllers
 
             for (int i = 1; i <= noOfInput; i++)
             {
-                var valTest = Request.Form["indexValue_"] + i;
+                var valTest = Request.Form["indexValue_"] + i; // test
                 int val = Int32.Parse(Request.Form["indexValue_"] + i); // ERROR; bug here. wrong value inserted
                 indexValueList.Add(val);
             }
