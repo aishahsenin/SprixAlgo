@@ -6,9 +6,15 @@
 
 @section Title{
     <h2>@Model.algoDetails.AlgorithmName</h2>
-    }
+}
 
 @section Content{
+
+    @* Merge sort *@
+    @if (Model.algoDetails.AlgorithmId == 6)
+    {
+        @Html.Partial("_MergeSortAnimationPartial", Model)
+    }
 
 }
 

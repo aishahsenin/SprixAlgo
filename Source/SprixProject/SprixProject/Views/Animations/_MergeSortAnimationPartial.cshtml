@@ -1,3 +1,11 @@
-﻿<input type="button" id="mergeSortExecute" value="Click to run" class="btn" onClick="start()" />
+﻿@model SprixProject.ViewModel.AnimationViewModel
+
+<p><input type="button" id="mergeSortExecute" value="Click to run" class="btn" onClick="start()" />
+</p>
 
 @* animation goes here!!! *@
+
+@for (int i = 1; i < Model.sortAnimationData.IndexValues.Count(); i++)
+{
+    <input type="hidden" name=@("index_" + i) value="@Model.sortAnimationData.IndexValues[i]">
+}
