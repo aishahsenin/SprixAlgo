@@ -65,7 +65,8 @@ namespace SprixProject.Controllers
 
             vm.knapsackAnimationData = knapsack;
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
-            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault(); 
+            vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            vm.noOfIndex = noOfInput;
 
             return View(vm);
         }

@@ -14,6 +14,8 @@ namespace SprixProject.ViewModel
 
         // sort data
         public SortAlgorithm sortAnimationData { get; set; }
+
+        // for dynamic form types
         public int noOfIndex { get; set; }
 
         // navigational bar
