@@ -1,4 +1,25 @@
-﻿function insertionSort(unsortedList) {
+﻿function retrieveValues() {
+    // empty array
+    var array = [];
+
+    // get no. of index
+    var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+
+    for (i = 1; i <= noOfIndex; i++) {
+        var a = parseInt(document.getElementById('index_' + i).value);
+        array.push(a);
+    }
+    return array;
+}
+
+function startInsertionSort() {
+    var array = retrieveValues();
+    console.log(array);
+    insertionSort(array);
+}
+
+// Insertion sort algorithm here!
+function insertionSort(unsortedList) {
     var len = unsortedList.length;
 
     for (var i = 0; i < len; i++) {
@@ -13,7 +34,11 @@
         //in sorted part.
         unsortedList[j + 1] = tmp;
     }
+
+    console.log(unsortedList);
 }
+/*
 var ul = [5, 3, 1, 2, 4];
 insertionSort(ul);
 console.log(ul);
+*/

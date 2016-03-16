@@ -216,6 +216,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\BubbleSort\BubbleSortAnimation.js" />
+    <Content Include="Scripts\InsertionSort\insertionSortAnimation.js" />
     <Content Include="Scripts\MergeSort\MergeSortAnimation.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -283,6 +284,7 @@
     <Content Include="Views\Animations\SortAnimation.cshtml" />
     <Content Include="Views\Animations\_KnapsackAnimationPartial.cshtml" />
     <Content Include="Views\Animations\_MergeSortAnimationPartial.cshtml" />
+    <Content Include="Views\Animations\_InsertionSortAnimationPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

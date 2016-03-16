@@ -10,10 +10,24 @@
 
 @section Content{
 
+    @* Hidden values that stores values from form *@
+    <input type="hidden" name="noOfIndex" id="noOfIndex" value="@Model.noOfIndex" />
+
+    @for (int i = 0; i < Model.sortAnimationData.IndexValues.Count(); i++)
+    {
+        var indexVal = i + 1;
+        <input type="hidden" name=@("index_" + indexVal) id=@("index_" + indexVal) value="@Model.sortAnimationData.IndexValues[i]">
+    }
+
     @* Merge sort *@
     @if (Model.algoDetails.AlgorithmId == 6)
     {
         @Html.Partial("_MergeSortAnimationPartial", Model)
+    }
+    @* Insertion sort *@
+    else if (Model.algoDetails.AlgorithmId == 8)
+    {
+        @Html.Partial("_InsertionSortAnimationPartial", Model);
     }
 
 }
@@ -43,5 +57,6 @@
 @section scripts {
     @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
     @Scripts.Render("~/Scripts/MergeSort/mergeSortTest.js")
+    @Scripts.Render("~/Scripts/InsertionSort/insertionSortAnimation.js")
 }
 
