@@ -39,6 +39,7 @@ namespace SprixProject.Controllers
             vm.sortAnimationData = sort;
             vm.algoNavBar = algorithmRepository.FindSameParadigmTypeAlgorithm(id).ToList();
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
+            vm.noOfIndex = noOfInput;
 
             return View(vm);
         }

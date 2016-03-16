@@ -3,9 +3,14 @@
 <p><input type="button" id="mergeSortExecute" value="Click to run" class="btn" onClick="start()" />
 </p>
 
-@* animation goes here!!! *@
+@* Here are the hidden values *@
+<input type="hidden" name="noOfIndex" id="noOfIndex" value="@Model.noOfIndex" />
 
-@for (int i = 1; i < Model.sortAnimationData.IndexValues.Count(); i++)
+@for (int i = 0; i < Model.sortAnimationData.IndexValues.Count(); i++)
 {
-    <input type="hidden" name=@("index_" + i) value="@Model.sortAnimationData.IndexValues[i]">
+    var indexVal = i + 1;
+    <input type="hidden" name=@("index_" + indexVal) id=@("index_" + indexVal) value="@Model.sortAnimationData.IndexValues[i]">
 }
+
+@* For Peter: For the animation, have a look at mergeSortTest.js. 
+   Also, the values are now retrieved from the merge sort form.*@

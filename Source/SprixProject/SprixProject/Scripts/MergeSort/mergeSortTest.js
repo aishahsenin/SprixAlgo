@@ -1,11 +1,26 @@
 ﻿// AISHAH'S MERGE SORT CODE
 // Below is the actual merge sort function
 
+function retrieveValues() {
+    // empty array
+    var array = [];
+
+    // get no. of index
+    var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+
+    for (i = 1; i <= noOfIndex; i++) {
+        var a = parseInt(document.getElementById('index_' + i).value);
+        array.push(a);
+    }
+    return array;
+}
+
+
 function start() {
     // input array
-    var a = [4, 76, 3, 6, 23, 84, 90, 54, 23, 5];
-    console.log(a);
-    mergeSort(a);
+    var array = retrieveValues();
+    console.log(array);
+    mergeSort(array);
 }
 
 /* 
