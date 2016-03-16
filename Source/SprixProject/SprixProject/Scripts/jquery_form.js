@@ -40,9 +40,7 @@ function KnapsackModel() {
 
 // Submit button function
 $('submitHere').click(function () {
-
     var request = new Knapsack
-
 })
 
 function AddOneMoreTextBox(clicked_id) {
@@ -61,7 +59,8 @@ function AddOneMoreTextBox(clicked_id) {
     else if (clicked_id == "knapsackButtonAdd") {
         document.getElementById('noOfKnapsackInput').value = variableInputCount; 
         var indexValueName = "itemWeight_" + variableInputCount;
-        var textBox = '<fieldset class="form-group"><input type="text" class="form-control" name="' + indexValueName + '" id="' + indexValueName + '" placeholder="Enter value" /></fieldset>';
+        var itemWorth = "itemBenefit_" + variableInputCount;
+        var textBox = '<fieldset class="form-group"><label for="itemWeight">Item ' + variableInputCount + '</label><input type="text" class="form-control" name="' + indexValueName + '" id="' + indexValueName + '" placeholder="Weight" /></fieldset><fieldset class="form-group"><input type="text" class="form-control" name="' + itemWorth + '" id="' + itemWorth + '" placeholder="Cost" /></fieldset>';
         $('div#newFieldsHere2').append(textBox);
     }
 

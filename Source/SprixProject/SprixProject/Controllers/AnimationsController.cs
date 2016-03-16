@@ -49,15 +49,17 @@ namespace SprixProject.Controllers
         {
             AnimationViewModel vm = new AnimationViewModel();
             KnapsackAlgorithm knapsack = new KnapsackAlgorithm();
+            KnapsackItems items = new KnapsackItems();
 
             int noOfInput = Int32.Parse(Request.Form["noOfKnapsackInput"]);
 
-            List<int> itemWeightList = new List<int>();
+            List<KnapsackItems> itemWeightList = new List<KnapsackItems>();
 
             for (int i = 1; i <= noOfInput; i++)
             {
-                int val = Int32.Parse(Request.Form["itemWeight_" + i]); 
-                itemWeightList.Add(val);
+                int val = Int32.Parse(Request.Form["itemWeight_" + i]);
+                int benefit = Int32.Parse(Request.Form["itemBenefit_" + i]);
+                itemWeightList.Add(new KnapsackItems { Weight = val, Benefit = benefit });
             }
 
             knapsack.Capacity = Int32.Parse(Request.Form["capacityValue"]);

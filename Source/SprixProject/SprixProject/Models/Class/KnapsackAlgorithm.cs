@@ -11,12 +11,12 @@ namespace SprixProject.Models.Class
         [DisplayName("Capacity")]
         public int Capacity { get; set; }
 
-        [DisplayName("Items")]
-        public List<int> Items { get; set; }
+        [DisplayName("Knapsack Items")]
+        public List<KnapsackItems> Items { get; set; }
 
         public KnapsackAlgorithm(){}
 
-        public KnapsackAlgorithm(int Capacity, List<int> Items)
+        public KnapsackAlgorithm(int Capacity, List<KnapsackItems> Items)
         {
             Capacity = this.Capacity;
             Items = this.Items;

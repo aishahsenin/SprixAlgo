@@ -180,6 +180,7 @@
     <Compile Include="Models\Class\Algorithm.cs" />
     <Compile Include="Models\Class\Input.cs" />
     <Compile Include="Models\Class\KnapsackAlgorithm.cs" />
+    <Compile Include="Models\Class\KnapsackItems.cs" />
     <Compile Include="Models\Repository\AlgorithmRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
