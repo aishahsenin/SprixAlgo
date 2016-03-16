@@ -1,13 +1,25 @@
 Work plan
 
+List of TODO's (16/3/16) Wednesday
+1. form for dynamic algorithm
+2. animation of 
+	- merge sort
+	- insertion sort
+3. program for
+	- knapsack algorithm
+	- fractional knapsack algorithm
+	- rod cutting problem
+	- matrix multiplication problem
+
 13/3/2016 (Sunday) THIS WEEK
 - completed the code(s) for 
-	- merge sort, animation needs to be done
+	- merge sort, animation needs to be done [done]
 - Start on the animation on some of the dynamic algorithms
 	- knapsack
 	- matrix multiplication
 	- rod cutting problem
-- fix links on the nav bar
+- fix links on the nav bar [done]
+	- will not work if link is to its own page for some reason
 
 19/2/2016 (Friday)
 - [todo] Something is wrong with the form input. textbox and buttons are not responding when clicked. sort it out!
