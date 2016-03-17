@@ -39,9 +39,9 @@ function KnapsackModel() {
 }
 
 // Submit button function
-$('submitHere').click(function () {
-    var request = new Knapsack
-})
+//$('submitHere').click(function () {
+//    var request = new Knapsack
+//})
 
 function AddOneMoreTextBox(clicked_id) {
     console.log(clicked_id);
