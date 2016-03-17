@@ -13,7 +13,7 @@ var box5 = new box(5, 0, 0);
 var boxArray = [box1, box2, box3, box4, box5];
 
 $(document).ready(function () {
-
+    console.log("super secret fire");
 });
 
 $("#btnTest").click(function () {

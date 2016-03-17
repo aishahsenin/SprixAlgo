@@ -11,37 +11,33 @@
 
     @* Separate the algorithms by its different types *@
 
+    @* SORT TYPES *@
     @if (Model.algoDetails.AlgorithmType == 1)
     {
         @* Merge sort *@
-    if (Model.algoDetails.AlgorithmId == 6)
-    {
-        @Html.Partial("_MergeSortAnimationPartial", Model)
-    }
-    if (Model.algoDetails.AlgorithmId == 7)
-    {
-        @Html.Partial("_InsertionSortAnimationPartial", Model)
-    }
-    else
-    {
-        <div class="col-md-12">
-            <div id="inHere">
-                <div class="index" id="index1">2</div>
-                <div class="index" id="index2">1</div>
-                <div class="index" id="index3">0</div>
-                @*<div class="index" id="index4">1</div>
-                    <div class="index" id="index5">0</div>*@
-            </div>
-            <input type="button" id="btnTest" class="btn btn-primary" value="Submit" />
-        </div>
+        if (Model.algoDetails.AlgorithmId == 6)
+        {
+            @Html.Partial("_MergeSortAnimationPartial", Model)
         }
+        @* Insertion sort *@
+        else if (Model.algoDetails.AlgorithmId == 7)
+        {
+            @Html.Partial("_InsertionSortAnimationPartial", Model)
+        }
+        @* Bubble sort *@
+        else if (Model.algoDetails.AlgorithmId == 8)
+        {
+            @Html.Partial("_BubbleSortAnimationPartial", Model)
+            }
 
-    }
+        }
+    @* KNAPSACK TYPES*@
     else if (Model.algoDetails.AlgorithmType == 2)
     {
         @* Knapsack animation goes here *@
         @Html.Partial("_KnapsackAnimationPartial", Model)
     }
+    @* DYNAMIC PROGRAMMING TYPES *@
     else if (Model.algoDetails.AlgorithmType == 3)
     {
 
@@ -68,7 +64,10 @@
 
 @section scripts {
     @Styles.Render("~/Content/Items/cube.css")
-    @Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
-    @Scripts.Render("~/Scripts/MergeSort/mergeSortTest.js")
-    @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css")
+    @*@Scripts.Render("~/Scripts/MergeSort/MergeSortAnimation.js")
+        @Scripts.Render("~/Scripts/MergeSort/mergeSortTest.js")
+        @Styles.Render("~/Content/Animation/mergeSortAnimationStyle.css")*@
+    @Scripts.Render("~/Scripts/BubbleSort/BubbleSortAnimation.js")
+    @Styles.Render("~/Content/Animation/bubbleSortAnimationStyle.css")
+    @Styles.Render("~/Content/Animation/algorithmAnimationStyle.css")
 }

@@ -62,6 +62,12 @@
   border-radius: 4px;
 }
 
+.frame4:hover .hex-inner{
+  height: 100px;
+  top: 90px !important;
+  border-radius: 4px;
+}
+
 .hex-outer{
   background: white;
   width: 210px;

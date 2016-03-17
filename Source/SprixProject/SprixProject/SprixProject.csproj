@@ -287,6 +287,7 @@
     <Content Include="Views\Animations\_KnapsackAnimationPartial.cshtml" />
     <Content Include="Views\Animations\_MergeSortAnimationPartial.cshtml" />
     <Content Include="Views\Animations\_InsertionSortAnimationPartial.cshtml" />
+    <Content Include="Views\Animations\_BubbleSortAnimationPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />
