@@ -6,10 +6,13 @@ List of TODO's (16/3/16) Wednesday
 	- merge sort
 	- insertion sort
 3. program for
-	- knapsack algorithm
+	- knapsack algorithm [done, need to bind values to form]
 	- fractional knapsack algorithm
 	- rod cutting problem
 	- matrix multiplication problem
+4. dissertation
+	- introduction
+	- design
 
 13/3/2016 (Sunday) THIS WEEK
 - completed the code(s) for 
