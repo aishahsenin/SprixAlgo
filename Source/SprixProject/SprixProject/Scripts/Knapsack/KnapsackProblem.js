@@ -9,12 +9,28 @@
 //    `items`     : [{w:Number, b:Number}]  
 // **returns**:  
 //    An object containing `maxValue` and `set`
+
+// TODO; Aishah
+// int type capacity
+// list int type items
+
+$(document).ready(function () {
+    console.log("knapsack ready");
+});
+
+function startKnapsack() {
+    console.log("knapsack executed");
+    var items = [45, 23, 7, 90];
+    var capacity = 50;
+    knapsack(items, capacity);
+}
+
 function knapsack(items, capacity) {
     var idxItem = 0,
         idxWeight = 0,
         oldMax = 0,
         newMax = 0,
-        numItems = items.length,
+        numItems = items.length, // Aishah; you're passing in list of items
         weightMatrix = new Array(numItems + 1),
         keepMatrix = new Array(numItems + 1),
         solutionSet = [];
