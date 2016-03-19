@@ -3,7 +3,7 @@ Work plan
 List of TODO's (16/3/16) Wednesday
 1. form for dynamic algorithm
 2. animation of 
-	- merge sort
+	- merge sort [peter's working on this]
 	- insertion sort
 3. program for
 	- knapsack algorithm [done, need to bind values to form]
