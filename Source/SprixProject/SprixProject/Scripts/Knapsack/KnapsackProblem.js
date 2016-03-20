@@ -9,7 +9,22 @@
 //    `items`     : [{w:Number, b:Number}]  
 // **returns**:  
 //    An object containing `maxValue` and `set`
+
+function startKnapsack() {
+
+    var capacity = document.getElementById('capacity').value;
+    var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+    var itemArray = [];
+
+    for (i = 1; i <= noOfIndex; i++) {
+        var item = parseInt(document.getElementById('index' + i).value);
+        itemArray.push(item);
+    }
+    knapsack(capacity, itemArray);
+}
+
 function knapsack(items, capacity) {
+    console.log("knapsack runs");
     var idxItem = 0,
         idxWeight = 0,
         oldMax = 0,
@@ -72,3 +87,24 @@ function knapsack(items, capacity) {
 }
 
 exports = knapsack;
+
+function generateRandomColour() {
+    var noOfItems = parseInt(document.getElementById("noOfIndex").value);
+    for (i = 1; i <= noOfItems; i++) {
+        do {
+            var colour = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            colour = colour.substring(1);      // strip #
+            var rgb = parseInt(colour, 16);   // convert rrggbb to decimal
+            var r = (rgb >> 16) & 0xff;  // extract red
+            var g = (rgb >> 8) & 0xff;  // extract green
+            var b = (rgb >> 0) & 0xff;  // extract blue
+            var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
+        }
+        while (luma < 150);
+        var itemElement = document.getElementById('index' + i).style.backgroundColor = "#" + colour;
+    }
+}
+
+$(document).ready(function () {
+    generateRandomColour();
+});

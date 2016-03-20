@@ -12,13 +12,16 @@
 
     @* Hidden values for the knapsack algorithm *@
     <input type="hidden" name="noOfIndex" id="noOfIndex" value="@Model.noOfIndex" />
-    <input type="hidden" name="capacity" id="capacity" value="@Model.knapsackAnimationData.Capacity"/>
+    <input type="hidden" name="capacity" id="capacity" value="@Model.knapsackAnimationData.Capacity" />
+
     @for (int i = 0; i < Model.knapsackAnimationData.Items.Count(); i++)
     {
         var indexVal = i + 1;
         <input type="hidden" name=@("itemWeight_" + indexVal) id=@("itemWeight_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Weight">
         <input type="hidden" name=@("itemBenefit_" + indexVal) id=@("itemBenefit_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Benefit">
     }
+
+    @Html.Partial("_KnapsackAnimationPartial", Model)
 }
 
 @section SideNavBar {
@@ -32,7 +35,7 @@
             {
                 <li>
                     <a href="#">
-                        @Html.ActionLink(item.Name, "AlgorithmDetails", new { id = item.Id })
+                        @Html.ActionLink(item.Name, "AlgorithmDetails", "Algorithm", new { id = item.Id }, null)
                     </a>
                 </li>
             }
@@ -43,3 +46,8 @@
 }
 
 
+@section scripts {
+    @Scripts.Render("~/Scripts/Knapsack/KnapsackProblem.js")
+    @Styles.Render("~/Content/Animation/knapsackAnimationStyle.css")
+
+}

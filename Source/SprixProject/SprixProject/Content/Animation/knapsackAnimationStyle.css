@@ -1,0 +1,70 @@
+﻿#inHere {
+    width: 700px;
+    height: 150px;
+    background-color:yellow;
+    position:relative;
+    /*padding-top: 100px;*/
+    /*padding-bottom: 100px;*/
+}
+
+#sack {
+    border-radius: 5px;
+    padding: 5px;
+    position:relative;
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background-color:sandybrown;
+    transition: background-color 0.5s ease;
+}
+
+.index {
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    position:relative;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+
+/*#index1 {
+    width: 140px;
+    height: 140px;
+    background-color:sandybrown;
+}*/
+
+/*#index1 {
+    background-color:orangered;
+}
+
+#index2 {
+    background-color:forestgreen;
+}
+
+#index3 {
+    background-color:cornflowerblue;
+}*/
+
+
+
+/* Animation code for bubble sort */
+
+@keyframes A {
+    0%   {background-color:red; left:0px; top:0px;}
+    50%  {background-color:red; left:30px; top:-50px;}
+    100% {background-color:red; left:60px; top:0px;}  
+}
+
+@keyframes B {
+    0%   {background-color:green; left:0px; top:0px;}
+    50%  {background-color:green; left:-30px; top:110px;}
+    100% {background-color:green; left:-50px; top:0px;}
+}
+
+@keyframes C {
+    0%   {background-color:green; left:0px; top:0px;}
+    50%  {background-color:green; left:-30px; top:110px;}
+    100% {background-color:green; left:-50px; top:0px;}
+}
+
