@@ -74,8 +74,13 @@ function mergeSort(arr) {
     // TODO; TIMEOUT FOR ANIMATION HERE
 
     console.log("MERGESORT FINISH");
-    return merge(mergeSort(left), mergeSort(right));
-    //return setTimeout(function () { merge(mergeSort(left), mergeSort(right)); }, 1000);
+    var temp = setTimeout(function () { mergeSort(left); }, 1000);
+    var temp2 = setTimeout(function () { mergeSort(right); }, 1000);
+
+    console.log("dicks");
+
+    return merge(temp, temp2);
+    //return merge(mergeSort(left), mergeSort(right));
 }
 
 /*
@@ -98,16 +103,37 @@ function merge(left, right) {
             // TODO; TIMEOUT FOR ANIMATION HERE
         }
     }
-
+    var i = 0
     // might need to do animation below, idk.
-    while (left.length)
+    while (left.length) {
+        console.log(left[i]);
         result.push(left.shift());
+        i++;
+    }
 
-    while (right.length)
+    while (right.length) {
+        console.log(right[i]);
         result.push(right.shift());
+        i++;
+    }
 
     console.log(result);
     console.log("MERGE FINISH");
 
+    //return setTimeout(function () { result }, 1000);
     return result;
+}
+
+function downShift(left, right) {
+    console.log("SHIFTING");
+
+    for (i = 0; i < left.length; i++) {
+        $("#index" + (left[i].index)).animate({ top: "30px" }, 1000);
+        $("#index" + (left[i].index)).animate({ left: "-15px" }, 1000);
+    }
+
+    for (i = 0; i < right.length; i++) {
+        $("#index" + (right[i].index)).animate({ top: "30px" }, 1000);
+        $("#index" + (right[i].index)).animate({ left: "15px" }, 1000);
+    }
 }
