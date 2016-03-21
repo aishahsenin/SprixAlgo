@@ -10,14 +10,66 @@
 // **returns**:  
 //    An object containing `maxValue` and `set`
 
-var capacity;
-var itemArray = [];
-
 $(document).ready(function () {
     generateRandomColour();
 });
 
+var idxItem = 0;
+var idxWeight = 0;
+var capacity = document.getElementById('capacity').value;
+var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+var itemArray = [];
+var weightMatrix = [];
+var keepMatrix = [];
+
 function startKnapsack() {
+    //capacity = document.getElementById('capacity').value;
+    //var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+
+    for (i = 1; i <= noOfIndex; i++) {
+        var item = parseInt(document.getElementById('index' + i).value);
+        itemArray.push(item);
+    }
+
+    for (idxItem = 0; idxItem < itemArray.length + 1; idxItem++) {
+        weightMatrix[idxItem] = new Array(capacity + 1); // weight table
+        keepMatrix[idxItem] = new Array(capacity + 1); // keep table
+    }
+
+    console.log("START");
+    knapsack();
+    console.log("END");
+}
+
+
+var x = 1;
+var y = 1;
+var total = 1;
+var capacityColumn = 6;
+var itemsRow = 5;
+
+function knapsack() {
+    setTimeout(function () {
+
+        if (y == 1) {
+            $("#valueTable tr:nth-child(" + y + ") td:nth-child(" + (x + 1) + ")").text("0");
+        } else {
+            $("#valueTable tr:nth-child(" + y + ") td:nth-child(" + (x + 1) + ")").text(total);
+        }
+
+        if ((x != capacityColumn) && (y != itemsRow)) {
+            x++;
+            if (x == capacityColumn) {
+                y++;
+                x = 1;
+            }
+            total++;
+            knapsack();
+        }
+    }, 500);
+}
+
+function startKnapsack2() {
     capacity = document.getElementById('capacity').value;
     var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
 
@@ -25,61 +77,9 @@ function startKnapsack() {
         var item = parseInt(document.getElementById('index' + i).value);
         itemArray.push(item);
     }
-    //knapsack(itemArray, capacity);
     console.log("START");
-    knapsack();
+    knapsack(itemArray, capacity);
     console.log("END");
-}
-
-//var idxItem;
-//var idxWeight;
-//var oldMax;
-//var newMax;
-//var numItems;
-//var weightMatrix = [];
-//var keepMatrix = [];
-//var solutionSet;
-
-function knapsack() {
-    console.log("KNAPSACK");
-    var idxItem = 0;
-    var idxWeight = 0;
-    var oldMax = 0;
-    var newMax = 0;
-    var numItems = itemArray.length;
-    var weightMatrix = new Array(numItems + 1); // adds an array of items into Weight Table
-    var keepMatrix = new Array(numItems + 1); // adds an array of items into Keep Table
-    var solutionSet = []; // ?
-
-    for (idxItem = 0; idxItem < numItems + 1; idxItem++) {
-        weightMatrix[idxItem] = new Array(capacity + 1); // weight table
-        keepMatrix[idxItem] = new Array(capacity + 1); // keep table
-    }
-    timeout(idxItem, idxWeight, weightMatrix, numItems);
-}
-
-var count = 1;
-
-function timeout(idxItem, idxWeight, weightMatrix, numItems) {
-    setTimeout(function () {
-        for (idxItem = 0; idxItem <= numItems; idxItem++) {
-            for (idxWeight = 0; idxWeight <= capacity; idxWeight++) {
-                if (idxItem === 0 || idxWeight === 0) {
-                    weightMatrix[idxItem][idxWeight] = 0;
-                    console.log(weightMatrix);
-                    $("#keepTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 1) + ")").text("0");
-                }
-            }
-        }
-
-        console.log("APPENDING");
-        $("#testing").append(count);
-
-        if (idxItem <= numItems) {
-            idxItem++;
-            timeout(idxItem, idxWeight, weightMatrix, numItems);
-        }
-    }, 1000, idxItem, idxWeight, weightMatrix, numItems);
 }
 
 function knapsack2(items, capacity) {
@@ -88,15 +88,10 @@ function knapsack2(items, capacity) {
         idxWeight = 0,
         oldMax = 0,
         newMax = 0,
-        //numItems = items.length, // Aishah; you're passing in list of items
-        //weightMatrix = new Array(numItems + 1),
-        //keepMatrix = new Array(numItems + 1),
-        //solutionSet = [];
-
-        numItems = items.length,
+        numItems = items.length, // Aishah; you're passing in list of items
         weightMatrix = new Array(numItems + 1), // adds an array of items into Weight Table
         keepMatrix = new Array(numItems + 1), // adds an array of items into Keep Table
-        solutionSet = []; // ?
+        solutionSet = [];
 
     // Setup matrices
     for (idxItem = 0; idxItem < numItems + 1; idxItem++) {
@@ -110,11 +105,6 @@ function knapsack2(items, capacity) {
         for (idxWeight = 0; idxWeight <= capacity; idxWeight++) {
             // Fill top row and left column with zeros
             if (idxItem === 0 || idxWeight === 0) {
-                //doSetTimeout((idxItem + 1), (idxWeight + 1));
-                //setTimeout(function () { writeToTable((idxItem + 1), (idxWeight + 1)) }, 1000 * count);
-                //setTimeout(function(){$("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 1) + ")").append("0");}, 1000 * count);
-                //setTimeout($("#keepTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 1) + ")").append("0"), 1000 * count);
-                $("#keepTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 1) + ")").append("0");
                 weightMatrix[idxItem][idxWeight] = 0;
             }
 
