@@ -7,7 +7,6 @@
 \usepackage{menukeys}
 \usepackage{listings}
 \usepackage{pdflscape}
-\usepackage{glossaries}
 \usepackage{wrapfig}
 \usepackage{float}
 \usepackage{lscape}
@@ -41,10 +40,8 @@
 % ----------------------------------------
 
 \begin{titlepage}
-
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
-
-\center % Center everything on the page
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+\center 
  
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
@@ -54,11 +51,10 @@
 \includegraphics[width=7cm]{images/logo/uol.png}
 
 \vfill
-%\vfill
 
-\textsc{\LARGE University of Liverpool}\\[1.5cm] % Name of your university/college
-\textsc{\large Computer Science with a Year in Industry BSc (Hons)}\\[0.5cm] % Major heading such as course name
-\textsc{\large G403}\\[0.5cm] % Minor heading such as course title
+\textsc{\LARGE University of Liverpool}\\[1.5cm] 
+\textsc{\large Computer Science with a Year in Industry BSc (Hons)}\\[0.5cm] 
+\textsc{\large G403}\\[0.5cm] 
 
 %----------------------------------------------------------------------------------------
 %	TITLE SECTION
@@ -81,14 +77,10 @@ N Aishah B M \textsc{Senin} \\ (200912462) % Your name
 ~
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
-\emph{Placement Advisor:} \\
-Dr. Ullrich \textsc{Hustadt} % Supervisor's Name
+\emph{Project advisor:} \\
+Dr. Prudence \textsc{Wong} % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[4cm]
-
-% If you don't want a supervisor, uncomment the two lines below and remove the section above
-%\Large \emph{Author:}\\
-%John \textsc{Smith}\\[3cm] % Your name
 
 %----------------------------------------------------------------------------------------
 %	DATE SECTION
@@ -99,42 +91,30 @@ Dr. Ullrich \textsc{Hustadt} % Supervisor's Name
 %----------------------------------------------------------------------------------------
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
-
 %\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
- 
 %----------------------------------------------------------------------------------------
 
 \vfill % Fill the rest of the page with whitespace
-
 \end{titlepage}
 
 % ----------------------------------------
-
-\tableofcontents
-%\appendix
-%\addtocontents{toc}{\protect\contentsline{chapter}{Appendix:}{}}
-
-% Lists all the todos
-%\todototoc
-%\listoftodos
-
 % ABSTRACT
-\input{abstract_final_report.tex}
+% ----------------------------------------
+\input{abstract_final_report}
 
-% INTRODUCTION
-\input{introduction_final_year_report.tex}
+% ----------------------------------------
+% 	CONTENTS PAGE
+% ----------------------------------------
+\tableofcontents
 
-% BIBLIOGRAPHY
-% \input{bibliography_dissertation.tex}
-
-\bibliography{bibliography_final_report}
-\bibliographystyle{abbrv}
-
-% APPENDICES
-\appendix
-
-\addtocontents{toc}{\protect\contentsline{chapter}{Appendix:}{}}
-
-\input{}
-
+% ----------------------------------------
+% 	REPORT CONTENT
+% ----------------------------------------
+\input{introduction_final_report}
+\input{design_final_report}
+\input{realisation_final_report}
+\input{evaluation_final_report}
+\input{learning_points_final_report}
+\input{professional_issues_final_report}
+% Todo; appendices here
 \end{document}
