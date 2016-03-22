@@ -1,67 +1,67 @@
-﻿function box(index, value, origin) {
+﻿function bubbleBox(index, value, origin) {
     this.index = index;
     this.value = value;
     this.origin = origin;
 }
 
-var box1 = new box(1, 4, 0);
-var box2 = new box(2, 3, 0);
-var box3 = new box(3, 2, 0);
-var box4 = new box(4, 1, 0);
-var box5 = new box(5, 0, 0);
+var bubbleBox1 = new bubbleBox(1, 4, 0);
+var bubbleBox2 = new bubbleBox(2, 3, 0);
+var bubbleBox3 = new bubbleBox(3, 2, 0);
+var bubbleBox4 = new bubbleBox(4, 1, 0);
+var bubbleBox5 = new bubbleBox(5, 0, 0);
 
-var boxArray = [box1, box2, box3, box4, box5];
+var bubbleBoxArray = [bubbleBox1, bubbleBox2, bubbleBox3, bubbleBox4, bubbleBox5];
 
 $(document).ready(function () {
-    console.log("super secret fire");
+    
 });
 
 $("#btnTest").click(function () {
-    console.log("STARTBUBBLE");
+    console.log("START BUBBLE");
     var i = 0;
     beginBubble(i);
 })
 
 function beginBubble(i) {
-    if (i < (boxArray.length - 1)) {
-        var valA = boxArray[i].value;
-        var valB = boxArray[i + 1].value;
+    if (i < (bubbleBoxArray.length - 1)) {
+        var valA = bubbleBoxArray[i].value;
+        var valB = bubbleBoxArray[i + 1].value;
 
         if (valA > valB) {
-            swapIndexes(i);
+            swapIndexesBubble(i);
         } else {
             beginBubble(++i);
         }
     } else {
         i = 0;
 
-        if (endCheck() != true) {
+        if (endCheckBubble() != true) {
             beginBubble(i);
         }
     }
 }
 
-function swapIndexes(i) {
+function swapIndexesBubble(i) {
 
-    boxArray[i].origin++;
-    $("#index" + (boxArray[i].index)).animate({ left: (54 * (boxArray[i].origin)) + "px" }, 1000);
+    bubbleBoxArray[i].origin++;
+    $("#index" + (bubbleBoxArray[i].index)).animate({ left: (54 * (bubbleBoxArray[i].origin)) + "px" }, 1000);
 
-    boxArray[i + 1].origin--;
-    $("#index" + (boxArray[i + 1].index)).animate({ left: (54 * (boxArray[i + 1].origin)) + "px" }, 1000);
+    bubbleBoxArray[i + 1].origin--;
+    $("#index" + (bubbleBoxArray[i + 1].index)).animate({ left: (54 * (bubbleBoxArray[i + 1].origin)) + "px" }, 1000);
 
-    var temp = boxArray[i];
-    boxArray[i] = boxArray[i + 1];
-    boxArray[i + 1] = temp;
+    var temp = bubbleBoxArray[i];
+    bubbleBoxArray[i] = bubbleBoxArray[i + 1];
+    bubbleBoxArray[i + 1] = temp;
 
     setTimeout(function () { beginBubble(++i); }, 1000);
 }
 
-function endCheck() {
-    for (j = 0; j < (boxArray.length - 2) ; j++) {
-        if (boxArray[j].value > boxArray[j + 1].value) {
+function endCheckBubble() {
+    for (j = 0; j < (bubbleBoxArray.length - 2) ; j++) {
+        if (bubbleBoxArray[j].value > bubbleBoxArray[j + 1].value) {
             return false;
         }
     }
-    console.log("END");
+    console.log("END BUBBLE");
     return true;
 }
