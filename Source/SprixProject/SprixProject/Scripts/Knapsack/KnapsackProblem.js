@@ -97,6 +97,18 @@ function knapsack() {
     }, 500);
 }
 
+function accumulateItemValues(itemXweight) {
+
+    var tempCapacity = ((idxWeight + 1) - itemXweight);
+    var ans = 0;
+
+    for (i = 0; i < idxItem; i++) {
+        if($("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + tempCapacity + ")").text() > ans) {
+            ans = $("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + tempCapacity + ")").text();
+        }
+    }
+}
+
 function startKnapsack2() {
     capacity = document.getElementById('capacity').value;
     var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
