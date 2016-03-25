@@ -1,10 +1,21 @@
 \chapter{Design}
 
 % Introduction on what the design chapter would consist of
+This chapter primarily consists of the plan for the construction of the \textit{AlgoAnimation} program. The design documentation includes the list of requirements that is expected of the program, system flowchart, database designs, code designs, sequence diagrams, and the designs of the animations that currently exists in the program. 
+% evaluation list?
 
 \section{Database Design}
 % mention that you have decided to include a database
-% - explain why
+% reasons to use database: http://programmers.stackexchange.com/questions/190482/why-use-a-database-instead-of-just-saving-your-data-to-disk
+
+% easier to retrieve relevant data using LINQ 
+\subsection{Benefits in retrieving relevant data}
+Initially, I thought that there wasn't a real reason for having a database system connected to this project, mainly because I could've kept the data in the model of the code. However, during the initial part of the implementation phase, I have realised that there was a need to add a database system into the project. Reasons being that, I needed a way to store the details of each algorithm, such as its name, type, form type, (more details in the database design below). I found that doing this way is easier for me to retrieve relevant data about the algorithms displayed on the page by using LINQ queries instead of sifting through the list of algorithms. 
+
+% scalability
+\subsection{Benefits in scalability}
+I have also found out that there were additional benefits for doing this way as well, such as the scalability of adding new algorithm animations into the existing program. In a certain circumstance where the developer decides to add a new algorithm into the program, s/he would only need to connect to the database, and add the relevant details of the algorithm, and the program will easily take them into an account and add the newly added algorithm into the program. When the developer already done so, s/he would just need to add the actual animation program into the code, possibly add a few additional models on top of the existing ones, and done.
+
 \subsection{Conceptual Design}
 \subsection{Logical Design}
 \subsection{Physical Design}

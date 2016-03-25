@@ -1,17 +1,22 @@
 Work plan
 
+dissertation, to be done by this sunday (27/3/2016)
+1. finish abstact
+2. finish introduction
+3. add database design
+
 List of TODO's (16/3/16) Wednesday
 1. form for dynamic algorithm
 2. animation of 
 	- merge sort [peter's working on this]
 	- insertion sort
 3. program for
-	- knapsack algorithm [done, need to bind values to form]
+	- knapsack algorithm [done, need to bind values to form] [working on this]
 	- fractional knapsack algorithm
 	- rod cutting problem
 	- matrix multiplication problem
 4. dissertation
-	- introduction
+	- introduction 
 	- design
 
 13/3/2016 (Sunday) THIS WEEK
