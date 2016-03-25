@@ -8,7 +8,7 @@
     <h2>@Model.algoDetails.AlgorithmName</h2>
 }
 
-@section Content{
+@section Content {
 
     @* Hidden values for the knapsack algorithm *@
     <input type="hidden" name="noOfIndex" id="noOfIndex" value="@Model.noOfIndex" />
@@ -17,19 +17,18 @@
     @for (int i = 0; i < Model.knapsackAnimationData.Items.Count(); i++)
     {
         var indexVal = i + 1;
-        <input type="hidden" name=@("itemWeight_" + indexVal) id=@("itemWeight_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Weight">
-        <input type="hidden" name=@("itemBenefit_" + indexVal) id=@("itemBenefit_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Benefit">
+        <input type="hidden" name=@("itemWeight_" + indexVal) id=@("itemWeight_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Weight" />
+        <input type="hidden" name=@("itemBenefit_" + indexVal) id=@("itemBenefit_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Benefit" />
     }
-
-    @* Knapsack Problem *@
 
     @if (Model.algoDetails.AlgorithmId == 1)
     {
-        @Html.Partial("_FractionalKnapsackAnimationPartial", Model)
+        @Html.Partial("_FracKnapAnimationPartial", Model) @* Something is wrong here, can't render newly made partial *@
     }
     else if (Model.algoDetails.AlgorithmId == 2)
     {
         @Html.Partial("_KnapsackAnimationPartial", Model)
+
     }
 
 }
@@ -52,11 +51,11 @@
         </ul>
     </div>
     <!-- /#sidebar-wrapper -->
-
 }
 
 @section scripts {
     @Scripts.Render("~/Scripts/Knapsack/KnapsackProblem.js")
+    @Scripts.Render("~/Scripts/Knapsack/FractionalKnapsackProblemAnimation.js")
     @Styles.Render("~/Content/Animation/knapsackAnimationStyle.css")
 
 }

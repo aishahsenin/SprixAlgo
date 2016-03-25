@@ -290,7 +290,8 @@
     <Content Include="Views\Animations\_MergeSortAnimationPartial.cshtml" />
     <Content Include="Views\Animations\_InsertionSortAnimationPartial.cshtml" />
     <Content Include="Views\Animations\_BubbleSortAnimationPartial.cshtml" />
-    <Content Include="Views\Animations\_FractionalKnapsackAnimationPartial.cshtml" />
+    <Content Include="Views\Shared\_FracKnapAnimationPartial.cshtml" />
+    <Content Include="Views\Shared\_TestPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\Buttons\" />

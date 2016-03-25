@@ -70,6 +70,16 @@ namespace SprixProject.Controllers
             vm.algoDetails = algorithmRepository.FindThis(id).SingleOrDefault();
             vm.noOfIndex = noOfInput;
 
+            /*
+            if (id == 1)
+            {
+                return PartialView("_FracKnapAnimationPartial", vm);
+            }
+            else
+            {
+                return PartialView("_KnapsackAnimationPartial", vm);
+            }
+            */
             return View(vm);
         }
 
