@@ -1,18 +1,4 @@
-﻿//Knapsack algorithm
-//==================
-// wikipedia: [Knapsack (0/1)](http://en.wikipedia.org/wiki/Knapsack_problem#0.2F1_Knapsack_Problem)
-// Given a set `[{weight:Number, benefit:Number}]` and a capacity,
-// find the maximum value possible while keeping the weight below
-// or equal to the capacity
-// **params**:  
-//    `capacity`  : Number,  
-//    `items`     : [{w:Number, b:Number}]  
-// **returns**:  
-//    An object containing `maxValue` and `set`
-
-// TODO; Aishah
-// int type capacity
-// list int type items
+﻿// wikipedia: [Knapsack (0/1)](http://en.wikipedia.org/wiki/Knapsack_problem#0.2F1_Knapsack_Problem)
 
 $(document).ready(function () {
     console.log("knapsack ready");

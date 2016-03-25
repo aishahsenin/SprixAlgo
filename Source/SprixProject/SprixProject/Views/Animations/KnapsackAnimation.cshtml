@@ -20,9 +20,17 @@
         <input type="hidden" name=@("itemBenefit_" + indexVal) id=@("itemBenefit_" + indexVal) value="@Model.knapsackAnimationData.Items[i].Benefit">
     }
 
-<p>
-    <input type="button" id="knapsackExecute" value="Click to run" class="btn" onClick="startKnapsack()" />
-</p>
+    @* Knapsack Problem *@
+
+    @if (Model.algoDetails.AlgorithmId == 1)
+    {
+        @Html.Partial("_FractionalKnapsackAnimationPartial", Model)
+    }
+    else if (Model.algoDetails.AlgorithmId == 2)
+    {
+        @Html.Partial("_KnapsackAnimationPartial", Model)
+    }
+
 }
 
 @section SideNavBar {
