@@ -9,6 +9,12 @@
 //    `items`     : [{w:Number, b:Number}]  
 // **returns**:  
 //    An object containing `maxValue` and `set`
+function itemBox(index, weight, value) {
+    this.index = index;
+    this.weight = weight;
+    this.value = value;
+}
+
 
 $(document).ready(function () {
     generateRandomColour();
@@ -23,11 +29,12 @@ var weightMatrix = [];
 var keepMatrix = [];
 
 function startKnapsack() {
-    //capacity = document.getElementById('capacity').value;
-    //var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
-
     for (i = 1; i <= noOfIndex; i++) {
-        var item = parseInt(document.getElementById('index' + i).value);
+        var itemWeight = parseInt(document.getElementById('itemWeight_' + i).value);
+        var itemValue = parseInt(document.getElementById('itemBenefit_' + i).value);
+
+        var item = new itemBox(i, itemWeight, itemValue);
+
         itemArray.push(item);
     }
 
@@ -36,37 +43,70 @@ function startKnapsack() {
         keepMatrix[idxItem] = new Array(capacity + 1); // keep table
     }
 
+    idxItem = 0;
+    idxWeight = 0;
+
     console.log("START");
     knapsack();
     console.log("END");
 }
 
-
-var x = 1;
-var y = 1;
 var total = 1;
-var capacityColumn = 6;
-var itemsRow = 5;
 
 function knapsack() {
+
     setTimeout(function () {
+        // checks if we're not at the final cell, if yes, run loop
+        if ((idxWeight != capacity) && (idxItem != (noOfIndex + 1))) {
 
-        if (y == 1) {
-            $("#valueTable tr:nth-child(" + y + ") td:nth-child(" + (x + 1) + ")").text("0");
-        } else {
-            $("#valueTable tr:nth-child(" + y + ") td:nth-child(" + (x + 1) + ")").text(total);
-        }
+            // if item is 0, means there is no weight, therefore make cell 0
+            // note idxItem + 1 and idxWeight + 2 denotes the current cell
+            if (idxItem == 0) {
+                $("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 2) + ")").text("0");
+            } else {
 
-        if ((x != capacityColumn) && (y != itemsRow)) {
-            x++;
-            if (x == capacityColumn) {
-                y++;
-                x = 1;
+                //  if current item's weight is <= the current capacity it's at. basically checks if item can fit in the current capacity of knapsack
+                if (itemArray[idxItem - 1].weight <= (idxWeight + 1)) {
+
+                    // 1 - with the value of item x, compare...
+                    var temp = itemArray[idxItem - 1].value;
+
+                    // 2 - the cells for values for item 0 to item x-1
+                    for (i = 0; i < idxItem; i++) {
+
+                        var compareVal = $("#valueTable tr:nth-child(" + (i + 1) + ") td:nth-child(" + (idxWeight + 2) + ")").text();
+
+                        if (temp < compareVal) {
+                            temp = compareVal;
+                        }
+                    }
+                    $("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 2) + ")").text(temp);
+                } else {
+                    $("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + (idxWeight + 2) + ")").text("0");
+                }
+            }
+
+            idxWeight++;
+            if (idxWeight == capacity) {
+                idxItem++;
+                idxWeight = 0;
             }
             total++;
             knapsack();
         }
     }, 500);
+}
+
+function accumulateItemValues(itemXweight) {
+
+    var tempCapacity = ((idxWeight + 1) - itemXweight);
+    var ans = 0;
+
+    for (i = 0; i < idxItem; i++) {
+        if($("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + tempCapacity + ")").text() > ans) {
+            ans = $("#valueTable tr:nth-child(" + (idxItem + 1) + ") td:nth-child(" + tempCapacity + ")").text();
+        }
+    }
 }
 
 function startKnapsack2() {
@@ -107,8 +147,6 @@ function knapsack2(items, capacity) {
             if (idxItem === 0 || idxWeight === 0) {
                 weightMatrix[idxItem][idxWeight] = 0;
             }
-
-
                 // If item will fit, decide if there's greater value in keeping it,
                 // or leaving it
             else if (items[idxItem - 1].w <= idxWeight) {
@@ -132,6 +170,14 @@ function knapsack2(items, capacity) {
             }
         }
     }
+
+    /*
+    for (i = 0; i < weightMatrix.length; i++) {
+        console.log(weightMatrix[i][0]);
+        for (j = 0; j < weightMatrix[i].length; j++) {
+            console.log(weightMatrix[i][j]);
+        }
+    }*/
 
     // Traverse through keepMatrix ([numItems][capacity] -> [1][?])
     // to create solutionSet
