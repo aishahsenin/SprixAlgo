@@ -1,50 +1,52 @@
-﻿$(document).ready(function () {
-    console.log("fractional knapsack ready");
+﻿function fracItemBox(weight, value, benefit) {
+    this.weight = weight;
+    this.value = value;
+    this.benefit = benefit;
+}
 
-    function itemBox(index, weight, value) {
-        this.index = index;
-        this.weight = weight;
-        this.value = value;
-        this.benefit = 0;
-    }
+$(document).ready(function () {
+    console.log("fractional knapsack ready");
 
     var idxItem = 0;
     var idxWeight = 0;
-    var capacity = getHiddenVals('capacity');
-    var noOfIndex = parseInt(getHiddenVals('noOfIndex'));
-    var itemArray = getItemValues();
+    var capacity = parseInt(document.getElementById('capacity').value);
+    var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+    //var itemArray = this.getItemValues;
     var weightMatrix = [];
     var keepMatrix = [];
 
 });
 
 // 1 - get the capacity and object array of items (weight & value)
-function getItemValues() {
-    var itemArray = []
-    for (i = 1; i <= noOfIndex; i++) {
-        var itemWeight = parseInt(document.getElementById('itemWeight_' + i).value);
-        var itemValue = parseInt(document.getElementById('itemBenefit_' + i).value);
-        var item = new itemBox(i, itemWeight, itemValue);
-        itemArray.push(item);
-    }
-    return itemArray;
-}
-
-function getHiddenVals(element) {
-    var val = document.getElementById(element).value;
-    return val;
-}
-
 // 2 - using the items, calculate benefitX = valueX / weightX
-function calculateBenefit(itemArray) {
-    for (i = 1; i <= noOfIndex; i++) {
-        var benefit = itemArray[i].value / itemArray[i].weight
-        itemArray[i].benefit = benefit;
-        console.log(i);
-        console.log("value " + itemArray[i].value);
-        console.log("weight " + itemArray[i].weight);
-        console.log("check benefit inserted" + itemArray[i].benefit);
+function getItems() {
+    var items = [];
+    for (i = 0; i < noOfIndex; i++) {
+        var hidIndexFind = i + 1;
+        var weight = parseInt(document.getElementById('itemWeight_' + hidIndexFind).value);
+        var value = parseInt(document.getElementById('itemBenefit_' + hidIndexFind).value);
+        // TODO; check if equation below divides by 0
+        var benefit = weight / value;
+        var item = new fracItemBox(weight, value, benefit);
+        items.push(item);
     }
+    return items;
+}
+
+function mergeSort(items) {
+    if (items.length < 2) return items;
+    var mid = Math.floor(items.length / 2);
+    var subLeft = mergeSort(items.slice(0, mid));
+    var subRight = mergeSort(items.slice(mid));
+    return merge(subLeft, subRight);
+}
+
+function merge(a, b) {
+    var result = [];
+    while (a.length > 0 && b.length > 0)
+        // ? dentotes as "then", and : denote as "else"
+        result.push(a[0].benefit < b[0].benefit ? a.shift() : b.shift());
+    return result.concat(a.length ? a : b);
 }
 
 // 3 - sort items based on the value benefitX, arrange the items from the item with the most benefit to the least
@@ -56,5 +58,10 @@ function calculateBenefit(itemArray) {
 // 5 - already found the optimum solution
 
 function startFractionalKnapsack() {
-    calculateBenefit(itemArray);
+    // 1 - get item details
+    var items = getItems();
+
+    // 2 - arrange items based on the amount of benefit
+    var sortedItems = mergeSort(items);
+    console.log(sortedItems);
 }
