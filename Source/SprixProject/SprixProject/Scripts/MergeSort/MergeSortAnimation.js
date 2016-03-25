@@ -27,7 +27,7 @@ $(document).ready(function () {
 });
 
 $("#btnTest").click(function () {
-    console.log("START");
+    console.log("START MERGE");
 //    potatoDown();
     var i = 0;
     beginBubble(i);

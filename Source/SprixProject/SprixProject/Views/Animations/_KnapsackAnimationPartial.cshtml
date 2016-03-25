@@ -1,5 +1,139 @@
 ﻿@model SprixProject.ViewModel.AnimationViewModel
+<div class="col-lg-12">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <div id="inHere">
+            @for (int i = 0; i < Model.knapsackAnimationData.Items.Count(); i++)
+            {
+                var indexVal = i + 1;
+                <div class="index" id=@("index" + indexVal)> Item @indexVal <br />Weight: @Model.knapsackAnimationData.Items[i].Weight <br />Value: @Model.knapsackAnimationData.Items[i].Benefit</div>
+            }
+            <p>Sack &nbsp;&nbsp;&nbsp; Capacity: @Model.knapsackAnimationData.Capacity</p>
+            <div name="capacity" id="sack"></div>
+        </div>
+    </div>
+    <div class="col-lg-2"></div>
+</div>
 
-<p>
-    <input type="button" id="knapsackExecute" value="Click to run" class="btn" onClick="startKnapsack()" />
-</p>
+<p id="testing"></p>
+
+<div class="col-lg-12">
+    <div class="col-lg-6">
+        <table class="table table-hover" id="valueTable">
+            <thead>
+                <tr>
+                    <th>V</th>
+                    @for (int i = 1; i <= Model.knapsackAnimationData.Capacity; i++)
+                    {
+                        <th>@i</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i <= Model.knapsackAnimationData.Items.Count; i++)
+            {
+                    <tr>
+                        <th scope="row">@i</th>
+                        @for (int j = 0; j < Model.knapsackAnimationData.Capacity; j++)
+                        {
+                            <td></td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<input type="button" id="testExecute" value="Test me" class="btn" onClick="startKnapsack()" />
+
+
+    @*
+        <div class="col-lg-12">
+
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div id="inHere">
+                    @for (int i = 0; i < Model.knapsackAnimationData.Items.Count(); i++)
+                    {
+                        var indexVal = i + 1;
+                        <div class="index" id=@("index" + indexVal)> Item @indexVal <br />Weight: @Model.knapsackAnimationData.Items[i].Weight <br />Value: @Model.knapsackAnimationData.Items[i].Benefit</div>
+                    }
+                    <p>Sack &nbsp;&nbsp;&nbsp; Capacity: @Model.knapsackAnimationData.Capacity</p>
+                    <div name="capacity" id="sack"></div>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+
+        <p id="testing"></p>
+
+        <div class="col-lg-12">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4">
+                <table class="table table-hover" id="valueTable">
+                    <thead>
+                        <tr>
+                            <th>V</th>
+                            @for (int i = 1; i <= Model.knapsackAnimationData.Capacity; i++)
+                            {
+                                <th>@i</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i <= Model.knapsackAnimationData.Items.Count; i++)
+                        {
+                            <tr>
+                                <th scope="row">@i</th>
+                                @for (int j = 0; j < Model.knapsackAnimationData.Capacity; j++)
+                                {
+                                    <td></td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4">
+                <table class="table table-hover" id="keepTable">
+                    <thead>
+                        <tr>
+                            <th>Keep</th>
+                            @for (int i = 1; i <= Model.knapsackAnimationData.Capacity; i++)
+                            {
+                                <th>@i</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i <= Model.knapsackAnimationData.Items.Count; i++)
+                        {
+                            <tr>
+                                <th scope="row">@i</th>
+                                @for (int j = 0; j < Model.knapsackAnimationData.Capacity; j++)
+                                {
+                                    <td></td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-lg-1"></div>
+        </div>
+
+    <div class="col-lg-12">
+        <div class="col-lg-5"></div>
+        <div class="col-lg-2">
+            <input type="button" id="mergeSortExecute" value="Click to run" class="btn" onClick="startKnapsack()" />
+        </div>
+        <div class="col-lg-5"></div>
+
+    </div>
+    *@
+
