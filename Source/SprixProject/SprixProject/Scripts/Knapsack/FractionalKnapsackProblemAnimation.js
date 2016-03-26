@@ -1,36 +1,43 @@
-﻿function fracItemBox(weight, value, benefit) {
+﻿function fracItemBox(num, weight, value, benefit) {
+    this.num = num;
     this.weight = weight;
     this.value = value;
     this.benefit = benefit;
 }
 
 $(document).ready(function () {
-    console.log("fractional knapsack ready");
-
-    var idxItem = 0;
-    var idxWeight = 0;
-    var capacity = parseInt(document.getElementById('capacity').value);
-    var noOfIndex = parseInt(document.getElementById('noOfIndex').value);
-    //var itemArray = this.getItemValues;
-    var weightMatrix = [];
-    var keepMatrix = [];
-
+    this.idxItem = 0;
+    this.idxWeight = 0;
+    this.capacity = parseInt(document.getElementById('capacity').value);
+    this.noOfIndex = parseInt(document.getElementById('noOfIndex').value);
+    var self = this;
 });
 
 // 1 - get the capacity and object array of items (weight & value)
 // 2 - using the items, calculate benefitX = valueX / weightX
-function getItems() {
+function startFractionalKnapsack() {
     var items = [];
     for (i = 0; i < noOfIndex; i++) {
         var hidIndexFind = i + 1;
         var weight = parseInt(document.getElementById('itemWeight_' + hidIndexFind).value);
         var value = parseInt(document.getElementById('itemBenefit_' + hidIndexFind).value);
-        // TODO; check if equation below divides by 0
-        var benefit = weight / value;
-        var item = new fracItemBox(weight, value, benefit);
+        if (this.weight == 0){
+            alert("Error in calculating benefit of item.");
+            return false;
+        }
+        var benefit = value / weight;
+        // TODO; need to animate this bit where the benefit for each item has been calculated
+        $("#index" + hidIndexFind).append("<br /> Benefit: " + benefit); 
+        var item = new fracItemBox(hidIndexFind, weight, value, benefit);
         items.push(item);
     }
-    return items;
+    // 2 - arrange items based on the amount of benefit
+    var sortedItems = mergeSort(items);
+    console.log(sortedItems);
+
+    var knapsackItems = checkItemFits(sortedItems);
+    console.log(knapsackItems);
+
 }
 
 function mergeSort(items) {
@@ -45,23 +52,27 @@ function merge(a, b) {
     var result = [];
     while (a.length > 0 && b.length > 0)
         // ? dentotes as "then", and : denote as "else"
-        result.push(a[0].benefit < b[0].benefit ? a.shift() : b.shift());
+        result.push(a[0].benefit > b[0].benefit ? a.shift() : b.shift());
     return result.concat(a.length ? a : b);
 }
 
-// 3 - sort items based on the value benefitX, arrange the items from the item with the most benefit to the least
+function checkItemFits(items) {
+    var knapsack = [];
+    var capacityLeft = self.capacity;
+    var count = 0;
 
-// 4 - using the capacity, find out if item on the first position can fit into the sack.
-//      - if item <= capacity, insert the whole item
-//      - else if item > capacity, divide the item up to a point you filled up the knapsack
-
-// 5 - already found the optimum solution
-
-function startFractionalKnapsack() {
-    // 1 - get item details
-    var items = getItems();
-
-    // 2 - arrange items based on the amount of benefit
-    var sortedItems = mergeSort(items);
-    console.log(sortedItems);
+    while (capacityLeft > 0) {
+        if (items[count].weight <= capacityLeft) {
+            knapsack.push(items[count]);
+            capacityLeft = capacityLeft - items[count].weight;
+        }
+        else if(items[count].weight > capacityLeft){
+            // using the amount of capacity left, split up the item weight until it fully fills up the capacity
+            var item = new fracItemBox(items[count].num, capacityLeft, (items[count].benefit * capacityLeft), items[count].benefit);
+            knapsack.push(item);
+            break;
+        }
+        count++;
+    }
+    return knapsack;
 }
